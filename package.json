@@ -1,20 +1,14 @@
 {
-	"name": "astro-starter-template",
+	"name": "@website/land_playform_cloud",
 	"version": "0.0.1",
-	"private": false,
-	"description": "📄 Starter template for AstroJS.",
-	"keywords": [
-		"astro",
-		"starter",
-		"skeleton"
-	],
-	"homepage": "https://github.com/Playform/AstroStarterTemplate#readme",
+	"private": true,
+	"homepage": "https://github.com/CodeEditorLand/Website#readme",
 	"bugs": {
-		"url": "https://github.com/Playform/AstroStarterTemplate/issues"
+		"url": "https://github.com/CodeEditorLand/Website/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Playform/AstroStarterTemplate.git"
+		"url": "git+https://github.com/CodeEditorLand/Website.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
@@ -56,6 +50,6 @@
 		"zod": "3.22.4"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "restricted"
 	}
 }
