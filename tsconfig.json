@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./",
-		"types": ["astro/client", "astro/env"]
+		"types": ["astro/client", "astro/env"],
 	},
-	"extends": "typescript-esbuild/Target/Notation/TypeScript"
+	"extends": "typescript-esbuild/Target/Notation/TypeScript",
 }
