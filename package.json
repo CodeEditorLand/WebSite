@@ -18,7 +18,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"prepublishOnly": "astro check ; astro build",
 		"start": "astro dev"
 	},
 	"dependencies": {
