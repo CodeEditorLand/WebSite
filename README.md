@@ -2,4 +2,4 @@
 
 Code Editor Land main website.
 
-[Code Editor Land]: https://land.playform.cloud
+[Code Editor Land]: https://Land.Playform.Cloud
