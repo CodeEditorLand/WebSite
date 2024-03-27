@@ -1,5 +1,3 @@
-# [Code Editor Land] 🏝️
+# 🗺️ [Website]
 
-Code Editor Land main website.
-
-[Code Editor Land]: https://Land.Playform.Cloud
+[Website]: https://Land.Playform.Cloud
