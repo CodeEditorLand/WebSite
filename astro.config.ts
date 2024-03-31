@@ -11,8 +11,8 @@ export default (await import("astro/config")).defineConfig({
 		(await import("@astrojs/sitemap")).default(),
 		(await import("@playform/critters-astro")).default({ Logger: 1 }),
 		(await import("@astrojs/prefetch")).default(),
-		(await import("rome-astro")).default({ Logger: 1 }),
-		(await import("compress-astro")).default({ Logger: 1 }),
+		(await import("@playform/rome-astro")).default({ Logger: 1 }),
+		(await import("@playform/compress-astro")).default({ Logger: 1 }),
 	],
 	vite: {
 		build: {
