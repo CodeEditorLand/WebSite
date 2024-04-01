@@ -2,13 +2,13 @@
 	"name": "@website/land_playform_cloud",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://GitHub.Com/CodeEditorLand/CodeEditorLand#readme",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
 	"bugs": {
-		"url": "https://GitHub.Com/CodeEditorLand/CodeEditorLand/issues"
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://GitHub.Com/CodeEditorLand/CodeEditorLand.git"
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
@@ -30,7 +30,7 @@
 		"astro-capo": "0.0.1",
 		"@playform/compress-astro": "0.0.1",
 		"@playform/critters-astro": "0.0.2",
-		"@playform/biome-astro": "0.0.1",
+		"@playform/biome-astro": "0.0.3",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
 		"cssnano": "6.1.2",
@@ -48,7 +48,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"typescript-esbuild": "0.4.10",
+		"@playform/build": "0.0.1",
 		"zod": "3.22.4"
 	},
 	"publishConfig": {
