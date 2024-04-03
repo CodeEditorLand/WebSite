@@ -23,8 +23,8 @@
 	"dependencies": {
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.2",
-		"@playform/format": "0.0.3",
 		"@playform/compress": "0.0.1",
+		"@playform/format": "0.0.3",
 		"@playform/inline": "0.0.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
@@ -48,7 +48,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.1",
+		"@playform/build": "0.0.2",
 		"zod": "3.22.4"
 	},
 	"publishConfig": {
