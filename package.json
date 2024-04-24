@@ -13,8 +13,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Land",
-		"email": "Land@Playform.Cloud",
-		"url": "HTTPS://Land.Playform.Cloud"
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
 	},
 	"scripts": {
 		"Start": "astro dev",
