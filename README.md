@@ -1,3 +1,3 @@
-# 🗺️ [Website] —
+# 🗺️ [WebSite] —
 
-[Website.]: https://Land.playform.cloud
+[WebSite.]: https://Land.playform.cloud
