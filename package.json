@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/CodeEditorLand.git"
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
