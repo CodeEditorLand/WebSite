@@ -1,3 +1,3 @@
 # 🗺️ [WebSite] —
 
-[WebSite.]: https://Editor.Land
+[WebSite]: https://Editor.Land
