@@ -52,7 +52,7 @@ const m = "modulepreload",
 	};
 (
 	await h(async () => {
-		const { initializeApp: o } = await import("./index.esm.CQlgJgN2.js");
+		const { initializeApp: o } = await import("./index.esm.BoasBFnU.js");
 		return { initializeApp: o };
 	}, [])
 ).initializeApp({
@@ -66,4 +66,4 @@ const m = "modulepreload",
 	projectId: "code-editor-land",
 	storageBucket: "code-editor-land.appspot.com",
 });
-//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.ZWXo5eeS.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.DoEmQ_vS.js.map
