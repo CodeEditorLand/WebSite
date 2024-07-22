@@ -1,7 +1,7 @@
 {
 	"name": "@website/land_playform_cloud",
 	"version": "0.0.1",
-	"private": false,
+	"private": true,
 	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/CodeEditorLand#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/CodeEditorLand/issues"
@@ -54,7 +54,7 @@
 		"zod": "*"
 	},
 	"publishConfig": {
-		"access": "public",
+		"access": "restricted",
 		"provenance": true
 	}
 }
