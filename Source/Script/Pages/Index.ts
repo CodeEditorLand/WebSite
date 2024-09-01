@@ -26,7 +26,7 @@ function Fn() {
 	Scene = new _Scene();
 
 	Camera = new PerspectiveCamera(
-		21,
+		2,
 		window.innerWidth / window.innerHeight,
 		0.0021,
 		2100,
@@ -70,15 +70,16 @@ function Fn() {
 		  }
 		`,
 		fragmentShader: `
-		  uniform float time;
-		  varying vec2 vUv;
-		  varying vec3 vNormal;
-	  
+			uniform float time;
+			uniform float gradientAngle; // Angle in radians (0 to 2*PI) 
+			varying vec2 vUv;
+			varying vec3 vNormal;
+
 		  void main() {
     		vec2 modifiedUv = vec2(vUv.x, 1.0 - vUv.y); 
 			vec2 center = vec2(0.5);
 			float distanceToCenter = distance(modifiedUv, center);
-	  
+
 			vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.21);
 			vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.21);
 			vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.21);
@@ -89,14 +90,15 @@ function Fn() {
 	  
 			float hotColdMix = (vNormal.x + 1.0) / 2.0;
 	  
+			vec2 direction = vec2(cos(gradientAngle), sin(gradientAngle));
+    		float gradientFactor = dot(normalize(modifiedUv - center), direction) * 0.5 + 0.5;
+
 			vec4 hotGradient = mix(hotColor1, hotColor2, smoothstep(0.0, 0.21, distanceToCenter));
 			hotGradient = mix(hotGradient, hotColor3, smoothstep(0.21, 1.0, distanceToCenter));
-	  
 			vec4 coldGradient = mix(coldColor1, coldColor2, smoothstep(0.0, 0.21, distanceToCenter));
 			coldGradient = mix(coldGradient, coldColor3, smoothstep(0.21, 1.0, distanceToCenter));
-	  
-			vec4 radialGradient = mix(coldGradient, hotGradient, hotColdMix);
-	  
+			vec4 radialGradient = mix(coldGradient, hotGradient, gradientFactor); // Use gradientFactor here
+
 			float effectSize = 0.021;
 			float effectIntensity = 0.021;
     		float effectDistance = mod(modifiedUv.y + time, effectSize) - effectSize; 
@@ -126,7 +128,7 @@ function Fn() {
 		type: FloatType,
 	});
 
-	Camera_Burn = new CubeCamera(0.0021, 2100, Render_Burn);
+	Camera_Burn = new CubeCamera(2, 2100, Render_Burn);
 
 	// Pyramid
 	Pyramid = new Group();
@@ -149,7 +151,7 @@ function Fn() {
 			envMap: Render_Burn.texture,
 			envMapIntensity: 0.0021,
 		}),
-	).translateY(-Base / 2);
+	).translateY(-Base / How);
 
 	Inner.castShadow = true;
 
@@ -190,8 +192,6 @@ function Move() {
 	requestAnimationFrame(Move);
 
 	Pyramid.rotation.x -= 0.00021;
-	Pyramid.rotation.y -= 0.00021;
-	Pyramid.rotation.z -= 0.00021;
 
 	Burn.material.uniforms.time.value = performance.now() / 21000;
 
