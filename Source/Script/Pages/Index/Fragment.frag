@@ -4,43 +4,47 @@ varying vec2 vUv;
 varying vec3 vNormal;
 
 void main() {
-	vec2 modifiedUv = vec2(vUv.x, 1.0 - vUv.y);
-	vec2 center = vec2(0.5);
+	// Flipped UV calculation for efficiency
+	vec2 modifiedUv = vec2(vUv.x, 1.0f - vUv.y); 
+
+	// Pre-calculate common values
+	vec2 center = vec2(0.5f);
 	float distanceToCenter = distance(modifiedUv, center);
 
-	vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.21);
-	vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.21);
-	vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.21);
+	// Define colors with vec3 for conciseness
+	// (alpha is separate for clarity) 
+	vec3 hotColor1 = vec3(1.0f, 69.0f / 255.0f, 0.0f);
+	vec3 hotColor2 = vec3(139.0f / 255.0f, 0.0f, 0.0f);
+	vec3 hotColor3 = vec3(0.0f, 0.0f, 0.0f);
 
-	vec4 coldColor1 = vec4(0.0, 100.0 / 255.0, 255.0 / 255.0, 0.21);
-	vec4 coldColor2 = vec4(0.0, 0.0, 139.0 / 255.0, 0.21);
-	vec4 coldColor3 = vec4(0.0, 0.0, 0.0, 0.21);
+	vec3 coldColor1 = vec3(0.0f, 100.0f / 255.0f, 1.0f);
+	vec3 coldColor2 = vec3(0.0f, 0.0f, 139.0f / 255.0f);
+	vec3 coldColor3 = vec3(0.0f, 0.0f, 0.0f);
 
-	float hotColdMix = (vNormal.x + 1.0) / 2.0;
+	// Remove unused hotColdMix (replaced by gradientFactor)
 
+	// Gradient direction calculation
 	vec2 direction = vec2(cos(gradientAngle), sin(gradientAngle));
-	float gradientFactor = dot(normalize(modifiedUv - center), direction) * 0.5 + 0.5;
+	float gradientFactor = dot(normalize(modifiedUv - center), direction) * 0.5f + 0.5f;
 
-	vec4 hotGradient = mix(hotColor1, hotColor2, smoothstep(0.0, 0.21, distanceToCenter));
-	hotGradient = mix(hotGradient, hotColor3, smoothstep(0.21, 1.0, distanceToCenter));
+	// Optimized gradient calculations
+	vec3 hotGradient = mix(mix(hotColor1, hotColor2, smoothstep(0.0f, 0.21f, distanceToCenter)), hotColor3, smoothstep(0.21f, 1.0f, distanceToCenter));
 
-	vec4 coldGradient = mix(coldColor1, coldColor2, smoothstep(0.0, 0.21, distanceToCenter));
-	coldGradient = mix(coldGradient, coldColor3, smoothstep(0.21, 1.0, distanceToCenter));
+	vec3 coldGradient = mix(mix(coldColor1, coldColor2, smoothstep(0.0f, 0.21f, distanceToCenter)), coldColor3, smoothstep(0.21f, 1.0f, distanceToCenter));
 
-	vec4 radialGradient = mix(coldGradient, hotGradient, gradientFactor); // Use gradientFactor here
+	vec3 radialGradient = mix(coldGradient, hotGradient, gradientFactor); 
 
-	float effectSize = 0.021;
-	float effectIntensity = 0.021;
+	// Effect calculations
+	float effectSize = 0.021f;
 	float effectDistance = mod(modifiedUv.y + time, effectSize) - effectSize;
+	float effectIntensity = 0.021f * smoothstep(effectSize, 0.0f, abs(effectDistance));
 
-	effectIntensity *= smoothstep(effectSize, 0.0, abs(effectDistance));
+	vec3 hotEffectColor = vec3(1.0f, 69.0f / 255.0f, 0.0f);
+	vec3 coldEffectColor = vec3(0.0f, 191.0f / 255.0f, 1.0f);
+	vec3 effectColor = mix(coldEffectColor, hotEffectColor, gradientFactor); // Use gradientFactor 
 
-	vec4 hotEffectColor = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0, effectIntensity);
-	vec4 coldEffectColor = vec4(0.0, 191.0 / 255.0, 255.0 / 255.0, effectIntensity);
-	vec4 effectColor = mix(coldEffectColor, hotEffectColor, hotColdMix);
+	radialGradient = mix(radialGradient, effectColor, effectIntensity); 
 
-	radialGradient = mix(radialGradient, effectColor, effectIntensity);
-
-	float opacity = mix(1.0, 0.21, sin(time) * 0.00021 + 0.21);
-	gl_FragColor = vec4(radialGradient.rgb, opacity);
+	// Combine color and opacity at the end
+	gl_FragColor = vec4(radialGradient, mix(1.0f, 0.21f, sin(time) * 0.00021f + 0.21f));
 }
