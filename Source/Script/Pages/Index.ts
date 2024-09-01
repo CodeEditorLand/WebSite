@@ -149,9 +149,6 @@ function Fn() {
 
 		Scene.environment = Environment;
 
-		Inner.material.envMap = Environment;
-		Outer.material.envMap = Environment;
-
 		Texture.dispose();
 
 		envMapLoader.dispose();
