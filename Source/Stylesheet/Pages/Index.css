@@ -11,9 +11,41 @@ html {
 
 #Vision,
 #Position {
-	@apply opacity-0 transition-all duration-200 ease-Ease;
+	@apply ease-Ease opacity-0 transition-all duration-200;
 
 	&.Visible {
 		@apply opacity-100;
+	}
+}
+
+#Burn {
+	background: radial-gradient(
+			circle at center,
+			rgba(255, 69, 0, 0.8) 0%,
+			rgba(139, 0, 0, 0.8) 50%,
+			rgba(0, 0, 0, 0.9) 100%
+		),
+		repeating-radial-gradient(
+			circle at center,
+			rgba(255, 69, 0, 0.2) 0%,
+			rgba(255, 69, 0, 0.2) 3%,
+			transparent 3%,
+			transparent 100%
+		);
+
+	background-size:
+		100% 100%,
+		21px 21px;
+
+	animation: Day 21s ease-in-out infinite;
+}
+
+@keyframes Day {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.21;
 	}
 }

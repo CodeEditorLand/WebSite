@@ -15,33 +15,15 @@ export const {
 	DirectionalLight,
 	ACESFilmicToneMapping,
 	PMREMGenerator,
+	SphereGeometry,
+	ShaderMaterial,
+	DoubleSide,
 } = await import("three");
 
-const Burn = document.getElementById("Burn");
 const Vision = document.getElementById("Vision");
 
-Burn.style.background = `
-	radial-gradient(circle at center, rgba(255,69,0,0.8) 0%, rgba(139,0,0,0.8) 50%, rgba(0,0,0,0.9) 100%),
-	repeating-radial-gradient(circle at center, rgba(255,69,0,0.2) 0%, rgba(255,69,0,0.2) 3%, transparent 3%, transparent 100%)
-`;
-
-Burn.style.backgroundSize = "100% 100%, 21px 21px";
-
-Burn.style.animation = "pulse 21s ease-in-out infinite";
-
-const Style = document.createElement("style");
-
-Style.textContent = `
-	@keyframes pulse {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.21; }
-	}
-`;
-
-document.head.appendChild(Style);
-
 // @ts-ignore
-let Scene, Camera, Renderer, Pyramid;
+let Scene, Camera, Renderer, Pyramid, Burn;
 
 function Fn() {
 	Scene = new _Scene();
@@ -53,6 +35,7 @@ function Fn() {
 		1000,
 	);
 
+	// Renderer
 	Renderer = new WebGLRenderer({
 		antialias: true,
 		alpha: true,
@@ -74,6 +57,79 @@ function Fn() {
 
 	Positon?.appendChild(Renderer.domElement);
 
+	// Burn
+
+	const BurnMaterial = new ShaderMaterial({
+		uniforms: {
+			time: { value: 0.0 },
+		},
+		vertexShader: `
+		  varying vec2 vUv;
+		  varying vec3 vNormal;
+	  
+		  void main() {
+			vUv = uv;
+			vNormal = normalize(normalMatrix * normal);
+			gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+		  }
+		`,
+		fragmentShader: `
+		  uniform float time;
+		  varying vec2 vUv;
+		  varying vec3 vNormal;
+	  
+		  void main() {
+			vec2 center = vec2(0.5);
+			float distanceToCenter = distance(vUv, center);
+	  
+			// Hot side colors
+			vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.8);
+			vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.8);
+			vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.9);
+	  
+			// Cold side colors
+			vec4 coldColor1 = vec4(0.0, 100.0 / 255.0, 255.0 / 255.0, 0.8);
+			vec4 coldColor2 = vec4(0.0, 0.0, 139.0 / 255.0, 0.8);
+			vec4 coldColor3 = vec4(0.0, 0.0, 0.0, 0.9);
+	  
+			// Use normal to determine hot or cold side
+			float hotColdMix = (vNormal.x + 1.0) / 2.0;
+	  
+			// Blend colors based on distance and hot/cold mix
+			vec4 hotGradient = mix(hotColor1, hotColor2, smoothstep(0.0, 0.21, distanceToCenter));
+			hotGradient = mix(hotGradient, hotColor3, smoothstep(0.21, 1.0, distanceToCenter));
+	  
+			vec4 coldGradient = mix(coldColor1, coldColor2, smoothstep(0.0, 0.21, distanceToCenter));
+			coldGradient = mix(coldGradient, coldColor3, smoothstep(0.21, 1.0, distanceToCenter));
+	  
+			vec4 radialGradient = mix(coldGradient, hotGradient, hotColdMix);
+	  
+			// Repeating radial gradient (flames/ice)
+			float effectSize = 0.021;
+			float effectIntensity = 0.021;
+			float effectDistance = mod(distanceToCenter * 21.0 + time * 2.1, effectSize * 2.1) - effectSize;
+			effectIntensity *= smoothstep(effectSize, 0.0, abs(effectDistance));
+	  
+			vec4 hotEffectColor = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0, effectIntensity);
+			vec4 coldEffectColor = vec4(0.0, 191.0 / 255.0, 255.0 / 255.0, effectIntensity);
+			vec4 effectColor = mix(coldEffectColor, hotEffectColor, hotColdMix);
+	  
+			radialGradient = mix(radialGradient, effectColor, effectIntensity);
+	  
+			// Apply opacity animation
+			float opacity = mix(1.0, 0.21, sin(time * 2.1) * 0.21 + 0.21);
+			gl_FragColor = vec4(radialGradient.rgb, opacity);
+		  }
+		`,
+		side: DoubleSide,
+		transparent: true,
+	});
+
+	Burn = new Mesh(new SphereGeometry(10, 32, 32), BurnMaterial);
+
+	Scene.add(Burn);
+
+	// Pyramid
 	Pyramid = new Group();
 
 	const How = 2.1;
@@ -124,6 +180,7 @@ function Fn() {
 
 	Scene.add(Pyramid);
 
+	// Light
 	Scene.add(new AmbientLight(0xffffff, 1.21));
 
 	const See = new DirectionalLight(0xffffff, 0.8);
@@ -142,21 +199,23 @@ function Fn() {
 
 	Scene.add(See);
 
-	const envMapLoader = new PMREMGenerator(Renderer);
+	// Loader
+	const Loader = new PMREMGenerator(Renderer);
 
 	new RGBELoader().setPath("/HDR/").load("Kiara.hdr", function (Texture) {
-		const Environment = envMapLoader.fromEquirectangular(Texture).texture;
+		const Environment = Loader.fromEquirectangular(Texture).texture;
 
 		Scene.environment = Environment;
 
 		Texture.dispose();
 
-		envMapLoader.dispose();
+		Loader.dispose();
 
 		Positon?.classList.add("Visible");
 		Vision?.classList.add("Visible");
 	});
 
+	// Movement
 	Camera.position.y = -Base / How;
 	Camera.position.z = Base * How;
 
@@ -166,9 +225,12 @@ function Fn() {
 function Move() {
 	requestAnimationFrame(Move);
 
+	Pyramid.rotation.x -= 0.00021;
 	Pyramid.rotation.y -= 0.00021;
 	Pyramid.rotation.z -= 0.00021;
-	Pyramid.rotation.x -= 0.00021;
+
+	// Update Burn Material Time
+	Burn.material.uniforms.time.value = performance.now() / 21000;
 
 	Renderer.render(Scene, Camera);
 }
