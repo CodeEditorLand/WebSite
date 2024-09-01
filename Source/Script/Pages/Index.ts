@@ -72,7 +72,7 @@ function Fn() {
 	const Top = Math.sqrt(How / Side) * How;
 	const Extend = 1.021;
 
-	// White pyramid
+	// Inner
 	const Inner = new Mesh(
 		new ConeGeometry(Base, Top, Side),
 		new MeshPhysicalMaterial({
@@ -93,7 +93,7 @@ function Fn() {
 
 	Pyramid.add(Inner);
 
-	// Outline
+	// Outer
 	const Outer = new Mesh(
 		new ConeGeometry(Base * Extend, Top * Extend, Side),
 		new MeshPhysicalMaterial({
