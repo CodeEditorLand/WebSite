@@ -25,8 +25,6 @@ export const {
 	WebGLCubeRenderTarget,
 } = await import("three");
 
-// const Vision = document.getElementById("Vision");
-
 // @ts-ignore
 let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
 
@@ -129,8 +127,7 @@ function Fn() {
 		transparent: true,
 	});
 
-	Burn = new Mesh(new SphereGeometry(10, 32, 32), Material_Burn);
-
+	Burn = new Mesh(new SphereGeometry(21, 21, 21), Material_Burn);
 
 	Scene.add(Burn);
 
@@ -161,7 +158,7 @@ function Fn() {
 			clearcoatRoughness: 0.021,
 			reflectivity: 0.21,
 			envMap: Render_Burn.texture,
-			envMapIntensity: 0.21, // Adjust this value to control the reflection intensity
+			envMapIntensity: 0.21,
 		}),
 	);
 
@@ -197,19 +194,15 @@ function Fn() {
 	// Light
 	Scene.add(new AmbientLight(0xffffff, 1.21));
 
-	const See = new DirectionalLight(0xffffff, 0.8);
+	const See = new DirectionalLight(0xffffff, 1.21);
 
-	See.position.set(5, 5, 5);
+	See.position.set(0, -Base / How, Base * How);
 
 	See.castShadow = true;
 
-	See.shadow.mapSize.width = 1024;
+	See.shadow.camera.near = 0.1;
 
-	See.shadow.mapSize.height = 1024;
-
-	See.shadow.camera.near = 0.5;
-
-	See.shadow.camera.far = 50;
+	See.shadow.camera.far = 1000;
 
 	Scene.add(See);
 
@@ -226,12 +219,11 @@ function Fn() {
 		Loader.dispose();
 
 		Positon?.classList.add("Visible");
-		// Vision?.classList.add("Visible");
 	});
 
 	// Movement
-	Camera.position.y = -Base / How;
-	Camera.position.z = Base * How;
+	Camera.position.set(0, -Base / How, Base * How);
+	Burn.position.set(0, -Base / How, Base * How);
 
 	Move();
 }
@@ -243,10 +235,8 @@ function Move() {
 	Pyramid.rotation.y -= 0.00021;
 	Pyramid.rotation.z -= 0.00021;
 
-	// Update Burn Material Time
 	Burn.material.uniforms.time.value = performance.now() / 21000;
 
-	// Render burn effect to cube camera
 	Camera_Burn.position.copy(Burn.position);
 	Camera_Burn.update(Renderer, Scene);
 
