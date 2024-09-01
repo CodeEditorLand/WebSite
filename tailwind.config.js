@@ -27,7 +27,11 @@ export default {
 						},
 					},
 				},
-			}
+			},
+			colors: {
+				backgroundLight: "var(--background-light)",
+				backgroundDark: "var(--background-dark)",
+			},
 		},
 	},
 

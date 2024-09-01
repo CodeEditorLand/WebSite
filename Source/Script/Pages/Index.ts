@@ -1,6 +1,5 @@
 export const {
 	PointLight,
-	Color,
 	Scene: _Scene,
 	PerspectiveCamera,
 	WebGLRenderer,
@@ -22,6 +21,7 @@ export const {
 	FloatType,
 	CubeCamera,
 	WebGLCubeRenderTarget,
+	Color,
 } = await import("three");
 export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
 
@@ -31,11 +31,13 @@ let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
 function Fn() {
 	Scene = new _Scene();
 
+	Scene.background = new Color(0xffffff);
+
 	Camera = new PerspectiveCamera(
 		21,
 		window.innerWidth / window.innerHeight,
-		0.1,
-		1000,
+		0.0021,
+		2100,
 	);
 
 	// Renderer
@@ -136,7 +138,7 @@ function Fn() {
 		type: FloatType,
 	});
 
-	Camera_Burn = new CubeCamera(0.1, 1000, Render_Burn);
+	Camera_Burn = new CubeCamera(0.0021, 2100, Render_Burn);
 
 	// Pyramid
 	Pyramid = new Group();
@@ -152,13 +154,13 @@ function Fn() {
 		new ConeGeometry(Base, Top, Side),
 		new MeshPhysicalMaterial({
 			color: 0xffffff,
-			metalness: 0.021,
-			roughness: 0.021,
-			clearcoat: 0.021,
-			clearcoatRoughness: 0.021,
-			reflectivity: 0.21,
+			metalness: 0.0021,
+			roughness: 0.0021,
+			clearcoat: 0.0021,
+			clearcoatRoughness: 0.0021,
+			reflectivity: 0.0021,
 			envMap: Render_Burn.texture,
-			envMapIntensity: 0.21,
+			envMapIntensity: 0.0021,
 		}),
 	);
 
@@ -200,7 +202,7 @@ function Fn() {
 
 	See.castShadow = true;
 
-	See.shadow.camera.near = 0.1;
+	See.shadow.camera.near = 0.0021;
 
 	See.shadow.camera.far = 1000;
 
@@ -228,21 +230,8 @@ function Fn() {
 	Move();
 }
 
-let fov = 21;
-const minFOV = 21;
-const maxFOV = 80;
-let hueShift = 0;
-
 function Move() {
 	requestAnimationFrame(Move);
-
-	fov =
-		minFOV +
-		((Math.sin(performance.now() * 0.0000021) + 1) / 2) * (maxFOV - minFOV);
-
-	Camera.fov = fov;
-
-	Camera.updateProjectionMatrix();
 
 	Pyramid.rotation.x -= 0.00021;
 	Pyramid.rotation.y -= 0.00021;
@@ -252,12 +241,6 @@ function Move() {
 
 	Camera_Burn.position.copy(Burn.position);
 	Camera_Burn.update(Renderer, Scene);
-
-	Scene.background = new Color().setHSL(
-		((Math.sin(performance.now() * 0.00021) + 1) / 2) * 0.21,
-		0.00021,
-		0.00021,
-	);
 
 	Renderer.render(Scene, Camera);
 }

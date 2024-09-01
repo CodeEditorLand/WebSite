@@ -8,22 +8,35 @@ body {
 }
 
 body {
-	@apply flex flex-grow flex-col bg-black tabular-nums text-white antialiased sm:subpixel-antialiased;
+	@apply flex flex-grow flex-col bg-white tabular-nums text-black antialiased sm:subpixel-antialiased dark:bg-black dark:text-white;
 
 	font-variant-ligatures: no-common-ligatures;
 
-	--swup-overlay-theme-color: black;
+	--swup-overlay-theme-color: white;
 	--swup-overlay-theme-duration: 0.21s;
 	--swup-overlay-theme-delay: 0s;
 	--swup-overlay-theme-scale: 0.21;
 	--swup-overlay-theme-skew: 0deg;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+		--swup-overlay-theme-color: black;
+	}
+}
+
 *::selection,
 ::selection {
 	text-shadow: none;
 
-	@apply bg-amber-400 text-white;
+	@apply bg-amber-400 text-black;
+}
+
+@media (prefers-color-scheme: dark) {
+	*::selection,
+	::selection {
+		@apply bg-orange-400 text-white;
+	}
 }
 
 img {
