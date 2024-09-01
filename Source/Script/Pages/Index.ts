@@ -18,12 +18,17 @@ export const {
 	SphereGeometry,
 	ShaderMaterial,
 	DoubleSide,
+	WebGLRenderTarget,
+	RGBAFormat,
+	FloatType,
+	CubeCamera,
+	WebGLCubeRenderTarget,
 } = await import("three");
 
-const Vision = document.getElementById("Vision");
+// const Vision = document.getElementById("Vision");
 
 // @ts-ignore
-let Scene, Camera, Renderer, Pyramid, Burn;
+let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
 
 function Fn() {
 	Scene = new _Scene();
@@ -58,8 +63,7 @@ function Fn() {
 	Positon?.appendChild(Renderer.domElement);
 
 	// Burn
-
-	const BurnMaterial = new ShaderMaterial({
+	const Material_Burn = new ShaderMaterial({
 		uniforms: {
 			time: { value: 0.0 },
 		},
@@ -125,9 +129,17 @@ function Fn() {
 		transparent: true,
 	});
 
-	Burn = new Mesh(new SphereGeometry(10, 32, 32), BurnMaterial);
+	Burn = new Mesh(new SphereGeometry(10, 32, 32), Material_Burn);
+
 
 	Scene.add(Burn);
+
+	const Render_Burn = new WebGLCubeRenderTarget(512, {
+		format: RGBAFormat,
+		type: FloatType,
+	});
+
+	Camera_Burn = new CubeCamera(0.1, 1000, Render_Burn);
 
 	// Pyramid
 	Pyramid = new Group();
@@ -147,7 +159,9 @@ function Fn() {
 			roughness: 0.021,
 			clearcoat: 0.021,
 			clearcoatRoughness: 0.021,
-			reflectivity: 1,
+			reflectivity: 0.21,
+			envMap: Render_Burn.texture,
+			envMapIntensity: 0.21, // Adjust this value to control the reflection intensity
 		}),
 	);
 
@@ -212,7 +226,7 @@ function Fn() {
 		Loader.dispose();
 
 		Positon?.classList.add("Visible");
-		Vision?.classList.add("Visible");
+		// Vision?.classList.add("Visible");
 	});
 
 	// Movement
@@ -231,6 +245,10 @@ function Move() {
 
 	// Update Burn Material Time
 	Burn.material.uniforms.time.value = performance.now() / 21000;
+
+	// Render burn effect to cube camera
+	Camera_Burn.position.copy(Burn.position);
+	Camera_Burn.update(Renderer, Scene);
 
 	Renderer.render(Scene, Camera);
 }
