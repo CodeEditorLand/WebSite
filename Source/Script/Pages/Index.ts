@@ -75,23 +75,20 @@ function Fn() {
 		  varying vec3 vNormal;
 	  
 		  void main() {
+    		vec2 modifiedUv = vec2(vUv.x, 1.0 - vUv.y); 
 			vec2 center = vec2(0.5);
-			float distanceToCenter = distance(vUv, center);
+			float distanceToCenter = distance(modifiedUv, center);
 	  
-			// Hot side colors
 			vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.8);
 			vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.8);
-			vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.9);
+			vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.21);
 	  
-			// Cold side colors
 			vec4 coldColor1 = vec4(0.0, 100.0 / 255.0, 255.0 / 255.0, 0.8);
 			vec4 coldColor2 = vec4(0.0, 0.0, 139.0 / 255.0, 0.8);
-			vec4 coldColor3 = vec4(0.0, 0.0, 0.0, 0.9);
+			vec4 coldColor3 = vec4(0.0, 0.0, 0.0, 0.21);
 	  
-			// Use normal to determine hot or cold side
 			float hotColdMix = (vNormal.x + 1.0) / 2.0;
 	  
-			// Blend colors based on distance and hot/cold mix
 			vec4 hotGradient = mix(hotColor1, hotColor2, smoothstep(0.0, 0.21, distanceToCenter));
 			hotGradient = mix(hotGradient, hotColor3, smoothstep(0.21, 1.0, distanceToCenter));
 	  
@@ -100,10 +97,10 @@ function Fn() {
 	  
 			vec4 radialGradient = mix(coldGradient, hotGradient, hotColdMix);
 	  
-			// Repeating radial gradient (flames/ice)
 			float effectSize = 0.021;
 			float effectIntensity = 0.021;
-			float effectDistance = mod(distanceToCenter * 21.0 + time * 2.1, effectSize * 2.1) - effectSize;
+    		float effectDistance = mod(modifiedUv.y + time * 2.1, effectSize * 2.1) - effectSize; 
+
 			effectIntensity *= smoothstep(effectSize, 0.0, abs(effectDistance));
 	  
 			vec4 hotEffectColor = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0, effectIntensity);
@@ -112,7 +109,6 @@ function Fn() {
 	  
 			radialGradient = mix(radialGradient, effectColor, effectIntensity);
 	  
-			// Apply opacity animation
 			float opacity = mix(1.0, 0.21, sin(time * 2.1) * 0.21 + 0.21);
 			gl_FragColor = vec4(radialGradient.rgb, opacity);
 		  }
@@ -153,9 +149,7 @@ function Fn() {
 			envMap: Render_Burn.texture,
 			envMapIntensity: 0.0021,
 		}),
-	);
-
-	Inner.position.y = -Base / 2;
+	).translateY(-Base / 2);
 
 	Inner.castShadow = true;
 
@@ -183,8 +177,10 @@ function Fn() {
 	Scene.add(See);
 
 	// Movement
-	Camera.position.set(0, -Base / How, Base * How);
-	Burn.position.set(0, -Base / How, Base * How);
+	Camera.position.set(-Base / How, -Base / How, Base * How);
+
+	Burn.position.set(-Base / How, -Base / How, Base * How);
+
 	Positon?.classList.add("Visible");
 
 	Move();
