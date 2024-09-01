@@ -11,7 +11,7 @@ html {
 
 #Vision,
 #Position {
-	@apply opacity-0 transition-all duration-200;
+	@apply opacity-0 transition-all duration-200 ease-Ease;
 
 	&.Visible {
 		@apply opacity-100;

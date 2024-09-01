@@ -14,7 +14,7 @@ export default {
 		},
 		extend: {
 			transitionTimingFunction: {
-				apple: "cubic-bezier(0.21, 0.1, 0.21, 1)",
+				Ease: "cubic-bezier(0.21, 0.1, 0.21, 1)",
 			},
 			fontFamily: {
 				sans: ["Albert Sans", ...fontFamily.sans],
@@ -27,11 +27,7 @@ export default {
 						},
 					},
 				},
-			},
-			colors: {
-				backgroundLight: "var(--background-light)",
-				backgroundDark: "var(--background-dark)",
-			},
+			}
 		},
 	},
 
