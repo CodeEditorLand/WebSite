@@ -1,5 +1,4 @@
 export const {
-	PointLight,
 	Scene: _Scene,
 	PerspectiveCamera,
 	WebGLRenderer,
@@ -7,31 +6,24 @@ export const {
 	Mesh,
 	ConeGeometry,
 	MeshPhysicalMaterial,
-	BackSide,
 	PCFSoftShadowMap,
 	AmbientLight,
 	DirectionalLight,
 	ACESFilmicToneMapping,
-	PMREMGenerator,
 	SphereGeometry,
 	ShaderMaterial,
 	DoubleSide,
-	WebGLRenderTarget,
 	RGBAFormat,
 	FloatType,
 	CubeCamera,
 	WebGLCubeRenderTarget,
-	Color,
 } = await import("three");
-export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
 
 // @ts-ignore
 let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
 
 function Fn() {
 	Scene = new _Scene();
-
-	Scene.background = new Color(0xffffff);
 
 	Camera = new PerspectiveCamera(
 		21,
@@ -147,7 +139,6 @@ function Fn() {
 	const Side = 3;
 	const Base = (Math.sqrt(Side) / Side) * How;
 	const Top = Math.sqrt(How / Side) * How;
-	const Extend = 1.021;
 
 	// Inner
 	const Inner = new Mesh(
@@ -172,25 +163,6 @@ function Fn() {
 
 	Pyramid.add(Inner);
 
-	// Outer
-	const Outer = new Mesh(
-		new ConeGeometry(Base * Extend, Top * Extend, Side),
-		new MeshPhysicalMaterial({
-			color: 0x000000,
-			side: BackSide,
-			metalness: 0.021,
-			roughness: 0.021,
-		}),
-	);
-
-	Outer.position.y = -Base / 2;
-
-	Outer.castShadow = true;
-
-	Outer.receiveShadow = true;
-
-	Pyramid.add(Outer);
-
 	Scene.add(Pyramid);
 
 	// Light
@@ -204,28 +176,16 @@ function Fn() {
 
 	See.shadow.camera.near = 0.0021;
 
-	See.shadow.camera.far = 1000;
+	See.receiveShadow = true;
+
+	See.shadow.camera.far = 2100;
 
 	Scene.add(See);
-
-	// Loader
-	const Loader = new PMREMGenerator(Renderer);
-
-	new RGBELoader().setPath("/HDR/").load("Kiara.hdr", function (Texture) {
-		const Environment = Loader.fromEquirectangular(Texture).texture;
-
-		Scene.environment = Environment;
-
-		Texture.dispose();
-
-		Loader.dispose();
-
-		Positon?.classList.add("Visible");
-	});
 
 	// Movement
 	Camera.position.set(0, -Base / How, Base * How);
 	Burn.position.set(0, -Base / How, Base * How);
+	Positon?.classList.add("Visible");
 
 	Move();
 }
