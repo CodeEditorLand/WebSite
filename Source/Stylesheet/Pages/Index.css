@@ -1,0 +1,19 @@
+body,
+html {
+	@apply m-0 h-full overflow-hidden;
+}
+
+#Burn,
+#Vision,
+#Position {
+	@apply fixed -z-10 h-full w-full;
+}
+
+#Vision,
+#Position {
+	@apply opacity-0 transition-all duration-200;
+
+	&.Visible {
+		@apply opacity-100;
+	}
+}

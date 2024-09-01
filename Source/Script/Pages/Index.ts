@@ -1,4 +1,7 @@
+export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
+
 export const {
+	PointLight,
 	Scene: _Scene,
 	PerspectiveCamera,
 	WebGLRenderer,
@@ -10,9 +13,12 @@ export const {
 	PCFSoftShadowMap,
 	AmbientLight,
 	DirectionalLight,
+	ACESFilmicToneMapping,
+	PMREMGenerator,
 } = await import("three");
 
 const Burn = document.getElementById("Burn");
+const Vision = document.getElementById("Vision");
 
 Burn.style.background = `
 	radial-gradient(circle at center, rgba(255,69,0,0.8) 0%, rgba(139,0,0,0.8) 50%, rgba(0,0,0,0.9) 100%),
@@ -62,7 +68,11 @@ function Fn() {
 
 	Renderer.shadowMap.type = PCFSoftShadowMap;
 
-	document.getElementById("Position")?.appendChild(Renderer.domElement);
+	Renderer.toneMapping = ACESFilmicToneMapping;
+
+	const Positon = document.getElementById("Position");
+
+	Positon?.appendChild(Renderer.domElement);
 
 	Pyramid = new Group();
 
@@ -114,23 +124,41 @@ function Fn() {
 
 	Scene.add(Pyramid);
 
-	Scene.add(new AmbientLight(0xffffff, 2.1));
+	Scene.add(new AmbientLight(0xffffff, 1.21));
 
-	const See = new DirectionalLight(0xffffff, 1);
+	const See = new DirectionalLight(0xffffff, 0.8);
 
 	See.position.set(5, 5, 5);
 
 	See.castShadow = true;
 
-	See.shadow.mapSize.width = 2048;
+	See.shadow.mapSize.width = 1024;
 
-	See.shadow.mapSize.height = 2048;
+	See.shadow.mapSize.height = 1024;
 
 	See.shadow.camera.near = 0.5;
 
 	See.shadow.camera.far = 50;
 
 	Scene.add(See);
+
+	const envMapLoader = new PMREMGenerator(Renderer);
+
+	new RGBELoader().setPath("/HDR/").load("Kiara.hdr", function (Texture) {
+		const Environment = envMapLoader.fromEquirectangular(Texture).texture;
+
+		Scene.environment = Environment;
+
+		Inner.material.envMap = Environment;
+		Outer.material.envMap = Environment;
+
+		Texture.dispose();
+
+		envMapLoader.dispose();
+
+		Positon?.classList.add("Visible");
+		Vision?.classList.add("Visible");
+	});
 
 	Camera.position.z = 5;
 
