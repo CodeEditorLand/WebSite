@@ -1,5 +1,3 @@
-export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
-
 export const {
 	PointLight,
 	Scene: _Scene,
@@ -24,6 +22,8 @@ export const {
 	CubeCamera,
 	WebGLCubeRenderTarget,
 } = await import("three");
+
+export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
 
 // @ts-ignore
 let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
