@@ -5,9 +5,7 @@ export const {
 	Group,
 	Mesh,
 	ConeGeometry,
-	MeshBasicMaterial,
-	MeshPhongMaterial,
-	MeshStandardMaterial,
+	MeshPhysicalMaterial,
 	BackSide,
 	PCFSoftShadowMap,
 	AmbientLight,
@@ -77,13 +75,13 @@ function Fn() {
 	// White pyramid
 	const Inner = new Mesh(
 		new ConeGeometry(Base, Top, Side),
-		new MeshStandardMaterial({
+		new MeshPhysicalMaterial({
 			color: 0xffffff,
-			// shininess: 100,
-			emissive: 0x222222,
-			metalness: 0.1,
-			roughness: 0.2,
-			// specular: 0x111111,
+			metalness: 0.021,
+			roughness: 0.021,
+			clearcoat: 0.021,
+			clearcoatRoughness: 0.021,
+			reflectivity: 1,
 		}),
 	);
 
@@ -98,11 +96,11 @@ function Fn() {
 	// Outline
 	const Outer = new Mesh(
 		new ConeGeometry(Base * Extend, Top * Extend, Side),
-		new MeshPhongMaterial({
+		new MeshPhysicalMaterial({
 			color: 0x000000,
 			side: BackSide,
-			shininess: 100,
-			specular: 0x111111,
+			metalness: 0.021,
+			roughness: 0.021,
 		}),
 	);
 
@@ -123,6 +121,14 @@ function Fn() {
 	See.position.set(5, 5, 5);
 
 	See.castShadow = true;
+
+	See.shadow.mapSize.width = 2048;
+
+	See.shadow.mapSize.height = 2048;
+
+	See.shadow.camera.near = 0.5;
+
+	See.shadow.camera.far = 50;
 
 	Scene.add(See);
 
