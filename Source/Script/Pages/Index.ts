@@ -1,5 +1,6 @@
 export const {
 	PointLight,
+	Color,
 	Scene: _Scene,
 	PerspectiveCamera,
 	WebGLRenderer,
@@ -22,7 +23,6 @@ export const {
 	CubeCamera,
 	WebGLCubeRenderTarget,
 } = await import("three");
-
 export const { RGBELoader } = await import("@Script/Pages/Index/Loader.js");
 
 // @ts-ignore
@@ -32,7 +32,7 @@ function Fn() {
 	Scene = new _Scene();
 
 	Camera = new PerspectiveCamera(
-		75,
+		21,
 		window.innerWidth / window.innerHeight,
 		0.1,
 		1000,
@@ -228,8 +228,21 @@ function Fn() {
 	Move();
 }
 
+let fov = 21;
+const minFOV = 21;
+const maxFOV = 80;
+let hueShift = 0;
+
 function Move() {
 	requestAnimationFrame(Move);
+
+	fov =
+		minFOV +
+		((Math.sin(performance.now() * 0.0000021) + 1) / 2) * (maxFOV - minFOV);
+
+	Camera.fov = fov;
+
+	Camera.updateProjectionMatrix();
 
 	Pyramid.rotation.x -= 0.00021;
 	Pyramid.rotation.y -= 0.00021;
@@ -239,6 +252,12 @@ function Move() {
 
 	Camera_Burn.position.copy(Burn.position);
 	Camera_Burn.update(Renderer, Scene);
+
+	Scene.background = new Color().setHSL(
+		((Math.sin(performance.now() * 0.00021) + 1) / 2) * 0.21,
+		0.00021,
+		0.00021,
+	);
 
 	Renderer.render(Scene, Camera);
 }
