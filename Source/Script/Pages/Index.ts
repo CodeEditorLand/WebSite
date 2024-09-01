@@ -160,7 +160,8 @@ function Fn() {
 		Vision?.classList.add("Visible");
 	});
 
-	Camera.position.z = 5;
+	Camera.position.y = -Base / 2;
+	Camera.position.z = Base * 2;
 
 	Move();
 }
