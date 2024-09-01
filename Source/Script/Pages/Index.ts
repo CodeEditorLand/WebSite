@@ -79,12 +79,12 @@ function Fn() {
 			vec2 center = vec2(0.5);
 			float distanceToCenter = distance(modifiedUv, center);
 	  
-			vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.8);
-			vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.8);
+			vec4 hotColor1 = vec4(255.0 / 255.0, 69.0 / 255.0, 0.0 / 255.0, 0.21);
+			vec4 hotColor2 = vec4(139.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0, 0.21);
 			vec4 hotColor3 = vec4(0.0, 0.0, 0.0, 0.21);
 	  
-			vec4 coldColor1 = vec4(0.0, 100.0 / 255.0, 255.0 / 255.0, 0.8);
-			vec4 coldColor2 = vec4(0.0, 0.0, 139.0 / 255.0, 0.8);
+			vec4 coldColor1 = vec4(0.0, 100.0 / 255.0, 255.0 / 255.0, 0.21);
+			vec4 coldColor2 = vec4(0.0, 0.0, 139.0 / 255.0, 0.21);
 			vec4 coldColor3 = vec4(0.0, 0.0, 0.0, 0.21);
 	  
 			float hotColdMix = (vNormal.x + 1.0) / 2.0;
@@ -99,7 +99,7 @@ function Fn() {
 	  
 			float effectSize = 0.021;
 			float effectIntensity = 0.021;
-    		float effectDistance = mod(modifiedUv.y + time * 2.1, effectSize * 2.1) - effectSize; 
+    		float effectDistance = mod(modifiedUv.y + time, effectSize) - effectSize; 
 
 			effectIntensity *= smoothstep(effectSize, 0.0, abs(effectDistance));
 	  
@@ -109,7 +109,7 @@ function Fn() {
 	  
 			radialGradient = mix(radialGradient, effectColor, effectIntensity);
 	  
-			float opacity = mix(1.0, 0.21, sin(time * 2.1) * 0.21 + 0.21);
+			float opacity = mix(1.0, 0.21, sin(time) * 0.00021 + 0.21);
 			gl_FragColor = vec4(radialGradient.rgb, opacity);
 		  }
 		`,
