@@ -28,10 +28,8 @@ let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
 function Fn() {
 	Scene = new _Scene();
 
-	const Search = new URLSearchParams(document.location.search).get("fov");
-
 	Camera = new PerspectiveCamera(
-		Search ? Number(Search) : 2.1,
+		2.1,
 		window.innerWidth / window.innerHeight,
 		0.0021,
 		2100,
