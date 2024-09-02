@@ -1,4 +1,4 @@
-import { _ as b } from "./preload-helper.BiBI96sQ.js";
+import { _ as F } from "./preload-helper.BiBI96sQ.js";
 const P = `uniform float time;
 uniform float gradientAngle;
 varying vec2 vUv;
@@ -63,10 +63,10 @@ void main() {
 		Scene: R,
 		PerspectiveCamera: T,
 		WebGLRenderer: E,
-		Group: A,
-		Mesh: p,
-		ConeGeometry: L,
-		MeshPhysicalMaterial: U,
+		Group: L,
+		Mesh: w,
+		ConeGeometry: U,
+		MeshPhysicalMaterial: A,
 		PCFSoftShadowMap: z,
 		AmbientLight: B,
 		DirectionalLight: D,
@@ -74,22 +74,22 @@ void main() {
 		SphereGeometry: I,
 		ShaderMaterial: H,
 		DoubleSide: V,
-		RGBAFormat: q,
-		FloatType: N,
+		RGBAFormat: N,
+		FloatType: q,
 		CubeCamera: j,
 		WebGLCubeRenderTarget: O,
-	} = await b(async () => {
+	} = await F(async () => {
 		const {
 			Scene: f,
-			PerspectiveCamera: m,
-			WebGLRenderer: l,
-			Group: e,
-			Mesh: a,
-			ConeGeometry: t,
-			MeshPhysicalMaterial: v,
-			PCFSoftShadowMap: r,
-			AmbientLight: o,
-			DirectionalLight: u,
+			PerspectiveCamera: l,
+			WebGLRenderer: v,
+			Group: s,
+			Mesh: e,
+			ConeGeometry: a,
+			MeshPhysicalMaterial: t,
+			PCFSoftShadowMap: h,
+			AmbientLight: r,
+			DirectionalLight: o,
 			ACESFilmicToneMapping: C,
 			SphereGeometry: g,
 			ShaderMaterial: S,
@@ -97,19 +97,19 @@ void main() {
 			RGBAFormat: M,
 			FloatType: G,
 			CubeCamera: x,
-			WebGLCubeRenderTarget: F,
+			WebGLCubeRenderTarget: b,
 		} = await import("./three.module.wf464D1I.js");
 		return {
 			Scene: f,
-			PerspectiveCamera: m,
-			WebGLRenderer: l,
-			Group: e,
-			Mesh: a,
-			ConeGeometry: t,
-			MeshPhysicalMaterial: v,
-			PCFSoftShadowMap: r,
-			AmbientLight: o,
-			DirectionalLight: u,
+			PerspectiveCamera: l,
+			WebGLRenderer: v,
+			Group: s,
+			Mesh: e,
+			ConeGeometry: a,
+			MeshPhysicalMaterial: t,
+			PCFSoftShadowMap: h,
+			AmbientLight: r,
+			DirectionalLight: o,
 			ACESFilmicToneMapping: C,
 			SphereGeometry: g,
 			ShaderMaterial: S,
@@ -117,13 +117,19 @@ void main() {
 			RGBAFormat: M,
 			FloatType: G,
 			CubeCamera: x,
-			WebGLCubeRenderTarget: F,
+			WebGLCubeRenderTarget: b,
 		};
 	}, []);
-let i, d, n, s, c, h;
+let i, d, n, m, c, p;
 function Y() {
-	(i = new R()),
-		(d = new T(2.1, window.innerWidth / window.innerHeight, 0.0021, 2100)),
+	i = new R();
+	const f = new URLSearchParams(document.location.search).get("fov");
+	(d = new T(
+		f ? Number(f) : 2.1,
+		window.innerWidth / window.innerHeight,
+		0.0021,
+		2100,
+	)),
 		(n = new E({
 			antialias: !0,
 			alpha: !0,
@@ -135,39 +141,39 @@ function Y() {
 		(n.shadowMap.enabled = !0),
 		(n.shadowMap.type = z),
 		(n.toneMapping = W);
-	const f = document.getElementById("Position");
-	f?.appendChild(n.domElement);
-	const m = new H({
+	const l = document.getElementById("Position");
+	l?.appendChild(n.domElement);
+	const v = new H({
 		uniforms: { time: { value: 0 } },
 		vertexShader: _,
 		fragmentShader: P,
 		side: V,
 		transparent: !0,
 	});
-	(c = new p(new I(21, 21, 21), m)), i.add(c);
-	const l = new O(512, { format: q, type: N });
-	(h = new j(2.1, 2100, l)), (s = new A());
+	(c = new w(new I(21, 21, 21), v)), i.add(c);
+	const s = new O(512, { format: N, type: q });
+	(p = new j(2.1, 2100, s)), (m = new L());
 	const e = 2.1,
 		a = 3,
 		t = (Math.sqrt(a) / a) * e,
-		v = Math.sqrt(e / a) * e,
-		r = new p(
-			new L(t, v, a),
-			new U({
+		h = Math.sqrt(e / a) * e,
+		r = new w(
+			new U(t, h, a),
+			new A({
 				color: 16777215,
 				metalness: 0.0021,
 				roughness: 0.0021,
 				clearcoat: 0.0021,
 				clearcoatRoughness: 0.0021,
 				reflectivity: 0.0021,
-				envMap: l.texture,
+				envMap: s.texture,
 				envMapIntensity: 0.0021,
 			}),
 		).translateY(-t / e);
 	(r.castShadow = !0),
 		(r.receiveShadow = !0),
-		s.add(r),
-		i.add(s),
+		m.add(r),
+		i.add(m),
 		i.add(new B(16777215, 1.21));
 	const o = new D(16777215, 1.21);
 	o.position.set(0, -t / e, t * e),
@@ -178,15 +184,15 @@ function Y() {
 		i.add(o),
 		d.position.set(-t / e, -t / e, t * e),
 		c.position.set(-t / e, -t / e, t * e),
-		f?.classList.add("Visible"),
-		w();
+		l?.classList.add("Visible"),
+		u();
 }
-function w() {
-	requestAnimationFrame(w),
-		(s.rotation.x -= 21e-5),
+function u() {
+	requestAnimationFrame(u),
+		(m.rotation.x -= 21e-5),
 		(c.material.uniforms.time.value = performance.now() / 1021e3),
-		h.position.copy(c.position),
-		h.update(n, i),
+		p.position.copy(c.position),
+		p.update(n, i),
 		n.render(i, d);
 }
 Y();
@@ -199,4 +205,4 @@ window.addEventListener(
 	},
 	!1,
 );
-//# sourceMappingURL=index.astro_astro_type_script_index_0_lang.Tx3mwd45.js.map
+//# sourceMappingURL=index.astro_astro_type_script_index_0_lang.CegZzA8i.js.map
