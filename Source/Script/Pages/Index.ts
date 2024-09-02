@@ -22,13 +22,12 @@ export const {
 	WebGLCubeRenderTarget,
 } = await import("three");
 
-// @ts-ignore
-let Scene, Camera, Renderer, Pyramid, Burn, Camera_Burn;
+let P6, P5, P4, P3, P2, P1;
 
 function Fn() {
-	Scene = new _Scene();
+	P6 = new _Scene();
 
-	Camera = new PerspectiveCamera(
+	P5 = new PerspectiveCamera(
 		2.1,
 		window.innerWidth / window.innerHeight,
 		0.0021,
@@ -36,26 +35,26 @@ function Fn() {
 	);
 
 	// Renderer
-	Renderer = new WebGLRenderer({
+	P4 = new WebGLRenderer({
 		antialias: true,
 		alpha: true,
 		precision: "highp",
 		powerPreference: "high-performance",
 	});
 
-	Renderer.setPixelRatio(window.devicePixelRatio);
+	P4.setPixelRatio(window.devicePixelRatio);
 
-	Renderer.setSize(window.innerWidth, window.innerHeight);
+	P4.setSize(window.innerWidth, window.innerHeight);
 
-	Renderer.shadowMap.enabled = true;
+	P4.shadowMap.enabled = true;
 
-	Renderer.shadowMap.type = PCFSoftShadowMap;
+	P4.shadowMap.type = PCFSoftShadowMap;
 
-	Renderer.toneMapping = ACESFilmicToneMapping;
+	P4.toneMapping = ACESFilmicToneMapping;
 
 	const Positon = document.getElementById("Position");
 
-	Positon?.appendChild(Renderer.domElement);
+	Positon?.appendChild(P4.domElement);
 
 	// Burn
 	const Material_Burn = new ShaderMaterial({
@@ -68,19 +67,19 @@ function Fn() {
 		transparent: true,
 	});
 
-	Burn = new Mesh(new SphereGeometry(21, 21, 21), Material_Burn);
+	P2 = new Mesh(new SphereGeometry(21, 21, 21), Material_Burn);
 
-	Scene.add(Burn);
+	P6.add(P2);
 
 	const Render_Burn = new WebGLCubeRenderTarget(512, {
 		format: RGBAFormat,
 		type: FloatType,
 	});
 
-	Camera_Burn = new CubeCamera(2.1, 2100, Render_Burn);
+	P1 = new CubeCamera(2.1, 2100, Render_Burn);
 
 	// Pyramid
-	Pyramid = new Group();
+	P3 = new Group();
 
 	const How = 2.1;
 	const Side = 3;
@@ -106,12 +105,12 @@ function Fn() {
 
 	Inner.receiveShadow = true;
 
-	Pyramid.add(Inner);
+	P3.add(Inner);
 
-	Scene.add(Pyramid);
+	P6.add(P3);
 
 	// Light
-	Scene.add(new AmbientLight(0xffffff, 1.21));
+	P6.add(new AmbientLight(0xffffff, 1.21));
 
 	const See = new DirectionalLight(0xffffff, 1.21);
 
@@ -125,12 +124,12 @@ function Fn() {
 
 	See.shadow.camera.far = 2100;
 
-	Scene.add(See);
+	P6.add(See);
 
 	// Movement
-	Camera.position.set(-Base / How, -Base / How, Base * How);
+	P5.position.set(-Base / How, -Base / How, Base * How);
 
-	Burn.position.set(-Base / How, -Base / How, Base * How);
+	P2.position.set(-Base / How, -Base / How, Base * How);
 
 	Positon?.classList.add("Visible");
 
@@ -140,14 +139,14 @@ function Fn() {
 function Move() {
 	requestAnimationFrame(Move);
 
-	Pyramid.rotation.x -= 0.00021;
+	P3.rotation.x -= 0.00021;
 
-	Burn.material.uniforms.time.value = performance.now() / 1021000;
+	P2.material.uniforms.time.value = performance.now() / 1021000;
 
-	Camera_Burn.position.copy(Burn.position);
-	Camera_Burn.update(Renderer, Scene);
+	P1.position.copy(P2.position);
+	P1.update(P4, P6);
 
-	Renderer.render(Scene, Camera);
+	P4.render(P6, P5);
 }
 
 Fn();
@@ -155,11 +154,11 @@ Fn();
 window.addEventListener(
 	"resize",
 	function () {
-		Camera.aspect = window.innerWidth / window.innerHeight;
+		P5.aspect = window.innerWidth / window.innerHeight;
 
-		Camera.updateProjectionMatrix();
+		P5.updateProjectionMatrix();
 
-		Renderer.setSize(window.innerWidth, window.innerHeight);
+		P4.setSize(window.innerWidth, window.innerHeight);
 	},
 	false,
 );

@@ -1,15 +1,15 @@
 ---
 import "@Stylesheet/Base.css";
 
+import { Head } from "astro-capo";
+import { ViewTransitions } from "astro:transitions";
+
 const { Title = "Land", Description = "Code Editor" } = Astro.props;
 
 interface Props {
 	Title?: string;
 	Description?: string;
 }
-
-import { Head } from "astro-capo";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -58,6 +58,12 @@ import { ViewTransitions } from "astro:transitions";
 		<ViewTransitions />
 	</Head>
 	<body>
+		<div id="Position"></div>
+
+		<script>
+			import "@Script/Pages/Index.js";
+		</script>
+
 		<div class="grow">
 			<slot />
 		</div>
