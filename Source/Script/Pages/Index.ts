@@ -1,31 +1,31 @@
-import Fragment from "@Script/Pages/Index/Fragment.frag?raw";
-import Vertex from "@Script/Pages/Index/Vertex.glsl?raw";
+import S1 from "@Script/Pages/Index/S1.frag?raw";
+import S2 from "@Script/Pages/Index/S2.glsl?raw";
 
 export const {
-	Scene: _Scene,
-	PerspectiveCamera,
-	WebGLRenderer,
+	ACESFilmicToneMapping,
+	AmbientLight,
+	ConeGeometry,
+	CubeCamera,
+	DirectionalLight,
+	DoubleSide,
+	FloatType,
 	Group,
 	Mesh,
-	ConeGeometry,
 	MeshPhysicalMaterial,
 	PCFSoftShadowMap,
-	AmbientLight,
-	DirectionalLight,
-	ACESFilmicToneMapping,
-	SphereGeometry,
-	ShaderMaterial,
-	DoubleSide,
+	PerspectiveCamera,
 	RGBAFormat,
-	FloatType,
-	CubeCamera,
+	Scene,
+	ShaderMaterial,
+	SphereGeometry,
 	WebGLCubeRenderTarget,
+	WebGLRenderer,
 } = await import("three");
 
 let P6, P5, P4, P3, P2, P1;
 
 function Fn() {
-	P6 = new _Scene();
+	P6 = new Scene();
 
 	P5 = new PerspectiveCamera(
 		2.1,
@@ -61,8 +61,8 @@ function Fn() {
 		uniforms: {
 			time: { value: 0.0 },
 		},
-		vertexShader: Vertex,
-		fragmentShader: Fragment,
+		vertexShader: S2,
+		fragmentShader: S1,
 		side: DoubleSide,
 		transparent: true,
 	});
