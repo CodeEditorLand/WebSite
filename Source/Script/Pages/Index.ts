@@ -1,41 +1,32 @@
-import S1 from "@Script/Pages/Index/S1.frag?raw";
-import S2 from "@Script/Pages/Index/S2.glsl?raw";
-
-export const {
-	ACESFilmicToneMapping,
-	AmbientLight,
-	ConeGeometry,
+import type {
 	CubeCamera,
-	DirectionalLight,
-	DoubleSide,
-	FloatType,
 	Group,
 	Mesh,
-	MeshPhysicalMaterial,
-	PCFSoftShadowMap,
 	PerspectiveCamera,
-	RGBAFormat,
 	Scene,
-	ShaderMaterial,
-	SphereGeometry,
-	WebGLCubeRenderTarget,
 	WebGLRenderer,
-} = await import("three");
+} from "three";
 
-let P6, P5, P4, P3, P2, P1;
+let P6: Scene,
+	P5: PerspectiveCamera,
+	P4: WebGLRenderer,
+	P3: Group,
+	P2: Mesh,
+	P1: CubeCamera;
 
-function Fn() {
-	P6 = new Scene();
+export const { Mesh: _P2 } = await import("three");
 
-	P5 = new PerspectiveCamera(
+const R1 = async () => {
+	P6 = new (await import("three")).Scene();
+
+	P5 = new (await import("three")).PerspectiveCamera(
 		2.1,
 		window.innerWidth / window.innerHeight,
 		0.0021,
 		2100,
 	);
 
-	// Renderer
-	P4 = new WebGLRenderer({
+	P4 = new (await import("three")).WebGLRenderer({
 		antialias: true,
 		alpha: true,
 		precision: "highp",
@@ -48,55 +39,53 @@ function Fn() {
 
 	P4.shadowMap.enabled = true;
 
-	P4.shadowMap.type = PCFSoftShadowMap;
+	P4.shadowMap.type = (await import("three")).PCFSoftShadowMap;
 
-	P4.toneMapping = ACESFilmicToneMapping;
+	P4.toneMapping = (await import("three")).ACESFilmicToneMapping;
 
 	const Positon = document.getElementById("Position");
 
 	Positon?.appendChild(P4.domElement);
 
-	// Burn
-	const Material_Burn = new ShaderMaterial({
+	const P7 = new (await import("three")).ShaderMaterial({
 		uniforms: {
 			time: { value: 0.0 },
 		},
-		vertexShader: S2,
-		fragmentShader: S1,
-		side: DoubleSide,
+		vertexShader: (await import("@Script/Pages/Index/S2.glsl?raw")).default,
+		fragmentShader: (await import("@Script/Pages/Index/S1.frag?raw"))
+			.default,
+		side: (await import("three")).DoubleSide,
 		transparent: true,
 	});
 
-	P2 = new Mesh(new SphereGeometry(21, 21, 21), Material_Burn);
+	P2 = new _P2(new (await import("three")).SphereGeometry(21, 21, 21), P7);
 
 	P6.add(P2);
 
-	const Render_Burn = new WebGLCubeRenderTarget(512, {
-		format: RGBAFormat,
-		type: FloatType,
+	const P8 = new (await import("three")).WebGLCubeRenderTarget(512, {
+		format: (await import("three")).RGBAFormat,
+		type: (await import("three")).FloatType,
 	});
 
-	P1 = new CubeCamera(2.1, 2100, Render_Burn);
+	P1 = new (await import("three")).CubeCamera(2.1, 2100, P8);
 
-	// Pyramid
-	P3 = new Group();
+	P3 = new (await import("three")).Group();
 
 	const How = 2.1;
 	const Side = 3;
 	const Base = (Math.sqrt(Side) / Side) * How;
 	const Top = Math.sqrt(How / Side) * How;
 
-	// Inner
-	const Inner = new Mesh(
-		new ConeGeometry(Base, Top, Side),
-		new MeshPhysicalMaterial({
+	const Inner = new _P2(
+		new (await import("three")).ConeGeometry(Base, Top, Side),
+		new (await import("three")).MeshPhysicalMaterial({
 			color: 0xffffff,
 			metalness: 0.0021,
 			roughness: 0.0021,
 			clearcoat: 0.0021,
 			clearcoatRoughness: 0.0021,
 			reflectivity: 0.0021,
-			envMap: Render_Burn.texture,
+			envMap: P8.texture,
 			envMapIntensity: 0.0021,
 		}),
 	).translateY(-Base / How);
@@ -109,10 +98,9 @@ function Fn() {
 
 	P6.add(P3);
 
-	// Light
-	P6.add(new AmbientLight(0xffffff, 1.21));
+	P6.add(new (await import("three")).AmbientLight(0xffffff, 1.21));
 
-	const See = new DirectionalLight(0xffffff, 1.21);
+	const See = new (await import("three")).DirectionalLight(0xffffff, 1.21);
 
 	See.position.set(0, -Base / How, Base * How);
 
@@ -126,7 +114,6 @@ function Fn() {
 
 	P6.add(See);
 
-	// Movement
 	P5.position.set(-Base / How, -Base / How, Base * How);
 
 	P2.position.set(-Base / How, -Base / How, Base * How);
@@ -134,13 +121,14 @@ function Fn() {
 	Positon?.classList.add("Visible");
 
 	Move();
-}
+};
 
 function Move() {
 	requestAnimationFrame(Move);
 
 	P3.rotation.x -= 0.00021;
 
+	// @ts-expect-error
 	P2.material.uniforms.time.value = performance.now() / 1021000;
 
 	P1.position.copy(P2.position);
@@ -149,7 +137,7 @@ function Move() {
 	P4.render(P6, P5);
 }
 
-Fn();
+await R1();
 
 window.addEventListener(
 	"resize",

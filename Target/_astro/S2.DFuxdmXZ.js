@@ -1,0 +1,1 @@
+const n="varying vec2 vUv;\nvarying vec3 vNormal;\n\nvoid main() {\n\tvUv = uv;\n\tvNormal = normalize(normalMatrix * normal);\n\tgl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n}\n";export{n as default};

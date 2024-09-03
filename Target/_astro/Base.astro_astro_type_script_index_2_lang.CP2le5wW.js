@@ -78,4 +78,4 @@ new (
 		).default(),
 	],
 });
-//# sourceMappingURL=Base.astro_astro_type_script_index_1_lang.CP2le5wW.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_2_lang.CP2le5wW.js.map
