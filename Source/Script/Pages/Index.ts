@@ -59,6 +59,8 @@ const R1 = async () => {
 		powerPreference: "high-performance",
 	});
 
+	P10?.appendChild(P4.domElement);
+
 	P4.setPixelRatio(window.devicePixelRatio);
 
 	P4.setSize(window.innerWidth, window.innerHeight);
@@ -141,8 +143,6 @@ const R1 = async () => {
 	P2.position.set(-Base / How, -Base / How, Base * How);
 
 	Move();
-
-	P10?.appendChild(P4.domElement);
 };
 
 await R1();

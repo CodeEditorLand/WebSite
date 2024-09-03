@@ -55,6 +55,7 @@ const { Mesh: h } = await t(async () => {
 				precision: "highp",
 				powerPreference: "high-performance",
 			})),
+			E?.appendChild(r.domElement),
 			r.setPixelRatio(window.devicePixelRatio),
 			r.setSize(window.innerWidth, window.innerHeight),
 			(r.shadowMap.enabled = !0),
@@ -219,8 +220,7 @@ const { Mesh: h } = await t(async () => {
 			n.add(o),
 			s.position.set(-i / a, -i / a, i * a),
 			_.position.set(-i / a, -i / a, i * a),
-			P(),
-			E?.appendChild(r.domElement);
+			P();
 	};
 await y();
 window.addEventListener(
@@ -232,4 +232,4 @@ window.addEventListener(
 	},
 	!1,
 );
-//# sourceMappingURL=Base.astro_astro_type_script_index_1_lang.CAfDVzOl.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_1_lang.Cr1tiROH.js.map
