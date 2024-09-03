@@ -4,10 +4,17 @@ import type {
 	Mesh,
 	PerspectiveCamera,
 	Scene,
+	ShaderMaterial,
+	WebGLCubeRenderTarget,
 	WebGLRenderer,
 } from "three";
 
-let P6: Scene,
+let P10: HTMLElement | null = document.getElementById("Position");
+
+let P9: boolean = false,
+	P8: WebGLCubeRenderTarget,
+	P7: ShaderMaterial,
+	P6: Scene,
 	P5: PerspectiveCamera,
 	P4: WebGLRenderer,
 	P3: Group,
@@ -15,6 +22,25 @@ let P6: Scene,
 	P1: CubeCamera;
 
 export const { Mesh: _P2 } = await import("three");
+
+export const Move = () => {
+	requestAnimationFrame(Move);
+
+	P3.rotation.x -= 0.00021;
+
+	// @ts-expect-error
+	P2.material.uniforms.time.value = performance.now() / 1021000;
+
+	P1.position.copy(P2.position);
+	P1.update(P4, P6);
+
+	P4.render(P6, P5);
+
+	if (!P9) {
+		P9 = true;
+		P10?.classList.add("Visible");
+	}
+};
 
 const R1 = async () => {
 	P6 = new (await import("three")).Scene();
@@ -43,11 +69,7 @@ const R1 = async () => {
 
 	P4.toneMapping = (await import("three")).ACESFilmicToneMapping;
 
-	const Positon = document.getElementById("Position");
-
-	Positon?.appendChild(P4.domElement);
-
-	const P7 = new (await import("three")).ShaderMaterial({
+	P7 = new (await import("three")).ShaderMaterial({
 		uniforms: {
 			time: { value: 0.0 },
 		},
@@ -62,7 +84,7 @@ const R1 = async () => {
 
 	P6.add(P2);
 
-	const P8 = new (await import("three")).WebGLCubeRenderTarget(512, {
+	P8 = new (await import("three")).WebGLCubeRenderTarget(512, {
 		format: (await import("three")).RGBAFormat,
 		type: (await import("three")).FloatType,
 	});
@@ -118,24 +140,10 @@ const R1 = async () => {
 
 	P2.position.set(-Base / How, -Base / How, Base * How);
 
-	Positon?.classList.add("Visible");
-
 	Move();
+
+	P10?.appendChild(P4.domElement);
 };
-
-function Move() {
-	requestAnimationFrame(Move);
-
-	P3.rotation.x -= 0.00021;
-
-	// @ts-expect-error
-	P2.material.uniforms.time.value = performance.now() / 1021000;
-
-	P1.position.copy(P2.position);
-	P1.update(P4, P6);
-
-	P4.render(P6, P5);
-}
 
 await R1();
 
