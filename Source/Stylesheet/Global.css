@@ -19,11 +19,11 @@ body {
 	--swup-overlay-theme-skew: 0deg;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	body {
 		--swup-overlay-theme-color: black;
 	}
-}
+} */
 
 *::selection,
 ::selection {
