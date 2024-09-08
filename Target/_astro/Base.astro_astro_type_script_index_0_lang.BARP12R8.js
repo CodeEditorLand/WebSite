@@ -1,4 +1,4 @@
-import { _ as e } from "./preload-helper.BiBI96sQ.js";
+import { _ as e } from "./preload-helper.D0LYr1aX.js";
 (
 	await e(async () => {
 		const { initializeApp: a } = await import("./index.esm.C4IwMFMF.js");
@@ -15,4 +15,4 @@ import { _ as e } from "./preload-helper.BiBI96sQ.js";
 	projectId: "code-editor-land",
 	storageBucket: "code-editor-land.appspot.com",
 });
-//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.C6MzTu1T.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.BARP12R8.js.map
