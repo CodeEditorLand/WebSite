@@ -13,47 +13,35 @@ Root="$(cd "$(dirname "$0")/../.." && pwd)"
 Vendor="$Root/Vendor/JellyUI"
 Public="$Root/Public/Vendor/JellyUI"
 
-# Some CI providers (Cloudflare Pages included) don't reliably run
-# `git submodule update --init --recursive` before the build command. If
-# the submodule directory is empty, fetch the exact commit the superproject
-# has pinned (recorded as a gitlink in its tree - no network needed to read
-# it) directly from GitHub instead of depending on the host's checkout step.
-#
-# Even when the submodule WAS cloned (CF does clone it), the version
-# checked out may be stale if the pinned commit was updated in a newer
-# deploy but git's submodule ignore = all prevents the checkout from
-# tracking it. Always sync to the exact pinned commit.
-Commit=$(cd "$Root" && git rev-parse "HEAD:Vendor/JellyUI" 2>/dev/null || true)
-
-if [ -z "$Commit" ]; then
-	echo "BuildJellyUIVendor: Vendor/JellyUI has no pinned commit in tree" >&2
-	echo "Run: git submodule update --init --recursive" >&2
-	exit 1
-fi
+# Always fetch and build from the latest main.
+# The submodule pointer is updated to match whatever main resolves to.
+Branch="main"
 
 if [ ! -f "$Vendor/package.json" ]; then
-	echo "BuildJellyUIVendor: Vendor/JellyUI is empty - fetching pinned commit $Commit directly"
+	echo "BuildJellyUIVendor: Vendor/JellyUI is empty - cloning $Branch"
 	rm -rf "$Vendor"
 	mkdir -p "$Vendor"
 	(
 		cd "$Vendor"
 		git init --quiet
 		git remote add origin "$Remote"
-		git fetch --quiet --depth 1 origin "$Commit"
+		git fetch --quiet --depth 1 origin "$Branch"
 		git checkout --quiet FETCH_HEAD
 	)
 else
-	# Submodule exists - ensure it's at the exact pinned commit even if
-	# the host's checkout is stale (e.g. ignore=all in .gitmodules).
-	Actual=$(cd "$Vendor" && git rev-parse HEAD 2>/dev/null || true)
-	if [ "$Actual" != "$Commit" ]; then
-		echo "BuildJellyUIVendor: syncing submodule from $Actual to pinned $Commit"
-		(cd "$Vendor" && git fetch --quiet --depth 1 origin "$Commit" && git checkout --quiet FETCH_HEAD)
-	fi
+	# Fetch the latest main. Always fast-forward to origin/main so the
+	# submodule tracks the branch head instead of staying pinned to a
+	# stale commit.
+	echo "BuildJellyUIVendor: fetching latest $Branch"
+	(
+		cd "$Vendor"
+		git fetch --quiet --depth 1 origin "$Branch"
+		git checkout --quiet FETCH_HEAD
+	)
 fi
 
 Stamp="$Vendor/dist/.BuiltFrom"
-Pinned=$(cd "$Root" && git rev-parse "HEAD:Vendor/JellyUI" 2>/dev/null || (cd "$Vendor" && git rev-parse HEAD))
+Pinned=$(cd "$Vendor" && git rev-parse HEAD)
 
 if [ -f "$Vendor/dist/jelly.js" ] && [ -f "$Stamp" ] && [ "$(cat "$Stamp")" = "$Pinned" ]; then
 	echo "BuildJellyUIVendor: dist/jelly.js already built for $Pinned - skipping build"
