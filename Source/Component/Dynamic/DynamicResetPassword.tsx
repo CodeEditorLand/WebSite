@@ -225,7 +225,7 @@ const DynamicResetPassword = ({
 										</h3>
 										{"\u2001"}
 										<lucide.CheckCircle
-											className="h-5 w-5 shrink-0 text-green-600 dark:text-green-400"
+											className="h-5 w-5 shrink-0 text-green-600"
 											aria-hidden="true"
 										/>
 									</div>
@@ -322,7 +322,7 @@ const DynamicResetPassword = ({
 											{[0, 1, 2].map((Segment) => (
 												<div
 													key={Segment}
-													className="h-1 flex-1 flat transition-colors"
+													className="flat h-1 flex-1 transition-colors"
 													style={{
 														backgroundColor:
 															Password.length >=

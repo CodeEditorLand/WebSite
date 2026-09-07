@@ -79,7 +79,7 @@ const MetaDescription = T("meta.dashboard.description", {
 						<img
 							alt="Code Editor Land logo"
 							title="Code Editor Land"
-							src="/Asset/Logo/Glyph/Land.svg"
+							src="/Asset/Dark/Logo/Glyph/Land.svg"
 							width="40"
 							height="40"
 						/>
@@ -106,37 +106,39 @@ const MetaDescription = T("meta.dashboard.description", {
 					class="flex flex-wrap items-center gap-3 text-muted-foreground"
 				>
 					<jelly-badge
-variant="mint"
-shape="square"
-style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Telemetry Feature Gated{"\u2001"}<span
-							class="h-1.5 w-1.5 flat" style="background-color:var(--SpinegRPC)"
+						variant="mint"
+						shape="square"
+						style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+					>
+						Telemetry Feature Gated{"\u2001"}<span
+							class="flat h-1.5 w-1.5"
+							style="background-color:var(--SpinegRPC)"
 							aria-hidden="true"></span>
-</jelly-badge>
+					</jelly-badge>
 					<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	CC0 Licensed
-</jelly-badge>
+						variant="platinum"
+						shape="square"
+						style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+					>
+						CC0 Licensed
+					</jelly-badge>
 					<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Signing Planned
-</jelly-badge>
+						variant="platinum"
+						shape="square"
+						style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+					>
+						Signing Planned
+					</jelly-badge>
 					<jelly-badge
-variant="azure"
-shape="square"
-style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Mountain Workbench{"\u2001"}<span
-							class="h-1.5 w-1.5 flat" style="background-color:var(--SpineIPC)"
+						variant="azure"
+						shape="square"
+						style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+					>
+						Mountain Workbench{"\u2001"}<span
+							class="flat h-1.5 w-1.5"
+							style="background-color:var(--SpineIPC)"
 							aria-hidden="true"></span>
-</jelly-badge>
+					</jelly-badge>
 				</div>
 			</header>
 
@@ -169,7 +171,7 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 					</h2>
 					<a
 						href="/Download"
-						class="StaccatoButton h- mb-3 inline-flex items-center justify-center bg-primary px-4 font-medium text-primary-fg transition-all hover:opacity-90 focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+						class="StaccatoButton h- text-primary-fg mb-3 inline-flex items-center justify-center bg-primary px-4 font-medium transition-all hover:opacity-90 focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 					>
 						{
 							T("common.dashboard.downloads.goButton", {
@@ -198,10 +200,7 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 					</h2>
 					<ul class="space-y-2">
 						<li>
-							<a
-								href="/Doc"
-								class="text-primary hover:underline"
-							>
+							<a href="/Doc" class="text-primary hover:underline">
 								{
 									T("common.dashboard.quickLinks.docs", {
 										defaultValue: "Documentation",
@@ -261,21 +260,22 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 						<div class="flex-1">
 							<div class="flex items-center gap-3">
 								<jelly-badge
-variant="mint"
-shape="square"
-style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Disabled{"\u2001"}<span
-										class="h-2 w-2 flat" style="background-color:var(--SpinegRPC)"
+									variant="mint"
+									shape="square"
+									style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+								>
+									Disabled{"\u2001"}<span
+										class="flat h-2 w-2"
+										style="background-color:var(--SpinegRPC)"
 										aria-hidden="true"></span>
-</jelly-badge>
+								</jelly-badge>
 								<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Feature Gated
-</jelly-badge>
+									variant="platinum"
+									shape="square"
+									style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+								>
+									Feature Gated
+								</jelly-badge>
 							</div>
 							<h3 class="mt-3 font-medium">
 								{
@@ -308,14 +308,15 @@ style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-bad
 						<div class="flex-1">
 							<div class="flex items-center gap-3">
 								<jelly-badge
-variant="amber"
-shape="square"
-style={`--jelly-fill:var(--ExtensionTauriMute);--jelly-label:var(--ExtensionTauriFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Optional{"\u2001"}<span
-										class="h-2 w-2 flat" style="background-color:var(--ExtensionTauri)"
+									variant="amber"
+									shape="square"
+									style={`--jelly-fill:var(--ExtensionTauriMute);--jelly-label:var(--ExtensionTauriFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+								>
+									Optional{"\u2001"}<span
+										class="flat h-2 w-2"
+										style="background-color:var(--ExtensionTauri)"
 										aria-hidden="true"></span>
-</jelly-badge>
+								</jelly-badge>
 							</div>
 							<h3 class="mt-3 font-medium">
 								{
@@ -342,14 +343,15 @@ style={`--jelly-fill:var(--ExtensionTauriMute);--jelly-label:var(--ExtensionTaur
 					<div class="px-5 pb-5 pt-8">
 						<div class="flex items-center gap-3">
 							<jelly-badge
-variant="azure"
-shape="square"
-style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Active{"\u2001"}<span
-									class="h-2 w-2 flat" style="background-color:var(--SpineIPC)"
+								variant="azure"
+								shape="square"
+								style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								Active{"\u2001"}<span
+									class="flat h-2 w-2"
+									style="background-color:var(--SpineIPC)"
 									aria-hidden="true"></span>
-</jelly-badge>
+							</jelly-badge>
 						</div>
 						<h3 class="mt-3 font-medium">
 							{
@@ -409,14 +411,15 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 								}
 							</h3>
 							<jelly-badge
-variant="azure"
-shape="square"
-style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Recommended{"\u2001"}<span
-									class="h-2 w-2 flat" style="background-color:var(--SpineIPC)"
+								variant="azure"
+								shape="square"
+								style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								Recommended{"\u2001"}<span
+									class="flat h-2 w-2"
+									style="background-color:var(--SpineIPC)"
 									aria-hidden="true"></span>
-</jelly-badge>
+							</jelly-badge>
 						</div>
 						<div class="mt-4 space-y-2">
 							<div class="flex justify-between">
@@ -460,14 +463,15 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 								}
 							</h3>
 							<jelly-badge
-variant="mint"
-shape="square"
-style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Active{"\u2001"}<span
-									class="h-2 w-2 flat" style="background-color:var(--SpinegRPC)"
+								variant="mint"
+								shape="square"
+								style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								Active{"\u2001"}<span
+									class="flat h-2 w-2"
+									style="background-color:var(--SpinegRPC)"
 									aria-hidden="true"></span>
-</jelly-badge>
+							</jelly-badge>
 						</div>
 						<div class="mt-4 space-y-2">
 							<div class="flex justify-between">
@@ -510,12 +514,12 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 								}
 							</h3>
 							<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	16 Permutations
-</jelly-badge>
+								variant="platinum"
+								shape="square"
+								style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								16 Permutations
+							</jelly-badge>
 						</div>
 						<div class="mt-4 space-y-2">
 							<div class="flex justify-between">
@@ -572,10 +576,10 @@ style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-bad
 						class="StaccatoCard StaccatoBorderShimmer flex items-center gap-4 bg-card p-5 transition-all hover:border-blue-300"
 					>
 						<div
-							class="flex h-10 w-10 shrink-0 items-center justify-center flat border border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950"
+							class="flat flex h-10 w-10 shrink-0 items-center justify-center border border-blue-200 bg-blue-50"
 						>
 							<span
-								class="text-lg text-blue-600 dark:text-blue-400"
+								class="text-lg text-blue-600"
 								aria-hidden="true">&#9729;</span
 							>
 						</div>
@@ -586,24 +590,25 @@ style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-bad
 							</p>
 						</div>
 						<jelly-badge
-variant="azure"
-shape="square"
-style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Online{"\u2001"}<span
-								class="h-1.5 w-1.5 flat" style="background-color:var(--SpineIPC)"
+							variant="azure"
+							shape="square"
+							style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+						>
+							Online{"\u2001"}<span
+								class="flat h-1.5 w-1.5"
+								style="background-color:var(--SpineIPC)"
 								aria-hidden="true"></span>
-</jelly-badge>
+						</jelly-badge>
 					</a>
 					<a
 						href="/Portal"
 						class="StaccatoCard StaccatoBorderShimmer flex items-center gap-4 bg-card p-5 transition-all hover:border-purple-300"
 					>
 						<div
-							class="flex h-10 w-10 shrink-0 items-center justify-center flat border border-purple-200 bg-purple-50 dark:border-purple-800 dark:bg-purple-950"
+							class="flat flex h-10 w-10 shrink-0 items-center justify-center border border-purple-200 bg-purple-50"
 						>
 							<span
-								class="text-lg text-purple-600 dark:text-purple-400"
+								class="text-lg text-purple-600"
 								aria-hidden="true">&#9831;</span
 							>
 						</div>
@@ -614,24 +619,25 @@ style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jel
 							</p>
 						</div>
 						<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--SpineWASMMute);--jelly-label:var(--SpineWASMFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	OAuth{"\u2001"}<span
-								class="h-1.5 w-1.5 flat" style="background-color:var(--SpineWASM)"
+							variant="platinum"
+							shape="square"
+							style={`--jelly-fill:var(--SpineWASMMute);--jelly-label:var(--SpineWASMFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+						>
+							OAuth{"\u2001"}<span
+								class="flat h-1.5 w-1.5"
+								style="background-color:var(--SpineWASM)"
 								aria-hidden="true"></span>
-</jelly-badge>
+						</jelly-badge>
 					</a>
 					<a
 						href="/Portal"
 						class="StaccatoCard StaccatoBorderShimmer flex items-center gap-4 bg-card p-5 transition-all hover:border-orange-300"
 					>
 						<div
-							class="flex h-10 w-10 shrink-0 items-center justify-center flat border border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950"
+							class="flat flex h-10 w-10 shrink-0 items-center justify-center border border-orange-200 bg-orange-50"
 						>
 							<span
-								class="text-lg text-orange-600 dark:text-orange-400"
+								class="text-lg text-orange-600"
 								aria-hidden="true">&#9881;</span
 							>
 						</div>
@@ -642,24 +648,25 @@ style={`--jelly-fill:var(--SpineWASMMute);--jelly-label:var(--SpineWASMFore);--j
 							</p>
 						</div>
 						<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--SpineTCPMute);--jelly-label:var(--SpineTCPFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	Local{"\u2001"}<span
-								class="h-1.5 w-1.5 flat" style="background-color:var(--SpineTCP)"
+							variant="platinum"
+							shape="square"
+							style={`--jelly-fill:var(--SpineTCPMute);--jelly-label:var(--SpineTCPFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+						>
+							Local{"\u2001"}<span
+								class="flat h-1.5 w-1.5"
+								style="background-color:var(--SpineTCP)"
 								aria-hidden="true"></span>
-</jelly-badge>
+						</jelly-badge>
 					</a>
 					<a
 						href="/Portal"
 						class="StaccatoCard StaccatoBorderShimmer flex items-center gap-4 bg-card p-5 transition-all hover:border-green-300"
 					>
 						<div
-							class="flex h-10 w-10 shrink-0 items-center justify-center flat border border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950"
+							class="flat flex h-10 w-10 shrink-0 items-center justify-center border border-green-200 bg-green-50"
 						>
 							<span
-								class="text-lg text-green-600 dark:text-green-400"
+								class="text-lg text-green-600"
 								aria-hidden="true">&#9739;</span
 							>
 						</div>
@@ -670,14 +677,15 @@ style={`--jelly-fill:var(--SpineTCPMute);--jelly-label:var(--SpineTCPFore);--jel
 							</p>
 						</div>
 						<jelly-badge
-variant="mint"
-shape="square"
-style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	SSO{"\u2001"}<span
-								class="h-1.5 w-1.5 flat" style="background-color:var(--SpinegRPC)"
+							variant="mint"
+							shape="square"
+							style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+						>
+							SSO{"\u2001"}<span
+								class="flat h-1.5 w-1.5"
+								style="background-color:var(--SpinegRPC)"
 								aria-hidden="true"></span>
-</jelly-badge>
+						</jelly-badge>
 					</a>
 				</div>
 			</section>
@@ -718,7 +726,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 									/>
 									<img
 										alt="Land"
-										src="/Asset/Logo/Glyph/Land.svg"
+										src="/Asset/Dark/Logo/Glyph/Land.svg"
 										width="48"
 										height="48"
 									/>
@@ -726,7 +734,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 								<div class="flex-1">
 									<div class="flex items-center gap-3">
 										<h3 class="font-medium">Air Daemon</h3>
-										<span class="inline-flex items-center bg-mute px-2.5 py-0.5 font-medium text-muted-foreground">
+										<span class="bg-mute inline-flex items-center px-2.5 py-0.5 font-medium text-muted-foreground">
 											{T(
 												"common.dashboard.editor.status",
 												{
@@ -736,7 +744,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 											)}
 											{"\u2001"}
 											<span
-												class="h-1.5 w-1.5 flat bg-gray-400"
+												class="flat h-1.5 w-1.5 bg-gray-400"
 												aria-hidden="true"
 											/>
 										</span>
@@ -758,7 +766,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 							<div class="mt-6 flex flex-wrap items-center gap-3">
 								<a
 									href="/Dashboard?mode=local"
-									class="StaccatoButton inline-flex items-center justify-center border border-orange-300 bg-orange-50 px-4 py-2 font-medium text-orange-700 transition-all hover:bg-orange-100 focus:outline-2 focus:outline-offset-2 focus:outline-orange-400 dark:border-orange-700 dark:bg-orange-950 dark:text-orange-300 dark:hover:bg-orange-900"
+									class="StaccatoButton inline-flex items-center justify-center border border-orange-300 bg-orange-50 px-4 py-2 font-medium text-orange-700 transition-all hover:bg-orange-100 focus:outline-2 focus:outline-offset-2 focus:outline-orange-400"
 								>
 									{T("common.dashboard.editor.scanButton", {
 										defaultValue: "Scan for Daemon",
@@ -810,7 +818,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 							/>
 							<img
 								alt="Code Editor Land"
-								src="/Asset/Logo/Glyph/Land.svg"
+								src="/Asset/Dark/Logo/Glyph/Land.svg"
 								width="32"
 								height="32"
 								class="h-8 w-8"
@@ -831,7 +839,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 					>
 						<picture>
 							<source
-								srcset="/Dark/Image/PlayForm.svg"
+								srcset="/Image/PlayForm.svg"
 								media="(prefers-color-scheme: dark)"
 								data-theme-dark
 							/>
@@ -857,7 +865,7 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 						class="StaccatoCard StaccatoBorderShimmer flex items-center gap-3 bg-card p-4 transition-all hover:border-[var(--Primary)]"
 					>
 						<div
-							class="flex h-8 w-8 shrink-0 items-center justify-center flat bg-mute font-bold"
+							class="flat bg-mute flex h-8 w-8 shrink-0 items-center justify-center font-bold"
 						>
 							NL
 						</div>
@@ -910,16 +918,16 @@ style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--j
 					>
 						<div>
 							<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	{
+								variant="platinum"
+								shape="square"
+								style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								{
 									T("common.comingSoon", {
 										defaultValue: "Coming Soon",
 									})
 								}
-</jelly-badge>
+							</jelly-badge>
 							<h3 class="mt-2 font-medium">
 								{
 									T("common.dashboard.settings.sync.title", {
@@ -945,16 +953,16 @@ style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-bad
 					>
 						<div>
 							<jelly-badge
-variant="platinum"
-shape="square"
-style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
->
-	{
+								variant="platinum"
+								shape="square"
+								style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+							>
+								{
 									T("common.comingSoon", {
 										defaultValue: "Coming Soon",
 									})
 								}
-</jelly-badge>
+							</jelly-badge>
 							<h3 class="mt-2 font-medium">
 								{
 									T(

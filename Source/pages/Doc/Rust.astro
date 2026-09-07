@@ -181,7 +181,7 @@ const RustDocSite = [
 							data-rustdoc-url={Site.Url}
 							class={`RustDocTab border px-3 py-1 font-medium transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
 								Index === 0
-									? "border-[var(--Primary)] bg-primary text-primary-fg"
+									? "text-primary-fg border-[var(--Primary)] bg-primary"
 									: "border-[var(--Border)] bg-card text-muted-foreground hover:bg-secondary"
 							}`}
 						>
@@ -217,8 +217,7 @@ const RustDocSite = [
 
 	const BaseClass =
 		"RustDocTab border px-3 py-1 font-medium transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]";
-	const ActiveClass =
-		"border-[var(--Primary)] bg-primary text-primary-fg";
+	const ActiveClass = "border-[var(--Primary)] bg-primary text-primary-fg";
 	const InactiveClass =
 		"border-[var(--Border)] bg-card text-muted-foreground hover:bg-secondary";
 

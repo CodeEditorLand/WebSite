@@ -31,7 +31,12 @@ const DynamicCard = ({ Sections, ClassName, OnClick, Style }: Property) => {
 		<Card
 			className={`${ClassName || ""}`}
 			onClick={OnClick}
-			style={{ cursor: OnClick ? "pointer" : undefined, ...(Style || {}) } as React.CSSProperties}
+			style={
+				{
+					cursor: OnClick ? "pointer" : undefined,
+					...(Style || {}),
+				} as React.CSSProperties
+			}
 		>
 			{HeaderSection && (
 				<CardHeader>

@@ -17,16 +17,8 @@ export interface ThemeImageProps {
 }
 
 /**
- * ThemeImage - native <picture> element that serves the correct SVG for the
- * active colour scheme.  The global Base.astro script syncs `data-theme-dark`
- * sources during initial HTML parsing.  The mount effect below covers the gap
- * for React client components that render new <source> elements after
- * DOMContentLoaded (when the Base.astro MutationObserver has already
- * disconnected).  Subsequent theme toggles are handled globally by
- * ThemeToggle.SyncPictureSources which iterates all source[data-theme-dark].
- *
- * Dark-image path convention: /Image/Foo.svg → /Dark/Image/Foo.svg.
- * Pass `darkSrc` explicitly to override.
+ * ThemeImage - Nocturnal Field Record (single theme).
+ * Serves the standard /Image/ variant. No theme switching.
  */
 export function ThemeImage({
 	src,
@@ -37,28 +29,20 @@ export function ThemeImage({
 	className,
 	...props
 }: ThemeImageProps) {
-	const Dark =
-		darkSrc ??
-		src
-			.replace(/^\/Image\//, "/Dark/Image/")
-			.replace(/^\/Asset\/(?!Dark\/)/, "/Asset/Dark/");
 	const sourceRef = useRef<HTMLSourceElement>(null);
 
 	useEffect(() => {
 		if (!sourceRef.current) return;
 
-		const isDark = document.documentElement.classList.contains("dark");
-
-		sourceRef.current.media = isDark
-			? "all"
-			: "(prefers-color-scheme: dark)";
+		// Nocturnal theme: serve standard images
+		sourceRef.current.media = "(prefers-color-scheme: dark)";
 	}, []);
 
 	return (
 		<picture>
 			<source
 				ref={sourceRef}
-				srcSet={Dark}
+				srcSet={src}
 				media="(prefers-color-scheme: dark)"
 				data-theme-dark=""
 			/>

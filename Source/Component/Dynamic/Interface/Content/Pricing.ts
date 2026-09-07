@@ -7,7 +7,7 @@ export default interface Interface {
 
 	Subtitle?: string;
 
-	Tiers: PricingTier[];
+	Tier: PricingTier[];
 
 	ShowMonthlyYearlyToggle?: boolean;
 

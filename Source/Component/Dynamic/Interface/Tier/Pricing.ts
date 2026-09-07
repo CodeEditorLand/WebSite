@@ -1,7 +1,7 @@
 import type ButtonContent from "../Content/Button.js";
 
 export default interface Interface {
-	Id: string;
+	Identifier: string;
 
 	Name: string;
 
@@ -15,9 +15,9 @@ export default interface Interface {
 
 	Currency?: string;
 
-	Elements?: string[];
+	Element?: string[];
 
-	Features: string[];
+	Feature: string[];
 
 	CTA: ButtonContent;
 

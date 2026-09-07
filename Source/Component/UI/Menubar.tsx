@@ -16,7 +16,7 @@ function Menubar({
 		<MenubarPrimitive.Root
 			data-slot="menubar"
 			className={cn(
-				"flex h-9 items-center gap-1 flat border bg-background p-1",
+				"flat flex h-9 items-center gap-1 border bg-background p-1",
 				className,
 			)}
 			{...props}
@@ -61,7 +61,7 @@ function MenubarTrigger({
 		<MenubarPrimitive.Trigger
 			data-slot="menubar-trigger"
 			className={cn(
-				"outline-hidden flex select-none items-center flat px-2 py-1 font-medium focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+				"outline-hidden flat flex select-none items-center px-2 py-1 font-medium focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 				className,
 			)}
 			{...props}
@@ -84,7 +84,7 @@ function MenubarContent({
 				alignOffset={alignOffset}
 				sideOffset={sideOffset}
 				className={cn(
-					"data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-menubar-content-transform-origin) z-50 min-w-[12rem] overflow-hidden flat border bg-popover p-1 text-popover-foreground",
+					"data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-menubar-content-transform-origin) flat z-50 min-w-[12rem] overflow-hidden border bg-popover p-1 text-popover-foreground",
 					className,
 				)}
 				{...props}
@@ -109,7 +109,7 @@ function MenubarItem({
 			data-inset={inset}
 			data-variant={variant}
 			className={cn(
-				"data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:*:[svg]:!text-destructive outline-hidden relative flex cursor-default select-none items-center gap-2 flat px-2 py-1.5 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[disabled]:opacity-50 data-[variant=destructive]:focus:text-destructive [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
+				"data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:*:[svg]:!text-destructive outline-hidden flat relative flex cursor-default select-none items-center gap-2 px-2 py-1.5 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[disabled]:opacity-50 data-[variant=destructive]:focus:text-destructive [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
 				className,
 			)}
 			{...props}
@@ -127,7 +127,7 @@ function MenubarCheckboxItem({
 		<MenubarPrimitive.CheckboxItem
 			data-slot="menubar-checkbox-item"
 			className={cn(
-				"outline-hidden relative flex cursor-default select-none items-center gap-2 flat py-1.5 pl-8 pr-2 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+				"outline-hidden flat relative flex cursor-default select-none items-center gap-2 py-1.5 pl-8 pr-2 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
 				className,
 			)}
 			checked={checked ?? false}
@@ -152,7 +152,7 @@ function MenubarRadioItem({
 		<MenubarPrimitive.RadioItem
 			data-slot="menubar-radio-item"
 			className={cn(
-				"outline-hidden relative flex cursor-default select-none items-center gap-2 flat py-1.5 pl-8 pr-2 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+				"outline-hidden flat relative flex cursor-default select-none items-center gap-2 py-1.5 pl-8 pr-2 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
 				className,
 			)}
 			{...props}
@@ -235,7 +235,7 @@ function MenubarSubTrigger({
 			data-slot="menubar-sub-trigger"
 			data-inset={inset}
 			className={cn(
-				"flex cursor-default select-none items-center flat px-2 py-1.5 outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[inset]:pl-8 data-[state=open]:text-accent-foreground",
+				"flat flex cursor-default select-none items-center px-2 py-1.5 outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[inset]:pl-8 data-[state=open]:text-accent-foreground",
 				className,
 			)}
 			{...props}
@@ -254,7 +254,7 @@ function MenubarSubContent({
 		<MenubarPrimitive.SubContent
 			data-slot="menubar-sub-content"
 			className={cn(
-				"data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-menubar-content-transform-origin) z-50 min-w-[8rem] overflow-hidden flat border bg-popover p-1 text-popover-foreground",
+				"data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-menubar-content-transform-origin) flat z-50 min-w-[8rem] overflow-hidden border bg-popover p-1 text-popover-foreground",
 				className,
 			)}
 			{...props}

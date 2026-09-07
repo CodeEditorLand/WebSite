@@ -151,7 +151,7 @@ const Footer = ({ Content }: FooterProps) => {
 							aria-label={`${FooterData.Brand?.Name || "Land"} - Go to homepage`}
 						>
 							<ThemeImage
-								src="/Asset/Logo/Glyph/Land.svg"
+								src="/Asset/Dark/Logo/Glyph/Land.svg"
 								alt="Code Editor Land"
 								title="Code Editor Land"
 								width={32}
@@ -159,8 +159,8 @@ const Footer = ({ Content }: FooterProps) => {
 								className="h-8 w-8"
 								aria-hidden="true"
 							/>
-							<span className="font-semibold">
-								{FooterData.Brand?.Name || "Land"}
+							<span className="font-mono text-sm font-medium uppercase tracking-widest">
+								{FooterData.Brand?.Name || "LAND"}
 							</span>
 						</a>
 						{FooterData.Brand?.Description && (
@@ -252,7 +252,7 @@ const Footer = ({ Content }: FooterProps) => {
 						>
 							<IconTooltip Label="GitHub">
 								<ThemeImage
-									src="/Image/GitHub.svg"
+									src="/Dark/Image/GitHub.svg"
 									alt="GitHub"
 									width={20}
 									height={20}
@@ -309,7 +309,7 @@ const Footer = ({ Content }: FooterProps) => {
 								aria-label="Made with Tauri (opens in new tab)"
 							>
 								<ThemeImage
-									src="/Image/GitHub/Made/Tauri.svg"
+									src="/Dark/Image/GitHub/Made/Tauri.svg"
 									alt="Made with Tauri"
 									width={160}
 									height={32}

@@ -120,32 +120,26 @@ const TermDictionary = new Map<string, TermCategory>([
 ]);
 
 const CategoryStyle: Record<TermCategory, string> = {
-	Architecture:
-		"border-blue-200 text-blue-700 dark:border-blue-800 dark:text-blue-300",
+	Architecture: "border-blue-200 text-blue-700",
 
-	Telemetry:
-		"border-yellow-200 text-yellow-700 dark:border-yellow-800 dark:text-yellow-300",
+	Telemetry: "border-yellow-200 text-yellow-700",
 
-	Protocol:
-		"border-purple-200 text-purple-700 dark:border-purple-800 dark:text-purple-300",
+	Protocol: "border-purple-200 text-purple-700",
 
-	Feature:
-		"border-orange-200 text-orange-700 dark:border-orange-800 dark:text-orange-300",
+	Feature: "border-orange-200 text-orange-700",
 
-	License:
-		"border-green-200 text-green-700 dark:border-green-800 dark:text-green-300",
+	License: "border-green-200 text-green-700",
 
-	Tool: "border-sky-200 text-sky-700 dark:border-sky-800 dark:text-sky-300",
+	Tool: "border-sky-200 text-sky-700",
 };
-
 
 const CategoryFill: Record<TermCategory, string> = {
 	Architecture: "var(--SpineIPCMute)",
-	Telemetry:   "var(--ExtensionTauriMute)",
-	Protocol:    "var(--SpineWASMMute)",
-	Feature:     "var(--SpineTCPMute)",
-	License:     "var(--SpinegRPCMute)",
-	Tool:        "var(--ExtensionReactMute)",
+	Telemetry: "var(--ExtensionTauriMute)",
+	Protocol: "var(--SpineWASMMute)",
+	Feature: "var(--SpineTCPMute)",
+	License: "var(--SpinegRPCMute)",
+	Tool: "var(--ExtensionReactMute)",
 };
 const CategoryLabel: Record<TermCategory, string> = {
 	Architecture: "Architecture element",
@@ -291,7 +285,7 @@ const CopyInlineButton = ({ Code }: { Code: string }) => {
 			onClick={HandleCopy}
 			aria-label={Copied ? "Copied" : "Copy to clipboard"}
 			title={Copied ? "Copied" : "Copy to clipboard"}
-			className="ml-1 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center flat bg-mute opacity-50 transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--Ring)]"
+			className="flat bg-mute ml-1 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center opacity-50 transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--Ring)]"
 		>
 			{Copied ? (
 				<lucide.Check
@@ -338,12 +332,14 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 					className={Style}
 					title={`${CategoryLabel[Segment.Category]}: ${Segment.Value}`}
 					aria-label={`${CategoryLabel[Segment.Category]} ${Segment.Value}`}
-					style={{
-						"--jelly-fill": Fill,
-						"--jelly-label": "currentColor",
-						"--jelly-badge-radius": "0px",
-						"--jelly-badge-font-size": "0.78em",
-					} as React.CSSProperties}
+					style={
+						{
+							"--jelly-fill": Fill,
+							"--jelly-label": "currentColor",
+							"--jelly-badge-radius": "0px",
+							"--jelly-badge-font-size": "0.78em",
+						} as React.CSSProperties
+					}
 				>
 					{Segment.Value}
 					{Logo && (
@@ -460,7 +456,7 @@ const LineNode = ({
 						)}
 						{ShowTerms && TermDictionary.has(Item) ? (
 							<span
-								className={`inline-flex items-center flat border px-1.5 py-0.5 align-middle font-mono font-medium leading-normal ${CategoryStyle[TermDictionary.get(Item)!]}`}
+								className={`flat inline-flex items-center border px-1.5 py-0.5 align-middle font-mono font-medium leading-normal ${CategoryStyle[TermDictionary.get(Item)!]}`}
 								title={`${CategoryLabel[TermDictionary.get(Item)!]}: ${Item}`}
 							>
 								{Item}
@@ -500,7 +496,7 @@ const LineNode = ({
 						)}
 						{ShowTerms && TermDictionary.has(Item) ? (
 							<span
-								className={`inline-flex items-center flat border px-1.5 py-0.5 align-middle font-mono font-medium leading-normal ${CategoryStyle[TermDictionary.get(Item)!]}`}
+								className={`flat inline-flex items-center border px-1.5 py-0.5 align-middle font-mono font-medium leading-normal ${CategoryStyle[TermDictionary.get(Item)!]}`}
 								title={`${CategoryLabel[TermDictionary.get(Item)!]}: ${Item}`}
 							>
 								{Item}

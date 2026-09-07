@@ -79,7 +79,7 @@ const Element = [
 					<div class="mt-4 border-t border-border pt-4">
 						<a
 							href="/Doc/Rust"
-							class="block flat px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+							class="flat block px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 						>
 							Rust API ↗
 						</a>
@@ -157,10 +157,13 @@ const Element = [
 							</h2>
 							<p class="text-muted-foreground">
 								{
-									T("common.docs.gettingStarted.description", {
-										defaultValue:
-											"The README walks you through installation, first build, and the fifteen-element architecture. No prior Rust or Tauri knowledge required.",
-									})
+									T(
+										"common.docs.gettingStarted.description",
+										{
+											defaultValue:
+												"The README walks you through installation, first build, and the fifteen-element architecture. No prior Rust or Tauri knowledge required.",
+										},
+									)
 								}
 							</p>
 						</div>

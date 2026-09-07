@@ -81,7 +81,7 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [
+						Tier: [
 							MakeTier("community", "Community"),
 							MakeTier("pro", "Pro"),
 						],
@@ -100,10 +100,10 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [
+						Tier: [
 							{
 								...MakeTier("free", "Free"),
-								Elements: [
+								Element: [
 									"Mountain\u2001\u26f0\ufe0f\nNative Process Manager\nReplaces Electron",
 									"Cocoon\u2001🦋\nExtension Host\nVS Code extensions run unchanged",
 								],
@@ -124,10 +124,10 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [
+						Tier: [
 							{
 								...MakeTier("free", "Free"),
-								Elements: [
+								Element: [
 									"Air\u2001🪁\nBackground Daemon\nSilent updates",
 								],
 							},
@@ -147,10 +147,10 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [
+						Tier: [
 							{
 								...MakeTier("free", "Free"),
-								Elements: [
+								Element: [
 									"Mountain\u2001\u26f0\ufe0f\nNative Process Manager\nReplaces Electron",
 								],
 							},
@@ -169,7 +169,7 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [MakeTier("pro", "Pro", true)],
+						Tier: [MakeTier("pro", "Pro", true)],
 						Labels: { Popular: "Most Popular" },
 					}}
 				/>,
@@ -184,7 +184,7 @@ describe("DynamicPricing", () => {
 			Wrap(
 				<DynamicPricing
 					Content={{
-						Tiers: [MakeTier("free", "Free", false)],
+						Tier: [MakeTier("free", "Free", false)],
 						Labels: { Popular: "Most Popular" },
 					}}
 				/>,

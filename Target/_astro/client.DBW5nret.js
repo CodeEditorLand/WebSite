@@ -1,0 +1,1 @@
+import{t}from"./Vendor/React.6D6-ifg1.js";export{t as default};

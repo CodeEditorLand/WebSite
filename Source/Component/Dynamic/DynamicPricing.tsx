@@ -92,7 +92,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 
 		Subtitle,
 
-		Tiers,
+		Tier: Tiers,
 
 		ShowMonthlyYearlyToggle = false,
 
@@ -174,7 +174,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 				>
 					{DisplayTier.map((Tier) => (
 						<jelly-card
-							key={Tier.Id}
+							key={Tier.Identifier}
 							className={`PricingCard flat ${
 								Tier.Highlighted || Tier.Popular ? "" : ""
 							} ${
@@ -259,13 +259,13 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 							{/* ── Card body ─────────────────────────────── */}
 							<div className="flex flex-1 flex-col p-8">
 								{/* Elements section */}
-								{Tier.Elements && Tier.Elements.length > 0 && (
+								{Tier.Element && Tier.Element.length > 0 && (
 									<>
 										<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 											Elements
 										</p>
 										<ul className="space-y-3">
-											{Tier.Elements.map(
+											{Tier.Element.map(
 												(Element, Index) => {
 													const Parts =
 														Element.split("\n");
@@ -341,24 +341,24 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 												},
 											)}
 										</ul>
-										{Tier.Features.length > 0 && (
+										{Tier.Feature.length > 0 && (
 											<hr className="my-5 border-[var(--Border)]" />
 										)}
 									</>
 								)}
 
 								{/* Features section */}
-								{Tier.Features.length > 0 && (
+								{Tier.Feature.length > 0 && (
 									<>
-										{Tier.Elements &&
-											Tier.Elements.length > 0 && (
+										{Tier.Element &&
+											Tier.Element.length > 0 && (
 												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 													Roadmap
 												</p>
 											)}
 
 										<ul className="space-y-3">
-											{Tier.Features.map(
+											{Tier.Feature.map(
 												(Feature, FeatureIndex) => (
 													<li
 														key={FeatureIndex}

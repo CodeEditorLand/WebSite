@@ -238,7 +238,7 @@ const DynamicSignUp = ({
 											{[0, 1, 2].map((Segment) => (
 												<div
 													key={Segment}
-													className="h-1 flex-1 flat transition-colors"
+													className="flat h-1 flex-1 transition-colors"
 													style={{
 														backgroundColor:
 															Password.length >=

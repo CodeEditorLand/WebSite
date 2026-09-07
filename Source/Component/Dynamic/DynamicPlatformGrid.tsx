@@ -463,14 +463,17 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 							<DynamicCard
 								Sections={PlatformCardSection}
 								ClassName="PlatformCard flex flex-col"
-								Style={{
-									"--jelly-color-border-default": PlatformAccentColor,
-									"--jelly-fill": "var(--Card)",
-									"--jelly-radius": "0",
-									"--jelly-card-padding-block": "0",
-									"--jelly-card-padding-inline": "0",
-									"--jelly-card-font-size": "inherit",
-								} as React.CSSProperties}
+								Style={
+									{
+										"--jelly-color-border-default":
+											PlatformAccentColor,
+										"--jelly-fill": "var(--Card)",
+										"--jelly-radius": "0",
+										"--jelly-card-padding-block": "0",
+										"--jelly-card-padding-inline": "0",
+										"--jelly-card-font-size": "inherit",
+									} as React.CSSProperties
+								}
 							/>
 						);
 					})}

@@ -8,5 +8,5 @@ export default interface Interface {
 
 	Icon?: string;
 
-	Colors?: string[];
+	Color?: string[];
 }

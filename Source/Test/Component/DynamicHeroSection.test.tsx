@@ -58,7 +58,7 @@ describe("DynamicHeroSection", () => {
 			<DynamicHeroSection
 				Content={{
 					...MinimalContent,
-					SecondaryCta: {
+					SecondaryCTA: {
 						Text: "View Source",
 						Href: "https://github.com",
 					},
@@ -74,8 +74,8 @@ describe("DynamicHeroSection", () => {
 			<DynamicHeroSection
 				Content={{
 					...MinimalContent,
-					FloatingCards: [
-						{ Id: "card-1", Title: "Rust Core", Colors: [] },
+					FloatingCard: [
+						{ Id: "card-1", Title: "Rust Core", Color: [] },
 					],
 				}}
 			/>,

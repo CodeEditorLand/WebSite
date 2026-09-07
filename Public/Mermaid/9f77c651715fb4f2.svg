@@ -1,1 +1,506 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 2376.61px; background-color: white;" viewBox="0 0 2376.609375 420" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#my-svg .cluster-label text{fill:#333;}#my-svg .cluster-label span{color:#333;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#333;color:#333;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#my-svg .arrowheadPath{fill:#333333;}#my-svg .edgePath .path{stroke:#333333;stroke-width:1px;}#my-svg .flowchart-link{stroke:#333333;fill:none;}#my-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#my-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#my-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#my-svg .cluster text{fill:#333;}#my-svg .cluster span{color:#333;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"><g class="cluster" id="my-svg-Layers" data-look="classic"><rect style="" x="1877.40625" y="8" width="238.40625" height="404"/><g class="cluster-label" transform="translate(1952.0703125, 8)"><foreignObject width="89.078125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>Layer Stacks</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-Service" data-look="classic"><rect style="" x="1376.671875" y="25" width="450.734375" height="387"/><g class="cluster-label" transform="translate(1512.375, 25)"><foreignObject width="179.328125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>Service Module Structure</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M1541.243,235L1547.9,230.833C1554.558,226.667,1567.873,218.333,1578.03,214.167C1588.188,210,1595.188,210,1598.688,210L1602.188,210" id="my-svg-L_Define_Implement_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Define_Implement_0" data-points="W3sieCI6MTU0MS4yNDMwNDE5OTIxODc1LCJ5IjoyMzV9LHsieCI6MTU4MS4xODc1LCJ5IjoyMTB9LHsieCI6MTYwNi4xODc1LCJ5IjoyMTB9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1541.243,313L1547.9,317.167C1554.558,321.333,1567.873,329.667,1582.504,333.833C1597.135,338,1613.083,338,1621.057,338L1629.031,338" id="my-svg-L_Define_Problem_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Define_Problem_0" data-points="W3sieCI6MTU0MS4yNDMwNDE5OTIxODc1LCJ5IjozMTN9LHsieCI6MTU4MS4xODc1LCJ5IjozMzh9LHsieCI6MTYzMy4wMzEyNSwieSI6MzM4fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1741.807,171L1756.073,156.167C1770.34,141.333,1798.873,111.667,1817.306,96.833C1835.74,82,1844.073,82,1852.406,82C1860.74,82,1869.073,82,1878.79,82C1888.508,82,1899.609,82,1905.16,82L1910.711,82" id="my-svg-L_Implement_TauriLive_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Implement_TauriLive_0" data-points="W3sieCI6MTc0MS44MDY3NjI2OTUzMTI1LCJ5IjoxNzF9LHsieCI6MTgyNy40MDYyNSwieSI6ODJ9LHsieCI6MTg1Mi40MDYyNSwieSI6ODJ9LHsieCI6MTg3Ny40MDYyNSwieSI6ODJ9LHsieCI6MTkxNC43MTA5Mzc1LCJ5Ijo4Mn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1802.406,210L1806.573,210C1810.74,210,1819.073,210,1827.406,210C1835.74,210,1844.073,210,1852.406,210C1860.74,210,1869.073,210,1876.74,210C1884.406,210,1891.406,210,1894.906,210L1898.406,210" id="my-svg-L_Implement_ElectronLive_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Implement_ElectronLive_0" data-points="W3sieCI6MTgwMi40MDYyNSwieSI6MjEwfSx7IngiOjE4MjcuNDA2MjUsInkiOjIxMH0seyJ4IjoxODUyLjQwNjI1LCJ5IjoyMTB9LHsieCI6MTg3Ny40MDYyNSwieSI6MjEwfSx7IngiOjE5MDIuNDA2MjUsInkiOjIxMH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1741.807,249L1756.073,263.833C1770.34,278.667,1798.873,308.333,1817.306,323.167C1835.74,338,1844.073,338,1852.406,338C1860.74,338,1869.073,338,1878.159,338C1887.245,338,1897.083,338,1902.003,338L1906.922,338" id="my-svg-L_Implement_TestLayer_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Implement_TestLayer_0" data-points="W3sieCI6MTc0MS44MDY3NjI2OTUzMTI1LCJ5IjoyNDl9LHsieCI6MTgyNy40MDYyNSwieSI6MzM4fSx7IngiOjE4NTIuNDA2MjUsInkiOjMzOH0seyJ4IjoxODc3LjQwNjI1LCJ5IjozMzh9LHsieCI6MTkxMC45MjE4NzUsInkiOjMzOH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M2078.508,82L2084.725,82C2090.943,82,2103.378,82,2113.762,82C2124.146,82,2132.479,82,2140.146,82C2147.813,82,2154.813,82,2158.313,82L2161.813,82" id="my-svg-L_TauriLive_Sky_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_TauriLive_Sky_0" data-points="W3sieCI6MjA3OC41MDc4MTI1LCJ5Ijo4Mn0seyJ4IjoyMTE1LjgxMjUsInkiOjgyfSx7IngiOjIxNDAuODEyNSwieSI6ODJ9LHsieCI6MjE2NS44MTI1LCJ5Ijo4Mn1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M1326.672,274L1330.839,274C1335.005,274,1343.339,274,1351.672,274C1360.005,274,1368.339,274,1376.005,274C1383.672,274,1390.672,274,1394.172,274L1397.672,274" id="my-svg-L_Services_Define_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_Services_Define_0" data-points="W3sieCI6MTMyNi42NzE4NzUsInkiOjI3NH0seyJ4IjoxMzUxLjY3MTg3NSwieSI6Mjc0fSx7IngiOjEzNzYuNjcxODc1LCJ5IjoyNzR9LHsieCI6MTQwMS42NzE4NzUsInkiOjI3NH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_Define_Implement_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_Define_Problem_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_Implement_TauriLive_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_Implement_ElectronLive_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_Implement_TestLayer_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_TauriLive_Sky_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_Services_Define_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="root" transform="translate(0, 201.5)"><g class="clusters"><g class="cluster" id="my-svg-Services" data-look="classic"><rect style="" x="8" y="8" width="1318.671875" height="129"/><g class="cluster-label" transform="translate(623.2578125, 8)"><foreignObject width="88.15625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>~40 Services</p></span></div></foreignObject></g></g></g><g class="edgePaths"/><g class="edgeLabels"/><g class="nodes"><g class="node default" id="my-svg-flowchart-IPC-10" data-look="classic" transform="translate(84.4765625, 72.5)"><rect class="basic label-container" style="" x="-41.4765625" y="-27" width="82.953125" height="54"/><g class="label" style="" transform="translate(-11.4765625, -12)"><rect/><foreignObject width="22.953125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>IPC</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Config-11" data-look="classic" transform="translate(254.4609375, 72.5)"><rect class="basic label-container" style="" x="-78.5078125" y="-27" width="157.015625" height="54"/><g class="label" style="" transform="translate(-48.5078125, -12)"><rect/><foreignObject width="97.015625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Configuration</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Editor-12" data-look="classic" transform="translate(434.5703125, 72.5)"><rect class="basic label-container" style="" x="-51.6015625" y="-27" width="103.203125" height="54"/><g class="label" style="" transform="translate(-21.6015625, -12)"><rect/><foreignObject width="43.203125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Editor</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Files-13" data-look="classic" transform="translate(582.6171875, 72.5)"><rect class="basic label-container" style="" x="-46.4453125" y="-27" width="92.890625" height="54"/><g class="label" style="" transform="translate(-16.4453125, -12)"><rect/><foreignObject width="32.890625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Files</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Terminal-14" data-look="classic" transform="translate(740.0390625, 72.5)"><rect class="basic label-container" style="" x="-60.9765625" y="-27" width="121.953125" height="54"/><g class="label" style="" transform="translate(-30.9765625, -12)"><rect/><foreignObject width="61.953125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Terminal</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Clip-15" data-look="classic" transform="translate(915.421875, 72.5)"><rect class="basic label-container" style="" x="-64.40625" y="-27" width="128.8125" height="54"/><g class="label" style="" transform="translate(-34.40625, -12)"><rect/><foreignObject width="68.8125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Clipboard</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Dialog-16" data-look="classic" transform="translate(1081.890625, 72.5)"><rect class="basic label-container" style="" x="-52.0625" y="-27" width="104.125" height="54"/><g class="label" style="" transform="translate(-22.0625, -12)"><rect/><foreignObject width="44.125" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Dialog</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Srch-17" data-look="classic" transform="translate(1237.8125, 72.5)"><rect class="basic label-container" style="" x="-53.859375" y="-27" width="107.71875" height="54"/><g class="label" style="" transform="translate(-23.859375, -12)"><rect/><foreignObject width="47.71875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Search</p></span></div></foreignObject></g></g></g></g><g class="node default" id="my-svg-flowchart-Define-0" data-look="classic" transform="translate(1478.9296875, 274)"><rect class="basic label-container" style="" x="-77.2578125" y="-39" width="154.515625" height="78"/><g class="label" style="" transform="translate(-47.2578125, -24)"><rect/><foreignObject width="94.515625" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Define.ts<br />Effect-TS Tag</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Implement-1" data-look="classic" transform="translate(1704.296875, 210)"><rect class="basic label-container" style="" x="-98.109375" y="-39" width="196.21875" height="78"/><g class="label" style="" transform="translate(-68.109375, -24)"><rect/><foreignObject width="136.21875" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Implement.ts<br />Tauri-backed Layer</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Problem-2" data-look="classic" transform="translate(1704.296875, 338)"><rect class="basic label-container" style="" x="-71.265625" y="-39" width="142.53125" height="78"/><g class="label" style="" transform="translate(-41.265625, -24)"><rect/><foreignObject width="82.53125" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Problem.ts<br />Typed Error</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-TauriLive-7" data-look="classic" transform="translate(1996.609375, 82)"><rect class="basic label-container" style="" x="-81.8984375" y="-39" width="163.796875" height="78"/><g class="label" style="" transform="translate(-51.8984375, -24)"><rect/><foreignObject width="103.796875" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>TauriLiveLayer<br />(production)</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-ElectronLive-8" data-look="classic" transform="translate(1996.609375, 210)"><rect class="basic label-container" style="" x="-94.203125" y="-39" width="188.40625" height="78"/><g class="label" style="" transform="translate(-64.203125, -24)"><rect/><foreignObject width="128.40625" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>ElectronLiveLayer<br />(Electron variant)</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-TestLayer-9" data-look="classic" transform="translate(1996.609375, 338)"><rect class="basic label-container" style="" x="-85.6875" y="-39" width="171.375" height="78"/><g class="label" style="" transform="translate(-55.6875, -24)"><rect/><foreignObject width="111.375" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>TestLayer<br />(mock services)</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-Sky-27" data-look="classic" transform="translate(2267.2109375, 82)"><rect class="basic label-container" style="" x="-101.3984375" y="-27" width="202.796875" height="54"/><g class="label" style="" transform="translate(-71.3984375, -12)"><rect/><foreignObject width="142.796875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>Consumed by Sky UI</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs></svg>
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart"
+	style="max-width: 2376.61px; background-color: white;" viewBox="0 0 2376.609375 420"
+	role="graphics-document document" aria-roledescription="flowchart-v2">
+	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#my-svg .cluster-label text{fill:#333;}#my-svg .cluster-label span{color:#333;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#333;color:#333;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#my-svg .arrowheadPath{fill:#333333;}#my-svg .edgePath .path{stroke:#333333;stroke-width:1px;}#my-svg .flowchart-link{stroke:#333333;fill:none;}#my-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#my-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#my-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#my-svg .cluster text{fill:#333;}#my-svg .cluster span{color:#333;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<g>
+		<marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10"
+			refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8"
+			orient="auto">
+			<path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath"
+				style="stroke-width: 1; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10"
+			refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8"
+			orient="auto">
+			<path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath"
+				style="stroke-width: 1; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2"
+			viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse"
+			markerWidth="10.5" markerHeight="14" orient="auto">
+			<path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath"
+				style="stroke-width: 0; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2"
+			viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5"
+			markerHeight="14" orient="auto">
+			<polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath"
+				style="stroke-width: 0; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10"
+			refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11"
+			orient="auto">
+			<circle cx="5" cy="5" r="5" class="arrowMarkerPath"
+				style="stroke-width: 1; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10"
+			refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11"
+			orient="auto">
+			<circle cx="5" cy="5" r="5" class="arrowMarkerPath"
+				style="stroke-width: 1; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2"
+			viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14"
+			markerHeight="14" orient="auto">
+			<circle cx="5" cy="5" r="5" class="arrowMarkerPath"
+				style="stroke-width: 0; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2"
+			viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14"
+			markerHeight="14" orient="auto">
+			<circle cx="5" cy="5" r="5" class="arrowMarkerPath"
+				style="stroke-width: 0; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2"
+			viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11"
+			markerHeight="11" orient="auto">
+			<path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath"
+				style="stroke-width: 2; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2"
+			viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11"
+			markerHeight="11" orient="auto">
+			<path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath"
+				style="stroke-width: 2; stroke-dasharray: 1, 0;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2"
+			viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto">
+			<path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;" />
+		</marker>
+		<marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2"
+			viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto">
+			<path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath"
+				style="stroke-width: 2.5; stroke-dasharray: 1, 0;" />
+		</marker>
+		<g class="root">
+			<g class="clusters">
+				<g class="cluster" id="my-svg-Layers" data-look="classic">
+					<rect style="" x="1877.40625" y="8" width="238.40625" height="404" />
+					<g class="cluster-label" transform="translate(1952.0703125, 8)">
+						<foreignObject width="89.078125" height="24">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5;">
+								<span class="nodeLabel">
+									<p>Layer Stacks</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="cluster" id="my-svg-Service" data-look="classic">
+					<rect style="" x="1376.671875" y="25" width="450.734375" height="387" />
+					<g class="cluster-label" transform="translate(1512.375, 25)">
+						<foreignObject width="179.328125" height="24">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5;">
+								<span class="nodeLabel">
+									<p>Service Module Structure</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+			</g>
+			<g class="edgePaths">
+				<path
+					d="M1541.243,235L1547.9,230.833C1554.558,226.667,1567.873,218.333,1578.03,214.167C1588.188,210,1595.188,210,1598.688,210L1602.188,210"
+					id="my-svg-L_Define_Implement_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Define_Implement_0"
+					data-points="W3sieCI6MTU0MS4yNDMwNDE5OTIxODc1LCJ5IjoyMzV9LHsieCI6MTU4MS4xODc1LCJ5IjoyMTB9LHsieCI6MTYwNi4xODc1LCJ5IjoyMTB9XQ=="
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M1541.243,313L1547.9,317.167C1554.558,321.333,1567.873,329.667,1582.504,333.833C1597.135,338,1613.083,338,1621.057,338L1629.031,338"
+					id="my-svg-L_Define_Problem_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Define_Problem_0"
+					data-points="W3sieCI6MTU0MS4yNDMwNDE5OTIxODc1LCJ5IjozMTN9LHsieCI6MTU4MS4xODc1LCJ5IjozMzh9LHsieCI6MTYzMy4wMzEyNSwieSI6MzM4fV0="
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M1741.807,171L1756.073,156.167C1770.34,141.333,1798.873,111.667,1817.306,96.833C1835.74,82,1844.073,82,1852.406,82C1860.74,82,1869.073,82,1878.79,82C1888.508,82,1899.609,82,1905.16,82L1910.711,82"
+					id="my-svg-L_Implement_TauriLive_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Implement_TauriLive_0"
+					data-points="W3sieCI6MTc0MS44MDY3NjI2OTUzMTI1LCJ5IjoxNzF9LHsieCI6MTgyNy40MDYyNSwieSI6ODJ9LHsieCI6MTg1Mi40MDYyNSwieSI6ODJ9LHsieCI6MTg3Ny40MDYyNSwieSI6ODJ9LHsieCI6MTkxNC43MTA5Mzc1LCJ5Ijo4Mn1d"
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M1802.406,210L1806.573,210C1810.74,210,1819.073,210,1827.406,210C1835.74,210,1844.073,210,1852.406,210C1860.74,210,1869.073,210,1876.74,210C1884.406,210,1891.406,210,1894.906,210L1898.406,210"
+					id="my-svg-L_Implement_ElectronLive_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Implement_ElectronLive_0"
+					data-points="W3sieCI6MTgwMi40MDYyNSwieSI6MjEwfSx7IngiOjE4MjcuNDA2MjUsInkiOjIxMH0seyJ4IjoxODUyLjQwNjI1LCJ5IjoyMTB9LHsieCI6MTg3Ny40MDYyNSwieSI6MjEwfSx7IngiOjE5MDIuNDA2MjUsInkiOjIxMH1d"
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M1741.807,249L1756.073,263.833C1770.34,278.667,1798.873,308.333,1817.306,323.167C1835.74,338,1844.073,338,1852.406,338C1860.74,338,1869.073,338,1878.159,338C1887.245,338,1897.083,338,1902.003,338L1906.922,338"
+					id="my-svg-L_Implement_TestLayer_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Implement_TestLayer_0"
+					data-points="W3sieCI6MTc0MS44MDY3NjI2OTUzMTI1LCJ5IjoyNDl9LHsieCI6MTgyNy40MDYyNSwieSI6MzM4fSx7IngiOjE4NTIuNDA2MjUsInkiOjMzOH0seyJ4IjoxODc3LjQwNjI1LCJ5IjozMzh9LHsieCI6MTkxMC45MjE4NzUsInkiOjMzOH1d"
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M2078.508,82L2084.725,82C2090.943,82,2103.378,82,2113.762,82C2124.146,82,2132.479,82,2140.146,82C2147.813,82,2154.813,82,2158.313,82L2161.813,82"
+					id="my-svg-L_TauriLive_Sky_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_TauriLive_Sky_0"
+					data-points="W3sieCI6MjA3OC41MDc4MTI1LCJ5Ijo4Mn0seyJ4IjoyMTE1LjgxMjUsInkiOjgyfSx7IngiOjIxNDAuODEyNSwieSI6ODJ9LHsieCI6MjE2NS44MTI1LCJ5Ijo4Mn1d"
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+				<path
+					d="M1326.672,274L1330.839,274C1335.005,274,1343.339,274,1351.672,274C1360.005,274,1368.339,274,1376.005,274C1383.672,274,1390.672,274,1394.172,274L1397.672,274"
+					id="my-svg-L_Services_Define_0"
+					class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+					style=";" data-edge="true" data-et="edge" data-id="L_Services_Define_0"
+					data-points="W3sieCI6MTMyNi42NzE4NzUsInkiOjI3NH0seyJ4IjoxMzUxLjY3MTg3NSwieSI6Mjc0fSx7IngiOjEzNzYuNjcxODc1LCJ5IjoyNzR9LHsieCI6MTQwMS42NzE4NzUsInkiOjI3NH1d"
+					data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)" />
+			</g>
+			<g class="edgeLabels">
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Define_Implement_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Define_Problem_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Implement_TauriLive_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Implement_ElectronLive_0"
+						transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Implement_TestLayer_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_TauriLive_Sky_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="edgeLabel">
+					<g class="label" data-id="L_Services_Define_0" transform="translate(0, 0)">
+						<foreignObject width="0" height="0">
+							<div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="edgeLabel"></span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+			</g>
+			<g class="nodes">
+				<g class="root" transform="translate(0, 201.5)">
+					<g class="clusters">
+						<g class="cluster" id="my-svg-Services" data-look="classic">
+							<rect style="" x="8" y="8" width="1318.671875" height="129" />
+							<g class="cluster-label" transform="translate(623.2578125, 8)">
+								<foreignObject width="88.15625" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5;">
+										<span class="nodeLabel">
+											<p>~40 Services</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+					</g>
+					<g class="edgePaths" />
+					<g class="edgeLabels" />
+					<g class="nodes">
+						<g class="node default" id="my-svg-flowchart-IPC-10" data-look="classic"
+							transform="translate(84.4765625, 72.5)">
+							<rect class="basic label-container" style="" x="-41.4765625" y="-27"
+								width="82.953125" height="54" />
+							<g class="label" style="" transform="translate(-11.4765625, -12)">
+								<rect />
+								<foreignObject width="22.953125" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>IPC</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Config-11" data-look="classic"
+							transform="translate(254.4609375, 72.5)">
+							<rect class="basic label-container" style="" x="-78.5078125" y="-27"
+								width="157.015625" height="54" />
+							<g class="label" style="" transform="translate(-48.5078125, -12)">
+								<rect />
+								<foreignObject width="97.015625" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Configuration</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Editor-12" data-look="classic"
+							transform="translate(434.5703125, 72.5)">
+							<rect class="basic label-container" style="" x="-51.6015625" y="-27"
+								width="103.203125" height="54" />
+							<g class="label" style="" transform="translate(-21.6015625, -12)">
+								<rect />
+								<foreignObject width="43.203125" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Editor</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Files-13" data-look="classic"
+							transform="translate(582.6171875, 72.5)">
+							<rect class="basic label-container" style="" x="-46.4453125" y="-27"
+								width="92.890625" height="54" />
+							<g class="label" style="" transform="translate(-16.4453125, -12)">
+								<rect />
+								<foreignObject width="32.890625" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Files</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Terminal-14"
+							data-look="classic" transform="translate(740.0390625, 72.5)">
+							<rect class="basic label-container" style="" x="-60.9765625" y="-27"
+								width="121.953125" height="54" />
+							<g class="label" style="" transform="translate(-30.9765625, -12)">
+								<rect />
+								<foreignObject width="61.953125" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Terminal</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Clip-15" data-look="classic"
+							transform="translate(915.421875, 72.5)">
+							<rect class="basic label-container" style="" x="-64.40625" y="-27"
+								width="128.8125" height="54" />
+							<g class="label" style="" transform="translate(-34.40625, -12)">
+								<rect />
+								<foreignObject width="68.8125" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Clipboard</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Dialog-16" data-look="classic"
+							transform="translate(1081.890625, 72.5)">
+							<rect class="basic label-container" style="" x="-52.0625" y="-27"
+								width="104.125" height="54" />
+							<g class="label" style="" transform="translate(-22.0625, -12)">
+								<rect />
+								<foreignObject width="44.125" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Dialog</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+						<g class="node default" id="my-svg-flowchart-Srch-17" data-look="classic"
+							transform="translate(1237.8125, 72.5)">
+							<rect class="basic label-container" style="" x="-53.859375" y="-27"
+								width="107.71875" height="54" />
+							<g class="label" style="" transform="translate(-23.859375, -12)">
+								<rect />
+								<foreignObject width="47.71875" height="24">
+									<div xmlns="http://www.w3.org/1999/xhtml"
+										style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+										<span class="nodeLabel">
+											<p>Search</p>
+										</span>
+									</div>
+								</foreignObject>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-Define-0" data-look="classic"
+					transform="translate(1478.9296875, 274)">
+					<rect class="basic label-container" style="" x="-77.2578125" y="-39"
+						width="154.515625" height="78" />
+					<g class="label" style="" transform="translate(-47.2578125, -24)">
+						<rect />
+						<foreignObject width="94.515625" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>Define.ts<br />Effect-TS Tag</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-Implement-1" data-look="classic"
+					transform="translate(1704.296875, 210)">
+					<rect class="basic label-container" style="" x="-98.109375" y="-39"
+						width="196.21875" height="78" />
+					<g class="label" style="" transform="translate(-68.109375, -24)">
+						<rect />
+						<foreignObject width="136.21875" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>Implement.ts<br />Tauri-backed Layer</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-Problem-2" data-look="classic"
+					transform="translate(1704.296875, 338)">
+					<rect class="basic label-container" style="" x="-71.265625" y="-39"
+						width="142.53125" height="78" />
+					<g class="label" style="" transform="translate(-41.265625, -24)">
+						<rect />
+						<foreignObject width="82.53125" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>Problem.ts<br />Typed Error</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-TauriLive-7" data-look="classic"
+					transform="translate(1996.609375, 82)">
+					<rect class="basic label-container" style="" x="-81.8984375" y="-39"
+						width="163.796875" height="78" />
+					<g class="label" style="" transform="translate(-51.8984375, -24)">
+						<rect />
+						<foreignObject width="103.796875" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>TauriLiveLayer<br />(production)</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-ElectronLive-8" data-look="classic"
+					transform="translate(1996.609375, 210)">
+					<rect class="basic label-container" style="" x="-94.203125" y="-39"
+						width="188.40625" height="78" />
+					<g class="label" style="" transform="translate(-64.203125, -24)">
+						<rect />
+						<foreignObject width="128.40625" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>ElectronLiveLayer<br />(Electron variant)</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-TestLayer-9" data-look="classic"
+					transform="translate(1996.609375, 338)">
+					<rect class="basic label-container" style="" x="-85.6875" y="-39"
+						width="171.375" height="78" />
+					<g class="label" style="" transform="translate(-55.6875, -24)">
+						<rect />
+						<foreignObject width="111.375" height="48">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>TestLayer<br />(mock services)</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+				<g class="node default" id="my-svg-flowchart-Sky-27" data-look="classic"
+					transform="translate(2267.2109375, 82)">
+					<rect class="basic label-container" style="" x="-101.3984375" y="-27"
+						width="202.796875" height="54" />
+					<g class="label" style="" transform="translate(-71.3984375, -12)">
+						<rect />
+						<foreignObject width="142.796875" height="24">
+							<div xmlns="http://www.w3.org/1999/xhtml"
+								style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+								<span class="nodeLabel">
+									<p>Consumed by Sky UI</p>
+								</span>
+							</div>
+						</foreignObject>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<defs>
+		<filter id="my-svg-drop-shadow" height="130%" width="130%">
+			<feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000" />
+		</filter>
+	</defs>
+	<defs>
+		<filter id="my-svg-drop-shadow-small" height="150%" width="150%">
+			<feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000" />
+		</filter>
+	</defs>
+</svg>

@@ -9,10 +9,7 @@ const Card = React.forwardRef<
 	return (
 		<jelly-card
 			ref={ref as unknown as React.Ref<HTMLElement>}
-			className={cn(
-				"text-card-fg",
-				className,
-			)}
+			className={cn("text-card-fg", className)}
 			style={
 				{
 					"--jelly-fill": "var(--Card)",

@@ -105,22 +105,22 @@ const IconTooltip = ({
 				</TooltipTrigger>
 				{Array.isArray(Label) ? (
 					<TooltipContent className="flex flex-col items-center gap-0 bg-transparent p-0 [&>svg]:hidden">
-												{Label.map((Line, Index) => {
-													// Deterministic hash so SSR and client hydration match
-													const Hash = (S: string): number => {
-														let H = 0;
-														for (let I = 0; I < S.length; I++) {
-															H = ((H << 5) - H + S.charCodeAt(I)) | 0;
-														}
-														return H / 2147483647;
-													};
-													const Seed = Hash(`ts-${Index}`).toFixed(3);
-													const Phase = Hash(`tp-${Index}`).toFixed(3);
+						{Label.map((Line, Index) => {
+							// Deterministic hash so SSR and client hydration match
+							const Hash = (S: string): number => {
+								let H = 0;
+								for (let I = 0; I < S.length; I++) {
+									H = ((H << 5) - H + S.charCodeAt(I)) | 0;
+								}
+								return H / 2147483647;
+							};
+							const Seed = Hash(`ts-${Index}`).toFixed(3);
+							const Phase = Hash(`tp-${Index}`).toFixed(3);
 
 							return (
 								<p
 									key={Index}
-									className="StaccatoCard w-fit flat bg-primary px-3 py-1 text-primary-foreground"
+									className="StaccatoCard flat w-fit bg-primary px-3 py-1 text-primary-foreground"
 									style={
 										{
 											"--StaccatoSeed": Seed,

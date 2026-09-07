@@ -12,8 +12,6 @@ import { Button } from "../UI/Button";
 
 import { IconTooltip } from "../UI/IconTooltip.js";
 
-import { ThemeToggle } from "../UI/ThemeToggle";
-
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
 import "../Layout/Header/Stylesheet.css";
@@ -216,11 +214,11 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 					{HeaderData.Actions?.filter(
 						(Action) => Action.Href !== "/Account/SignIn",
 					).map((Action, Index) => {
-						const variant = (Action.Variant as
-							| "ghost"
-							| "default"
-							| "outline") || "default";
-						const size = (Action.Size as "default" | "sm" | "lg") ||
+						const variant =
+							(Action.Variant as
+								"ghost" | "default" | "outline") || "default";
+						const size =
+							(Action.Size as "default" | "sm" | "lg") ||
 							"default";
 						const cls = FullWidth
 							? "StaccatoButton w-full justify-start"
@@ -232,53 +230,90 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 						// physics as the hero buttons.
 						if (variant === "ghost" || variant === "link") {
 							return (
-								<Button key={Index} variant={variant} size={size}
-									className={cls} asChild>
+								<Button
+									key={Index}
+									variant={variant}
+									size={size}
+									className={cls}
+									asChild
+								>
 									<a href={Action.Href} onClick={OnClick}>
 										{Action.Text}
-										{RenderActionIcon(Action.Icon, Action.Text, Action.Tooltip)}
+										{RenderActionIcon(
+											Action.Icon,
+											Action.Text,
+											Action.Tooltip,
+										)}
 									</a>
 								</Button>
 							);
 						}
 						return (
-							<Button key={Index} variant={variant} size={size}
+							<Button
+								key={Index}
+								variant={variant}
+								size={size}
 								className={cls}
-								onClick={() => { window.location.href = Action.Href; }}>
+								onClick={() => {
+									window.location.href = Action.Href;
+								}}
+							>
 								{Action.Text}
-								{RenderActionIcon(Action.Icon, Action.Text, Action.Tooltip)}
+								{RenderActionIcon(
+									Action.Icon,
+									Action.Text,
+									Action.Tooltip,
+								)}
 							</Button>
 						);
 					})}
 				</>
 			) : (
 				HeaderData.Actions?.map((Action, Index) => {
-					const variant = (Action.Variant as
-						| "ghost"
-						| "default"
-						| "outline") || "default";
-					const size = (Action.Size as "default" | "sm" | "lg") ||
+					const variant =
+						(Action.Variant as "ghost" | "default" | "outline") ||
 						"default";
+					const size =
+						(Action.Size as "default" | "sm" | "lg") || "default";
 					const cls = FullWidth
 						? "StaccatoButton w-full justify-start"
 						: "StaccatoButton";
 					if (variant === "ghost" || variant === "link") {
 						return (
-							<Button key={Index} variant={variant} size={size}
-								className={cls} asChild>
+							<Button
+								key={Index}
+								variant={variant}
+								size={size}
+								className={cls}
+								asChild
+							>
 								<a href={Action.Href} onClick={OnClick}>
 									{Action.Text}
-									{RenderActionIcon(Action.Icon, Action.Text, Action.Tooltip)}
+									{RenderActionIcon(
+										Action.Icon,
+										Action.Text,
+										Action.Tooltip,
+									)}
 								</a>
 							</Button>
 						);
 					}
 					return (
-						<Button key={Index} variant={variant} size={size}
+						<Button
+							key={Index}
+							variant={variant}
+							size={size}
 							className={cls}
-							onClick={() => { window.location.href = Action.Href; }}>
+							onClick={() => {
+								window.location.href = Action.Href;
+							}}
+						>
 							{Action.Text}
-							{RenderActionIcon(Action.Icon, Action.Text, Action.Tooltip)}
+							{RenderActionIcon(
+								Action.Icon,
+								Action.Text,
+								Action.Tooltip,
+							)}
 						</Button>
 					);
 				})
@@ -302,7 +337,7 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 							aria-hidden="true"
 						>
 							<ThemeImage
-								src="/Asset/Logo/Glyph/Land.svg"
+								src="/Asset/Dark/Logo/Glyph/Land.svg"
 								alt="Code Editor Land"
 								title="Code Editor Land"
 								width={32}
@@ -310,8 +345,8 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 								className="h-full w-full"
 							/>
 						</div>
-						<span className="font-semibold">
-							{HeaderData.Logo?.Text || "Land"}
+						<span className="font-mono text-sm font-medium uppercase tracking-widest">
+							{HeaderData.Logo?.Text || "LAND"}
 						</span>
 					</a>
 
@@ -359,7 +394,6 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 				{/* Right: actions (md+) + mobile hamburger */}
 				<div className="flex items-center gap-3">
 					<div className="hidden items-center gap-3 md:flex">
-						<ThemeToggle />
 						<LocaleSwitcher />
 						<ActionButtons />
 					</div>

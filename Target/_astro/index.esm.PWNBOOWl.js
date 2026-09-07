@@ -1,0 +1,1 @@
+import{a as s,c as a,i as r,l as o,n as e,o as i,r as t,s as m,t as n}from"./Vendor/Firebase.BKVMEFTt.js";export{m as initializeApp};

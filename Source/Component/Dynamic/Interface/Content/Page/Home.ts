@@ -8,20 +8,20 @@ import type HeroContent from "../Hero.js";
 
 import type PricingContent from "../Pricing.js";
 
-import type TestimonialsContent from "../Testimonial.js";
+import type TestimonialContent from "../Testimonial.js";
 
 export default interface Interface {
 	Hero: HeroContent;
 
-	Features: FeaturesContent;
+	Feature: FeaturesContent;
 
 	Pricing: PricingContent;
 
-	Testimonials: TestimonialsContent;
+	Testimonial: TestimonialContent;
 
 	Download: PlatformGridContent;
 
-	Header?: HeaderContent;
+	Header?: HeaderContent | undefined;
 
-	Footer?: Record<string, unknown>;
+	Footer?: Record<string, unknown> | undefined;
 }

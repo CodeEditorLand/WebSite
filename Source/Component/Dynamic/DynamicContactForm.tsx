@@ -163,9 +163,9 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 	const MailtoHref = BuildMailtoHref(Config, Values, Year, PairId);
 
 	const BadgeColor = Config.Destructive
-		? "border-red-200 bg-red-50 text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-300"
+		? "border-red-200 bg-red-50 text-red-700"
 		: Config.Article
-			? "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300"
+			? "border-blue-200 bg-blue-50 text-blue-700"
 			: "border-[var(--Border)] bg-mute text-muted-foreground";
 
 	return (
@@ -180,11 +180,11 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 						{Config.Code}-{PairId}
 					</span>
 					{Config.Article && (
-						<span className="inline-flex items-center border border-[var(--Border)] bg-mute px-2 py-0.5 font-mono text-sm text-muted-foreground">
+						<span className="bg-mute inline-flex items-center border border-[var(--Border)] px-2 py-0.5 font-mono text-sm text-muted-foreground">
 							{Config.Article}
 						</span>
 					)}
-					<span className="inline-flex items-center bg-mute px-2 py-0.5 font-mono text-sm text-muted-foreground">
+					<span className="bg-mute inline-flex items-center px-2 py-0.5 font-mono text-sm text-muted-foreground">
 						{Config.ResponseDays}d SLA
 					</span>
 				</div>
@@ -417,7 +417,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 				<a
 					href={MailtoHref}
 					onClick={Validate}
-					className={`StaccatoButton flex w-full items-center gap-3 border px-5 py-3 font-medium transition-all hover:bg-secondary focus:outline-2 focus:outline-[var(--Primary)] ${Config.Destructive ? "border-red-200 hover:bg-red-50 dark:border-red-800 dark:hover:bg-red-950" : "border-[var(--Border)]"}`}
+					className={`StaccatoButton flex w-full items-center gap-3 border px-5 py-3 font-medium transition-all hover:bg-secondary focus:outline-2 focus:outline-[var(--Primary)] ${Config.Destructive ? "border-red-200 hover:bg-red-50" : "border-[var(--Border)]"}`}
 				>
 					<Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
 					<div className="flex-1 text-left">
@@ -479,7 +479,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 			</div>
 
 			{/* Pair reference explanation */}
-			<div className="border border-[var(--Border)] bg-mute px-5 py-4 text-sm text-muted-foreground">
+			<div className="bg-mute border border-[var(--Border)] px-5 py-4 text-sm text-muted-foreground">
 				<span className="font-mono font-semibold text-foreground">
 					{Config.Code}-{PairId}
 				</span>{" "}

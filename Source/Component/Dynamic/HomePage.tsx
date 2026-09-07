@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslation } from "react-i18next";
 
 import { ErrorBoundary } from "../ErrorBoundary.js";
@@ -27,9 +25,8 @@ import type Interface from "./Interface/Content/Page/Home.js";
 import type Property from "./Interface/Property/Page/Home.js";
 
 /**
- * Dynamic HomePage composition
- * Assembles Header, Hero, Features, Pricing, Testimonials, Download, Footer
- * Content driven by translations (useTranslation) or explicit props
+ * Dynamic HomePage composition - Nocturnal Field Record.
+ * Black canvas, warm-white cards, mono type, green accent.
  */
 const HomePage = ({ Content, ClassName }: Property) => {
 	const { t: T } = useTranslation(["home", "common", "download", "footer"]);
@@ -44,7 +41,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 		Hero: {
 			Badge: {
 				Text: T("home:hero.badge", {
-					defaultValue: "No Electron No Chromium CC0",
+					defaultValue: "NO ELECTRON NO CHROMIUM CC0",
 				}),
 
 				Variant: "secondary",
@@ -55,7 +52,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 			}),
 
 			TitleHighlight: T("home:hero.titleHighlight", {
-				defaultValue: "Land",
+				defaultValue: "LAND",
 			}),
 
 			Subtitle: T("home:hero.subtitle", {
@@ -63,9 +60,9 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					"A native code editor with the soul of VS Code - and none of the browser. Built on Rust and Tauri, compatible with the extensions you already use.",
 			}),
 
-			PrimaryCta: {
+			PrimaryCTA: {
 				Text: T("common:button.download", {
-					defaultValue: "Download Land Free",
+					defaultValue: "DOWNLOAD LAND FREE",
 				}),
 
 				Variant: "default",
@@ -77,9 +74,9 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				Href: "/Download",
 			},
 
-			SecondaryCta: {
+			SecondaryCTA: {
 				Text: T("common:button.learnMore", {
-					defaultValue: "See What Makes Land Different",
+					defaultValue: "SEE WHAT MAKES LAND DIFFERENT",
 				}),
 
 				Variant: "ghost",
@@ -91,12 +88,12 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				Href: "https://github.com/CodeEditorLand/Land#readme",
 			},
 
-			FloatingCards: [
+			FloatingCard: [
 				{
 					Id: "1",
 
 					Title: T("home:hero.scene.cards.1.title", {
-						defaultValue: "Rust Core",
+						defaultValue: "RUST CORE",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.1.tooltip", [
@@ -107,14 +104,14 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"The ActionEffect system treats every operation as declarative data dispatched across layers.",
 					]),
 
-					Colors: ["var(--ExtensionRust)", "var(--Mute)"],
+					Color: ["var(--ExtensionRust)", "var(--Mute)"],
 				},
 
 				{
 					Id: "2",
 
 					Title: T("home:hero.scene.cards.2.title", {
-						defaultValue: "Tauri UI",
+						defaultValue: "TAURI UI",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.2.tooltip", [
@@ -123,7 +120,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Multiple workbench layouts adapt the UI layer to different runtimes: browser proxy, Mountain-native, or Electron.",
 					]),
 
-					Colors: [
+					Color: [
 						"var(--ExtensionTauri)",
 
 						"var(--Primary)",
@@ -138,7 +135,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "3",
 
 					Title: T("home:hero.scene.cards.3.title", {
-						defaultValue: "Effect-TS Services",
+						defaultValue: "EFFECT-TS SERVICES",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.3.tooltip", [
@@ -147,7 +144,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Wind composes workbench services into Layer stacks that make dependency paths traceable at compile time - one stack per runtime target.",
 					]),
 
-					Colors: [
+					Color: [
 						"var(--ExtensionEffectTypeScript)",
 
 						"var(--ExtensionEffectTypeScriptFore)",
@@ -160,7 +157,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "4",
 
 					Title: T("home:hero.scene.cards.4.title", {
-						defaultValue: "gRPC IPC",
+						defaultValue: "GRPC IPC",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.4.tooltip", [
@@ -171,14 +168,14 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Every gRPC call is a typed contract - the wire format is the interface.",
 					]),
 
-					Colors: ["var(--SpinegRPC)", "var(--SpineIPC)"],
+					Color: ["var(--SpinegRPC)", "var(--SpineIPC)"],
 				},
 
 				{
 					Id: "5",
 
 					Title: T("home:hero.scene.cards.5.title", {
-						defaultValue: "Extension Host",
+						defaultValue: "EXTENSION HOST",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.5.tooltip", [
@@ -191,14 +188,14 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Effect-TS services implement the vscode API shim across both tracks.",
 					]),
 
-					Colors: ["var(--TierProvider)"],
+					Color: ["var(--TierProvider)"],
 				},
 
 				{
 					Id: "6",
 
 					Title: T("home:hero.scene.cards.6.title", {
-						defaultValue: "Cross-Platform",
+						defaultValue: "CROSS-PLATFORM",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.6.tooltip", [
@@ -207,7 +204,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Per-platform build configuration and binary management keep cross-compilation paths explicit rather than hidden in installer scripts.",
 					]),
 
-					Colors: [
+					Color: [
 						"var(--OSMacOS)",
 
 						"var(--OSWindows)",
@@ -220,7 +217,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "7",
 
 					Title: T("home:hero.scene.cards.7.title", {
-						defaultValue: "VS Code API",
+						defaultValue: "VS CODE API",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.7.tooltip", [
@@ -229,14 +226,14 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"The dual-track architecture preserves compatibility with published extension APIs while routing through native services.",
 					]),
 
-					Colors: ["var(--SpineIPC)"],
+					Color: ["var(--SpineIPC)"],
 				},
 
 				{
 					Id: "8",
 
 					Title: T("home:hero.scene.cards.8.title", {
-						defaultValue: "Open Source CC0",
+						defaultValue: "OPEN SOURCE CC0",
 					}),
 
 					Tooltip: TArr("home:hero.scene.cards.8.tooltip", [
@@ -247,7 +244,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						"Funded by NLnet NGI0 Commons Fund.",
 					]),
 
-					Colors: ["var(--SpinegRPC)", "var(--ExtensionTauri)"],
+					Color: ["var(--SpinegRPC)", "var(--ExtensionTauri)"],
 				},
 			],
 
@@ -258,9 +255,9 @@ const HomePage = ({ Content, ClassName }: Property) => {
 			RespectReducedMotion: true,
 		},
 
-		Features: {
+		Feature: {
 			Title: T("home:features.title", {
-				defaultValue: "VS Code. Without Electron.",
+				defaultValue: "VS CODE. WITHOUT ELECTRON.",
 			}),
 
 			Subtitle: T("home:features.subtitle", {
@@ -268,7 +265,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					"Native speed. VS Code compatibility. No Chromium, no compromises.",
 			}),
 
-			Features: [
+			Feature: [
 				{
 					Id: "performance",
 
@@ -424,12 +421,12 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					"Funded by NLnet NGI0 Commons Fund.\n\nEach milestone is labelled by what it represents: active source, integration work in progress, or release preparation.",
 			}),
 
-			Tiers: [
+			Tier: [
 				{
-					Id: "free",
+					Identifier: "free",
 
 					Name: T("home:roadmap.tiers.current.name", {
-						defaultValue: "Active Now",
+						defaultValue: "ACTIVE NOW",
 					}),
 
 					Description: T("home:roadmap.tiers.current.description", {
@@ -439,7 +436,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 					Price: { Monthly: 0, Yearly: 0 },
 
-					Elements: [
+					Element: [
 						T("home:roadmap.tiers.current.elements.mountain", {
 							defaultValue:
 								"Mountain\nNative Backend\nReplaces Electron main process, no bundled Chromium",
@@ -471,7 +468,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						}),
 					],
 
-					Features: [
+					Feature: [
 						T("home:roadmap.tiers.current.features.1", {
 							defaultValue:
 								"Installed extensions run unmodified through Cocoon",
@@ -504,7 +501,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 					CTA: {
 						Text: T("home:roadmap.tiers.current.button", {
-							defaultValue: "View on GitHub",
+							defaultValue: "VIEW ON GITHUB",
 						}),
 
 						Variant: "default",
@@ -516,10 +513,10 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				},
 
 				{
-					Id: "progress",
+					Identifier: "progress",
 
 					Name: T("home:roadmap.tiers.future.name", {
-						defaultValue: "v1.0",
+						defaultValue: "V1.0",
 					}),
 
 					Status: "WIP",
@@ -531,7 +528,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 					Price: { Monthly: 0, Yearly: 0 },
 
-					Elements: [
+					Element: [
 						T("home:roadmap.tiers.future.elements.vine", {
 							defaultValue:
 								"Vine\nProtocol In Progress\nMountain, Cocoon, Air, and Grove contracts",
@@ -563,7 +560,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						}),
 					],
 
-					Features: [
+					Feature: [
 						T("home:roadmap.tiers.future.features.1", {
 							defaultValue:
 								"Marketplace installation path under review",
@@ -594,7 +591,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 					CTA: {
 						Text: T("home:roadmap.tiers.future.button", {
-							defaultValue: "Track Progress",
+							defaultValue: "TRACK PROGRESS",
 						}),
 
 						Variant: "outline",
@@ -607,7 +604,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 			],
 		},
 
-		Testimonials: {
+		Testimonial: {
 			Title: T("home:architecture.title", {
 				defaultValue: "Under the Hood",
 			}),
@@ -617,7 +614,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					"Each element replaces one piece of the Electron stack. All inspectable in source.",
 			}),
 
-			Testimonials: [
+			Testimonial: [
 				{
 					Id: "Air",
 
@@ -629,7 +626,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 					Role: T("home:architecture.air.subtitle", {
 						defaultValue:
-							"Background Services\u2001Downloader\u2001Workspace Indexer",
+							"Background Services Downloader Workspace Indexer",
 					}),
 
 					Quote: T("home:architecture.air.description", {
@@ -761,7 +758,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				{
 					Id: "Mountain",
 
-					Emoji: "\u26F0\uFE0F",
+					Emoji: "⛰️",
 
 					Href: "https://github.com/CodeEditorLand/Mountain",
 
@@ -781,7 +778,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				{
 					Id: "Output",
 
-					Emoji: "\u26AB",
+					Emoji: "⚫",
 
 					Href: "https://github.com/CodeEditorLand/Output",
 
@@ -801,7 +798,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				{
 					Id: "Rest",
 
-					Emoji: "\u26F1\uFE0F",
+					Emoji: "⛱️",
 
 					Href: "https://github.com/CodeEditorLand/Rest",
 
@@ -919,11 +916,11 @@ const HomePage = ({ Content, ClassName }: Property) => {
 				},
 			],
 
-			Columns: "masonry",
+			Column: "masonry",
 		},
 
 		Download: {
-			Title: T("download:title", { defaultValue: "Download Land" }),
+			Title: T("download:title", { defaultValue: "DOWNLOAD LAND" }),
 
 			Subtitle: T("download:subtitle", {
 				defaultValue:
@@ -935,7 +932,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "macos",
 
 					Name: T("download:card.platform.macos.title", {
-						defaultValue: "macOS",
+						defaultValue: "MACOS",
 					}),
 
 					Icon: "Apple" as const,
@@ -958,7 +955,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "windows",
 
 					Name: T("download:card.platform.windows.title", {
-						defaultValue: "Windows",
+						defaultValue: "WINDOWS",
 					}),
 
 					Icon: "Monitor" as const,
@@ -980,7 +977,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 					Id: "linux",
 
 					Name: T("download:card.platform.linux.title", {
-						defaultValue: "Linux",
+						defaultValue: "LINUX",
 					}),
 
 					Icon: "Terminal" as const,
@@ -997,7 +994,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 			ShowVerification: true,
 
-			OnDownload: async (Platform: { name: string; id?: string }) => {
+			OnDownload: async (Platform: { Name: string; id?: string }) => {
 				if (Platform.id) {
 					try {
 						const { default: DownloadAPI } =
@@ -1027,7 +1024,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 		Footer: {
 			Brand: {
 				Name: T("common:brand.name", {
-					defaultValue: "Code Editor Land",
+					defaultValue: "CODE EDITOR LAND",
 				}),
 
 				Description: T("footer:brand.description", {
@@ -1043,13 +1040,13 @@ const HomePage = ({ Content, ClassName }: Property) => {
 			Columns: [
 				{
 					Title: T("footer:columns.product.title", {
-						defaultValue: "Product",
+						defaultValue: "PRODUCT",
 					}),
 
 					Links: [
 						{
 							Label: T("footer:columns.product.features", {
-								defaultValue: "Features",
+								defaultValue: "FEATURE",
 							}),
 
 							Href: "/#features",
@@ -1057,7 +1054,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.product.downloads", {
-								defaultValue: "Downloads",
+								defaultValue: "DOWNLOAD",
 							}),
 
 							Href: "/Download",
@@ -1065,7 +1062,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.product.docs", {
-								defaultValue: "Documentation",
+								defaultValue: "DOCUMENTATION",
 							}),
 
 							Href: "https://github.com/CodeEditorLand/Land#readme",
@@ -1075,13 +1072,13 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 				{
 					Title: T("footer:columns.company.title", {
-						defaultValue: "Community",
+						defaultValue: "COMMUNITY",
 					}),
 
 					Links: [
 						{
 							Label: T("footer:columns.company.github", {
-								defaultValue: "GitHub",
+								defaultValue: "GITHUB",
 							}),
 
 							Href: "https://github.com/CodeEditorLand/Land",
@@ -1089,7 +1086,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.company.issues", {
-								defaultValue: "Issues",
+								defaultValue: "ISSUES",
 							}),
 
 							Href: "https://github.com/CodeEditorLand/Land/issues",
@@ -1097,7 +1094,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.company.contributing", {
-								defaultValue: "Contributing",
+								defaultValue: "CONTRIBUTING",
 							}),
 
 							Href: "https://github.com/CodeEditorLand/Land/tree/Current/CONTRIBUTING.md",
@@ -1107,13 +1104,13 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 				{
 					Title: T("footer:columns.legal.title", {
-						defaultValue: "Legal",
+						defaultValue: "LEGAL",
 					}),
 
 					Links: [
 						{
 							Label: T("footer:columns.legal.privacy", {
-								defaultValue: "Privacy",
+								defaultValue: "PRIVACY",
 							}),
 
 							Href: "/Legal/Privacy",
@@ -1121,7 +1118,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.legal.terms", {
-								defaultValue: "Terms",
+								defaultValue: "TERMS",
 							}),
 
 							Href: "/Legal/Term",
@@ -1129,7 +1126,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 						{
 							Label: T("footer:columns.legal.license", {
-								defaultValue: "License",
+								defaultValue: "LICENSE",
 							}),
 
 							Href: "/License",
@@ -1145,11 +1142,11 @@ const HomePage = ({ Content, ClassName }: Property) => {
 	const {
 		Hero,
 
-		Features,
+		Feature,
 
 		Pricing,
 
-		Testimonials,
+		Testimonial: Testimonials,
 
 		Download,
 
@@ -1158,7 +1155,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 	return (
 		<div className={`flex min-h-screen flex-col ${ClassName || ""}`}>
-			{HeaderContent !== undefined && <Header content={HeaderContent} />}
+			{HeaderContent !== undefined && <Header Content={HeaderContent} />}
 
 			<div className="flex-1" role="region" aria-label="Page content">
 				<ErrorBoundary
@@ -1177,7 +1174,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 						</div>
 					)}
 				>
-					<DynamicFeatures Content={Features} />
+					<DynamicFeatures Content={Feature} />
 				</ErrorBoundary>
 				<ErrorBoundary
 					FallbackComponent={() => (

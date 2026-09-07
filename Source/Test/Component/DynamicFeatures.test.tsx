@@ -102,7 +102,7 @@ describe("DynamicFeatures", () => {
 	});
 
 	it("renders without title or subtitle when omitted", () => {
-		render(<DynamicFeatures Content={{ Features: SampleFeatures }} />);
+		render(<DynamicFeatures Content={{ Feature: SampleFeatures }} />);
 
 		for (const Feature of SampleFeatures) {
 			expect(screen.getByText(Feature.Title)).toBeInTheDocument();

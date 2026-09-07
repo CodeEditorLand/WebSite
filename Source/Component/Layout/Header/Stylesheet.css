@@ -1,7 +1,7 @@
-/* Header - frosted translucent bar that follows the active theme */
+/* Header - Nocturnal Field Record. Dark canvas, mono, flat. */
 
 .Header {
-	background: color-mix(in srgb, var(--Background) 78%, transparent);
+	background: color-mix(in srgb, var(--Background) 85%, transparent);
 	backdrop-filter: blur(12px) saturate(140%);
 	-webkit-backdrop-filter: blur(12px) saturate(140%);
 	border-bottom: 1px solid var(--Border);
@@ -15,8 +15,7 @@
 	color: var(--Foreground);
 }
 
-/* Nav link label - underline only the text, not the em quad + icon */
-
+/* Nav link label - underline only the text */
 .HeaderSubLink .HeaderLinkLabel {
 	text-decoration: underline;
 	text-decoration-color: var(--Border);
@@ -25,11 +24,10 @@
 }
 
 .HeaderSubLink:hover .HeaderLinkLabel {
-	text-decoration-color: var(--Primary);
+	text-decoration-color: var(--Accent);
 }
 
-/* Nav dropdown (desktop hamburger panel) */
-
+/* Nav dropdown */
 .NavDropdown {
 	background: var(--Background);
 	border-bottom: 1px solid var(--Border);
@@ -40,23 +38,21 @@
 	z-index: 1;
 }
 
-/* Full gray hover overlay */
-
+/* Hover overlay - uses accent green at low opacity */
 .HeaderSubLink::before {
 	content: "";
 	position: absolute;
 	inset: 0;
 	z-index: -1;
-	background: var(--Mute);
+	background: var(--Accent);
 	opacity: 0;
 	transition: opacity 0.12s ease;
 }
 
 .HeaderSubLink:hover::before {
-	opacity: 1;
+	opacity: 0.12;
 }
 
 .HeaderSubLink:active::before {
-	opacity: 0.8;
-	background: var(--Accent);
+	opacity: 0.2;
 }

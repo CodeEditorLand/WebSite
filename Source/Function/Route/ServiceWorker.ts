@@ -934,56 +934,50 @@ self.addEventListener("fetch", (Event: FetchEvent) => {
 		__DEV__ && Log(`Asset (cache-first): ${Path}`);
 
 		Event.respondWith(
-			caches
-				.open(CACHE_ASSET)
-				.then(async (Cache) => {
-					const Cached = await Cache.match(Request);
+			caches.open(CACHE_ASSET).then(async (Cache) => {
+				const Cached = await Cache.match(Request);
 
-					if (Cached) {
-						__DEV__ && Log(`Asset cache hit: ${Path}`);
+				if (Cached) {
+					__DEV__ && Log(`Asset cache hit: ${Path}`);
 
-						return Cached;
+					return Cached;
+				}
+
+				__DEV__ && Log(`Asset cache miss, fetching: ${Path}`);
+
+				try {
+					const NetworkResponse = await fetch(Request);
+
+					// Only cache genuine asset responses. During a
+					// broken deploy window the catch-all can return a
+					// 200 HTML page for an asset URL (e.g. /Mermaid/*.svg
+					// before the routing fix); caching that as the asset
+					// permanently breaks the diagram. Guard on content
+					// type so HTML fallbacks are never stored.
+					const Type =
+						NetworkResponse?.headers?.get("content-type") ?? "";
+					if (
+						NetworkResponse &&
+						NetworkResponse.ok &&
+						Type.startsWith("image/")
+					) {
+						await Cache.put(Request, NetworkResponse.clone());
 					}
 
-					__DEV__ && Log(`Asset cache miss, fetching: ${Path}`);
+					return (
+						NetworkResponse ||
+						new Response(`Failed to fetch ${Path}`, {
+							status: 504,
+						})
+					);
+				} catch (_Error: unknown) {
+					__DEV__ && ErrorLog(`Asset fetch failed: ${Path}`, _Error);
 
-					try {
-						const NetworkResponse = await fetch(Request);
-
-						// Only cache genuine asset responses. During a
-						// broken deploy window the catch-all can return a
-						// 200 HTML page for an asset URL (e.g. /Mermaid/*.svg
-						// before the routing fix); caching that as the asset
-						// permanently breaks the diagram. Guard on content
-						// type so HTML fallbacks are never stored.
-						const Type =
-							NetworkResponse?.headers?.get("content-type") ?? "";
-						if (
-							NetworkResponse &&
-							NetworkResponse.ok &&
-							Type.startsWith("image/")
-						) {
-							await Cache.put(
-								Request,
-								NetworkResponse.clone(),
-							);
-						}
-
-						return (
-							NetworkResponse ||
-							new Response(`Failed to fetch ${Path}`, {
-								status: 504,
-							})
-						);
-					} catch (_Error: unknown) {
-						__DEV__ &&
-							ErrorLog(`Asset fetch failed: ${Path}`, _Error);
-
-						return new Response(`Offline: ${Path}`, {
-							status: 503,
-						});
-					}
-				}),
+					return new Response(`Offline: ${Path}`, {
+						status: 503,
+					});
+				}
+			}),
 		);
 
 		return;

@@ -1,5 +1,7 @@
-<svg width="2048" height="2048" viewBox="0 0 2048 2048" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<rect width="2048" height="2048" transform="matrix(-1 0 0 1 2048 0)" fill="#EAEAEA" fill-opacity="0.21" />
+<svg width="2048" height="2048" viewBox="0 0 2048 2048" fill="none"
+	xmlns="http://www.w3.org/2000/svg">
+	<rect width="2048" height="2048" transform="matrix(-1 0 0 1 2048 0)" fill="#EAEAEA"
+		fill-opacity="0.21" />
 	<path
 		d="M1176.71 1708.76C1211.29 1798.84 1113.96 1882.67 1030 1835.11C981.01 1807.36 963.501 1745.45 990.471 1696.22L991.117 1695.06L1098.45 1504.89L1176.71 1708.76ZM801.349 526.759C727.195 333.58 915.847 143.354 1109.63 215.9C1239.16 264.39 1301.04 412.019 1244.78 538.371L1176.7 691.289L1003.74 1054L801.349 526.759Z"
 		stroke="#151515" stroke-opacity="0.21" stroke-width="73.1619" />

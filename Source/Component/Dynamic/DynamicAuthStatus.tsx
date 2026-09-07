@@ -100,7 +100,7 @@ export default ({
 			<DropdownMenuTrigger asChild>
 				<button
 					type="button"
-					className="flex items-center gap-2 flat focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+					className="flat flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 					aria-label={T("user.avatarAlt", {
 						defaultValue: "User menu",
 					})}

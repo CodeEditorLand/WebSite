@@ -144,7 +144,7 @@ const DynamicEmailVerification = ({
 	const RenderPending = () => (
 		<Card className="StaccatoCard StaccatoBorderShimmer StaccatoShadowLift">
 			<CardHeader className="text-center">
-				<div className="bg-primary/10 mx-auto mb-4 flex h-12 w-12 items-center justify-center flat">
+				<div className="bg-primary/10 flat mx-auto mb-4 flex h-12 w-12 items-center justify-center">
 					<lucide.Mail
 						className="h-6 w-6 text-primary"
 						aria-hidden="true"
@@ -189,10 +189,7 @@ const DynamicEmailVerification = ({
 					/>
 
 					{ResendSuccess && (
-						<p
-							className="text-center text-green-600 dark:text-green-400"
-							role="status"
-						>
+						<p className="text-center text-green-600" role="status">
 							{Content.Pending.ResendSuccessMessage ||
 								T("resendSuccess", {
 									defaultValue: "Verification email resent!",
@@ -214,7 +211,7 @@ const DynamicEmailVerification = ({
 		<Card className="StaccatoCard StaccatoBorderShimmer StaccatoShadowLift">
 			<CardHeader className="text-center">
 				<div
-					className="bg-primary/10 mx-auto mb-4 flex h-12 w-12 items-center justify-center flat"
+					className="bg-primary/10 flat mx-auto mb-4 flex h-12 w-12 items-center justify-center"
 					aria-hidden="true"
 				>
 					<div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent"></div>
@@ -252,7 +249,7 @@ const DynamicEmailVerification = ({
 					</CardTitle>
 					{"\u2001"}
 					<lucide.CheckCircle
-						className="h-5 w-5 shrink-0 text-green-600 dark:text-green-400"
+						className="h-5 w-5 shrink-0 text-green-600"
 						aria-hidden="true"
 					/>
 				</div>
@@ -279,7 +276,7 @@ const DynamicEmailVerification = ({
 					</CardTitle>
 					{"\u2001"}
 					<lucide.XCircle
-						className="h-5 w-5 shrink-0 text-red-600 dark:text-red-400"
+						className="h-5 w-5 shrink-0 text-red-600"
 						aria-hidden="true"
 					/>
 				</div>

@@ -107,7 +107,7 @@ const DynamicDocSidebar = ({
 										ToggleSection(Section.Id)
 									}
 								>
-									<CollapsibleTrigger className="flex w-full items-center justify-between flat px-2 py-1.5 text-sm font-semibold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
+									<CollapsibleTrigger className="flat flex w-full items-center justify-between px-2 py-1.5 text-sm font-semibold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
 										<span className="font-mono">
 											{Section.Label}
 										</span>
@@ -142,7 +142,7 @@ const DynamicDocSidebar = ({
 																	)
 																}
 															>
-																<CollapsibleTrigger className="flex w-full items-center justify-between flat px-2 py-1 text-sm font-medium text-foreground transition-colors hover:bg-secondary focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
+																<CollapsibleTrigger className="flat flex w-full items-center justify-between px-2 py-1 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
 																	<span>
 																		{
 																			Item.Label
@@ -181,9 +181,9 @@ const DynamicDocSidebar = ({
 																									? "page"
 																									: undefined
 																							}
-																							className={`block flat px-2 py-1 text-sm transition-colors hover:bg-secondary hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
+																							className={`flat block px-2 py-1 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
 																								IsActive
-																									? "bg-secondary font-medium text-foreground"
+																									? "bg-accent font-medium text-accent-foreground"
 																									: "text-muted-foreground"
 																							}`}
 																						>
@@ -214,9 +214,9 @@ const DynamicDocSidebar = ({
 																	? "page"
 																	: undefined
 															}
-															className={`block flat px-2 py-1 text-sm transition-colors hover:bg-secondary hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
+															className={`flat block px-2 py-1 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
 																IsActive
-																	? "bg-secondary font-medium text-foreground"
+																	? "bg-accent font-medium text-accent-foreground"
 																	: "text-muted-foreground"
 															}`}
 														>
@@ -236,7 +236,7 @@ const DynamicDocSidebar = ({
 						<li key={Section.Id}>
 							<a
 								href={`/Doc/${Section.Id}`}
-								className="block flat px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+								className="flat block px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 							>
 								{Section.Label}
 							</a>
@@ -266,7 +266,7 @@ const DynamicDocSidebar = ({
 			<button
 				type="button"
 				onClick={() => SetMobileOpen((O) => !O)}
-				className="flex w-full items-center justify-between px-1 py-2 text-sm font-medium text-foreground hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+				className="flex w-full items-center justify-between px-1 py-2 text-sm font-medium text-foreground hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 				aria-expanded={MobileOpen}
 			>
 				<span className="flex items-center gap-2">

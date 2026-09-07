@@ -8,10 +8,45 @@ html {
 	/* clip (not hidden) so fixed/sticky children don't add horizontal scroll */
 	overflow-x: clip;
 	font-family: var(--FontSans);
-	/* font-size-adjust stabilizes line height across fallback → Albert Sans swap,
-	 reducing CLS from text reflow. 0.48 matches Albert Sans's x-height ratio. */
+	/* font-size-adjust stabilizes line height across fallback → mono swap */
 	font-size-adjust: 0.48;
 }
+
+/* Jelly UI: flat corners everywhere per Nocturnal Field Record */
+jelly-card,
+jelly-button,
+jelly-icon-button,
+jelly-badge {
+	border-radius: 0 !important;
+	--jelly-radius: 0 !important;
+	--jelly-button-radius: 0 !important;
+	--jelly-icon-button-radius: 0 !important;
+	--jelly-badge-radius: 0 !important;
+}
+
+/* Jelly UI: flat corners everywhere per Nocturnal Field Record */
+--jelly-radius: 0;
+--jelly-accordion-radius: 0;
+--jelly-alert-radius: 0;
+--jelly-badge-radius: 0;
+--jelly-breadcrumbs-radius: 0;
+--jelly-button-radius: 0;
+--jelly-checkbox-radius: 0;
+--jelly-chip-radius: 0;
+--jelly-collapsible-radius: 0;
+--jelly-dialog-radius: 0;
+--jelly-drawer-radius: 0;
+--jelly-icon-button-radius: 0;
+--jelly-input-radius: 0;
+--jelly-menu-item-radius: 0;
+--jelly-menu-radius: 0;
+--jelly-otp-radius: 0;
+--jelly-popover-radius: 0;
+--jelly-select-radius: 0;
+--jelly-select-row-radius: 0;
+--jelly-textarea-radius: 0;
+--jelly-toast-radius: 0;
+--jelly-tooltip-radius: 0;
 
 /* Emoji and symbol fallback fonts for special characters like ★☆ */
 body,
@@ -22,10 +57,7 @@ select {
 	font-family: inherit;
 }
 
-/* Emoji font:apply ONLY to elements that render emoji/symbol characters.
- * NEVER use broad attribute selectors like [class*="star"]:they leak
- * emoji font-family onto unrelated text that shares a substring. */
-
+/* Emoji font:apply ONLY to elements that render emoji/symbol characters. */
 .StarRatingSymbol {
 	font-family:
 		"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
@@ -41,9 +73,7 @@ picture {
 	font-size: 0;
 }
 
-/* CLS prevention: reserve space for client:load components before hydration.
- * Astro renders an empty astro-island wrapper; this ensures the page
- * doesn't collapse to zero height then jump when JS renders content. */
+/* CLS prevention: reserve space for client:load components before hydration. */
 main > astro-island {
 	display: block;
 	min-height: 100dvh;
@@ -57,8 +87,7 @@ main > astro-island:has(> :first-child) {
 	contain-intrinsic-block-size: auto;
 }
 
-/* CLS prevention: Header island - reserve the exact header bar height (h-14 = 3.5rem)
- * so the sticky header doesn't shift content when it hydrates. */
+/* CLS prevention: Header island - reserve the exact header bar height (h-14 = 3.5rem) */
 main ~ astro-island,
 body > astro-island {
 	display: block;
@@ -76,11 +105,6 @@ body > astro-island {
 }
 
 /* ─── content-visibility: skip layout cost for off-screen sections ─── */
-
-/* These sections sit below the fold on the homepage.
- * content-visibility: auto lets the browser skip layout/paint until the
- * section scrolls near the viewport. contain-intrinsic-block-size provides
- * a placeholder height so the scrollbar remains stable (no CLS). */
 #features,
 #pricing,
 #testimonials,
@@ -89,12 +113,7 @@ body > astro-island {
 	contain-intrinsic-block-size: 800px;
 }
 
-/* ─── Vertical rhythm: breathing room between headings & paragraphs ───
- * Unlayered (like the rest of this file), so it takes effect everywhere on
- * the site - including over components that already carry a Tailwind
- * margin utility, since unlayered rules beat @layer utilities regardless
- * of source order. Bottom-margin-only ("stack") so gaps never double up
- * inside flex/grid containers, where sibling margins don't collapse. */
+/* ─── Vertical rhythm: breathing room between headings & paragraphs ─── */
 h1,
 h2,
 h3,
@@ -137,11 +156,7 @@ p:last-child {
 	margin-bottom: 0;
 }
 
-/* Shared "// Eyebrow" + <h2> + subtitle heading block, reused across
- * Features, Pricing, Architecture/PlatformGrid, and Testimonials sections
- * (DynamicFeatures.tsx, DynamicPricing.tsx, DynamicPlatformGrid.tsx,
- * DynamicTestimonials.tsx all share this exact utility combination).
- * Give the whole group more room before the content below it. */
+/* Shared "// Eyebrow" + <h2> + subtitle heading block */
 .mx-auto.mb-10.max-w-2xl.text-center {
 	margin-bottom: 4rem;
 }
@@ -170,12 +185,12 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgba(26, 26, 26, 0.18);
+	background: rgba(255, 255, 255, 0.18);
 	border-radius: 99px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: rgba(26, 26, 26, 0.32);
+	background: rgba(255, 255, 255, 0.32);
 }
 
 ::-webkit-scrollbar-corner {
@@ -185,26 +200,10 @@ img {
 /* Firefox */
 html {
 	scrollbar-width: thin;
-	scrollbar-color: rgba(26, 26, 26, 0.18) transparent;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.18);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-	background: rgba(255, 255, 255, 0.32);
-}
-
-.dark html {
 	scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
 }
 
-/* ─── Masonry card responsive col-span ───────────────────────────
- * The --masonry-col CSS custom property is set via inline style.
- * Below lg the card resets to span-1 so the 1-col / 2-col grid
- * takes over; above lg it uses the noise-computed value. */
-
+/* ─── Masonry card responsive col-span ─────────────────────────── */
 .MasonryCard {
 	grid-column: span 1;
 }
@@ -216,9 +215,7 @@ html {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
-
-/* Accessibility: links must be distinguishable by more than color alone.
- * Underline content links; exclude nav, logo, button, icon, and social links. */
+/* Accessibility: links must be distinguishable by more than color alone. */
 a:not([class*="Button"]):not([class*="Logo"]):not([class*="Icon"]):not(
 		[class*="Social"]
 	):not([class*="StaccatoLogo"]):not([class*="StaccatoSocial"]):not(

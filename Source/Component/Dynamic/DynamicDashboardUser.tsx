@@ -201,7 +201,7 @@ const DashboardUserInner = () => {
 				<button
 					type="button"
 					onClick={() => Login()}
-					className="StaccatoButton inline-flex items-center justify-center bg-primary px-4 py-1.5 font-medium text-primary-fg transition-all hover:opacity-90"
+					className="StaccatoButton text-primary-fg inline-flex items-center justify-center bg-primary px-4 py-1.5 font-medium transition-all hover:opacity-90"
 				>
 					{T("dashboard.account.signInButton", {
 						defaultValue: "Sign In",
@@ -268,7 +268,7 @@ const DashboardUserInner = () => {
 						width="48"
 						height="48"
 						loading="lazy"
-						className="h-12 w-12 flat"
+						className="flat h-12 w-12"
 						onError={(Event) => {
 							(Event.target as HTMLImageElement).style.display =
 								"none";
@@ -281,7 +281,7 @@ const DashboardUserInner = () => {
 					/>
 				) : null}
 				<div
-					className={`${User.picture ? "hidden" : "flex"} h-12 w-12 items-center justify-center flat bg-mute text-lg font-bold text-muted-foreground`}
+					className={`${User.picture ? "hidden" : "flex"} flat bg-mute h-12 w-12 items-center justify-center text-lg font-bold text-muted-foreground`}
 					aria-hidden="true"
 				>
 					<Pii visible={PIIVisible}>
@@ -313,7 +313,7 @@ const DashboardUserInner = () => {
 					</span>
 					{User.email_verified === true && (
 						<span
-							className="inline-flex items-center border border-green-200 bg-green-50 px-1.5 py-0 text-sm font-medium text-green-700 dark:border-green-800 dark:bg-green-950 dark:text-green-300"
+							className="inline-flex items-center border border-green-200 bg-green-50 px-1.5 py-0 text-sm font-medium text-green-700"
 							title={T("dashboard.account.emailVerifiedTitle", {
 								defaultValue: "Email verified",
 							})}
@@ -323,7 +323,7 @@ const DashboardUserInner = () => {
 							})}{" "}
 							<CircleCheck
 								aria-hidden="true"
-								className="inline h-4 w-4 align-[-3px] text-grpc"
+								className="text-grpc inline h-4 w-4 align-[-3px]"
 							/>
 						</span>
 					)}
@@ -397,7 +397,7 @@ const DashboardUserInner = () => {
 
 			{/* Enterprise SSO Banner */}
 			{IsEnterprise && (
-				<div className="mt-2 border border-green-200 bg-green-50 px-3 py-2 text-green-700 dark:border-green-800 dark:bg-green-950 dark:text-green-300">
+				<div className="mt-2 border border-green-200 bg-green-50 px-3 py-2 text-green-700">
 					{T("dashboard.account.enterpriseSSO", {
 						defaultValue: "Enterprise SSO active",
 					})}{" "}
@@ -410,7 +410,7 @@ const DashboardUserInner = () => {
 
 			{/* Email Not Verified Warning */}
 			{User.email_verified === false && (
-				<div className="mt-2 border border-yellow-200 bg-yellow-50 px-3 py-2 text-yellow-700 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-300">
+				<div className="mt-2 border border-yellow-200 bg-yellow-50 px-3 py-2 text-yellow-700">
 					{T("dashboard.account.emailNotVerified", {
 						defaultValue: "Email not verified. Check your inbox.",
 					})}{" "}
@@ -434,7 +434,7 @@ const DashboardUserInner = () => {
 				<button
 					type="button"
 					onClick={HandleSignOut}
-					className="StaccatoButton inline-flex flex-1 items-center justify-center bg-card px-3 py-1.5 font-medium text-red-600 transition-all hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950"
+					className="StaccatoButton inline-flex flex-1 items-center justify-center bg-card px-3 py-1.5 font-medium text-red-600 transition-all hover:bg-red-50"
 				>
 					{T("dashboard.account.signOutButton", {
 						defaultValue: "Sign Out",

@@ -151,7 +151,13 @@ const IconSemanticColorMap: Record<string, string> = {
  * All icons are wrapped in IconTooltip - aria-label, title, and hover tooltip.
  */
 const DynamicFeatures = ({ Content, ClassName }: Property) => {
-	const { Title, Subtitle, Features, Columns = 3, Gap = "lg" } = Content;
+	const {
+		Title,
+		Subtitle,
+		Feature: Features,
+		Columns = 3,
+		Gap = "lg",
+	} = Content;
 
 	const GridReference = useRef<HTMLDivElement>(null);
 
@@ -283,144 +289,154 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 															? "CC0 1.0 Universal\npublic domain dedication.\n\nFunded by NLnet NGI0 Commons Fund."
 															: undefined
 								}
-								className="FeatureCard min-h-0 flat p-8"
-								style={{
-									"--jelly-fill": "var(--Card)",
-									"--jelly-radius": "0",
-									"--jelly-card-padding-block": "0",
-									"--jelly-card-padding-inline": "0",
-									"--jelly-color-border-default": "var(--ColorMuteBorder)",
-									"--jelly-card-font-size": "inherit",
-								} as React.CSSProperties}
+								className="FeatureCard flat min-h-0 p-8"
+								style={
+									{
+										"--jelly-fill": "var(--Card)",
+										"--jelly-radius": "0",
+										"--jelly-card-padding-block": "0",
+										"--jelly-card-padding-inline": "0",
+										"--jelly-color-border-default":
+											"var(--ColorMuteBorder)",
+										"--jelly-card-font-size": "inherit",
+									} as React.CSSProperties
+								}
 							>
 								<div className="flex flex-col gap-6">
 									<div className="flex items-start justify-between">
-									<h3 className="font-mono text-sm font-semibold leading-snug">
-										{Feature.Title}
-									</h3>
-									<div
-										className="ml-4 flex h-9 w-9 shrink-0 items-center justify-center flat"
-										style={{
-											backgroundColor: FeatureColorMute,
-										}}
-									>
-										<IconTooltip
-											Label={IconLabel}
-											Icon={Icon ?? lucide.Sparkles}
-											Color={FeatureColor}
-											SizeClass="h-4 w-4"
-											ClassName="StaccatoIcon"
-										/>
+										<h3 className="font-mono text-sm font-semibold leading-snug">
+											{Feature.Title}
+										</h3>
+										<div
+											className="flat ml-4 flex h-9 w-9 shrink-0 items-center justify-center"
+											style={{
+												backgroundColor:
+													FeatureColorMute,
+											}}
+										>
+											<IconTooltip
+												Label={IconLabel}
+												Icon={Icon ?? lucide.Sparkles}
+												Color={FeatureColor}
+												SizeClass="h-4 w-4"
+												ClassName="StaccatoIcon"
+											/>
+										</div>
 									</div>
-								</div>
-								<p className="StaccatoBreath text-sm text-muted-foreground">
-									<RichText Text={Feature.Description} />
-									<br />
-									{Feature.Icons &&
-										Feature.Icons.length > 0 && (
-											<span
-												className="inline-flex items-center align-middle"
-												role="img"
-												aria-label={`${Feature.Title} technology stack`}
-											>
-												{Feature.Icons.map(
-													(IconName, IconIndex) => {
-														const IsBrandSvg =
-															IconName.startsWith(
-																"/",
-															);
+									<p className="StaccatoBreath text-sm text-muted-foreground">
+										<RichText Text={Feature.Description} />
+										<br />
+										{Feature.Icons &&
+											Feature.Icons.length > 0 && (
+												<span
+													className="inline-flex items-center align-middle"
+													role="img"
+													aria-label={`${Feature.Title} technology stack`}
+												>
+													{Feature.Icons.map(
+														(
+															IconName,
+															IconIndex,
+														) => {
+															const IsBrandSvg =
+																IconName.startsWith(
+																	"/",
+																);
 
-														const StackIcon =
-															IsBrandSvg
-																? null
-																: FeatureIconRegistry[
-																		IconName
-																	];
+															const StackIcon =
+																IsBrandSvg
+																	? null
+																	: FeatureIconRegistry[
+																			IconName
+																		];
 
-														const StackLabel =
-															FeatureIconLabelMap[
-																IconName
-															] ??
-															IconName.replace(
-																/^\/Image\/|\.svg$/g,
+															const StackLabel =
+																FeatureIconLabelMap[
+																	IconName
+																] ??
+																IconName.replace(
+																	/^\/Image\/|\.svg$/g,
 
-																"",
-															);
+																	"",
+																);
 
-														const StackColor =
-															IconSemanticColorMap[
-																IconName
-															] ?? FeatureColor;
+															const StackColor =
+																IconSemanticColorMap[
+																	IconName
+																] ??
+																FeatureColor;
 
-														if (
-															!IsBrandSvg &&
-															!StackIcon
-														) {
-															return null;
-														}
+															if (
+																!IsBrandSvg &&
+																!StackIcon
+															) {
+																return null;
+															}
 
-														return (
-															<span
-																key={IconIndex}
-																className="inline-flex items-center"
-															>
-																{IconIndex ===
-																0 ? (
-																	"\u2001"
-																) : (
-																	<>
-																		{
-																			"\u2001"
-																		}
-																		{
-																			"\u2001"
-																		}
-																	</>
-																)}
-																{IsBrandSvg ? (
-																	<IconTooltip
-																		Label={
-																			StackLabel
-																		}
-																	>
-																		<ThemeImage
-																			src={
-																				IconName
+															return (
+																<span
+																	key={
+																		IconIndex
+																	}
+																	className="inline-flex items-center"
+																>
+																	{IconIndex ===
+																	0 ? (
+																		"\u2001"
+																	) : (
+																		<>
+																			{
+																				"\u2001"
 																			}
-																			alt={
+																			{
+																				"\u2001"
+																			}
+																		</>
+																	)}
+																	{IsBrandSvg ? (
+																		<IconTooltip
+																			Label={
 																				StackLabel
 																			}
-																			width={
-																				16
+																		>
+																			<ThemeImage
+																				src={
+																					IconName
+																				}
+																				alt={
+																					StackLabel
+																				}
+																				width={
+																					16
+																				}
+																				height={
+																					16
+																				}
+																				className="inline h-4 w-4"
+																				aria-hidden="true"
+																			/>
+																		</IconTooltip>
+																	) : (
+																		<IconTooltip
+																			Label={
+																				StackLabel
 																			}
-																			height={
-																				16
+																			Icon={
+																				StackIcon!
 																			}
-																			className="inline h-4 w-4"
-																			aria-hidden="true"
+																			Color={
+																				StackColor
+																			}
+																			SizeClass="h-4 w-4"
 																		/>
-																	</IconTooltip>
-																) : (
-																	<IconTooltip
-																		Label={
-																			StackLabel
-																		}
-																		Icon={
-																			StackIcon!
-																		}
-																		Color={
-																			StackColor
-																		}
-																		SizeClass="h-4 w-4"
-																	/>
-																)}
-															</span>
-														);
-													},
-												)}
-											</span>
-										)}
-								</p>
+																	)}
+																</span>
+															);
+														},
+													)}
+												</span>
+											)}
+									</p>
 								</div>
 							</jelly-card>
 						);

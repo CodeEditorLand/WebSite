@@ -125,14 +125,14 @@ The following documents provide in-depth system-level documentation
 complementing these workflows. A comprehensive master index is available at
 [`README.md`](https://github.com/CodeEditorLand/Land#readme).
 
-| Document                                            | Topics Covered                                                                              |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [Architecture](/Doc/architecture)                     | System architecture, process model, IPC architecture, service layer design                  |
-| [BuildPipeline](/Doc/build-pipeline)                   | Build stages, env propagation, profile system, artifact layout                              |
-| [EditorCore](https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/EditorCore.md)                         | Workbench adaptation, Wind service layer, command dispatch, workbench variants              |
-| [Polyfills](/Doc/polyfills)                           | Preload shim, SkyBridge, Cocoon prelude, Output transforms, Worker SW                       |
-| [RustInfrastructure](https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/RustInfrastructure.md)         | Common traits, Echo scheduler, Mountain, Mist DNS, Air daemon, Rest OXC, Vine gRPC protocol |
-| [InterComponentProtocol](/Doc/api-reference) | Tauri IPC, Vine gRPC, Spine protocol, connection lifecycle, health monitoring               |
+| Document                                                                                                             | Topics Covered                                                                              |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| [Architecture](/Doc/architecture)                                                                                    | System architecture, process model, IPC architecture, service layer design                  |
+| [BuildPipeline](/Doc/build-pipeline)                                                                                 | Build stages, env propagation, profile system, artifact layout                              |
+| [EditorCore](https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/EditorCore.md)                 | Workbench adaptation, Wind service layer, command dispatch, workbench variants              |
+| [Polyfills](/Doc/polyfills)                                                                                          | Preload shim, SkyBridge, Cocoon prelude, Output transforms, Worker SW                       |
+| [RustInfrastructure](https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/RustInfrastructure.md) | Common traits, Echo scheduler, Mountain, Mist DNS, Air daemon, Rest OXC, Vine gRPC protocol |
+| [InterComponentProtocol](/Doc/api-reference)                                                                         | Tauri IPC, Vine gRPC, Spine protocol, connection lifecycle, health monitoring               |
 
 ### Per-Element Architecture
 

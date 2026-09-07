@@ -1,90 +1,22 @@
 import * as lucide from "lucide-react";
 
-import { useEffect, useState } from "react";
-
 import { Button } from "./Button";
 
 /**
- * ThemeToggle - switches between the flat-white light theme and the
- * cyberpunk terminal-HUD dark theme by toggling the `.dark` class on
- * <html>. The pre-paint script in Source/Layout/Base.astro sets the
- * initial class (stored preference → OS color scheme) to avoid a flash;
- * this control only handles user-driven changes after hydration.
- *
- * See .claude/skills/land-design/Reference/Theme.md
+ * ThemeToggle - Nocturnal Field Record.
+ * Single theme: renders a static moon icon indicating nocturnal mode.
  */
-const SyncPictureSources = (IsDark: boolean) => {
-	document
-		.querySelectorAll<HTMLSourceElement>("source[data-theme-dark]")
-		.forEach((Source) => {
-			Source.media = IsDark ? "all" : "(prefers-color-scheme: dark)";
-		});
-};
-
-// <jelly-theme mode="auto"> only tracks the OS scheme by default - pin it to
-// the manually-toggled theme so Jelly UI buttons stay in lockstep with the
-// rest of the site instead of the user's OS preference.
-const SyncJellyTheme = (IsDark: boolean) => {
-	document.querySelectorAll("jelly-theme").forEach((Theme) => {
-		Theme.setAttribute("mode", IsDark ? "dark" : "light");
-	});
-};
-
 const ThemeToggle = ({ ClassName }: { ClassName?: string }) => {
-	const [IsDark, SetIsDark] = useState(false);
-
-	// Sync local state with whatever the pre-paint script already decided,
-	// and re-sync all picture sources in case React hydration reset any
-	// source[data-theme-dark].media attributes during reconciliation.
-	useEffect(() => {
-		const CurrentlyDark =
-			document.documentElement.classList.contains("dark");
-
-		SetIsDark(CurrentlyDark);
-
-		SyncPictureSources(CurrentlyDark);
-
-		SyncJellyTheme(CurrentlyDark);
-	}, []);
-
-	const Toggle = () => {
-		const Next = !document.documentElement.classList.contains("dark");
-
-		document.documentElement.classList.toggle("dark", Next);
-
-		document.documentElement.style.colorScheme = Next ? "dark" : "light";
-
-		try {
-			localStorage.setItem("Theme", Next ? "dark" : "light");
-		} catch (_) {}
-
-		document
-			.querySelector('meta[name="theme-color"]')
-
-			?.setAttribute("content", Next ? "#0a0a0c" : "#ffffff");
-
-		SyncPictureSources(Next);
-
-		SyncJellyTheme(Next);
-
-		SetIsDark(Next);
-	};
-
 	return (
 		<Button
 			variant="ghost"
 			size="icon"
-			onClick={Toggle}
-			aria-label={
-				IsDark ? "Switch to light theme" : "Switch to dark theme"
-			}
-			title={IsDark ? "Light" : "Dark"}
+			aria-label="Nocturnal theme active"
+			title="Nocturnal"
 			className={ClassName}
+			disabled
 		>
-			{/* Both icons render; CSS shows the relevant one per theme so the
-			 control is correct even before hydration reads the class. */}
-			<lucide.Sun className="hidden h-4 w-4 dark:block" />
-			<lucide.Moon className="block h-4 w-4 dark:hidden" />
+			<lucide.Moon className="h-4 w-4 opacity-50" />
 		</Button>
 	);
 };

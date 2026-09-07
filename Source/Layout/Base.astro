@@ -11,80 +11,161 @@ import MetaTags from "../Component/Social/MetaTags";
 import { PascalCaseCanonical } from "../Function/Route/Map";
 import { GetI18n } from "../Library/I18n/Server";
 
-const RawPath = Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
+const RawPath =
+	Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
 const CanonicalPath = PascalCaseCanonical[RawPath] ?? RawPath;
 const DefaultURL = Astro.url.href;
-const OpenGraphSlug = CanonicalPath === "/" ? "" : CanonicalPath.replace(/^\//, "");
-const DefaultOpenGraphImage = OpenGraphSlug ? `/OpenGraph/${OpenGraphSlug}.svg` : "/OpenGraph.svg";
+const OpenGraphSlug =
+	CanonicalPath === "/" ? "" : CanonicalPath.replace(/^\//, "");
+const DefaultOpenGraphImage = OpenGraphSlug
+	? `/OpenGraph/${OpenGraphSlug}.svg`
+	: "/OpenGraph.svg";
 
-const { Title, Description, Language = "en", Direction = "ltr", Image = DefaultOpenGraphImage, Url = DefaultURL, Type = "website", NoIndex = false } = Astro.props;
-interface Props { Title?: string; Description?: string; Language?: string; Direction?: string; Image?: string; Url?: string; Type?: "website" | "article"; NoIndex?: boolean; }
+const {
+	Title,
+	Description,
+	Language = "en",
+	Direction = "ltr",
+	Image = DefaultOpenGraphImage,
+	Url = DefaultURL,
+	Type = "website",
+	NoIndex = false,
+} = Astro.props;
+interface Props {
+	Title?: string;
+	Description?: string;
+	Language?: string;
+	Direction?: string;
+	Image?: string;
+	Url?: string;
+	Type?: "website" | "article";
+	NoIndex?: boolean;
+}
 const T = GetI18n();
 ---
+
 <!doctype html>
-<html lang={Language} class="no-js" dir={Direction}>
+<html lang={Language} dir={Direction}>
 	<head>
 		<meta charset="utf-8" />
-		<script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
-		<script is:inline>
-			(() => { try { const S=localStorage.getItem("Theme");const D=S==="dark"||(!S&&matchMedia("(prefers-color-scheme: dark)").matches);const R=document.documentElement;R.classList.toggle("dark",D);R.style.colorScheme=D?"dark":"light";const M=document.querySelector('meta[name="theme-color"]');if(M)M.setAttribute("content",D?"#0a0a0c":"#ffffff");const SS=s=>{s.media=D?"all":"(prefers-color-scheme: dark)"};const O=new MutationObserver(()=>{R.querySelectorAll("source[data-theme-dark]:not([data-ts])").forEach(s=>{s.setAttribute("data-ts","");SS(s)})});O.observe(R,{subtree:true,childList:true});document.addEventListener("DOMContentLoaded",()=>{R.querySelectorAll("source[data-theme-dark]").forEach(SS);R.querySelectorAll("jelly-theme").forEach(T=>{T.setAttribute("mode",D?"dark":"light")});O.disconnect()},{once:true})} catch(_){} })();
-		</script>
-		<MetaTags title={Title||T("meta.title",{defaultValue:"Land"})} description={Description||T("meta.description",{defaultValue:"Code Editor"})} image={Image} url={Url} type={Type} lang={Language} noIndex={NoIndex} />
+		<MetaTags
+			title={Title || T("meta.title", { defaultValue: "Land" })}
+			description={Description ||
+				T("meta.description", { defaultValue: "Code Editor" })}
+			image={Image}
+			url={Url}
+			type={Type}
+			lang={Language}
+			noIndex={NoIndex}
+		/>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta name="theme-color" content="#ffffff" />
+		<meta name="theme-color" content="#000000" />
 		<!-- Fonts: preconnect to Google Fonts origins, then preload the CSS
-		 stylesheet as a high-priority fetch. The font CSS file itself is small
-		 (~1 KB) and declares the @font-face rules that trigger woff2 downloads.
-		 Preloading the stylesheet eliminates the render-blocking parser delay
-		 while keeping font-display: optional to prevent CLS from font swap. -->
+		 stylesheet as a high-priority fetch. IBM Plex Mono for the Nocturnal Field Record design system. -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="preload"
 			as="style"
-			href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=optional"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=optional"
 		/>
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=optional"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=optional"
 			media="print"
 			onload="this.media='all'"
 		/>
 		<noscript>
 			<link
 				rel="stylesheet"
-				href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=optional"
+				href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=optional"
 			/>
 		</noscript>
-		<link rel="preload" as="image" href="/Asset/Logo/Glyph/Land.svg" />
-		<style is:global>@import "@Stylesheet/Global.css";</style>
-		<style is:inline>.dark .mermaid-diagram svg{filter:invert(1) hue-rotate(180deg)}.dark .astro-code-themes,.dark .astro-code-themes span{color:var(--shiki-dark,inherit)!important;background-color:var(--shiki-dark-bg,inherit)!important}</style>
-		<script>import "@/Library/I18n/Client.js";</script>
-		<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication",name:"Code Editor Land",operatingSystem:"Windows, macOS, Linux",applicationCategory:"DeveloperApplication",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},url:Astro.site?.href??"",downloadUrl:`${Astro.site?.href??""}Download`,license:"https://creativecommons.org/publicdomain/zero/1.0/"})} />
+		<link rel="preload" as="image" href="/Asset/Dark/Logo/Glyph/Land.svg" />
+		<style is:global>
+			@import "@Stylesheet/Global.css";
+		</style>
+		<style is:inline>
+			.mermaid-diagram svg {
+				filter: invert(1) hue-rotate(180deg);
+			}
+			.dark .astro-code-themes,
+			.dark .astro-code-themes span {
+				color: var(--shiki-dark, inherit) !important;
+				background-color: var(--shiki-dark-bg, inherit) !important;
+			}
+		</style>
+		<script>
+			import "@/Library/I18n/Client.js";
+		</script>
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				name: "Code Editor Land",
+				operatingSystem: "Windows, macOS, Linux",
+				applicationCategory: "DeveloperApplication",
+				offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+				url: Astro.site?.href ?? "",
+				downloadUrl: `${Astro.site?.href ?? ""}Download`,
+				license: "https://creativecommons.org/publicdomain/zero/1.0/",
+			})}
+		/>
 		<slot name="Head" />
-		<link rel="icon" type="image/png" href="/Favicon/favicon-96x96.png" sizes="96x96" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/Favicon/favicon-96x96.png"
+			sizes="96x96"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/Favicon/favicon.svg" />
 		<link rel="shortcut icon" href="/Favicon/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/Favicon/apple-touch-icon.png"
+		/>
 		<meta name="apple-mobile-web-app-title" content="Code Editor Land" />
 		<link rel="manifest" href="/Favicon/site.webmanifest" />
 		<script>
-			import jellyUrl from '../../Vendor/JellyUI/dist/jelly.js?url';
-			document.head.appendChild(Object.assign(document.createElement('script'),{type:'module',src:jellyUrl}));
+			import jellyUrl from "../../Vendor/JellyUI/dist/jelly.js?url";
+			document.head.appendChild(
+				Object.assign(document.createElement("script"), {
+					type: "module",
+					src: jellyUrl,
+				}),
+			);
 		</script>
 	</head>
 	<body>
-		<a href="#main-content" class="sr-only fixed left-2 top-2 z-[100] -translate-y-full bg-primary px-4 py-2 font-medium text-primary-fg transition-transform focus:not-sr-only focus:translate-y-0 focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">Skip to main content</a>
+		<a
+			href="#main-content"
+			class="text-primary-fg sr-only fixed left-2 top-2 z-[100] -translate-y-full bg-primary px-4 py-2 font-medium transition-transform focus:not-sr-only focus:translate-y-0 focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Ring)]"
+			>Skip to main content</a
+		>
 		<jelly-theme id="JellyTheme" mode="auto">
 			<Background />
 			<AnalyticsProvider>
 				<PageviewTracker />
-				<main id="main-content" class="grow" tabindex="-1"><ErrorBoundary client:load><slot /></ErrorBoundary></main>
+				<main id="main-content" class="grow" tabindex="-1">
+					<ErrorBoundary client:load><slot /></ErrorBoundary>
+				</main>
 			</AnalyticsProvider>
 			<div id="Footer" class="shrink"><Footer client:idle /></div>
 		</jelly-theme>
-		<script>import "@Script/Firebase";</script>
-		<script>await import("@Function/Route/Policy.js");await import("@Function/Route/Register.js");</script>
-		<a class="absolute left-0 top-0 hidden" rel="me" href="https://x.com/CodeEditorLand" aria-hidden="true" tabindex="-1"></a>
+		<script>
+			import "@Script/Firebase";
+		</script>
+		<script>
+			await import("@Function/Route/Policy.js");
+			await import("@Function/Route/Register.js");
+		</script>
+		<a
+			class="absolute left-0 top-0 hidden"
+			rel="me"
+			href="https://x.com/CodeEditorLand"
+			aria-hidden="true"
+			tabindex="-1"></a>
 	</body>
 </html>

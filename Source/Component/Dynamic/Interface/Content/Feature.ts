@@ -5,7 +5,7 @@ export default interface Interface {
 
 	Subtitle?: string;
 
-	Features: FeatureItem[];
+	Feature: FeatureItem[];
 
 	Columns?: 1 | 2 | 3 | 4 | 5 | 6;
 

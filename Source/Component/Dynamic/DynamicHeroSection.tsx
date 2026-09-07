@@ -13,10 +13,9 @@ import { DynamicButton } from "./DynamicButton";
 import type Property from "./Interface/Property/Hero.js";
 
 /**
- * Dynamic HeroSection with simplex noise integration.
- * Desktop: orbital layout with staccato float animation.
- * The entire hero can act as a button (clickable CTA surface).
- * Floating cards are noise-seeded for organic staccato movement.
+ * Dynamic HeroSection - Nocturnal Field Record.
+ * Black canvas, mono HUD, green accent, bracketed time treatment.
+ * Tech stack grid: flat, mono, single-color per card.
  */
 const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 	const SceneReference = useRef<HTMLDivElement>(null);
@@ -25,28 +24,19 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 	const {
 		Title,
-
 		TitleHighlight,
-
 		Subtitle,
-
-		PrimaryCta: PrimaryCTA,
-
-		SecondaryCta: SecondaryCTA,
-
-		FloatingCards: FloatingCard = [],
+		PrimaryCTA: PrimaryCTA,
+		SecondaryCTA: SecondaryCTA,
+		FloatingCard: FloatingCard = [],
 		...HeroConfiguration
 	} = Content;
 
 	useEffect(() => {
 		const Scene = SceneReference.current;
 
-		// Calm/refined direction: the orbital cards stay static at their
-		// anchors instead of drifting on noise (the drift read as dated
-		// parallax). The scene keeps its layout; only the animation is off.
 		if (
 			!Scene ||
-			true ||
 			(HeroConfiguration.RespectReducedMotion &&
 				window.matchMedia("(prefers-reduced-motion: reduce)").matches)
 		) {
@@ -60,12 +50,9 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 		let NoiseFunction: ((X: number, Y: number) => number) | null = null;
 
-		// Per-card lerp state - tracks current rendered position and hover
 		interface CardState {
 			CurrentX: number;
-
 			CurrentY: number;
-
 			IsHovered: boolean;
 		}
 
@@ -74,7 +61,6 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 		const LoadNoise = async () => {
 			const { createNoise2D } = await import("simplex-noise");
 
-			// Each page load gets a new noise function → unique orbital drift
 			NoiseFunction = createNoise2D();
 
 			const StaccatoModule =
@@ -93,7 +79,6 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 				CardStates.set(Card, State);
 
-				// Hover: target lerps to (0,0) - card settles at orbital anchor
 				Card.addEventListener("mouseenter", () => {
 					State.IsHovered = true;
 				});
@@ -114,12 +99,9 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 		const AnimateCards = (Time: number) => {
 			if (!NoiseFunction) {
 				FrameIdentifier = requestAnimationFrame(AnimateCards);
-
 				return;
 			}
 
-			// Very slow advance - 0.00007 per ms = ~0.07 per second
-			// No quantization: pure smooth simplex output
 			const TimeFactor = Time * 0.00007;
 
 			CardElement.forEach((Card, Index) => {
@@ -127,11 +109,8 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 				if (!State) return;
 
-				// Each card uses a different noise coordinate offset (Seed)
 				const Seed = Index * 1.3;
 
-				// Target: noise → small amplitude (±5px / ±3.5px)
-				// On hover target is (0,0) → smooth lerp back to orbital rest
 				const TargetX = State.IsHovered
 					? 0
 					: NoiseFunction!(TimeFactor + Seed, Seed * 0.4) * 5;
@@ -140,7 +119,6 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 					? 0
 					: NoiseFunction!(Seed * 0.4, TimeFactor + Seed) * 3.5;
 
-				// Lerp factor 0.04 → silky smooth, no visible stepping
 				State.CurrentX += (TargetX - State.CurrentX) * 0.04;
 
 				State.CurrentY += (TargetY - State.CurrentY) * 0.04;
@@ -158,7 +136,6 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 		return () => {
 			cancelAnimationFrame(FrameIdentifier);
 
-			// Remove event listeners on cleanup
 			CardElement.forEach((Card) => {
 				const Fresh: CardState = {
 					CurrentX: 0,
@@ -182,7 +159,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 			ref={SectionReference}
 			id="hero"
 			aria-label="Hero"
-			className={`StaccatoHeroButton relative flex min-h-0 w-full items-start overflow-hidden pb-12 pt-20 lg:items-center lg:pb-24 lg:pt-32 ${ClassName || ""}`}
+			className={`relative flex min-h-0 w-full items-start overflow-hidden pb-12 pt-20 lg:items-center lg:pb-24 lg:pt-32 ${ClassName || ""}`}
 			onClick={HandleHeroClick}
 			onKeyDown={(Event) => {
 				if (Event.key === "Enter" || Event.key === " ") {
@@ -194,14 +171,13 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 			role="button"
 			tabIndex={0}
 		>
-			{/* Cyberpunk HUD: hairline blueprint grid, dark theme only.
-			 Faint --Border-colored lines, masked to fade at the edges. */}
+			{/* Nocturnal Field Record: faint grid on black canvas */}
 			<div
 				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 hidden dark:block"
+				className="pointer-events-none absolute inset-0"
 				style={{
 					backgroundImage:
-						"linear-gradient(var(--Border) 1px, transparent 1px), linear-gradient(90deg, var(--Border) 1px, transparent 1px)",
+						"linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
 					backgroundSize: "48px 48px",
 					maskImage:
 						"radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%)",
@@ -210,51 +186,43 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 				}}
 			/>
 			<div className="container relative mx-auto px-4 text-center">
-				{/* Badge:breathing with rhythm pulse on dot */}
+				{/* Badge */}
 				{Content.Badge && (
-					<DynamicBadge
-						Content={Content.Badge}
-						ClassName="StaccatoBadge mb-8"
-					/>
+					<DynamicBadge Content={Content.Badge} ClassName="mb-8" />
 				)}
 
-				{/* Title: Albert Sans display. 400 weight, near-zero
-				 tracking and tight leading - the high-emphasis voice. */}
-				<h1 className="StaccatoColorShift mx-auto max-w-4xl text-6xl font-normal leading-[0.95] tracking-[-0.01em] md:text-8xl lg:text-9xl">
+				{/* Title - mono display, oversized per design system */}
+				<h1 className="mx-auto max-w-4xl font-mono text-6xl font-normal uppercase leading-[0.95] tracking-[-0.01em] md:text-8xl lg:text-9xl">
 					{Title}
 					{Title && TitleHighlight ? " " : ""}
 					{TitleHighlight && (
-						<span className="text-ipc">
-							{TitleHighlight}
-						</span>
+						<span className="text-accent">{TitleHighlight}</span>
 					)}
 				</h1>
 
-				{/* Subtitle: small grayed help text directly under the title */}
-				<div className="StaccatoBreath mx-auto mt-3 max-w-2xl text-muted">
+				{/* Subtitle */}
+				<div className="mx-auto mt-3 max-w-2xl text-muted-foreground">
 					<RichText Text={Subtitle} />
 				</div>
 
-				{/* Wide top padding before CTAs (body) */}
+				{/* CTAs */}
 				<div className="mb-16 mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row sm:[&>button]:w-auto">
 					<DynamicButton Content={PrimaryCTA} />
 					{SecondaryCTA && <DynamicButton Content={SecondaryCTA} />}
 				</div>
 
-				{/* Tech stack section label - mono HUD eyebrow */}
+				{/* Tech stack label - mono HUD eyebrow */}
 				<p className="mb-8 font-mono text-sm uppercase tracking-[0.25em] text-muted-foreground">
-					Tech
-					Stack
+					TECH STACK
 				</p>
 
-				{/* Tech stack - modern HUD grid (static, grid-aligned, all breakpoints) */}
+				{/* Tech stack grid - flat, mono, single-color per card */}
 				<div
 					className="mx-auto max-w-5xl px-6 py-10 lg:px-10"
 					aria-hidden="true"
 				>
-					<div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+					<div className="grid grid-cols-2 items-center gap-3 sm:grid-cols-3 lg:grid-cols-4">
 						{FloatingCard.map((Card, Index) => {
-							// Map card titles to appropriate icons
 							const GetIcon = () => {
 								const Title = Card.Title.toLowerCase();
 
@@ -303,12 +271,11 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 								)
 									return lucide.Zap;
 
-								return lucide.Cpu; // default fallback
+								return lucide.Cpu;
 							};
 
 							const IconComponent = GetIcon();
 
-							// Map card titles to Spine protocol colors
 							const GetIconColor = (): string => {
 								const Title = Card.Title.toLowerCase();
 
@@ -361,30 +328,21 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 							};
 
 							return (
-								<jelly-card
+								<div
 									key={Card.Id}
-									squish
-									className="group relative p-4"
-									style={{
-										"--jelly-fill": "var(--Card)",
-										"--jelly-radius": "0",
-										"--jelly-card-font-size": "inherit",
-										"--jelly-card-padding-block": "0",
-										"--jelly-card-padding-inline": "0",
-										"--jelly-color-border-default": "var(--ColorMuteBorder)",
-									} as React.CSSProperties}
+									className="group relative flex h-full items-center border border-border bg-background p-4 transition-colors hover:border-accent"
 								>
 									<div className="flex items-center gap-3">
 										<IconComponent
-										className="h-5 w-5 shrink-0"
-										strokeWidth={1.5}
-										style={{ color: GetIconColor() }}
-									/>
-									<span className="truncate font-mono text-sm uppercase tracking-wider text-foreground">
-										{Card.Title}
-									</span>
+											className="h-5 w-5 shrink-0"
+											strokeWidth={1.5}
+											style={{ color: GetIconColor() }}
+										/>
+										<span className="truncate font-mono text-sm uppercase tracking-wider text-foreground">
+											{Card.Title}
+										</span>
 									</div>
-								</jelly-card>
+								</div>
 							);
 						})}
 					</div>

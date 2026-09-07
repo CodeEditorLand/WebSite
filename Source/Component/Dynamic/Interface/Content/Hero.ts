@@ -13,11 +13,11 @@ export default interface Interface {
 
 	Subtitle: string;
 
-	PrimaryCta: ButtonContent;
+	PrimaryCTA: ButtonContent;
 
-	SecondaryCta?: ButtonContent;
+	SecondaryCTA?: ButtonContent;
 
-	FloatingCards?: FloatingCard[];
+	FloatingCard?: FloatingCard[];
 
 	ShowConnectingLines?: boolean;
 

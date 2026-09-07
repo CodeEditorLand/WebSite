@@ -40,7 +40,7 @@ export default () => {
 
 	const BadgeColor = (Article?: string): string =>
 		Article
-			? "border border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300"
+			? "border border-blue-200 bg-blue-50 text-blue-700"
 			: "bg-mute text-muted-foreground";
 
 	return (
@@ -139,10 +139,10 @@ export default () => {
 				</p>
 				<a
 					href="/Contact/Erase"
-					className="StaccatoCard block border border-red-200 bg-card p-6 transition-all hover:bg-red-50 focus:outline-2 focus:outline-offset-2 focus:outline-red-400 dark:border-red-800 dark:hover:bg-red-950"
+					className="StaccatoCard block border border-red-200 bg-card p-6 transition-all hover:bg-red-50 focus:outline-2 focus:outline-offset-2 focus:outline-red-400"
 				>
 					<div className="mb-4 flex items-start gap-4">
-						<div className="flex h-10 w-10 shrink-0 items-center justify-center border border-red-200 bg-red-50 text-red-600 dark:border-red-800 dark:bg-red-950 dark:text-red-400">
+						<div className="flex h-10 w-10 shrink-0 items-center justify-center border border-red-200 bg-red-50 text-red-600">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="20"
@@ -164,10 +164,10 @@ export default () => {
 						</div>
 						<div className="flex-1">
 							<div className="mb-1 flex items-center gap-2">
-								<h4 className="font-semibold text-red-700 dark:text-red-400">
+								<h4 className="font-semibold text-red-700">
 									Permanent Account Deletion
 								</h4>
-								<span className="font-mono text-sm font-bold tracking-widest text-red-400 dark:text-red-500">
+								<span className="font-mono text-sm font-bold tracking-widest text-red-400">
 									ERASE
 								</span>
 							</div>
@@ -179,7 +179,7 @@ export default () => {
 								30-day response requirement.
 							</p>
 						</div>
-						<span className="shrink-0 font-medium text-red-600 dark:text-red-400">
+						<span className="shrink-0 font-medium text-red-600">
 							{"→"}
 						</span>
 					</div>

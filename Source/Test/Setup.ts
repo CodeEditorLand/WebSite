@@ -25,7 +25,10 @@ class JellyButtonStub extends HTMLElement {
 	}
 
 	private SyncAttributes() {
-		this.setAttribute("aria-disabled", String(this.hasAttribute("disabled")));
+		this.setAttribute(
+			"aria-disabled",
+			String(this.hasAttribute("disabled")),
+		);
 
 		if (this.hasAttribute("label")) {
 			this.setAttribute("aria-label", this.getAttribute("label")!);

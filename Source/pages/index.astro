@@ -88,7 +88,7 @@ const SiteUrl = Astro.site?.href ?? "";
 	>
 		<picture>
 			<source
-				srcset="/Asset/Dark/Logo/Glyph/Land.svg"
+				srcset="/Asset/Logo/Glyph/Land.svg"
 				media="(prefers-color-scheme: dark)"
 				data-theme-dark
 			/>
@@ -101,23 +101,23 @@ const SiteUrl = Astro.site?.href ?? "";
 			/>
 		</picture>
 		<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Telemetry Feature Gated&#x2001;<span
-					class="h-1.5 w-1.5 flat"
-					style="background-color:var(--SpinegRPC)"
-					aria-hidden="true"></span>
-			</jelly-badge>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				CC0 Licensed&#x2001;<picture class="inline-flex align-middle">
+			variant="mint"
+			shape="square"
+			style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Telemetry Feature Gated&#x2001;<span
+				class="flat h-1.5 w-1.5"
+				style="background-color:var(--SpinegRPC)"
+				aria-hidden="true"></span>
+		</jelly-badge>
+		<jelly-badge
+			variant="mint"
+			shape="square"
+			style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			CC0 Licensed&#x2001;<picture class="inline-flex align-middle">
 				<source
-					srcset="/Dark/Image/CC0.svg"
+					srcset="/Image/CC0.svg"
 					media="(prefers-color-scheme: dark)"
 					data-theme-dark
 				/>
@@ -130,15 +130,15 @@ const SiteUrl = Astro.site?.href ?? "";
 					aria-hidden="true"
 				/>
 			</picture>
-			</jelly-badge>
-			<jelly-badge
+		</jelly-badge>
+		<jelly-badge
 			variant="azure"
 			shape="square"
 			style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
+		>
 			Rust&#x2001;<picture class="inline-flex align-middle">
 				<source
-					srcset="/Dark/Image/Rust.svg"
+					srcset="/Image/Rust.svg"
 					media="(prefers-color-scheme: dark)"
 					data-theme-dark
 				/>
@@ -154,7 +154,7 @@ const SiteUrl = Astro.site?.href ?? "";
 				class="inline-flex align-middle"
 			>
 				<source
-					srcset="/Dark/Image/Tauri.svg"
+					srcset="/Image/Tauri.svg"
 					media="(prefers-color-scheme: dark)"
 					data-theme-dark
 				/>
@@ -167,32 +167,32 @@ const SiteUrl = Astro.site?.href ?? "";
 					aria-hidden="true"
 				/>
 			</picture>
-			</jelly-badge>
-			<jelly-badge
+		</jelly-badge>
+		<jelly-badge
 			variant="platinum"
 			shape="square"
 			outline
 			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
+		>
 			VS Code API In Progress
-			</jelly-badge>
-			<jelly-badge
+		</jelly-badge>
+		<jelly-badge
 			variant="platinum"
 			shape="square"
 			outline
 			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
 			onclick="window.open('https://PlayForm.Cloud','_blank','noopener noreferrer')"
-			>
+		>
 			PlayForm
-			</jelly-badge>
-			<jelly-badge
+		</jelly-badge>
+		<jelly-badge
 			variant="platinum"
 			shape="square"
 			outline
 			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
 			onclick="location.href='/'"
-			>
+		>
 			CodeEditorLand
-			</jelly-badge>
+		</jelly-badge>
 	</div>
 </Base>

@@ -1,298 +1,323 @@
 /* ═══════════════════════════════════════════════════════════════════════════
- * REPEATABLE UTILITY CLASSES - extracted from inline Tailwind
+ * REPEATABLE UTILITY CLASSES - Nocturnal Field Record
  * 
- * These classes consolidate the most frequently repeated non-layout Tailwind
- * utility combinations across 50+ TSX/Astro source files. Extracting them
- * into pre-parsed CSS lets the browser cache the styles and reduces the
- * JIT engine's work at build time. Each class is named after its semantic
- * role rather than the raw utility it replaces.
- * 
- * Imported in Base.astro alongside Base.css.
+ * Extracted from inline Tailwind. Flat corners, mono type, uppercase,
+ * dark canvas. Named after semantic role.
  * ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ─── BORDER RADIUS ──────────────────────────────────────────────────────
- * .flat replaces rounded-none (172 occurrences across 50 files).
- * All jelly-* custom elements use --jelly-*-radius:0px inline;
- * this class covers plain div/span/button/etc. that need zero radius. */
+ * .flat replaces rounded-none. All elements flat per design system. */
 .flat {
-  border-radius: 0;
+	border-radius: 0;
 }
 
-/* ─── FOCUS RING ─────────────────────────────────────────────────────────
- * .focus-ring replaces the repeated triplet:
- *   focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]
- * (45+41 occurrences). Same focus ring used on nav links, skip-to-content,
- * interactive cards, clickable surfaces. */
+/* ─── FOCUS RING ───────────────────────────────────────────────────────── */
 .focus-ring:focus-visible,
 .focus-ring:focus {
-  outline: 2px solid var(--Primary);
-  outline-offset: 2px;
+	outline: 2px solid var(--Ring);
+	outline-offset: 2px;
 }
 
-/* Lighter variant for form inputs (only color changes) */
 .focus-ring-light:focus-visible,
 .focus-ring-light:focus {
-  outline: 2px solid var(--Ring);
-  outline-offset: 2px;
+	outline: 2px solid var(--Ring);
+	outline-offset: 2px;
 }
 
-/* ─── TRANSITIONS ────────────────────────────────────────────────────────
- * .tr-fg replaces transition-colors hover:text-foreground (109+ occurrences). */
+/* ─── TRANSITIONS ──────────────────────────────────────────────────────── */
 .tr-fg {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+	transition-property:
+		color, background-color, border-color, text-decoration-color, fill,
+		stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 .tr-fg:hover {
-  color: var(--Foreground);
+	color: var(--Foreground);
 }
 
-/* .tr-bg replaces transition-colors without the hover:foreground override. */
 .tr-bg {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+	transition-property:
+		color, background-color, border-color, text-decoration-color, fill,
+		stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
 }
 
-/* ─── BACKGROUND COLOR VARIABLES (63 bg-[var(--Secondary)], 33 bg-[var(--Mute)], etc.) ── */
-.bg-secondary   { background-color: var(--Secondary); }
-.bg-mute        { background-color: var(--Mute); }
-.bg-foreground  { background-color: var(--Foreground); }
-.bg-primary     { background-color: var(--Primary); }
-.bg-destruct    { background-color: var(--Destruct); }
-.bg-surface3    { background-color: var(--Surface3); }
-.bg-popover     { background-color: var(--Popover); }
-.bg-background  { background-color: var(--Background); }
+/* ─── BACKGROUND COLOR VARIABLES ── */
+.bg-secondary {
+	background-color: var(--Secondary);
+}
+.bg-mute {
+	background-color: var(--Mute);
+}
+.bg-foreground {
+	background-color: var(--Foreground);
+}
+.bg-primary {
+	background-color: var(--Primary);
+}
+.bg-destruct {
+	background-color: var(--Destruct);
+}
+.bg-surface3 {
+	background-color: var(--Surface3);
+}
+.bg-popover {
+	background-color: var(--Popover);
+}
+.bg-background {
+	background-color: var(--Background);
+}
 
-/* Hover variants */
-.hover\:bg-secondary:hover  { background-color: var(--Secondary); }
-.hover\:bg-mute:hover       { background-color: var(--Mute); }
-.hover\:bg-destruct:hover   { background-color: var(--Destruct); }
-.hover\:bg-surface3:hover   { background-color: var(--Surface3); }
-.hover\:bg-foreground:hover { background-color: var(--Foreground); }
+.hover\:bg-secondary:hover {
+	background-color: var(--Secondary);
+}
+.hover\:bg-mute:hover {
+	background-color: var(--Mute);
+}
+.hover\:bg-destruct:hover {
+	background-color: var(--Destruct);
+}
+.hover\:bg-surface3:hover {
+	background-color: var(--Surface3);
+}
+.hover\:bg-foreground:hover {
+	background-color: var(--Foreground);
+}
 
-.text-popover-fg  { color: var(--PopoverForeground); }
+.text-popover-fg {
+	color: var(--PopoverForeground);
+}
 
 /* ─── TEXT COLOR VARIABLES ─────────────────────────────────────────────── */
-.text-muted       { color: var(--MuteForeground); }
-.text-primary     { color: var(--Primary); }
-.text-primary-fg  { color: var(--PrimaryForeground); }
-.text-fg          { color: var(--Foreground); }
-.text-destruct-fg { color: var(--DestructForeground); }
-.text-secondary-fg{ color: var(--SecondaryForeground); }
-.text-grpc        { color: var(--SpinegRPCFore); }
-.text-tcp         { color: var(--SpineTCPFore); }
-.text-ipc         { color: var(--SpineIPCFore); }
-.text-card-fg     { color: var(--CardForeground); }
-.text-bg          { color: var(--Background); }
+.text-muted {
+	color: var(--MuteForeground);
+}
+.text-primary {
+	color: var(--Primary);
+}
+.text-primary-fg {
+	color: var(--PrimaryForeground);
+}
+.text-fg {
+	color: var(--Foreground);
+}
+.text-destruct-fg {
+	color: var(--DestructForeground);
+}
+.text-secondary-fg {
+	color: var(--SecondaryForeground);
+}
+.text-grpc {
+	color: var(--SpinegRPCFore);
+}
+.text-tcp {
+	color: var(--SpineTCPFore);
+}
+.text-ipc {
+	color: var(--SpineIPCFore);
+}
+.text-card-fg {
+	color: var(--CardForeground);
+}
+.text-bg {
+	color: var(--Background);
+}
 
 /* ─── BORDER VARIABLES ─────────────────────────────────────────────────── */
-.border-hairline { border-color: var(--Border); }
-.border-transparent { border-color: transparent; }
+.border-hairline {
+	border-color: var(--Border);
+}
+.border-transparent {
+	border-color: transparent;
+}
 
 /* ─── TYPOGRAPHY PATTERNS ──────────────────────────────────────────────── */
 
-/* .eyebrow - section eyebrow label (6 occurrences)
- *   replaces: font-mono text-sm uppercase tracking-[0.25em] text-[var(--MuteForeground)]
- *   used in: DynamicFeatures, DynamicPricing, DynamicTestimonials, DynamicPlatformGrid,
- *            DynamicHeroSection */
+/* .eyebrow - section eyebrow label - mono, uppercase, tracked */
 .eyebrow {
-  font-family: var(--FontMono);
-  font-size: 0.875rem;        /* text-sm */
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: var(--MuteForeground);
+	font-family: var(--FontMono);
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	color: var(--MuteForeground);
 }
 
-/* .headline - section heading (5 occurrences)
- *   replaces: font-serif text-4xl font-normal tracking-tight sm:text-5xl
- *   (serif display dropped - headlines now use --FontSans / Albert Sans)
- *   used in: DynamicFeatures, DynamicPricing, DynamicTestimonials, DynamicPlatformGrid */
+/* .headline - mono display, 4 scales only per design system */
 .headline {
-  font-family: var(--FontSans);
-  font-size: 2.25rem;        /* text-4xl */
-  line-height: 2.5rem;
-  font-weight: 400;
-  letter-spacing: -0.025em;
+	font-family: var(--FontSans);
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	font-weight: 400;
+	letter-spacing: -0.025em;
 }
 @media (min-width: 640px) {
-  .headline {
-    font-size: 3rem;          /* text-5xl */
-    line-height: 1;
-  }
+	.headline {
+		font-size: 3rem;
+		line-height: 1;
+	}
 }
 
-/* .section-label - small mono section label (pricing, features, etc.)
- *   replaces: font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground */
+/* .section-label - small mono section label */
 .section-label {
-  font-family: var(--FontMono);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--MuteForeground);
+	font-family: var(--FontMono);
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--MuteForeground);
 }
 
-/* .nav-label - navigation link label
- *   replaces: font-mono text-sm font-medium uppercase tracking-widest */
+/* .nav-label - navigation link label, mono uppercase */
 .nav-label {
-  font-family: var(--FontMono);
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+	font-family: var(--FontMono);
+	font-size: 0.875rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
 
-/* .card-title - card heading (CardTitle.tsx and inline cards)
- *   replaces: font-mono text-sm font-semibold leading-snug tracking-tight */
+/* .card-title-mono - mono card heading */
 .card-title-mono {
-  font-family: var(--FontMono);
-  font-size: 0.875rem;       /* text-sm */
-  line-height: 1.375;        /* leading-snug */
-  font-weight: 600;
-  letter-spacing: -0.025em;
+	font-family: var(--FontMono);
+	font-size: 0.875rem;
+	line-height: 1.375;
+	font-weight: 600;
+	letter-spacing: -0.025em;
 }
 
-/* .tag-mono - pill/chip label (role tags, feature names)
- *   replaces: bg-[var(--Mute)] px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground */
+/* .tag-mono - pill/chip label, mono */
 .tag-mono {
-  background-color: var(--Mute);
-  padding: 0.125rem 0.5rem;
-  font-family: var(--FontMono);
-  font-size: 10px;
-  letter-spacing: 0.025em;
-  color: var(--MuteForeground);
+	background-color: var(--Mute);
+	padding: 0.125rem 0.5rem;
+	font-family: var(--FontMono);
+	font-size: 10px;
+	letter-spacing: 0.025em;
+	color: var(--MuteForeground);
 }
 
-/* .code-inline - inline code snippet
- *   replaces: rounded-none bg-[var(--Mute)] px-1.5 py-0.5 font-mono */
+/* .code-inline - inline code snippet, mono */
 .code-inline {
-  border-radius: 0;
-  background-color: var(--Mute);
-  padding: 0.125rem 0.375rem;
-  font-family: var(--FontMono);
-  font-size: 0.875rem;
+	border-radius: 0;
+	background-color: var(--Mute);
+	padding: 0.125rem 0.375rem;
+	font-family: var(--FontMono);
+	font-size: 0.875rem;
 }
 
-/* .content-subtitle - body subtitle below section headings
- *   replaces: mt-3 text-[var(--MuteForeground)] */
+/* .content-subtitle - body subtitle */
 .content-subtitle {
-  margin-top: 0.75rem;
-  color: var(--MuteForeground);
+	margin-top: 0.75rem;
+	color: var(--MuteForeground);
 }
 
-/* .text-muted-fg - the most common text utility
- *   replaces: text-muted-foreground (50+ files) */
+/* .text-muted-fg - common text utility */
 .text-muted-fg {
-  color: var(--MuteForeground);
+	color: var(--MuteForeground);
 }
 
 /* ─── OPACITY ──────────────────────────────────────────────────────────── */
-.opacity-dim    { opacity: 0.70; }
-.opacity-dim-75 { opacity: 0.75; }
-.opacity-faded  { opacity: 0.50; }
-.opacity-light  { opacity: 0.60; }
+.opacity-dim {
+	opacity: 0.7;
+}
+.opacity-dim-75 {
+	opacity: 0.75;
+}
+.opacity-faded {
+	opacity: 0.5;
+}
+.opacity-light {
+	opacity: 0.6;
+}
 
 /* ─── BUTTON / SVG UTILITIES ───────────────────────────────────────────── */
-
-/* .btn-svg - SVG inside buttons (no events, shrink-0)
- *   replaces: [&_svg]:pointer-events-none [&_svg]:shrink-0 */
 .btn-svg svg,
 .btn-svg > svg {
-  pointer-events: none;
-  flex-shrink: 0;
+	pointer-events: none;
+	flex-shrink: 0;
 }
 
-/* .shrink-icon - standalone shrink-0 for icon elements */
 .shrink-icon {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
-/* .no-pointer - pointer-events: none */
 .no-pointer {
-  pointer-events: none;
+	pointer-events: none;
 }
 
-/* .noselect - user-select: none + touch-action: manipulation */
 .noselect {
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
 }
 
-/* .no-drag - prevent default browser drag behavior on buttons/links */
 .no-drag {
-  -webkit-user-drag: none;
-  user-select: none;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 /* ─── MISCELLANEOUS ────────────────────────────────────────────────────── */
 
-/* .sr-only is already provided by Tailwind base; included here for explicit
- * reference. .whitespace-nowrap is layout but used with text patterns. */
-
-/* .content-section - standard section wrapper
- *   replaces: w-full py-16 sm:py-20 */
+/* .content-section - standard section wrapper */
 .content-section {
-  width: 100%;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+	width: 100%;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 @media (min-width: 640px) {
-  .content-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+	.content-section {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 }
 
 /* .container-center - container mx-auto px-4 text-center */
 .container-center {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-align: center;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: center;
 }
 @media (min-width: 640px) {
-  .container-center {
-    max-width: 640px;
-  }
+	.container-center {
+		max-width: 640px;
+	}
 }
 @media (min-width: 768px) {
-  .container-center {
-    max-width: 768px;
-  }
+	.container-center {
+		max-width: 768px;
+	}
 }
 @media (min-width: 1024px) {
-  .container-center {
-    max-width: 1024px;
-  }
+	.container-center {
+		max-width: 1024px;
+	}
 }
 @media (min-width: 1280px) {
-  .container-center {
-    max-width: 1280px;
-  }
+	.container-center {
+		max-width: 1280px;
+	}
 }
 @media (min-width: 1536px) {
-  .container-center {
-    max-width: 1536px;
-  }
+	.container-center {
+		max-width: 1536px;
+	}
 }
 
-/* .section-intro - centered heading block (eyebrow + headline + subtitle)
- *   replaces: mx-auto mb-10 max-w-2xl text-center */
+/* .section-intro - centered heading block */
 .section-intro {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.5rem;
-  max-width: 42rem;
-  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2.5rem;
+	max-width: 42rem;
+	text-align: center;
 }
 
-/* .subtitle-block - subtitle container below a heading
- *   replaces: mt-3 text-[var(--MuteForeground)] */
+/* .subtitle-block - subtitle container below a heading */
 .subtitle-block {
-  margin-top: 0.75rem;
-  color: var(--MuteForeground);
+	margin-top: 0.75rem;
+	color: var(--MuteForeground);
 }

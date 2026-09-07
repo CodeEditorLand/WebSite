@@ -36,14 +36,14 @@ Mist is organised into five core modules:
 <img src="/Mermaid/a08c62373866bebb.svg" alt="Mermaid diagram" />
 ### Module Map
 
-| Path                        | Purpose                                                      |
-| --------------------------- | ------------------------------------------------------------ |
-| `Source/Server.rs`          | UDP and TCP DNS listener, query dispatch                     |
-| `Source/Zone.rs`            | `editor.land` zone configuration and record generation       |
-| `Source/Resolver.rs`        | External DNS forwarding for allowlisted domains              |
-| `Source/ForwardSecurity.rs` | DNSSEC signing with ECDSA P-256                              |
-| `Source/WebSocket.rs`       | WebSocket transport for `Sky`↔`Cocoon` communication |
-| `Source/lib.rs`             | Library root                                                 |
+| Path                        | Purpose                                                |
+| --------------------------- | ------------------------------------------------------ |
+| `Source/Server.rs`          | UDP and TCP DNS listener, query dispatch               |
+| `Source/Zone.rs`            | `editor.land` zone configuration and record generation |
+| `Source/Resolver.rs`        | External DNS forwarding for allowlisted domains        |
+| `Source/ForwardSecurity.rs` | DNSSEC signing with ECDSA P-256                        |
+| `Source/WebSocket.rs`       | WebSocket transport for `Sky`↔`Cocoon` communication   |
+| `Source/lib.rs`             | Library root                                           |
 
 ## Hickory DNS
 

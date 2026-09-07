@@ -329,124 +329,124 @@ const MetaDescription = T("meta.downloads.description", {
 
 <Base Title={MetaTitle} Description={MetaDescription}>
 	<Header client:load />
-		<div
-			class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 pt-6 text-muted-foreground"
+	<div
+		class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 pt-6 text-muted-foreground"
+	>
+		<picture>
+			<source
+				srcset="/Asset/Logo/Glyph/Land.svg"
+				media="(prefers-color-scheme: dark)"
+				data-theme-dark
+			/>
+			<img
+				alt="Land"
+				src="/Asset/Logo/Glyph/Land.svg"
+				width="24"
+				height="24"
+			/>
+		</picture>
+		<jelly-badge
+			variant="mint"
+			shape="square"
+			style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
 		>
-			<picture>
+			Telemetry Feature Gated&#x2001;<span
+				class="flat h-1.5 w-1.5"
+				style="background-color:var(--SpinegRPC)"
+				aria-hidden="true"></span>
+		</jelly-badge>
+		<jelly-badge
+			variant="mint"
+			shape="square"
+			style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			CC0 Licensed
+		</jelly-badge>
+		<jelly-badge
+			variant="platinum"
+			shape="square"
+			style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Signing Planned
+		</jelly-badge>
+		<jelly-badge
+			variant="azure"
+			shape="square"
+			style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Native Rust&#x2001;<picture class="inline-flex align-middle">
 				<source
-					srcset="/Asset/Dark/Logo/Glyph/Land.svg"
+					srcset="/Image/Rust.svg"
 					media="(prefers-color-scheme: dark)"
 					data-theme-dark
 				/>
 				<img
-					alt="Land"
-					src="/Asset/Logo/Glyph/Land.svg"
-					width="24"
-					height="24"
+					src="/Image/Rust.svg"
+					alt=""
+					width="14"
+					height="14"
+					class="opacity-70"
+					aria-hidden="true"
 				/>
 			</picture>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Telemetry Feature Gated&#x2001;<span
-					class="h-1.5 w-1.5 flat"
-					style="background-color:var(--SpinegRPC)"
-					aria-hidden="true"></span>
-			</jelly-badge>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				CC0 Licensed
-			</jelly-badge>
-			<jelly-badge
-				variant="platinum"
-				shape="square"
-				style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Signing Planned
-			</jelly-badge>
-			<jelly-badge
-				variant="azure"
-				shape="square"
-				style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Native Rust&#x2001;<picture class="inline-flex align-middle">
-					<source
-						srcset="/Dark/Image/Rust.svg"
-						media="(prefers-color-scheme: dark)"
-						data-theme-dark
-					/>
-					<img
-						src="/Image/Rust.svg"
-						alt=""
-						width="14"
-						height="14"
-						class="opacity-70"
-						aria-hidden="true"
-					/>
-				</picture>
-			</jelly-badge>
-			<jelly-badge
-				variant="amber"
-				shape="square"
-				style={`--jelly-fill:var(--ExtensionTauriMute);--jelly-label:var(--ExtensionTauriFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Tauri&#x2001;<picture class="inline-flex align-middle">
-					<source
-						srcset="/Dark/Image/Tauri.svg"
-						media="(prefers-color-scheme: dark)"
-						data-theme-dark
-					/>
-					<img
-						src="/Image/Tauri.svg"
-						alt=""
-						width="14"
-						height="14"
-						class="opacity-70"
-						aria-hidden="true"
-					/>
-				</picture>
-			</jelly-badge>
-			<jelly-badge
-				variant="platinum"
-				shape="square"
-				style={`--jelly-fill:var(--ExtensionEffectTypeScriptMute);--jelly-label:var(--ExtensionEffectTypeScriptFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Effect-TS&#x2001;<picture class="inline-flex align-middle">
-					<source
-						srcset="/Dark/Image/EffectTS.svg"
-						media="(prefers-color-scheme: dark)"
-						data-theme-dark
-					/>
-					<img
-						src="/Image/EffectTS.svg"
-						alt=""
-						width="14"
-						height="14"
-						class="opacity-70"
-						aria-hidden="true"
-					/>
-				</picture>
-			</jelly-badge>
-			<jelly-badge
-				variant="platinum"
-				shape="square"
-				style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				macOS + Windows + Linux Targets
-			</jelly-badge>
-			<jelly-badge
-				variant="platinum"
-				shape="square"
-				style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Unmodified Extensions
-			</jelly-badge>
-		</div>
+		</jelly-badge>
+		<jelly-badge
+			variant="amber"
+			shape="square"
+			style={`--jelly-fill:var(--ExtensionTauriMute);--jelly-label:var(--ExtensionTauriFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Tauri&#x2001;<picture class="inline-flex align-middle">
+				<source
+					srcset="/Image/Tauri.svg"
+					media="(prefers-color-scheme: dark)"
+					data-theme-dark
+				/>
+				<img
+					src="/Image/Tauri.svg"
+					alt=""
+					width="14"
+					height="14"
+					class="opacity-70"
+					aria-hidden="true"
+				/>
+			</picture>
+		</jelly-badge>
+		<jelly-badge
+			variant="platinum"
+			shape="square"
+			style={`--jelly-fill:var(--ExtensionEffectTypeScriptMute);--jelly-label:var(--ExtensionEffectTypeScriptFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Effect-TS&#x2001;<picture class="inline-flex align-middle">
+				<source
+					srcset="/Image/EffectTS.svg"
+					media="(prefers-color-scheme: dark)"
+					data-theme-dark
+				/>
+				<img
+					src="/Image/EffectTS.svg"
+					alt=""
+					width="14"
+					height="14"
+					class="opacity-70"
+					aria-hidden="true"
+				/>
+			</picture>
+		</jelly-badge>
+		<jelly-badge
+			variant="platinum"
+			shape="square"
+			style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			macOS + Windows + Linux Targets
+		</jelly-badge>
+		<jelly-badge
+			variant="platinum"
+			shape="square"
+			style={`--jelly-fill:var(--Mute);--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+		>
+			Unmodified Extensions
+		</jelly-badge>
+	</div>
 	<DownloadsPage
 		Content={DownloadContent}
 		MetaTitle={MetaTitle}

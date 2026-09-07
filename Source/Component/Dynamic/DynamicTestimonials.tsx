@@ -179,7 +179,12 @@ const GetRowRatio = (RowIndex: number): [number, number] => {
 // ── Component ──────────────────────────────────────────────────────────────
 
 const DynamicTestimonials = ({ Content, ClassName }: Property) => {
-	const { Title, Subtitle, Testimonials, Columns = 3 } = Content;
+	const {
+		Title,
+		Subtitle,
+		Testimonial: Testimonials,
+		Column: Columns = 3,
+	} = Content;
 
 	const GridReference = useRef<HTMLDivElement>(null);
 
@@ -315,66 +320,73 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											"--jelly-card-font-size": "inherit",
 											"--jelly-card-padding-block": "0",
 											"--jelly-card-padding-inline": "0",
-											"--jelly-color-border-default": "var(--ColorMuteBorder)",
+											"--jelly-color-border-default":
+												"var(--ColorMuteBorder)",
 											"--masonry-col": ColSpan,
 										} as React.CSSProperties
 									}
 								>
 									<div className="flex flex-col gap-3">
-									{/* Name + glyph + GitHub link */}
-									<div className="flex items-center justify-between gap-2">
-										<div className="flex items-center gap-1.5">
-											<span
-												className="font-mono text-sm font-bold"
-												style={{ color: AccentColor }}
-											>
-												{Testimonial.Href ? (
-													<a
-														href={Testimonial.Href}
-														target="_blank"
-														rel="noopener noreferrer"
-														className="hover:underline"
-													>
-														{Testimonial.Author}
-													</a>
-												) : (
-													Testimonial.Author
+										{/* Name + glyph + GitHub link */}
+										<div className="flex items-center justify-between gap-2">
+											<div className="flex items-center gap-1.5">
+												<span
+													className="font-mono text-sm font-bold"
+													style={{
+														color: AccentColor,
+													}}
+												>
+													{Testimonial.Href ? (
+														<a
+															href={
+																Testimonial.Href
+															}
+															target="_blank"
+															rel="noopener noreferrer"
+															className="hover:underline"
+														>
+															{Testimonial.Author}
+														</a>
+													) : (
+														Testimonial.Author
+													)}
+												</span>
+												{Testimonial.Author && (
+													<ElementGlyph
+														Name={
+															Testimonial.Author
+														}
+													/>
 												)}
-											</span>
-											{Testimonial.Author && (
-												<ElementGlyph
-													Name={Testimonial.Author}
+											</div>
+											{Testimonial.Href && (
+												<lucide.ExternalLink
+													className="text-muted-foreground/40 h-3 w-3 shrink-0"
+													aria-hidden="true"
 												/>
 											)}
 										</div>
-										{Testimonial.Href && (
-											<lucide.ExternalLink
-												className="text-muted-foreground/40 h-3 w-3 shrink-0"
-												aria-hidden="true"
-											/>
-										)}
-									</div>
 
-									{/* Role → chips split by " - " */}
-									{Testimonial.Role && (
-										<div className="flex flex-wrap gap-1">
-											{Testimonial.Role.split(" - ").map(
-												(Tag, TagIndex) => (
+										{/* Role → chips split by " - " */}
+										{Testimonial.Role && (
+											<div className="flex flex-wrap gap-1">
+												{Testimonial.Role.split(
+													" - ",
+												).map((Tag, TagIndex) => (
 													<span
 														key={TagIndex}
 														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground"
 													>
 														{Tag}
 													</span>
-												),
-											)}
-										</div>
-									)}
+												))}
+											</div>
+										)}
 
-									{/* Lead - first line of the quote only */}
-									<p className="text-sm leading-relaxed text-muted-foreground">
-										{Testimonial.Quote.split("\n")[0]}
-									</p>
+										{/* Lead - first line of the quote only */}
+										<p className="text-sm leading-relaxed text-muted-foreground">
+											{Testimonial.Quote.split("\n")[0]}
+										</p>
 									</div>
 								</jelly-card>
 							);
@@ -424,64 +436,67 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 							<jelly-card
 								key={Testimonial.Id}
 								className="TestimonialCard flat p-5"
-								style={{
-									"--jelly-fill": "var(--Card)",
-									"--jelly-radius": "0",
-									"--jelly-card-padding-block": "0",
-									"--jelly-card-padding-inline": "0",
-									"--jelly-color-border-default": "var(--ColorMuteBorder)",
-								} as React.CSSProperties}
+								style={
+									{
+										"--jelly-fill": "var(--Card)",
+										"--jelly-radius": "0",
+										"--jelly-card-padding-block": "0",
+										"--jelly-card-padding-inline": "0",
+										"--jelly-color-border-default":
+											"var(--ColorMuteBorder)",
+									} as React.CSSProperties
+								}
 							>
 								<div className="flex flex-col gap-3">
-								<div className="flex items-center justify-between gap-2">
-									<div className="flex items-center gap-1.5">
-										<span
-											className="font-mono text-sm font-bold"
-											style={{ color: AccentColor }}
-										>
-											{Testimonial.Href ? (
-												<a
-													href={Testimonial.Href}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="hover:underline"
-												>
-													{Testimonial.Author}
-												</a>
-											) : (
-												Testimonial.Author
+									<div className="flex items-center justify-between gap-2">
+										<div className="flex items-center gap-1.5">
+											<span
+												className="font-mono text-sm font-bold"
+												style={{ color: AccentColor }}
+											>
+												{Testimonial.Href ? (
+													<a
+														href={Testimonial.Href}
+														target="_blank"
+														rel="noopener noreferrer"
+														className="hover:underline"
+													>
+														{Testimonial.Author}
+													</a>
+												) : (
+													Testimonial.Author
+												)}
+											</span>
+											{Testimonial.Author && (
+												<ElementGlyph
+													Name={Testimonial.Author}
+												/>
 											)}
-										</span>
-										{Testimonial.Author && (
-											<ElementGlyph
-												Name={Testimonial.Author}
+										</div>
+										{Testimonial.Href && (
+											<lucide.ExternalLink
+												className="text-muted-foreground/40 h-3 w-3 shrink-0"
+												aria-hidden="true"
 											/>
 										)}
 									</div>
-									{Testimonial.Href && (
-										<lucide.ExternalLink
-											className="text-muted-foreground/40 h-3 w-3 shrink-0"
-											aria-hidden="true"
-										/>
+									{Testimonial.Role && (
+										<div className="flex flex-wrap gap-1">
+											{Testimonial.Role.split(" - ").map(
+												(Tag, TagIndex) => (
+													<span
+														key={TagIndex}
+														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground"
+													>
+														{Tag}
+													</span>
+												),
+											)}
+										</div>
 									)}
-								</div>
-								{Testimonial.Role && (
-									<div className="flex flex-wrap gap-1">
-										{Testimonial.Role.split(" - ").map(
-											(Tag, TagIndex) => (
-												<span
-													key={TagIndex}
-													className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground"
-												>
-													{Tag}
-												</span>
-											),
-										)}
-									</div>
-								)}
-								<p className="text-sm leading-relaxed text-muted-foreground">
-									{Testimonial.Quote.split("\n")[0]}
-								</p>
+									<p className="text-sm leading-relaxed text-muted-foreground">
+										{Testimonial.Quote.split("\n")[0]}
+									</p>
 								</div>
 							</jelly-card>
 						);

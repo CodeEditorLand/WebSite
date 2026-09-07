@@ -5,7 +5,7 @@ export default interface Interface {
 
 	Subtitle?: string;
 
-	Testimonials: Testimonial[];
+	Testimonial: Testimonial[];
 
-	Columns?: 1 | 2 | 3 | 4 | 5 | 6 | "masonry";
+	Column?: 1 | 2 | 3 | 4 | 5 | 6 | "masonry";
 }

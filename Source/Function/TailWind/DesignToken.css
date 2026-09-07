@@ -1,13 +1,13 @@
 :root {
 	/* ─────────────────────────────────────────────────────────────
-	 BORDER / RADIUS TOKENS
+	 BORDER / RADIUS TOKENS - Nocturnal Field Record
 	 ───────────────────────────────────────────────────────────── */
 	--BorderWidth: 1px;
 	--BorderRadius: 0;
 
-	/* Logo-aligned radius for interactive surfaces. Cards stay flat. */
-	--RadiusButton: 6px;
-	--RadiusInput: 6px;
+	/* Flat - no rounded corners per design system */
+	--RadiusButton: 0;
+	--RadiusInput: 0;
 
 	/* ─────────────────────────────────────────────────────────────
 	 SPACING SCALE (4px grid)
@@ -38,338 +38,325 @@
 	--Spacing64: 16rem; /* 256px */
 
 	/* ─────────────────────────────────────────────────────────────
-	 SEMANTIC COLOR TOKENS - Flat White & Gray Theme
-	 Neutral zinc scale; matches the Land logo's geometric palette
-	 (near-black slabs on white). No warm tints.
+	 SEMANTIC COLOR TOKENS - Nocturnal Field Record
+	 Black canvas, warm-white cards, mono type, green accent.
 	 ───────────────────────────────────────────────────────────── */
-	--ColorBackground: #ffffff;
-	--ColorForeground: #1a1a1a;
-	--ColorBorder: rgba(0, 0, 0, 0.08);
-	--ColorPrimary: #1a1a1a;
-	--ColorSecondary: #f4f4f5;
-	--ColorAccent: #f4f4f5;
-	--ColorMute: #fafafa;
-	--ColorMuteForeground: #71717a;
-	--ColorMuteBorder: #71717a;
-	--ColorCard: #ffffff;
-	--ColorCardForeground: #1a1a1a;
-	--ColorPopover: #ffffff;
-	--ColorPopoverForeground: #1a1a1a;
-	--ColorRing: #1a1a1a;
-	--ColorDestruct: #dc2626;
+	--ColorBackground: #000000;
+	--ColorForeground: #e7e7ea;
+	--ColorBorder: rgba(255, 255, 255, 0.08);
+	--ColorPrimary: #e7e7ea;
+	--ColorSecondary: #f8f7f2;
+	--ColorAccent: #1e742a;
+	--ColorMute: #1a1a1e;
+	--ColorMuteForeground: #8a8a93;
+	--ColorMuteBorder: #3f3f46;
+	--ColorCard: #f8f7f2;
+	--ColorCardForeground: #070707;
+	--ColorPopover: #f8f7f2;
+	--ColorPopoverForeground: #070707;
+	--ColorRing: #1e742a;
+	--ColorDestruct: #f87171;
 	--ColorSuccess: #34d399;
 	--ColorWarning: #fbbf24;
 
-	/* Surface depth layers (neutral zinc) */
-	--ColorSurface0: #ffffff;
-	--ColorSurface1: #fafafa;
-	--ColorSurface2: #f4f4f5;
-	--ColorSurface3: #e7e7e9;
-	--ColorSurface4: #d4d4d8;
+	/* Surface depth layers (dark) */
+	--ColorSurface0: #000000;
+	--ColorSurface1: #0a0a0c;
+	--ColorSurface2: #111116;
+	--ColorSurface3: #1a1a1e;
+	--ColorSurface4: #26262f;
 
 	/* ─────────────────────────────────────────────────────────────
-	 NEUTRAL GRAY SCALE
-	 Pure neutral scales (Tailwind zinc-equivalent values).
-	 Used as surface depth references; matches the logo's flat
-	 white-and-gray vocabulary.
+	 NEUTRAL GRAY SCALE - dark theme values
 	 ───────────────────────────────────────────────────────────── */
+	--ColorSlate50: #0a0a0c;
+	--ColorSlate100: #111116;
+	--ColorSlate200: #1a1a1e;
+	--ColorSlate300: #26262f;
+	--ColorSlate400: #3f3f46;
+	--ColorSlate500: #52525b;
+	--ColorSlate600: #71717a;
+	--ColorSlate700: #8a8a93;
+	--ColorSlate800: #a1a1aa;
+	--ColorSlate900: #d4d4d8;
+	--ColorSlate950: #e7e7ea;
 
-	/* Slate → neutral gray */
-	--ColorSlate50: #fafafa;
-	--ColorSlate100: #f4f4f5;
-	--ColorSlate200: #e4e4e7;
-	--ColorSlate300: #d4d4d8;
-	--ColorSlate400: #a1a1aa;
-	--ColorSlate500: #71717a;
-	--ColorSlate600: #52525b;
-	--ColorSlate700: #3f3f46;
-	--ColorSlate800: #27272a;
-	--ColorSlate900: #18181b;
-	--ColorSlate950: #09090b;
+	--ColorGray50: #0a0a0c;
+	--ColorGray100: #111116;
+	--ColorGray200: #1a1a1e;
+	--ColorGray300: #26262f;
+	--ColorGray400: #3f3f46;
+	--ColorGray500: #52525b;
+	--ColorGray600: #71717a;
+	--ColorGray700: #8a8a93;
+	--ColorGray800: #a1a1aa;
+	--ColorGray900: #d4d4d8;
+	--ColorGray950: #e7e7ea;
 
-	/* Gray → neutral gray */
-	--ColorGray50: #fafafa;
-	--ColorGray100: #f4f4f5;
-	--ColorGray200: #e4e4e7;
-	--ColorGray300: #d4d4d8;
-	--ColorGray400: #a1a1aa;
-	--ColorGray500: #71717a;
-	--ColorGray600: #52525b;
-	--ColorGray700: #3f3f46;
-	--ColorGray800: #27272a;
-	--ColorGray900: #18181b;
-	--ColorGray950: #09090b;
+	--ColorZinc50: #0a0a0c;
+	--ColorZinc100: #111116;
+	--ColorZinc200: #1a1a1e;
+	--ColorZinc300: #26262f;
+	--ColorZinc400: #3f3f46;
+	--ColorZinc500: #52525b;
+	--ColorZinc600: #71717a;
+	--ColorZinc700: #8a8a93;
+	--ColorZinc800: #a1a1aa;
+	--ColorZinc900: #d4d4d8;
+	--ColorZinc950: #e7e7ea;
 
-	/* Zinc → neutral gray */
-	--ColorZinc50: #fafafa;
-	--ColorZinc100: #f4f4f5;
-	--ColorZinc200: #e4e4e7;
-	--ColorZinc300: #d4d4d8;
-	--ColorZinc400: #a1a1aa;
-	--ColorZinc500: #71717a;
-	--ColorZinc600: #52525b;
-	--ColorZinc700: #3f3f46;
-	--ColorZinc800: #27272a;
-	--ColorZinc900: #18181b;
-	--ColorZinc950: #09090b;
+	--ColorNeutral50: #0a0a0c;
+	--ColorNeutral100: #111116;
+	--ColorNeutral200: #1a1a1e;
+	--ColorNeutral300: #26262f;
+	--ColorNeutral400: #3f3f46;
+	--ColorNeutral500: #52525b;
+	--ColorNeutral600: #71717a;
+	--ColorNeutral700: #8a8a93;
+	--ColorNeutral800: #a1a1aa;
+	--ColorNeutral900: #d4d4d8;
+	--ColorNeutral950: #e7e7ea;
 
-	/* Neutral → neutral gray */
-	--ColorNeutral50: #fafafa;
-	--ColorNeutral100: #f4f4f5;
-	--ColorNeutral200: #e4e4e7;
-	--ColorNeutral300: #d4d4d8;
-	--ColorNeutral400: #a1a1aa;
-	--ColorNeutral500: #71717a;
-	--ColorNeutral600: #52525b;
-	--ColorNeutral700: #3f3f46;
-	--ColorNeutral800: #27272a;
-	--ColorNeutral900: #18181b;
-	--ColorNeutral950: #09090b;
-
-	/* Stone → neutral gray */
-	--ColorStone50: #fafafa;
-	--ColorStone100: #f4f4f5;
-	--ColorStone200: #e4e4e7;
-	--ColorStone300: #d4d4d8;
-	--ColorStone400: #a1a1aa;
-	--ColorStone500: #71717a;
-	--ColorStone600: #52525b;
-	--ColorStone700: #3f3f46;
-	--ColorStone800: #27272a;
-	--ColorStone900: #18181b;
-	--ColorStone950: #09090b;
+	--ColorStone50: #0a0a0c;
+	--ColorStone100: #111116;
+	--ColorStone200: #1a1a1e;
+	--ColorStone300: #26262f;
+	--ColorStone400: #3f3f46;
+	--ColorStone500: #52525b;
+	--ColorStone600: #71717a;
+	--ColorStone700: #8a8a93;
+	--ColorStone800: #a1a1aa;
+	--ColorStone900: #d4d4d8;
+	--ColorStone950: #e7e7ea;
 
 	/* ─────────────────────────────────────────────────────────────
-	 CHROMATIC SCALES
-	 Warm-shifted where applicable. Full 50-950 stops.
+	 CHROMATIC SCALES - kept for technology badges, syntax, etc.
+	 These are the same hues; they appear as accents on the dark canvas.
 	 ───────────────────────────────────────────────────────────── */
 
 	/* Red */
-	--ColorRed50: #fceaea;
-	--ColorRed100: #f9d5c5;
-	--ColorRed200: #f5bfa0;
-	--ColorRed300: #f2aa7b;
-	--ColorRed400: #ee9456;
-	--ColorRed500: #ea7f31;
-	--ColorRed600: #d06d2a;
-	--ColorRed700: #b85c24;
-	--ColorRed800: #9f4b1e;
-	--ColorRed900: #853b18;
-	--ColorRed950: #6b2c12;
+	--ColorRed50: #300d0d;
+	--ColorRed100: #451212;
+	--ColorRed200: #5c1818;
+	--ColorRed300: #731e1e;
+	--ColorRed400: #8b2424;
+	--ColorRed500: #a32b2b;
+	--ColorRed600: #bc4444;
+	--ColorRed700: #d46a6a;
+	--ColorRed800: #e89999;
+	--ColorRed900: #f5c5c5;
+	--ColorRed950: #fceaea;
 
 	/* Orange */
-	--ColorOrange50: #fff3e6;
-	--ColorOrange100: #ffe0bf;
-	--ColorOrange200: #ffcc99;
-	--ColorOrange300: #ffb973;
-	--ColorOrange400: #ffa64d;
-	--ColorOrange500: #ff9533;
-	--ColorOrange600: #e08a2e;
-	--ColorOrange700: #c27f29;
-	--ColorOrange800: #a47424;
-	--ColorOrange900: #88691f;
-	--ColorOrange950: #6c5e1a;
+	--ColorOrange50: #2d1703;
+	--ColorOrange100: #422107;
+	--ColorOrange200: #582c0b;
+	--ColorOrange300: #6e3810;
+	--ColorOrange400: #854415;
+	--ColorOrange500: #9d511a;
+	--ColorOrange600: #b66a35;
+	--ColorOrange700: #cf8a5d;
+	--ColorOrange800: #e3b08e;
+	--ColorOrange900: #f2d6c2;
+	--ColorOrange950: #fcf0e6;
 
 	/* Amber */
-	--ColorAmber50: #fff8e6;
-	--ColorAmber100: #fff0cc;
-	--ColorAmber200: #ffe9b3;
-	--ColorAmber300: #ffe1a0;
-	--ColorAmber400: #ffd989;
-	--ColorAmber500: #ffcf73;
-	--ColorAmber600: #e6b966;
-	--ColorAmber700: #cc9e59;
-	--ColorAmber800: #b3864c;
-	--ColorAmber900: #99703f;
-	--ColorAmber950: #805c32;
+	--ColorAmber50: #2d1f03;
+	--ColorAmber100: #422d07;
+	--ColorAmber200: #583c0b;
+	--ColorAmber300: #6e4b10;
+	--ColorAmber400: #855b15;
+	--ColorAmber500: #9d6c1a;
+	--ColorAmber600: #b68535;
+	--ColorAmber700: #cfa55d;
+	--ColorAmber800: #e3c58e;
+	--ColorAmber900: #f2e2c2;
+	--ColorAmber950: #fcf5e6;
 
 	/* Yellow */
-	--ColorYellow50: #fffce8;
-	--ColorYellow100: #fff9d1;
-	--ColorYellow200: #fff5ba;
-	--ColorYellow300: #fff2a3;
-	--ColorYellow400: #ffef8c;
-	--ColorYellow500: #ffec75;
-	--ColorYellow600: #e6d55f;
-	--ColorYellow700: #cca049;
-	--ColorYellow800: #b38a33;
-	--ColorYellow900: #99741d;
-	--ColorYellow950: #806d07;
+	--ColorYellow50: #2d2803;
+	--ColorYellow100: #423a07;
+	--ColorYellow200: #584d0b;
+	--ColorYellow300: #6e6010;
+	--ColorYellow400: #857415;
+	--ColorYellow500: #9d881a;
+	--ColorYellow600: #b6a035;
+	--ColorYellow700: #ccb95d;
+	--ColorYellow800: #e3d28e;
+	--ColorYellow900: #f2ebc2;
+	--ColorYellow950: #fcf8e8;
 
 	/* Lime */
-	--ColorLime50: #f6fee6;
-	--ColorLime100: #edfdcc;
-	--ColorLime200: #e3fcb2;
-	--ColorLime300: #dafc98;
-	--ColorLime400: #d0fb7e;
-	--ColorLime500: #c7fa64;
-	--ColorLime600: #a7d24f;
-	--ColorLime700: #87aa3a;
-	--ColorLime800: #678426;
-	--ColorLime900: #476c11;
-	--ColorLime950: #28520c;
+	--ColorLime50: #1a2d03;
+	--ColorLime100: #274207;
+	--ColorLime200: #35580b;
+	--ColorLime300: #436e10;
+	--ColorLime400: #528515;
+	--ColorLime500: #619d1a;
+	--ColorLime600: #7db635;
+	--ColorLime700: #9bcf5d;
+	--ColorLime800: #bae38e;
+	--ColorLime900: #dbf2c2;
+	--ColorLime950: #f1fce6;
 
 	/* Green */
-	--ColorGreen50: #f1f8e9;
-	--ColorGreen100: #dcedc8;
-	--ColorGreen200: #c5e1a5;
-	--ColorGreen300: #aed581;
-	--ColorGreen400: #9ccc65;
-	--ColorGreen500: #8bc34a;
-	--ColorGreen600: #7cb342;
-	--ColorGreen700: #689f38;
-	--ColorGreen800: #558b2f;
-	--ColorGreen900: #33691e;
-	--ColorGreen950: #254d13;
+	--ColorGreen50: #0d2506;
+	--ColorGreen100: #14380c;
+	--ColorGreen200: #1c4c12;
+	--ColorGreen300: #256018;
+	--ColorGreen400: #2e751e;
+	--ColorGreen500: #388a25;
+	--ColorGreen600: #52a33f;
+	--ColorGreen700: #73bf62;
+	--ColorGreen800: #9ad58e;
+	--ColorGreen900: #c5e8c0;
+	--ColorGreen950: #eaf9e8;
 
 	/* Emerald */
-	--ColorEmerald50: #e8f9f0;
-	--ColorEmerald100: #d1f3e1;
-	--ColorEmerald200: #bafce1;
-	--ColorEmerald300: #a3f6d2;
-	--ColorEmerald400: #8cf0c3;
-	--ColorEmerald500: #75eab3;
-	--ColorEmerald600: #61c599;
-	--ColorEmerald700: #4da07f;
-	--ColorEmerald800: #398b65;
-	--ColorEmerald900: #26764b;
-	--ColorEmerald950: #135232;
+	--ColorEmerald50: #06251a;
+	--ColorEmerald100: #0c382a;
+	--ColorEmerald200: #124c3b;
+	--ColorEmerald300: #18604c;
+	--ColorEmerald400: #1e755d;
+	--ColorEmerald500: #258a6f;
+	--ColorEmerald600: #3fa388;
+	--ColorEmerald700: #62bfa5;
+	--ColorEmerald800: #8ed5c3;
+	--ColorEmerald900: #c0e8de;
+	--ColorEmerald950: #e8f7f3;
 
 	/* Teal */
-	--ColorTeal50: #e6f9f8;
-	--ColorTeal100: #cceff1;
-	--ColorTeal200: #b3e5ea;
-	--ColorTeal300: #99dbdf;
-	--ColorTeal400: #80d1d8;
-	--ColorTeal500: #66c7d1;
-	--ColorTeal600: #53a8b2;
-	--ColorTeal700: #409a93;
-	--ColorTeal800: #307c75;
-	--ColorTeal900: #205f56;
-	--ColorTeal950: #104138;
+	--ColorTeal50: #032525;
+	--ColorTeal100: #073838;
+	--ColorTeal200: #0b4c4c;
+	--ColorTeal300: #106060;
+	--ColorTeal400: #157575;
+	--ColorTeal500: #1a8a8a;
+	--ColorTeal600: #35a3a3;
+	--ColorTeal700: #5dbfbf;
+	--ColorTeal800: #8ed5d5;
+	--ColorTeal900: #c2e8e8;
+	--ColorTeal950: #e8f7f7;
 
 	/* Cyan */
-	--ColorCyan50: #e6f7fb;
-	--ColorCyan100: #cceff7;
-	--ColorCyan200: #b3e7f3;
-	--ColorCyan300: #99dff0;
-	--ColorCyan400: #80d7ec;
-	--ColorCyan500: #66cfe8;
-	--ColorCyan600: #53a8c9;
-	--ColorCyan700: #4090aa;
-	--ColorCyan800: #30798b;
-	--ColorCyan900: #20526c;
-	--ColorCyan950: #103a4d;
+	--ColorCyan50: #031f2d;
+	--ColorCyan100: #073142;
+	--ColorCyan200: #0b4458;
+	--ColorCyan300: #10576e;
+	--ColorCyan400: #156b85;
+	--ColorCyan500: #1a7f9d;
+	--ColorCyan600: #3599b6;
+	--ColorCyan700: #5db3cf;
+	--ColorCyan800: #8ed5e3;
+	--ColorCyan900: #c2e8f2;
+	--ColorCyan950: #e8f7fc;
 
 	/* Sky */
-	--ColorSky50: #e6f2ff;
-	--ColorSky100: #cce5ff;
-	--ColorSky200: #b3d8ff;
-	--ColorSky300: #99cbff;
-	--ColorSky400: #80beff;
-	--ColorSky500: #66b1ff;
-	--ColorSky600: #5290e6;
-	--ColorSky700: #4070cc;
-	--ColorSky800: #3050b3;
-	--ColorSky900: #203099;
-	--ColorSky950: #101f80;
+	--ColorSky50: #03172d;
+	--ColorSky100: #072542;
+	--ColorSky200: #0b3458;
+	--ColorSky300: #10446e;
+	--ColorSky400: #155485;
+	--ColorSky500: #1a659d;
+	--ColorSky600: #3580b6;
+	--ColorSky700: #5d9dcf;
+	--ColorSky800: #8ebde3;
+	--ColorSky900: #c2def2;
+	--ColorSky950: #e8f2ff;
 
 	/* Blue */
-	--ColorBlue50: #e6edff;
-	--ColorBlue100: #cceaff;
-	--ColorBlue200: #b3e7ff;
-	--ColorBlue300: #99e4ff;
-	--ColorBlue400: #80e0ff;
-	--ColorBlue500: #66ddff;
-	--ColorBlue600: #53bacc;
-	--ColorBlue700: #4098b8;
-	--ColorBlue800: #3074a5;
-	--ColorBlue900: #205091;
-	--ColorBlue950: #103c7e;
+	--ColorBlue50: #030f2d;
+	--ColorBlue100: #071842;
+	--ColorBlue200: #0b2258;
+	--ColorBlue300: #102c6e;
+	--ColorBlue400: #153785;
+	--ColorBlue500: #1a429d;
+	--ColorBlue600: #355eb6;
+	--ColorBlue700: #5d7fcf;
+	--ColorBlue800: #8eaae3;
+	--ColorBlue900: #c2d2f2;
+	--ColorBlue950: #e8edff;
 
 	/* Indigo */
-	--ColorIndigo50: #ececff;
-	--ColorIndigo100: #dbd8ff;
-	--ColorIndigo200: #c9c5ff;
-	--ColorIndigo300: #b7b2ff;
-	--ColorIndigo400: #a59fff;
-	--ColorIndigo500: #938cff;
-	--ColorIndigo600: #7a6ac9;
-	--ColorIndigo700: #6358a5;
-	--ColorIndigo800: #4c4681;
-	--ColorIndigo900: #35335d;
-	--ColorIndigo950: #1e2140;
+	--ColorIndigo50: #0e032d;
+	--ColorIndigo100: #160742;
+	--ColorIndigo200: #1f0b58;
+	--ColorIndigo300: #28106e;
+	--ColorIndigo400: #311585;
+	--ColorIndigo500: #3b1a9d;
+	--ColorIndigo600: #5535b6;
+	--ColorIndigo700: #765dcf;
+	--ColorIndigo800: #9e8ee3;
+	--ColorIndigo900: #c8c2f2;
+	--ColorIndigo950: #ececff;
 
 	/* Violet */
-	--ColorViolet50: #f3e6ff;
-	--ColorViolet100: #e7ccff;
-	--ColorViolet200: #dab3ff;
-	--ColorViolet300: #ce99ff;
-	--ColorViolet400: #c080ff;
-	--ColorViolet500: #b466ff;
-	--ColorViolet600: #9f55e6;
-	--ColorViolet700: #8943cc;
-	--ColorViolet800: #7332b3;
-	--ColorViolet900: #5d20a0;
-	--ColorViolet950: #471f80;
+	--ColorViolet50: #1a032d;
+	--ColorViolet100: #280742;
+	--ColorViolet200: #370b58;
+	--ColorViolet300: #46106e;
+	--ColorViolet400: #561585;
+	--ColorViolet500: #661a9d;
+	--ColorViolet600: #8035b6;
+	--ColorViolet700: #9f5dcf;
+	--ColorViolet800: #be8ee3;
+	--ColorViolet900: #dcc2f2;
+	--ColorViolet950: #f3e6ff;
 
 	/* Purple */
-	--ColorPurple50: #f4e6ff;
-	--ColorPurple100: #e9ccff;
-	--ColorPurple200: #dfb3ff;
-	--ColorPurple300: #d59aff;
-	--ColorPurple400: #ca80ff;
-	--ColorPurple500: #c066ff;
-	--ColorPurple600: #a55acc;
-	--ColorPurple700: #894699;
-	--ColorPurple800: #6d3676;
-	--ColorPurple900: #512d53;
-	--ColorPurple950: #361630;
+	--ColorPurple50: #1a032d;
+	--ColorPurple100: #280742;
+	--ColorPurple200: #370b58;
+	--ColorPurple300: #46106e;
+	--ColorPurple400: #561585;
+	--ColorPurple500: #661a9d;
+	--ColorPurple600: #8035b6;
+	--ColorPurple700: #9f5dcf;
+	--ColorPurple800: #be8ee3;
+	--ColorPurple900: #dcc2f2;
+	--ColorPurple950: #f4e6ff;
 
 	/* Fuchsia */
-	--ColorFuchsia50: #fde6ff;
-	--ColorFuchsia100: #fbc9ff;
-	--ColorFuchsia200: #f9acff;
-	--ColorFuchsia300: #f78fff;
-	--ColorFuchsia400: #f571ff;
-	--ColorFuchsia500: #f354ff;
-	--ColorFuchsia600: #d840d1;
-	--ColorFuchsia700: #ba2ca3;
-	--ColorFuchsia800: #9d1895;
-	--ColorFuchsia900: #800075;
-	--ColorFuchsia950: #640057;
+	--ColorFuchsia50: #2d0325;
+	--ColorFuchsia100: #420736;
+	--ColorFuchsia200: #580b48;
+	--ColorFuchsia300: #6e105a;
+	--ColorFuchsia400: #85156d;
+	--ColorFuchsia500: #9d1a80;
+	--ColorFuchsia600: #b6359b;
+	--ColorFuchsia700: #cf5db5;
+	--ColorFuchsia800: #e38ece;
+	--ColorFuchsia900: #f2c2e6;
+	--ColorFuchsia950: #fce6f8;
 
 	/* Pink */
-	--ColorPink50: #ffe6f2;
-	--ColorPink100: #ffccd9;
-	--ColorPink200: #ffb3c1;
-	--ColorPink300: #ff99a8;
-	--ColorPink400: #ff808f;
-	--ColorPink500: #ff6677;
-	--ColorPink600: #e65a6a;
-	--ColorPink700: #cc4e5d;
-	--ColorPink800: #b34350;
-	--ColorPink900: #993844;
-	--ColorPink950: #802c37;
+	--ColorPink50: #2d0317;
+	--ColorPink100: #420725;
+	--ColorPink200: #580b34;
+	--ColorPink300: #6e1044;
+	--ColorPink400: #851554;
+	--ColorPink500: #9d1a65;
+	--ColorPink600: #b63580;
+	--ColorPink700: #cf5d9f;
+	--ColorPink800: #e38ebc;
+	--ColorPink900: #f2c2dc;
+	--ColorPink950: #fce6f2;
 
 	/* Rose */
-	--ColorRose50: #fff0f0;
-	--ColorRose100: #ffe0e0;
-	--ColorRose200: #ffd1d1;
-	--ColorRose300: #ffc1c1;
-	--ColorRose400: #ffb2b2;
-	--ColorRose500: #ffa2a2;
-	--ColorRose600: #e08f8f;
-	--ColorRose700: #c07c7c;
-	--ColorRose800: #a06969;
-	--ColorRose900: #804656;
-	--ColorRose950: #603343;
+	--ColorRose50: #2d030a;
+	--ColorRose100: #420712;
+	--ColorRose200: #580b1b;
+	--ColorRose300: #6e1024;
+	--ColorRose400: #85152d;
+	--ColorRose500: #9d1a37;
+	--ColorRose600: #b63554;
+	--ColorRose700: #cf5d76;
+	--ColorRose800: #e38e9e;
+	--ColorRose900: #f2c2c8;
+	--ColorRose950: #fce6ec;
 
 	/* ─────────────────────────────────────────────────────────────
 	 TECHNOLOGY COLOR ALIASES
-	 Mirror Base.css token names so both files are in sync.
-	 These are flat references - no color-mix() here; computed
-	 values live in Base.css :root.
 	 ───────────────────────────────────────────────────────────── */
 
 	/* Protocol Spine */

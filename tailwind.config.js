@@ -10,7 +10,7 @@ export default {
 		"./src/**/*.{astro,js,jsx,ts,tsx}",
 	],
 
-	darkMode: "class",
+	darkMode: false,
 
 	theme: {
 		container: {
@@ -62,7 +62,6 @@ export default {
 
 			borderRadius: {
 				none: "0",
-
 				full: "9999px",
 			},
 
@@ -123,6 +122,18 @@ export default {
 				input: "var(--Input)",
 
 				ring: "var(--Ring)",
+
+				// Sidebar
+				sidebar: {
+					DEFAULT: "var(--Background)",
+					foreground: "var(--Foreground)",
+					primary: "var(--Primary)",
+					"primary-foreground": "var(--PrimaryForeground)",
+					accent: "var(--Accent)",
+					"accent-foreground": "var(--AccentForeground)",
+					border: "var(--Border)",
+					ring: "var(--Ring)",
+				},
 
 				// Existing tokens
 				backgroundLight: "var(--BackgroundLight)",
