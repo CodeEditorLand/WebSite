@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <circle cx="100" cy="100" r="95" fill="#1E742A"/>
-  <path d="M100,100 Q120,60 150,50 Q130,80 140,100 Q160,120 150,150 Q120,140 100,150 Q80,160 50,150 Q60,120 40,100 Q50,80 50,50 Q80,60 100,100" fill="none" stroke="#D6B947" stroke-width="1.5"/>
-  <path d="M100,100 Q115,70 135,65 Q125,85 130,95 Q145,110 140,135 Q120,130 100,135 Q85,145 65,135 Q70,115 55,95 Q65,80 70,65 Q85,70 100,100" fill="none" stroke="#D6B947" stroke-width="1"/>
-  <circle cx="100" cy="100" r="8" fill="#D6B947"/>
-  <circle cx="100" cy="50" r="3" fill="#D6B947"/>
-  <circle cx="150" cy="100" r="3" fill="#D6B947"/>
-  <circle cx="100" cy="150" r="3" fill="#D6B947"/>
-  <circle cx="50" cy="100" r="3" fill="#D6B947"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="95" fill="#1e742a"/><path fill="none" stroke="#d6b947" stroke-width="1.5" d="M100 100q20-40 50-50-20 30-10 50 20 20 10 50-30-10-50 0t-50 0q10-30-10-50 10-20 10-50 30 10 50 50"/><path fill="none" stroke="#d6b947" d="M100 100q15-30 35-35-10 20-5 30 15 15 10 40-20-5-40 0-15 10-35 0 5-20-10-40 10-15 15-30 15 5 30 35"/><circle cx="100" cy="100" r="8" fill="#d6b947"/><circle cx="100" cy="50" r="3" fill="#d6b947"/><circle cx="150" cy="100" r="3" fill="#d6b947"/><circle cx="100" cy="150" r="3" fill="#d6b947"/><circle cx="50" cy="100" r="3" fill="#d6b947"/></svg>
