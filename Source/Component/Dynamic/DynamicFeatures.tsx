@@ -156,7 +156,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 		Subtitle,
 		Feature: Features,
 		Columns = 3,
-		Gap = "lg",
+		Gap = "xl",
 	} = Content;
 
 	const GridReference = useRef<HTMLDivElement>(null);

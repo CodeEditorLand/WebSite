@@ -62,7 +62,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 			PrimaryCTA: {
 				Text: T("common:button.download", {
-					defaultValue: "DOWNLOAD LAND FREE",
+					defaultValue: "ENTER",
 				}),
 
 				Variant: "default",
@@ -76,7 +76,7 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 			SecondaryCTA: {
 				Text: T("common:button.learnMore", {
-					defaultValue: "SEE WHAT MAKES LAND DIFFERENT",
+					defaultValue: "TRACE",
 				}),
 
 				Variant: "ghost",

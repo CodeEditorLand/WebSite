@@ -788,6 +788,12 @@
 			"IBM Plex Mono", "JetBrains Mono", "Fira Code", ui-monospace,
 			"SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
 
+		/* Nocturnal Field Record: dramatic 4-scale type system */
+		--TypeScaleXS: 0.75rem;
+		--TypeScaleS: 0.875rem;
+		--TypeScaleL: clamp(2rem, 5vw, 3.25rem);
+		--TypeScaleXL: clamp(3rem, 8vw, 4.5rem);
+
 		/* Shim Color System */
 		--land-shim-low: #ff6b35;
 
@@ -1308,6 +1314,7 @@ img[src*="/Mermaid/"] {
 	padding: 1rem;
 }
 
+
 /* ── Jelly UI fallback (https://jelly-ui.com) ─────────────────────────
  <jelly-button>/<jelly-icon-button> are custom elements upgraded by an
  external <script> in Source/Layout/Base.astro - until that script loads
@@ -1379,4 +1386,29 @@ jelly-icon-button:not(:defined)[disabled] {
 	opacity: 0.5;
 
 	pointer-events: none;
+}
+
+/* Nocturnal Field Record type utilities */
+.text-field-xs {
+	font-size: var(--TypeScaleXS);
+	line-height: 1.1;
+	letter-spacing: 0.04em;
+}
+
+.text-field-s {
+	font-size: var(--TypeScaleS);
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+
+.text-field-l {
+	font-size: var(--TypeScaleL);
+	line-height: 1.0;
+	letter-spacing: -0.02em;
+}
+
+.text-field-xl {
+	font-size: var(--TypeScaleXL);
+	line-height: 0.95;
+	letter-spacing: -0.02em;
 }

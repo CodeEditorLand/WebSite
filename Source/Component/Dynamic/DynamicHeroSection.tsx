@@ -6,6 +6,8 @@ import { IconTooltip } from "../UI/IconTooltip.js";
 
 import { RichText } from "../UI/RichText.js";
 
+import { SpecimenSeal } from "../UI/SpecimenSeal.js";
+
 import { DynamicBadge } from "./DynamicBadge";
 
 import { DynamicButton } from "./DynamicButton";
@@ -14,8 +16,13 @@ import type Property from "./Interface/Property/Hero.js";
 
 /**
  * Dynamic HeroSection - Nocturnal Field Record.
- * Black canvas, mono HUD, green accent, bracketed time treatment.
- * Tech stack grid: flat, mono, single-color per card.
+ *
+ * Hierarchy (per design_system.md):
+ *   series label → specimen seal → oversized timestamp → route block →
+ *   program + duration → MAJOR BLANK ZONE → project/artist → metadata footer →
+ *   CTAs → tech stack grid.
+ *
+ * Animation logic (simplex noise, Staccato, Attention) is preserved unchanged.
  */
 const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 	const SceneReference = useRef<HTMLDivElement>(null);
@@ -52,7 +59,9 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 		interface CardState {
 			CurrentX: number;
+
 			CurrentY: number;
+
 			IsHovered: boolean;
 		}
 
@@ -73,7 +82,9 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 				const State: CardState = {
 					CurrentX: 0,
+
 					CurrentY: 0,
+
 					IsHovered: false,
 				};
 
@@ -99,6 +110,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 		const AnimateCards = (Time: number) => {
 			if (!NoiseFunction) {
 				FrameIdentifier = requestAnimationFrame(AnimateCards);
+
 				return;
 			}
 
@@ -139,7 +151,9 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 			CardElement.forEach((Card) => {
 				const Fresh: CardState = {
 					CurrentX: 0,
+
 					CurrentY: 0,
+
 					IsHovered: false,
 				};
 
@@ -185,38 +199,89 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 						"radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%)",
 				}}
 			/>
-			<div className="container relative mx-auto px-4 text-center">
-				{/* Badge */}
-				{Content.Badge && (
-					<DynamicBadge Content={Content.Badge} ClassName="mb-8" />
-				)}
 
-				{/* Title - mono display, oversized per design system */}
-				<h1 className="mx-auto max-w-4xl font-mono text-6xl font-normal uppercase leading-[0.95] tracking-[-0.01em] md:text-8xl lg:text-9xl">
-					{Title}
-					{Title && TitleHighlight ? " " : ""}
-					{TitleHighlight && (
-						<span className="text-accent">{TitleHighlight}</span>
-					)}
-				</h1>
+			<div className="container relative mx-auto px-4">
+				{/* ── Micro label ── */}
+				<p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">
+					# NOCTURNAL FIELD RECORD
+				</p>
 
-				{/* Subtitle */}
-				<div className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-					<RichText Text={Subtitle} />
+				{/* ── Specimen seal (upper-right) ── */}
+				<SpecimenSeal className="absolute right-4 top-0 w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+
+				{/* ── Oversized bracketed timestamp - LARGEST element ── */}
+				<div className="mt-10 md:mt-14">
+					<p className="font-mono text-field-xl font-normal leading-[0.95] tracking-[-0.02em] text-foreground">
+						〈08.09.26〉
+					</p>
+
+					<p className="mt-1 font-mono text-field-l font-normal leading-[1.0] tracking-[-0.02em] text-foreground">
+						〈20:18〉
+					</p>
 				</div>
 
-				{/* CTAs */}
-				<div className="mb-16 mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row sm:[&>button]:w-auto">
+				{/* ── Route block ── */}
+				<div className="mt-10 md:mt-14">
+					<p className="font-mono text-field-l font-normal leading-[1.05] text-foreground">
+						/MEET:EDITOR LAND
+					</p>
+
+					<p className="mt-1 font-mono text-field-s font-normal leading-[1.1] text-muted-foreground">
+						MOUNTAIN GATE ◎1
+					</p>
+				</div>
+
+				{/* ── Program line ── */}
+				<p className="mt-6 font-mono text-field-xs uppercase tracking-[0.25em] text-muted-foreground">
+					OBSERVE · TRACE · RECORD
+				</p>
+
+				{/* ── Duration ── */}
+				<p className="mt-2 font-mono text-field-xs uppercase tracking-[0.2em] text-muted-foreground">
+					20:18 → 01:40
+				</p>
+
+				{/* ── MAJOR BLANK ZONE (15-25% of card) ── */}
+				<div className="my-20 md:my-28 lg:my-36" aria-hidden="true" />
+
+				{/* ── Project / artist block ── */}
+				<div>
+					<p className="font-mono text-field-l font-normal leading-[1.08] text-foreground">
+						{Title || "LAND:"}
+					</p>
+
+					<p className="mt-3 font-mono text-field-s font-normal leading-[1.1] text-accent">
+						↳CODE EDITOR LAND
+					</p>
+				</div>
+
+				{/* ── Specimen metadata footer ── */}
+				<div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 font-mono text-field-xs uppercase tracking-[0.15em] text-muted-foreground">
+					<span>
+						SPECIES:{" "}
+						<em className="not-italic text-foreground">*ACTIAS LUNA*</em>
+					</span>
+
+					<span>TEMP: 16.2 C</span>
+
+					<span>WIND: 01.8 KM/H</span>
+
+					<span>HUMIDITY: 71%</span>
+				</div>
+
+				{/* ── CTAs ── */}
+				<div className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row sm:[&>button]:w-auto">
 					<DynamicButton Content={PrimaryCTA} />
+
 					{SecondaryCTA && <DynamicButton Content={SecondaryCTA} />}
 				</div>
 
-				{/* Tech stack label - mono HUD eyebrow */}
-				<p className="mb-8 font-mono text-sm uppercase tracking-[0.25em] text-muted-foreground">
+				{/* ── Tech stack label ── */}
+				<p className="mt-24 mb-8 font-mono text-sm uppercase tracking-[0.25em] text-muted-foreground">
 					TECH STACK
 				</p>
 
-				{/* Tech stack grid - flat, mono, single-color per card */}
+				{/* ── Tech stack grid - flat, mono, single-color per card ── */}
 				<div
 					className="mx-auto max-w-5xl px-6 py-10 lg:px-10"
 					aria-hidden="true"
@@ -338,6 +403,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 											strokeWidth={1.5}
 											style={{ color: GetIconColor() }}
 										/>
+
 										<span className="truncate font-mono text-sm uppercase tracking-wider text-foreground">
 											{Card.Title}
 										</span>
