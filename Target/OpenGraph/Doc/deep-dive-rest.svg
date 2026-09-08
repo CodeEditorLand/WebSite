@@ -1,1 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675"><path fill="#fff" d="M0 0h1200v675H0z"/><path fill="#151515" fill-opacity=".12" d="M0 0h1200v4H0z"/><rect width="1005.28" height="620.771" fill="#151515" fill-opacity=".2" rx="91.389" transform="matrix(-.2334 .08959 0 .25 925 138)"/><rect width="1005.28" height="620.771" fill="#151515" fill-opacity=".2" rx="91.389" transform="matrix(-.2334 .08959 0 .25 1160 292.55)"/><rect width="67" height="32" x="72" y="56" fill="#151515" fill-opacity=".08" rx="4"/><text x="86" y="78" fill="#555" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="600" letter-spacing=".1em">DOC</text><text x="72" y="138" fill="#151515" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="48" font-weight="700">Rest - Deep Dive</text><text x="72" y="220.4" fill="#666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400">Rest TypeScript compiler architecture, OXC</text><text x="72" y="252.4" fill="#666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400">toolchain pipeline, key modules, data flow,</text><text x="72" y="284.4" fill="#666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400">integration points with Output/Cocoon/Sky, and</text><path fill="#fafafa" d="M0 619h1200v56H0z"/><path stroke="#e5e5e5" d="M0 619h1200"/><text x="72" y="655" fill="#888" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="500">editor.land</text><text x="1128" y="655" fill="#888" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="600" text-anchor="end">Code Editor Land</text></svg>
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+	<!-- Background -->
+	<rect width="1200" height="675" fill="#ffffff" />
+
+	<!-- Top accent line -->
+	<rect width="1200" height="4" fill="#151515" fill-opacity="0.12" />
+
+	<!-- Land logo glyph: upper + lower parallelogram, x 690-1160, y 138-538 -->
+	<rect width="1005.28" height="620.771" rx="91.3889"
+		transform="matrix(-0.23340 0.08959 0 0.25 925 138)"
+		fill="#151515" fill-opacity="0.20" />
+	<rect width="1005.28" height="620.771" rx="91.3889"
+		transform="matrix(-0.23340 0.08959 0 0.25 1160 292.55)"
+		fill="#151515" fill-opacity="0.20" />
+
+	<!-- Section badge -->
+	<rect x="72" y="56" width="67" height="32" rx="4" fill="#151515" fill-opacity="0.08" />
+		<text x="86" y="78" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#555555" letter-spacing="0.1em">DOC</text>
+
+	<!-- Title -->
+	<text x="72" y="138" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="48" font-weight="700" fill="#151515">Rest - Deep Dive</text>
+
+	<!-- Description -->
+	<text x="72" y="220.4" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400" fill="#666666">Rest TypeScript compiler architecture, OXC</text>
+		<text x="72" y="252.4" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400" fill="#666666">toolchain pipeline, key modules, data flow,</text>
+		<text x="72" y="284.4" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="400" fill="#666666">integration points with Output/Cocoon/Sky, and</text>
+
+	<!-- Bottom bar -->
+	<rect y="619" width="1200" height="56" fill="#fafafa" />
+	<line x1="0" y1="619" x2="1200" y2="619" stroke="#e5e5e5" stroke-width="1" />
+
+	<!-- URL (bottom-left) -->
+	<text x="72" y="655" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="500" fill="#888888">editor.land</text>
+
+	<!-- Brand name (bottom-right) -->
+	<text x="1128" y="655" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#888888" text-anchor="end">Code Editor Land</text>
+</svg>

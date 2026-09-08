@@ -1,0 +1,1 @@
+import{t as a}from"./Header.C6plLtsF.js";export{a as Header,a as default};

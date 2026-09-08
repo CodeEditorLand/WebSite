@@ -295,8 +295,6 @@ export default (await import("astro/config")).defineConfig({
 
 			rollupOptions: {
 				output: {
-					experimentalMinChunkSize: 4_000,
-
 					manualChunks(Identifier: string) {
 						if (Identifier.includes("node_modules")) {
 							// React + Radix + i18next share one chunk.

@@ -757,6 +757,7 @@
 /_astro/*                 /_astro/:splat            200
 /Asset/*                  /Asset/:splat             200
 /Dark/*                   /Dark/:splat              200
+/Evidence/*               /Evidence/:splat          200
 /Favicon/*                /Favicon/:splat           200
 /Font/*                   /Font/:splat              200
 /Image/*                  /Image/:splat             200
