@@ -668,7 +668,7 @@ const AccountProfileInner = ({
 			{/* ── Profile fields ────────────────────────────────────── */}
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="flex items-center justify-between border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold">
+					<h3 className="font-semibold text-card-foreground">
 						{T("profileSection", {
 							defaultValue: "Profile Fields",
 						})}
@@ -872,7 +872,7 @@ const AccountProfileInner = ({
 			{/* ── Security ──────────────────────────────────────────── */}
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold">Security</h3>
+					<h3 className="font-semibold text-card-foreground">Security</h3>
 				</div>
 				<div className="divide-y divide-[var(--Border)]">
 					{/* Password - email/password users only */}
@@ -907,7 +907,7 @@ const AccountProfileInner = ({
 									</button>
 								)}
 								{PasswordResetState === "sending" && (
-									<span className="shrink-0 text-sm text-muted-foreground">
+									<span className="shrink-0 text-sm text-card-foreground opacity-70">
 										Sending…
 									</span>
 								)}
@@ -991,7 +991,7 @@ const AccountProfileInner = ({
 
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold">
+					<h3 className="font-semibold text-card-foreground">
 						{T("actionsSection", {
 							defaultValue: "Account Actions",
 						})}

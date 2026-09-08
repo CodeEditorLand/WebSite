@@ -1,260 +1,534 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 3484px; background-color: white;"
-	viewBox="-50 -10 3484 1244" role="graphics-document document" aria-roledescription="sequence">
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="max-width: 3484px; background-color: white;" viewBox="-50 -10 3484 1244" role="graphics-document document"
+	aria-roledescription="sequence">
 	<g>
-		<rect x="3234" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mtn"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="3309" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="3234" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mtn" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="3309" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="3309" dy="0">Mountain IPC</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2858" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2933" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2858" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2933" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2933" dy="0">LandDiagnostics</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2497" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Err"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2572" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2497" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="Err" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2572" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2572" dy="0">errorHandler [L1]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2297" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="SW"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2372" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2297" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="SW" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2372" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2372" dy="0">StopWatch [L8]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1921" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="ST0"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1996" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1921" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="ST0" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1996" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1996" dy="0">setTimeout0 [L5]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1714" y="1158" fill="#eaeaea" stroke="#666" width="157" height="65" name="DS"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1792.5" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1714" y="1158" fill="#eaeaea" stroke="#666" width="157" height="65" name="DS" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1792.5" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1792.5" dy="0">DisposableStore [L4]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1447" y="1158" fill="#eaeaea" stroke="#666" width="217" height="65" name="CTS"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1555.5" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1447" y="1158" fill="#eaeaea" stroke="#666" width="217" height="65" name="CTS" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1555.5" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1555.5" dy="0">CancellationTokenSource [L3]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1221" y="1158" fill="#eaeaea" stroke="#666" width="176" height="65" name="SM"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1309" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1221" y="1158" fill="#eaeaea" stroke="#666" width="176" height="65" name="SM" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1309" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1309" dy="0">checkLandSwallowMap</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="809" y="1158" fill="#eaeaea" stroke="#666" width="202" height="65" name="EM" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="910" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="809" y="1158" fill="#eaeaea" stroke="#666" width="202" height="65" name="EM" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="910" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="910" dy="0">Emitter.prototype.fire() [L2]</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="430" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="StatusBar"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="505" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="430" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="StatusBar" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="505" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="505" dy="0">StatusbarService</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="230" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="DOM"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="305" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="230" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="DOM" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="305" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="305" dy="0">DOM Event</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="0" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="75" y="1190.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="0" y="1158" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="75" y="1190.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="75" dy="0">👤 User Click</tspan>
 		</text>
 	</g>
 	<g>
-		<line id="actor11" x1="3309" y1="65" x2="3309" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Mtn" data-et="life-line" data-id="Mtn" />
+		<line id="actor11" x1="3309" y1="65" x2="3309" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Mtn" data-et="life-line" data-id="Mtn" />
 		<g id="root-11" data-et="participant" data-type="participant" data-id="Mtn">
-			<rect x="3234" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mtn"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="3309" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="3234" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mtn" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="3309" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="3309" dy="0">Mountain IPC</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor10" x1="2933" y1="65" x2="2933" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Diag" data-et="life-line" data-id="Diag" />
+		<line id="actor10" x1="2933" y1="65" x2="2933" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Diag" data-et="life-line" data-id="Diag" />
 		<g id="root-10" data-et="participant" data-type="participant" data-id="Diag">
-			<rect x="2858" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2933" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2858" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2933" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2933" dy="0">LandDiagnostics</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor9" x1="2572" y1="65" x2="2572" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Err" data-et="life-line" data-id="Err" />
+		<line id="actor9" x1="2572" y1="65" x2="2572" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Err" data-et="life-line" data-id="Err" />
 		<g id="root-9" data-et="participant" data-type="participant" data-id="Err">
-			<rect x="2497" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Err"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2572" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2497" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Err" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2572" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2572" dy="0">errorHandler [L1]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor8" x1="2372" y1="65" x2="2372" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="SW" data-et="life-line" data-id="SW" />
+		<line id="actor8" x1="2372" y1="65" x2="2372" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="SW" data-et="life-line" data-id="SW" />
 		<g id="root-8" data-et="participant" data-type="participant" data-id="SW">
-			<rect x="2297" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="SW"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2372" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2297" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="SW" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2372" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2372" dy="0">StopWatch [L8]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor7" x1="1996" y1="65" x2="1996" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="ST0" data-et="life-line" data-id="ST0" />
+		<line id="actor7" x1="1996" y1="65" x2="1996" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="ST0" data-et="life-line" data-id="ST0" />
 		<g id="root-7" data-et="participant" data-type="participant" data-id="ST0">
-			<rect x="1921" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="ST0"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1996" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1921" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="ST0" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1996" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1996" dy="0">setTimeout0 [L5]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor6" x1="1792.5" y1="65" x2="1792.5" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="DS" data-et="life-line" data-id="DS" />
+		<line id="actor6" x1="1792.5" y1="65" x2="1792.5" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="DS" data-et="life-line" data-id="DS" />
 		<g id="root-6" data-et="participant" data-type="participant" data-id="DS">
-			<rect x="1714" y="0" fill="#eaeaea" stroke="#666" width="157" height="65" name="DS"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1792.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1714" y="0" fill="#eaeaea" stroke="#666" width="157" height="65" name="DS" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1792.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1792.5" dy="0">DisposableStore [L4]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor5" x1="1555.5" y1="65" x2="1555.5" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="CTS" data-et="life-line" data-id="CTS" />
+		<line id="actor5" x1="1555.5" y1="65" x2="1555.5" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="CTS" data-et="life-line" data-id="CTS" />
 		<g id="root-5" data-et="participant" data-type="participant" data-id="CTS">
-			<rect x="1447" y="0" fill="#eaeaea" stroke="#666" width="217" height="65" name="CTS"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1555.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1447" y="0" fill="#eaeaea" stroke="#666" width="217" height="65" name="CTS" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1555.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1555.5" dy="0">CancellationTokenSource [L3]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor4" x1="1309" y1="65" x2="1309" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="SM" data-et="life-line" data-id="SM" />
+		<line id="actor4" x1="1309" y1="65" x2="1309" y2="1158" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="SM" data-et="life-line" data-id="SM" />
 		<g id="root-4" data-et="participant" data-type="participant" data-id="SM">
-			<rect x="1221" y="0" fill="#eaeaea" stroke="#666" width="176" height="65" name="SM"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1309" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1221" y="0" fill="#eaeaea" stroke="#666" width="176" height="65" name="SM" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1309" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1309" dy="0">checkLandSwallowMap</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor3" x1="910" y1="65" x2="910" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="EM" data-et="life-line" data-id="EM" />
+		<line id="actor3" x1="910" y1="65" x2="910" y2="1158" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="EM" data-et="life-line" data-id="EM" />
 		<g id="root-3" data-et="participant" data-type="participant" data-id="EM">
-			<rect x="809" y="0" fill="#eaeaea" stroke="#666" width="202" height="65" name="EM"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="910" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="809" y="0" fill="#eaeaea" stroke="#666" width="202" height="65" name="EM" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="910" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="910" dy="0">Emitter.prototype.fire() [L2]</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor2" x1="505" y1="65" x2="505" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="StatusBar" data-et="life-line"
-			data-id="StatusBar" />
+		<line id="actor2" x1="505" y1="65" x2="505" y2="1158" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="StatusBar" data-et="life-line" data-id="StatusBar" />
 		<g id="root-2" data-et="participant" data-type="participant" data-id="StatusBar">
-			<rect x="430" y="0" fill="#eaeaea" stroke="#666" width="150" height="65"
-				name="StatusBar" rx="3" ry="3" class="actor actor-top" />
-			<text x="505" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="430" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="StatusBar" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="505" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="505" dy="0">StatusbarService</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor1" x1="305" y1="65" x2="305" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="DOM" data-et="life-line" data-id="DOM" />
+		<line id="actor1" x1="305" y1="65" x2="305" y2="1158" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="DOM" data-et="life-line" data-id="DOM" />
 		<g id="root-1" data-et="participant" data-type="participant" data-id="DOM">
-			<rect x="230" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="DOM"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="305" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="230" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="DOM" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="305" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="305" dy="0">DOM Event</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor0" x1="75" y1="65" x2="75" y2="1158" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="User" data-et="life-line" data-id="User" />
+		<line id="actor0" x1="75" y1="65" x2="75" y2="1158" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="User" data-et="life-line" data-id="User" />
 		<g id="root-0" data-et="participant" data-type="participant" data-id="User">
-			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="75" dy="0">👤 User Click</tspan>
 			</text>
 		</g>
 	</g>
-	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .actor{stroke:#9370DB;fill:#ECECFF;stroke-width:1;}#my-svg rect.actor.outer-path[data-look="neo"]{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg rect.note[data-look="neo"]{stroke:#aaaa33;fill:#fff5ad;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg text.actor&gt;tspan{fill:black;stroke:none;}#my-svg .actor-line{stroke:#9370DB;}#my-svg .innerArc{stroke-width:1.5;stroke-dasharray:none;}#my-svg .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#my-svg .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#my-svg [id$="-arrowhead"] path{fill:#333;stroke:#333;}#my-svg .sequenceNumber{fill:white;}#my-svg [id$="-sequencenumber"]{fill:#333;}#my-svg [id$="-crosshead"] path{fill:#333;stroke:#333;}#my-svg .messageText{fill:#333;stroke:none;}#my-svg .labelBox{stroke:#9370DB;fill:#ECECFF;filter:none;}#my-svg .labelText,#my-svg .labelText&gt;tspan{fill:black;stroke:none;}#my-svg .loopText,#my-svg .loopText&gt;tspan{fill:black;stroke:none;}#my-svg .sectionTitle,#my-svg .sectionTitle&gt;tspan{fill:black;stroke:none;}#my-svg .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#9370DB;fill:#9370DB;}#my-svg .note{stroke:#aaaa33;fill:#fff5ad;}#my-svg .noteText,#my-svg .noteText&gt;tspan{fill:black;stroke:none;font-weight:normal;}#my-svg .activation0{fill:#f4f4f4;stroke:#666;}#my-svg .activation1{fill:#f4f4f4;stroke:#666;}#my-svg .activation2{fill:#f4f4f4;stroke:#666;}#my-svg .actorPopupMenu{position:absolute;}#my-svg .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#my-svg .actor-man circle,#my-svg line{fill:#ECECFF;stroke-width:2px;}#my-svg g rect.rect{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));stroke:#9370DB;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<style>
+		#my-svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+			fill: #333;
+		}
+
+		@keyframes edge-animation-frame {
+			from {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		#my-svg .edge-animation-slow {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 50s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .edge-animation-fast {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 20s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .error-icon {
+			fill: #552222;
+		}
+
+		#my-svg .error-text {
+			fill: #552222;
+			stroke: #552222;
+		}
+
+		#my-svg .edge-thickness-normal {
+			stroke-width: 1px;
+		}
+
+		#my-svg .edge-thickness-thick {
+			stroke-width: 3.5px;
+		}
+
+		#my-svg .edge-pattern-solid {
+			stroke-dasharray: 0;
+		}
+
+		#my-svg .edge-thickness-invisible {
+			stroke-width: 0;
+			fill: none;
+		}
+
+		#my-svg .edge-pattern-dashed {
+			stroke-dasharray: 3;
+		}
+
+		#my-svg .edge-pattern-dotted {
+			stroke-dasharray: 2;
+		}
+
+		#my-svg .marker {
+			fill: #333333;
+			stroke: #333333;
+		}
+
+		#my-svg .marker.cross {
+			stroke: #333333;
+		}
+
+		#my-svg svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+		}
+
+		#my-svg p {
+			margin: 0;
+		}
+
+		#my-svg .actor {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			stroke-width: 1;
+		}
+
+		#my-svg rect.actor.outer-path[data-look="neo"] {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg rect.note[data-look="neo"] {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg text.actor&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .actor-line {
+			stroke: #9370DB;
+		}
+
+		#my-svg .innerArc {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+		}
+
+		#my-svg .messageLine0 {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+			stroke: #333;
+		}
+
+		#my-svg .messageLine1 {
+			stroke-width: 1.5;
+			stroke-dasharray: 2, 2;
+			stroke: #333;
+		}
+
+		#my-svg [id$="-arrowhead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .sequenceNumber {
+			fill: white;
+		}
+
+		#my-svg [id$="-sequencenumber"] {
+			fill: #333;
+		}
+
+		#my-svg [id$="-crosshead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .messageText {
+			fill: #333;
+			stroke: none;
+		}
+
+		#my-svg .labelBox {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			filter: none;
+		}
+
+		#my-svg .labelText,
+		#my-svg .labelText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopText,
+		#my-svg .loopText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .sectionTitle,
+		#my-svg .sectionTitle&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopLine {
+			stroke-width: 2px;
+			stroke-dasharray: 2, 2;
+			stroke: #9370DB;
+			fill: #9370DB;
+		}
+
+		#my-svg .note {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+		}
+
+		#my-svg .noteText,
+		#my-svg .noteText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+			font-weight: normal;
+		}
+
+		#my-svg .activation0 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation1 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation2 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .actorPopupMenu {
+			position: absolute;
+		}
+
+		#my-svg .actorPopupMenuPanel {
+			position: absolute;
+			fill: #ECECFF;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+		}
+
+		#my-svg .actor-man circle,
+		#my-svg line {
+			fill: #ECECFF;
+			stroke-width: 2px;
+		}
+
+		#my-svg g rect.rect {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			stroke: #9370DB;
+		}
+
+		#my-svg .node .neo-node {
+			stroke: #9370DB;
+		}
+
+		#my-svg [data-look="neo"].node rect,
+		#my-svg [data-look="neo"].cluster rect,
+		#my-svg [data-look="neo"].node polygon {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node path {
+			stroke: #9370DB;
+			stroke-width: 1px;
+		}
+
+		#my-svg [data-look="neo"].node .outer-path {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node .neo-line path {
+			stroke: #9370DB;
+			filter: none;
+		}
+
+		#my-svg [data-look="neo"].node circle {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node circle .state-start {
+			fill: #000000;
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon {
+			fill: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon-neo path {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg :root {
+			--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+		}
+	</style>
 	<g />
 	<defs>
 		<symbol id="my-svg-computer" width="24" height="24">
@@ -275,193 +549,165 @@
 		</symbol>
 	</defs>
 	<defs>
-		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M -1 0 L 10 5 L 0 10 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4"
-			refY="4.5">
+		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5">
 			<path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7"
 				style="stroke-dasharray: 0, 0;" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28"
-			orient="auto">
+		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto">
 			<path d="M 18,7 L9,13 L14,7 L9,1 Z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40"
-			orient="auto">
+		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto">
 			<circle cx="15" cy="15" r="6" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 8 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 0 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<g data-et="note" data-id="i0">
 		<rect x="50" y="75" fill="#EDF2AE" stroke="#666" width="3284" height="39" class="note" />
-		<text x="1692" y="80" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="noteText" dy="1em"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="1692" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="noteText" dy="1em" style="font-size: 16px; font-weight: 400;">
 			<tspan x="1692">TierShim=Own - all 6 hooks active</tspan>
 		</text>
 	</g>
 	<g data-et="note" data-id="i17">
 		<rect x="2497" y="888" fill="#EDF2AE" stroke="#666" width="150" height="39" class="note" />
-		<text x="2572" y="893" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="noteText" dy="1em"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="2572" y="893" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="noteText" dy="1em" style="font-size: 16px; font-weight: 400;">
 			<tspan x="2572">If anything threw...</tspan>
 		</text>
 	</g>
 	<g data-et="note" data-id="i20">
 		<rect x="2858" y="1055" fill="#EDF2AE" stroke="#666" width="150" height="39" class="note" />
-		<text x="2933" y="1060" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="noteText" dy="1em"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="2933" y="1060" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="noteText" dy="1em" style="font-size: 16px; font-weight: 400;">
 			<tspan x="2933">30s later...</tspan>
 		</text>
 	</g>
-	<text x="189" y="129" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Click status bar "UTF-8"</text>
-	<line x1="76" y1="158" x2="301" y2="158" class="messageLine0" data-et="message" data-id="i1"
-		data-from="User" data-to="DOM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="404" y="173" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">onClick handler</text>
-	<line x1="306" y1="202" x2="501" y2="202" class="messageLine0" data-et="message" data-id="i2"
-		data-from="DOM" data-to="StatusBar" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1437" y="217" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">new StopWatch() (L8 intercept)</text>
-	<line x1="506" y1="246" x2="2368" y2="246" class="messageLine0" data-et="message" data-id="i3"
-		data-from="StatusBar" data-to="SW" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2651" y="261" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">recordTimingTrace(action:"create",
+	<text x="189" y="129" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Click status bar "UTF-8"</text>
+	<line x1="76" y1="158" x2="301" y2="158" class="messageLine0" data-et="message" data-id="i1" data-from="User"
+		data-to="DOM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="404" y="173" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">onClick handler</text>
+	<line x1="306" y1="202" x2="501" y2="202" class="messageLine0" data-et="message" data-id="i2" data-from="DOM"
+		data-to="StatusBar" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1437" y="217" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">new StopWatch() (L8 intercept)</text>
+	<line x1="506" y1="246" x2="2368" y2="246" class="messageLine0" data-et="message" data-id="i3" data-from="StatusBar"
+		data-to="SW" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2651" y="261" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">recordTimingTrace(action:"create",
 		micros:1732.415)</text>
-	<line x1="2373" y1="290" x2="2929" y2="290" class="messageLine0" data-et="message" data-id="i4"
-		data-from="SW" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1029" y="305" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Cancel pending encoding query (L3 intercept)</text>
+	<line x1="2373" y1="290" x2="2929" y2="290" class="messageLine0" data-et="message" data-id="i4" data-from="SW"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1029" y="305" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Cancel pending encoding query (L3
+		intercept)</text>
 	<line x1="506" y1="334" x2="1551.5" y2="334" class="messageLine0" data-et="message" data-id="i5"
-		data-from="StatusBar" data-to="CTS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2243" y="349" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">recordCancellationTrace(stack:"at
+		data-from="StatusBar" data-to="CTS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2243" y="349" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">recordCancellationTrace(stack:"at
 		StatusBarService.updateEncoding...")</text>
-	<line x1="1556.5" y1="378" x2="2929" y2="378" class="messageLine0" data-et="message"
-		data-id="i6" data-from="CTS" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="706" y="393" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">fire(StatusBarEncodingChangeEvent) (L2 intercept)</text>
-	<line x1="506" y1="422" x2="906" y2="422" class="messageLine0" data-et="message" data-id="i7"
-		data-from="StatusBar" data-to="EM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1108" y="437" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1556.5" y1="378" x2="2929" y2="378" class="messageLine0" data-et="message" data-id="i6" data-from="CTS"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="706" y="393" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">fire(StatusBarEncodingChangeEvent) (L2
+		intercept)</text>
+	<line x1="506" y1="422" x2="906" y2="422" class="messageLine0" data-et="message" data-id="i7" data-from="StatusBar"
+		data-to="EM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1108" y="437" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">checkLandSwallowMap("onDidChangeEncoding")</text>
-	<line x1="911" y1="466" x2="1305" y2="466" class="messageLine0" data-et="message" data-id="i8"
-		data-from="EM" data-to="SM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1111" y="481" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">false (not suppressed)</text>
-	<line x1="1308" y1="510" x2="914" y2="510" class="messageLine1" data-et="message" data-id="i9"
-		data-from="SM" data-to="EM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="911" y="525" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">originalFire.apply(this, [event])</text>
-	<path d="M 911,554 C 971,544 971,584 911,574" class="messageLine0" data-et="message"
-		data-id="i10" data-from="EM" data-to="EM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1920" y="599" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">recordEmitterTrace (sampled: tick % 100 === 0)</text>
-	<line x1="911" y1="628" x2="2929" y2="628" class="messageLine0" data-et="message" data-id="i11"
-		data-from="EM" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1147" y="643" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">store.add(encodingListener) (L4 intercept)</text>
-	<line x1="506" y1="672" x2="1788.5" y2="672" class="messageLine0" data-et="message"
-		data-id="i12" data-from="StatusBar" data-to="DS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2361" y="687" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">recordDisposableTrace(action:"add", id:1247)</text>
-	<line x1="1793.5" y1="716" x2="2929" y2="716" class="messageLine0" data-et="message"
-		data-id="i13" data-from="DS" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1249" y="731" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">setTimeout0(() =&gt; updateLabel()) (L5
+	<line x1="911" y1="466" x2="1305" y2="466" class="messageLine0" data-et="message" data-id="i8" data-from="EM"
+		data-to="SM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1111" y="481" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">false (not suppressed)</text>
+	<line x1="1308" y1="510" x2="914" y2="510" class="messageLine1" data-et="message" data-id="i9" data-from="SM"
+		data-to="EM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="911" y="525" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">originalFire.apply(this, [event])</text>
+	<path d="M 911,554 C 971,544 971,584 911,574" class="messageLine0" data-et="message" data-id="i10" data-from="EM"
+		data-to="EM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1920" y="599" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">recordEmitterTrace (sampled: tick % 100
+		=== 0)</text>
+	<line x1="911" y1="628" x2="2929" y2="628" class="messageLine0" data-et="message" data-id="i11" data-from="EM"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1147" y="643" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">store.add(encodingListener) (L4
+		intercept)</text>
+	<line x1="506" y1="672" x2="1788.5" y2="672" class="messageLine0" data-et="message" data-id="i12"
+		data-from="StatusBar" data-to="DS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2361" y="687" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">recordDisposableTrace(action:"add",
+		id:1247)</text>
+	<line x1="1793.5" y1="716" x2="2929" y2="716" class="messageLine0" data-et="message" data-id="i13" data-from="DS"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1249" y="731" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">setTimeout0(() =&gt; updateLabel()) (L5
 		intercept)</text>
 	<line x1="506" y1="760" x2="1992" y2="760" class="messageLine0" data-et="message" data-id="i14"
-		data-from="StatusBar" data-to="ST0" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1997" y="775" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">batchQueue.push(callback) - coalesced</text>
-	<path d="M 1997,804 C 2057,794 2057,834 1997,824" class="messageLine0" data-et="message"
-		data-id="i15" data-from="ST0" data-to="ST0" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2183" y="849" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">new StopWatch() for label render (L8 intercept)</text>
-	<line x1="1997" y1="878" x2="2368" y2="878" class="messageLine0" data-et="message" data-id="i16"
-		data-from="ST0" data-to="SW" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2751" y="942" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">recordErrorTrace({message:"...", stack:"..."})</text>
-	<line x1="2573" y1="971" x2="2929" y2="971" class="messageLine0" data-et="message" data-id="i18"
-		data-from="Err" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2934" y="986" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Ring buffers accumulate</text>
-	<path d="M 2934,1015 C 2994,1005 2994,1045 2934,1035" class="messageLine0" data-et="message"
-		data-id="i19" data-from="Diag" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="3120" y="1109" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">flushAll() → invoke("MountainIPCInvoke", ...)</text>
-	<line x1="2934" y1="1138" x2="3305" y2="1138" class="messageLine0" data-et="message"
-		data-id="i21" data-from="Diag" data-to="Mtn" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+		data-from="StatusBar" data-to="ST0" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1997" y="775" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">batchQueue.push(callback) -
+		coalesced</text>
+	<path d="M 1997,804 C 2057,794 2057,834 1997,824" class="messageLine0" data-et="message" data-id="i15"
+		data-from="ST0" data-to="ST0" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2183" y="849" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">new StopWatch() for label render (L8
+		intercept)</text>
+	<line x1="1997" y1="878" x2="2368" y2="878" class="messageLine0" data-et="message" data-id="i16" data-from="ST0"
+		data-to="SW" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2751" y="942" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">recordErrorTrace({message:"...",
+		stack:"..."})</text>
+	<line x1="2573" y1="971" x2="2929" y2="971" class="messageLine0" data-et="message" data-id="i18" data-from="Err"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2934" y="986" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Ring buffers accumulate</text>
+	<path d="M 2934,1015 C 2994,1005 2994,1045 2934,1035" class="messageLine0" data-et="message" data-id="i19"
+		data-from="Diag" data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="3120" y="1109" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">flushAll() → invoke("MountainIPCInvoke",
+		...)</text>
+	<line x1="2934" y1="1138" x2="3305" y2="1138" class="messageLine0" data-et="message" data-id="i21" data-from="Diag"
+		data-to="Mtn" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
 </svg>

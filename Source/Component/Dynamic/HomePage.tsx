@@ -1155,7 +1155,9 @@ const HomePage = ({ Content, ClassName }: Property) => {
 
 	return (
 		<div className={`flex min-h-screen flex-col ${ClassName || ""}`}>
-			{HeaderContent !== undefined && <Header Content={HeaderContent} />}
+			{HeaderContent !== undefined && (
+				<Header Content={HeaderContent} Mode="minimal" />
+			)}
 
 			<div className="flex-1" role="region" aria-label="Page content">
 				<ErrorBoundary

@@ -18,8 +18,13 @@ export interface ThemeImageProps {
 
 /**
  * ThemeImage - Nocturnal Field Record (single theme).
- * Serves the dark variant. If src already points to a /Dark/ path, uses it
- * directly. Otherwise, derives the dark path from the light src.
+ *
+ * For LIGHT backgrounds (warm-white cards): use the LIGHT image variant.
+ * For DARK backgrounds (black canvas): use the DARK image variant.
+ *
+ * Convention:
+ *   Light: /Image/Foo.svg or /Asset/Foo.svg
+ *   Dark:  /Dark/Image/Foo.svg or /Asset/Dark/Foo.svg
  */
 export function ThemeImage({
 	src,
@@ -30,20 +35,28 @@ export function ThemeImage({
 	className,
 	...props
 }: ThemeImageProps) {
-	const Dark =
+	const IsDark = src.includes("/Dark/") || src.includes("/Asset/Dark/");
+
+	const Light =
 		darkSrc ??
-		(src.includes("/Dark/")
+		(IsDark
 			? src
-			: src
-					.replace(/^\/Image\//, "/Dark/Image/")
-					.replace(/^\/Asset\//, "/Asset/Dark/"));
+					.replace(/^\/Dark\/Image\//, "/Image/")
+					.replace(/^\/Asset\/Dark\//, "/Asset/")
+			: src);
+
+	const Dark = IsDark
+		? src
+		: src.includes("/Asset/")
+			? src.replace(/^\/Asset\//, "/Asset/Dark/")
+			: src.replace(/^\/Image\//, "/Dark/Image/");
+
 	const sourceRef = useRef<HTMLSourceElement>(null);
 
 	useEffect(() => {
 		if (!sourceRef.current) return;
 
-		// Nocturnal theme: always serve dark images
-		sourceRef.current.media = "all";
+		sourceRef.current.media = "(prefers-color-scheme: dark)";
 	}, []);
 
 	return (
@@ -55,7 +68,7 @@ export function ThemeImage({
 				data-theme-dark=""
 			/>
 			<img
-				src={Dark}
+				src={Light}
 				alt={alt}
 				width={width}
 				height={height}

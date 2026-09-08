@@ -64,7 +64,7 @@ export class ErrorBoundary extends Component<
 						<h2 className="text-fg mb-2 text-xl font-semibold">
 							Something went wrong
 						</h2>
-						<p className="mb-6 text-muted">
+						<p className="mb-6 text-card-foreground opacity-70">
 							{CaughtError.message ||
 								"An unexpected error occurred. Please try again."}
 						</p>

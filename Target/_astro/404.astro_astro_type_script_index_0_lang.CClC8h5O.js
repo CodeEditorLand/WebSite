@@ -1,1 +1,0 @@
-import{t as e}from"./preload-helper.BTWODNQy.js";var t=document.getElementById("RouteRedirectNotice");t&&t.classList.remove("hidden");var a=(await e(async()=>{const{default:e}=await(import("./Redirect.DzjdGxw0.js"));return{default:e}},[])).default;await a(),t&&t.classList.add("hidden");

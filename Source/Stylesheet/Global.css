@@ -110,8 +110,8 @@ body > astro-island {
 
 /* Footer wrapper: reserve space before client:idle hydration */
 #Footer {
-	min-height: 280px;
-	contain-intrinsic-block-size: 280px;
+	min-height: 200px;
+	contain-intrinsic-block-size: 200px;
 }
 
 #Footer:has(> astro-island > :first-child) {

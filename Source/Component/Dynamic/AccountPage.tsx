@@ -293,7 +293,10 @@ const AccountPage = ({
 
 	return (
 		<div className={`flex min-h-screen flex-col ${ClassName || ""}`}>
-			<Header {...(Content.Header ? { content: Content.Header } : {})} />
+			<Header
+				{...(Content.Header ? { content: Content.Header } : {})}
+				Mode="functional"
+			/>
 
 			<div className="flex-1">
 				{Route === "signin" && (

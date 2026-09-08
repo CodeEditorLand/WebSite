@@ -128,15 +128,7 @@ const T = GetI18n();
 		/>
 		<meta name="apple-mobile-web-app-title" content="Code Editor Land" />
 		<link rel="manifest" href="/Favicon/site.webmanifest" />
-		<script>
-			import jellyUrl from "../../Vendor/JellyUI/dist/jelly.js?url";
-			document.head.appendChild(
-				Object.assign(document.createElement("script"), {
-					type: "module",
-					src: jellyUrl,
-				}),
-			);
-		</script>
+		<script type="module" src="../../Vendor/JellyUI/dist/jelly.js"></script>
 	</head>
 	<body>
 		<a

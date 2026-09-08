@@ -1,280 +1,554 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 3084.5px; background-color: white;"
-	viewBox="-50 -10 3084.5 1725" role="graphics-document document" aria-roledescription="sequence">
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="max-width: 3084.5px; background-color: white;" viewBox="-50 -10 3084.5 1725"
+	role="graphics-document document" aria-roledescription="sequence">
 	<g>
-		<rect x="2833.5" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mnt"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2908.5" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2833.5" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mnt" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2908.5" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2908.5" dy="0">Mountain Backend</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2572.5" y="1639" fill="#eaeaea" stroke="#666" width="211" height="65" name="TDFSP"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2678" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2572.5" y="1639" fill="#eaeaea" stroke="#666" width="211" height="65" name="TDFSP" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2678" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2678" dy="0">TauriDiskFileSystemProvider</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2371" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="FS"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2446" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2371" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="FS" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2446" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2446" dy="0">FileService</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2171" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="BES"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2246" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2171" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="BES" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2246" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2246" dy="0">BulkEditService</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1971" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="PE"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2046" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1971" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="PE" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2046" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2046" dy="0">Prettier Extension</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1681" y="1639" fill="#eaeaea" stroke="#666" width="240" height="65" name="EDSP"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1801" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1681" y="1639" fill="#eaeaea" stroke="#666" width="240" height="65" name="EDSP" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1801" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1801" dy="0">ExtHostDocumentSaveParticipant</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1366" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="CIP"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1441" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1366" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="CIP" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1441" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1441" dy="0">Cocoon IPC Server</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1143" y="1639" fill="#eaeaea" stroke="#666" width="173" height="65" name="EHS"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1229.5" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1143" y="1639" fill="#eaeaea" stroke="#666" width="173" height="65" name="EHS" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1229.5" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1229.5" dy="0">ExtHostSaveParticipant</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="910" y="1639" fill="#eaeaea" stroke="#666" width="183" height="65" name="WCF"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1001.5" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="910" y="1639" fill="#eaeaea" stroke="#666" width="183" height="65" name="WCF" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1001.5" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1001.5" dy="0">WorkingCopyFileService</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="648" y="1639" fill="#eaeaea" stroke="#666" width="212" height="65" name="TFEM"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="754" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="648" y="1639" fill="#eaeaea" stroke="#666" width="212" height="65" name="TFEM" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="754" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="754" dy="0">TextFileEditorModelManager</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="448" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="ES" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="523" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="448" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="ES" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="523" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="523" dy="0">EditorService</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="200" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="UI" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="275" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="200" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="UI" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="275" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="275" dy="0">Wind/Sky UI</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="0" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="75" y="1671.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="0" y="1639" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="75" y="1671.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="75" dy="0">User</tspan>
 		</text>
 	</g>
 	<g>
-		<line id="actor12" x1="2908.5" y1="65" x2="2908.5" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Mnt" data-et="life-line" data-id="Mnt" />
+		<line id="actor12" x1="2908.5" y1="65" x2="2908.5" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Mnt" data-et="life-line" data-id="Mnt" />
 		<g id="root-12" data-et="participant" data-type="participant" data-id="Mnt">
-			<rect x="2833.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mnt"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2908.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2833.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mnt" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2908.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2908.5" dy="0">Mountain Backend</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor11" x1="2678" y1="65" x2="2678" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="TDFSP" data-et="life-line" data-id="TDFSP" />
+		<line id="actor11" x1="2678" y1="65" x2="2678" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="TDFSP" data-et="life-line" data-id="TDFSP" />
 		<g id="root-11" data-et="participant" data-type="participant" data-id="TDFSP">
-			<rect x="2572.5" y="0" fill="#eaeaea" stroke="#666" width="211" height="65" name="TDFSP"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2678" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2572.5" y="0" fill="#eaeaea" stroke="#666" width="211" height="65" name="TDFSP" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2678" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2678" dy="0">TauriDiskFileSystemProvider</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor10" x1="2446" y1="65" x2="2446" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="FS" data-et="life-line" data-id="FS" />
+		<line id="actor10" x1="2446" y1="65" x2="2446" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="FS" data-et="life-line" data-id="FS" />
 		<g id="root-10" data-et="participant" data-type="participant" data-id="FS">
-			<rect x="2371" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="FS"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2446" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2371" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="FS" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2446" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2446" dy="0">FileService</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor9" x1="2246" y1="65" x2="2246" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="BES" data-et="life-line" data-id="BES" />
+		<line id="actor9" x1="2246" y1="65" x2="2246" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="BES" data-et="life-line" data-id="BES" />
 		<g id="root-9" data-et="participant" data-type="participant" data-id="BES">
-			<rect x="2171" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="BES"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2246" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2171" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="BES" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2246" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2246" dy="0">BulkEditService</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor8" x1="2046" y1="65" x2="2046" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="PE" data-et="life-line" data-id="PE" />
+		<line id="actor8" x1="2046" y1="65" x2="2046" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="PE" data-et="life-line" data-id="PE" />
 		<g id="root-8" data-et="participant" data-type="participant" data-id="PE">
-			<rect x="1971" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="PE"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2046" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1971" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="PE" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2046" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2046" dy="0">Prettier Extension</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor7" x1="1801" y1="65" x2="1801" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="EDSP" data-et="life-line" data-id="EDSP" />
+		<line id="actor7" x1="1801" y1="65" x2="1801" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="EDSP" data-et="life-line" data-id="EDSP" />
 		<g id="root-7" data-et="participant" data-type="participant" data-id="EDSP">
-			<rect x="1681" y="0" fill="#eaeaea" stroke="#666" width="240" height="65" name="EDSP"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1801" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1681" y="0" fill="#eaeaea" stroke="#666" width="240" height="65" name="EDSP" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1801" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1801" dy="0">ExtHostDocumentSaveParticipant</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor6" x1="1441" y1="65" x2="1441" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="CIP" data-et="life-line" data-id="CIP" />
+		<line id="actor6" x1="1441" y1="65" x2="1441" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="CIP" data-et="life-line" data-id="CIP" />
 		<g id="root-6" data-et="participant" data-type="participant" data-id="CIP">
-			<rect x="1366" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="CIP"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1441" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1366" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="CIP" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1441" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1441" dy="0">Cocoon IPC Server</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor5" x1="1229.5" y1="65" x2="1229.5" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="EHS" data-et="life-line" data-id="EHS" />
+		<line id="actor5" x1="1229.5" y1="65" x2="1229.5" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="EHS" data-et="life-line" data-id="EHS" />
 		<g id="root-5" data-et="participant" data-type="participant" data-id="EHS">
-			<rect x="1143" y="0" fill="#eaeaea" stroke="#666" width="173" height="65" name="EHS"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1229.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1143" y="0" fill="#eaeaea" stroke="#666" width="173" height="65" name="EHS" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1229.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1229.5" dy="0">ExtHostSaveParticipant</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor4" x1="1001.5" y1="65" x2="1001.5" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="WCF" data-et="life-line" data-id="WCF" />
+		<line id="actor4" x1="1001.5" y1="65" x2="1001.5" y2="1639" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="WCF" data-et="life-line" data-id="WCF" />
 		<g id="root-4" data-et="participant" data-type="participant" data-id="WCF">
-			<rect x="910" y="0" fill="#eaeaea" stroke="#666" width="183" height="65" name="WCF"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1001.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="910" y="0" fill="#eaeaea" stroke="#666" width="183" height="65" name="WCF" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1001.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1001.5" dy="0">WorkingCopyFileService</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor3" x1="754" y1="65" x2="754" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="TFEM" data-et="life-line" data-id="TFEM" />
+		<line id="actor3" x1="754" y1="65" x2="754" y2="1639" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="TFEM" data-et="life-line" data-id="TFEM" />
 		<g id="root-3" data-et="participant" data-type="participant" data-id="TFEM">
-			<rect x="648" y="0" fill="#eaeaea" stroke="#666" width="212" height="65" name="TFEM"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="754" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="648" y="0" fill="#eaeaea" stroke="#666" width="212" height="65" name="TFEM" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="754" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="754" dy="0">TextFileEditorModelManager</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor2" x1="523" y1="65" x2="523" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="ES" data-et="life-line" data-id="ES" />
+		<line id="actor2" x1="523" y1="65" x2="523" y2="1639" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="ES" data-et="life-line" data-id="ES" />
 		<g id="root-2" data-et="participant" data-type="participant" data-id="ES">
-			<rect x="448" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="ES"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="523" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="448" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="ES" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="523" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="523" dy="0">EditorService</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor1" x1="275" y1="65" x2="275" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="UI" data-et="life-line" data-id="UI" />
+		<line id="actor1" x1="275" y1="65" x2="275" y2="1639" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="UI" data-et="life-line" data-id="UI" />
 		<g id="root-1" data-et="participant" data-type="participant" data-id="UI">
-			<rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="UI"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="UI" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="275" dy="0">Wind/Sky UI</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor0" x1="75" y1="65" x2="75" y2="1639" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="User" data-et="life-line" data-id="User" />
+		<line id="actor0" x1="75" y1="65" x2="75" y2="1639" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="User" data-et="life-line" data-id="User" />
 		<g id="root-0" data-et="participant" data-type="participant" data-id="User">
-			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="75" dy="0">User</tspan>
 			</text>
 		</g>
 	</g>
-	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .actor{stroke:#9370DB;fill:#ECECFF;stroke-width:1;}#my-svg rect.actor.outer-path[data-look="neo"]{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg rect.note[data-look="neo"]{stroke:#aaaa33;fill:#fff5ad;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg text.actor&gt;tspan{fill:black;stroke:none;}#my-svg .actor-line{stroke:#9370DB;}#my-svg .innerArc{stroke-width:1.5;stroke-dasharray:none;}#my-svg .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#my-svg .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#my-svg [id$="-arrowhead"] path{fill:#333;stroke:#333;}#my-svg .sequenceNumber{fill:white;}#my-svg [id$="-sequencenumber"]{fill:#333;}#my-svg [id$="-crosshead"] path{fill:#333;stroke:#333;}#my-svg .messageText{fill:#333;stroke:none;}#my-svg .labelBox{stroke:#9370DB;fill:#ECECFF;filter:none;}#my-svg .labelText,#my-svg .labelText&gt;tspan{fill:black;stroke:none;}#my-svg .loopText,#my-svg .loopText&gt;tspan{fill:black;stroke:none;}#my-svg .sectionTitle,#my-svg .sectionTitle&gt;tspan{fill:black;stroke:none;}#my-svg .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#9370DB;fill:#9370DB;}#my-svg .note{stroke:#aaaa33;fill:#fff5ad;}#my-svg .noteText,#my-svg .noteText&gt;tspan{fill:black;stroke:none;font-weight:normal;}#my-svg .activation0{fill:#f4f4f4;stroke:#666;}#my-svg .activation1{fill:#f4f4f4;stroke:#666;}#my-svg .activation2{fill:#f4f4f4;stroke:#666;}#my-svg .actorPopupMenu{position:absolute;}#my-svg .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#my-svg .actor-man circle,#my-svg line{fill:#ECECFF;stroke-width:2px;}#my-svg g rect.rect{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));stroke:#9370DB;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<style>
+		#my-svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+			fill: #333;
+		}
+
+		@keyframes edge-animation-frame {
+			from {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		#my-svg .edge-animation-slow {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 50s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .edge-animation-fast {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 20s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .error-icon {
+			fill: #552222;
+		}
+
+		#my-svg .error-text {
+			fill: #552222;
+			stroke: #552222;
+		}
+
+		#my-svg .edge-thickness-normal {
+			stroke-width: 1px;
+		}
+
+		#my-svg .edge-thickness-thick {
+			stroke-width: 3.5px;
+		}
+
+		#my-svg .edge-pattern-solid {
+			stroke-dasharray: 0;
+		}
+
+		#my-svg .edge-thickness-invisible {
+			stroke-width: 0;
+			fill: none;
+		}
+
+		#my-svg .edge-pattern-dashed {
+			stroke-dasharray: 3;
+		}
+
+		#my-svg .edge-pattern-dotted {
+			stroke-dasharray: 2;
+		}
+
+		#my-svg .marker {
+			fill: #333333;
+			stroke: #333333;
+		}
+
+		#my-svg .marker.cross {
+			stroke: #333333;
+		}
+
+		#my-svg svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+		}
+
+		#my-svg p {
+			margin: 0;
+		}
+
+		#my-svg .actor {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			stroke-width: 1;
+		}
+
+		#my-svg rect.actor.outer-path[data-look="neo"] {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg rect.note[data-look="neo"] {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg text.actor&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .actor-line {
+			stroke: #9370DB;
+		}
+
+		#my-svg .innerArc {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+		}
+
+		#my-svg .messageLine0 {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+			stroke: #333;
+		}
+
+		#my-svg .messageLine1 {
+			stroke-width: 1.5;
+			stroke-dasharray: 2, 2;
+			stroke: #333;
+		}
+
+		#my-svg [id$="-arrowhead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .sequenceNumber {
+			fill: white;
+		}
+
+		#my-svg [id$="-sequencenumber"] {
+			fill: #333;
+		}
+
+		#my-svg [id$="-crosshead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .messageText {
+			fill: #333;
+			stroke: none;
+		}
+
+		#my-svg .labelBox {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			filter: none;
+		}
+
+		#my-svg .labelText,
+		#my-svg .labelText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopText,
+		#my-svg .loopText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .sectionTitle,
+		#my-svg .sectionTitle&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopLine {
+			stroke-width: 2px;
+			stroke-dasharray: 2, 2;
+			stroke: #9370DB;
+			fill: #9370DB;
+		}
+
+		#my-svg .note {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+		}
+
+		#my-svg .noteText,
+		#my-svg .noteText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+			font-weight: normal;
+		}
+
+		#my-svg .activation0 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation1 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation2 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .actorPopupMenu {
+			position: absolute;
+		}
+
+		#my-svg .actorPopupMenuPanel {
+			position: absolute;
+			fill: #ECECFF;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+		}
+
+		#my-svg .actor-man circle,
+		#my-svg line {
+			fill: #ECECFF;
+			stroke-width: 2px;
+		}
+
+		#my-svg g rect.rect {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			stroke: #9370DB;
+		}
+
+		#my-svg .node .neo-node {
+			stroke: #9370DB;
+		}
+
+		#my-svg [data-look="neo"].node rect,
+		#my-svg [data-look="neo"].cluster rect,
+		#my-svg [data-look="neo"].node polygon {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node path {
+			stroke: #9370DB;
+			stroke-width: 1px;
+		}
+
+		#my-svg [data-look="neo"].node .outer-path {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node .neo-line path {
+			stroke: #9370DB;
+			filter: none;
+		}
+
+		#my-svg [data-look="neo"].node circle {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node circle .state-start {
+			fill: #000000;
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon {
+			fill: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon-neo path {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg :root {
+			--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+		}
+	</style>
 	<g />
 	<defs>
 		<symbol id="my-svg-computer" width="24" height="24">
@@ -295,237 +569,189 @@
 		</symbol>
 	</defs>
 	<defs>
-		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M -1 0 L 10 5 L 0 10 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4"
-			refY="4.5">
+		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5">
 			<path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7"
 				style="stroke-dasharray: 0, 0;" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28"
-			orient="auto">
+		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto">
 			<path d="M 18,7 L9,13 L14,7 L9,1 Z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40"
-			orient="auto">
+		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto">
 			<circle cx="15" cy="15" r="6" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 8 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 0 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
-	<text x="174" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
-		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Press Ctrl+S</text>
-	<line x1="76" y1="109" x2="271" y2="109" class="messageLine0" data-et="message" data-id="i0"
-		data-from="User" data-to="UI" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="398" y="124" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">workbench.action.files.save</text>
-	<line x1="276" y1="153" x2="519" y2="153" class="messageLine0" data-et="message" data-id="i1"
-		data-from="UI" data-to="ES" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="637" y="168" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">save() on EditorInput</text>
-	<line x1="524" y1="197" x2="750" y2="197" class="messageLine0" data-et="message" data-id="i2"
-		data-from="ES" data-to="TFEM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="755" y="212" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Check dirty state</text>
-	<path d="M 755,241 C 815,231 815,271 755,261" class="messageLine0" data-et="message"
-		data-id="i3" data-from="TFEM" data-to="TFEM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="876" y="286" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">runSaveParticipants()</text>
-	<line x1="755" y1="315" x2="997.5" y2="315" class="messageLine0" data-et="message" data-id="i4"
-		data-from="TFEM" data-to="WCF" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1003" y="330" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Gather ISaveParticipants</text>
-	<path d="M 1002.5,359 C 1062.5,349 1062.5,389 1002.5,379" class="messageLine0" data-et="message"
-		data-id="i5" data-from="WCF" data-to="WCF" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1114" y="404" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">participate()</text>
-	<line x1="1002.5" y1="433" x2="1225.5" y2="433" class="messageLine0" data-et="message"
-		data-id="i6" data-from="WCF" data-to="EHS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1334" y="448" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">$participateInSave</text>
-	<text x="1334" y="467" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC request</text>
-	<line x1="1230.5" y1="494" x2="1437" y2="494" class="messageLine0" data-et="message"
-		data-id="i7" data-from="EHS" data-to="CIP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1620" y="509" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Dispatch to service</text>
-	<line x1="1442" y1="538" x2="1797" y2="538" class="messageLine0" data-et="message" data-id="i8"
-		data-from="CIP" data-to="EDSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1802" y="553" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Fire onWillSaveTextDocument</text>
-	<path d="M 1802,582 C 1862,572 1862,612 1802,602" class="messageLine0" data-et="message"
-		data-id="i9" data-from="EDSP" data-to="EDSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1922" y="627" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Event to extension</text>
-	<line x1="1802" y1="656" x2="2042" y2="656" class="messageLine0" data-et="message" data-id="i10"
-		data-from="EDSP" data-to="PE" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2047" y="671" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Calculate formatting edits</text>
-	<path d="M 2047,700 C 2107,690 2107,730 2047,720" class="messageLine0" data-et="message"
-		data-id="i11" data-from="PE" data-to="PE" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1925" y="745" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Promise(TextEdit[])</text>
-	<line x1="2045" y1="774" x2="1805" y2="774" class="messageLine1" data-et="message" data-id="i12"
-		data-from="PE" data-to="EDSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1802" y="789" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Collect all extension edits</text>
-	<path d="M 1802,818 C 1862,808 1862,848 1802,838" class="messageLine0" data-et="message"
-		data-id="i13" data-from="EDSP" data-to="EDSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1623" y="863" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">$participateInSave response / TextEdit DTOs</text>
-	<line x1="1800" y1="892" x2="1445" y2="892" class="messageLine0" data-et="message" data-id="i14"
-		data-from="EDSP" data-to="CIP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1337" y="907" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC response</text>
-	<line x1="1440" y1="936" x2="1233.5" y2="936" class="messageLine1" data-et="message"
-		data-id="i15" data-from="CIP" data-to="EHS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1117" y="951" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">TextEdit array</text>
-	<line x1="1228.5" y1="980" x2="1005.5" y2="980" class="messageLine1" data-et="message"
-		data-id="i16" data-from="EHS" data-to="WCF" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1622" y="995" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Apply edits to document</text>
-	<line x1="1002.5" y1="1024" x2="2242" y2="1024" class="messageLine0" data-et="message"
-		data-id="i17" data-from="WCF" data-to="BES" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2247" y="1039" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Apply TextEdits</text>
-	<text x="2247" y="1058" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Update model in memory</text>
-	<path d="M 2247,1085 C 2307,1075 2307,1115 2247,1105" class="messageLine0" data-et="message"
-		data-id="i18" data-from="BES" data-to="BES" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1502" y="1130" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Edits applied</text>
-	<line x1="2245" y1="1159" x2="758" y2="1159" class="messageLine1" data-et="message"
-		data-id="i19" data-from="BES" data-to="TFEM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1599" y="1174" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">IFileService.writeFile()</text>
-	<line x1="755" y1="1203" x2="2442" y2="1203" class="messageLine0" data-et="message"
-		data-id="i20" data-from="TFEM" data-to="FS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2561" y="1218" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Lookup provider for URI</text>
-	<line x1="2447" y1="1247" x2="2674" y2="1247" class="messageLine0" data-et="message"
-		data-id="i21" data-from="FS" data-to="TDFSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2792" y="1262" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">WriteFile Effect</text>
-	<text x="2792" y="1281" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">TauriInvoke</text>
-	<line x1="2679" y1="1308" x2="2904.5" y2="1308" class="messageLine0" data-et="message"
-		data-id="i22" data-from="TDFSP" data-to="Mnt" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2910" y="1323" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">tokio::fs::write()</text>
-	<path d="M 2909.5,1352 C 2969.5,1342 2969.5,1382 2909.5,1372" class="messageLine0"
-		data-et="message" data-id="i23" data-from="Mnt" data-to="Mnt" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2795" y="1397" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Success response</text>
-	<line x1="2907.5" y1="1426" x2="2682" y2="1426" class="messageLine1" data-et="message"
-		data-id="i24" data-from="Mnt" data-to="TDFSP" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="2564" y="1441" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Write complete</text>
-	<line x1="2677" y1="1470" x2="2450" y2="1470" class="messageLine1" data-et="message"
-		data-id="i25" data-from="TDFSP" data-to="FS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1602" y="1485" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Save successful</text>
-	<line x1="2445" y1="1514" x2="758" y2="1514" class="messageLine1" data-et="message"
-		data-id="i26" data-from="FS" data-to="TFEM" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="516" y="1529" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Update dirty indicator</text>
-	<text x="516" y="1548" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Remove filled circle</text>
-	<line x1="753" y1="1575" x2="279" y2="1575" class="messageLine0" data-et="message" data-id="i27"
-		data-from="TFEM" data-to="UI" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="177" y="1590" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Save complete</text>
-	<line x1="274" y1="1619" x2="79" y2="1619" class="messageLine1" data-et="message" data-id="i28"
-		data-from="UI" data-to="User" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="174" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText"
+		dy="1em" style="font-size: 16px; font-weight: 400;">Press Ctrl+S</text>
+	<line x1="76" y1="109" x2="271" y2="109" class="messageLine0" data-et="message" data-id="i0" data-from="User"
+		data-to="UI" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="398" y="124" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">workbench.action.files.save</text>
+	<line x1="276" y1="153" x2="519" y2="153" class="messageLine0" data-et="message" data-id="i1" data-from="UI"
+		data-to="ES" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="637" y="168" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">save() on EditorInput</text>
+	<line x1="524" y1="197" x2="750" y2="197" class="messageLine0" data-et="message" data-id="i2" data-from="ES"
+		data-to="TFEM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="755" y="212" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Check dirty state</text>
+	<path d="M 755,241 C 815,231 815,271 755,261" class="messageLine0" data-et="message" data-id="i3" data-from="TFEM"
+		data-to="TFEM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="876" y="286" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">runSaveParticipants()</text>
+	<line x1="755" y1="315" x2="997.5" y2="315" class="messageLine0" data-et="message" data-id="i4" data-from="TFEM"
+		data-to="WCF" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1003" y="330" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Gather ISaveParticipants</text>
+	<path d="M 1002.5,359 C 1062.5,349 1062.5,389 1002.5,379" class="messageLine0" data-et="message" data-id="i5"
+		data-from="WCF" data-to="WCF" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1114" y="404" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">participate()</text>
+	<line x1="1002.5" y1="433" x2="1225.5" y2="433" class="messageLine0" data-et="message" data-id="i6" data-from="WCF"
+		data-to="EHS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1334" y="448" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">$participateInSave</text>
+	<text x="1334" y="467" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC request</text>
+	<line x1="1230.5" y1="494" x2="1437" y2="494" class="messageLine0" data-et="message" data-id="i7" data-from="EHS"
+		data-to="CIP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1620" y="509" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Dispatch to service</text>
+	<line x1="1442" y1="538" x2="1797" y2="538" class="messageLine0" data-et="message" data-id="i8" data-from="CIP"
+		data-to="EDSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1802" y="553" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Fire onWillSaveTextDocument</text>
+	<path d="M 1802,582 C 1862,572 1862,612 1802,602" class="messageLine0" data-et="message" data-id="i9"
+		data-from="EDSP" data-to="EDSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1922" y="627" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Event to extension</text>
+	<line x1="1802" y1="656" x2="2042" y2="656" class="messageLine0" data-et="message" data-id="i10" data-from="EDSP"
+		data-to="PE" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2047" y="671" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Calculate formatting edits</text>
+	<path d="M 2047,700 C 2107,690 2107,730 2047,720" class="messageLine0" data-et="message" data-id="i11"
+		data-from="PE" data-to="PE" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1925" y="745" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Promise(TextEdit[])</text>
+	<line x1="2045" y1="774" x2="1805" y2="774" class="messageLine1" data-et="message" data-id="i12" data-from="PE"
+		data-to="EDSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1802" y="789" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Collect all extension edits</text>
+	<path d="M 1802,818 C 1862,808 1862,848 1802,838" class="messageLine0" data-et="message" data-id="i13"
+		data-from="EDSP" data-to="EDSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1623" y="863" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">$participateInSave response / TextEdit
+		DTOs</text>
+	<line x1="1800" y1="892" x2="1445" y2="892" class="messageLine0" data-et="message" data-id="i14" data-from="EDSP"
+		data-to="CIP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1337" y="907" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC response</text>
+	<line x1="1440" y1="936" x2="1233.5" y2="936" class="messageLine1" data-et="message" data-id="i15" data-from="CIP"
+		data-to="EHS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1117" y="951" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">TextEdit array</text>
+	<line x1="1228.5" y1="980" x2="1005.5" y2="980" class="messageLine1" data-et="message" data-id="i16" data-from="EHS"
+		data-to="WCF" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1622" y="995" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Apply edits to document</text>
+	<line x1="1002.5" y1="1024" x2="2242" y2="1024" class="messageLine0" data-et="message" data-id="i17" data-from="WCF"
+		data-to="BES" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2247" y="1039" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Apply TextEdits</text>
+	<text x="2247" y="1058" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Update model in memory</text>
+	<path d="M 2247,1085 C 2307,1075 2307,1115 2247,1105" class="messageLine0" data-et="message" data-id="i18"
+		data-from="BES" data-to="BES" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1502" y="1130" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Edits applied</text>
+	<line x1="2245" y1="1159" x2="758" y2="1159" class="messageLine1" data-et="message" data-id="i19" data-from="BES"
+		data-to="TFEM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1599" y="1174" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">IFileService.writeFile()</text>
+	<line x1="755" y1="1203" x2="2442" y2="1203" class="messageLine0" data-et="message" data-id="i20" data-from="TFEM"
+		data-to="FS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2561" y="1218" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Lookup provider for URI</text>
+	<line x1="2447" y1="1247" x2="2674" y2="1247" class="messageLine0" data-et="message" data-id="i21" data-from="FS"
+		data-to="TDFSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="2792" y="1262" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">WriteFile Effect</text>
+	<text x="2792" y="1281" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">TauriInvoke</text>
+	<line x1="2679" y1="1308" x2="2904.5" y2="1308" class="messageLine0" data-et="message" data-id="i22"
+		data-from="TDFSP" data-to="Mnt" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2910" y="1323" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">tokio::fs::write()</text>
+	<path d="M 2909.5,1352 C 2969.5,1342 2969.5,1382 2909.5,1372" class="messageLine0" data-et="message" data-id="i23"
+		data-from="Mnt" data-to="Mnt" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2795" y="1397" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Success response</text>
+	<line x1="2907.5" y1="1426" x2="2682" y2="1426" class="messageLine1" data-et="message" data-id="i24" data-from="Mnt"
+		data-to="TDFSP" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="2564" y="1441" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Write complete</text>
+	<line x1="2677" y1="1470" x2="2450" y2="1470" class="messageLine1" data-et="message" data-id="i25" data-from="TDFSP"
+		data-to="FS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1602" y="1485" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Save successful</text>
+	<line x1="2445" y1="1514" x2="758" y2="1514" class="messageLine1" data-et="message" data-id="i26" data-from="FS"
+		data-to="TFEM" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="516" y="1529" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Update dirty indicator</text>
+	<text x="516" y="1548" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Remove filled circle</text>
+	<line x1="753" y1="1575" x2="279" y2="1575" class="messageLine0" data-et="message" data-id="i27" data-from="TFEM"
+		data-to="UI" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="177" y="1590" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Save complete</text>
+	<line x1="274" y1="1619" x2="79" y2="1619" class="messageLine1" data-et="message" data-id="i28" data-from="UI"
+		data-to="User" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
 </svg>

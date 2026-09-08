@@ -130,7 +130,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 						)}
 
 						{Subtitle && (
-							<div className="mx-auto max-w-3xl text-lg text-muted-foreground">
+							<div className="mx-auto max-w-3xl text-lg text-card-foreground opacity-70">
 								<RichText Text={Subtitle} />
 							</div>
 						)}
@@ -139,7 +139,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 
 				{/* Telemetry Policy */}
 				<div className="mb-16">
-					<h3 className="mb-2 text-2xl tracking-tight">
+					<h3 className="mb-2 text-2xl tracking-tight text-foreground">
 						Telemetry Policy
 					</h3>
 					<p className="mb-8 text-muted-foreground">
@@ -156,7 +156,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 									className="TransparencyCard StaccatoCard StaccatoBorderShimmer flat flex flex-col space-y-4 bg-card p-6"
 								>
 									<div className="flex items-start justify-between">
-										<h4 className="font-mono text-sm font-semibold">
+										<h4 className="font-mono text-sm font-semibold text-card-foreground">
 											{Item.Title}
 										</h4>
 										<div className="ml-4 flex items-center gap-3">
@@ -188,11 +188,11 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 											)}
 										</div>
 									</div>
-									<div className="StaccatoBreath text-muted-foreground">
+									<div className="StaccatoBreath text-card-foreground opacity-70">
 										<RichText Text={Item.Description} />
 									</div>
 									{Item.Detail && (
-										<div className="text-muted-foreground/70">
+										<div className="text-card-foreground opacity-50">
 											<RichText
 												Text={Item.Detail}
 												Terms
@@ -207,10 +207,10 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 
 				{/* Build Variants */}
 				<div className="mb-16">
-					<h3 className="mb-2 text-2xl tracking-tight">
+					<h3 className="mb-2 text-2xl tracking-tight text-foreground">
 						Build Variants
 					</h3>
-					<p className="mb-8 text-muted-foreground">
+					<p className="mb-8 text-foreground opacity-70">
 						{Variant.length} named profiles across{" "}
 						{MatrixPermutation} test permutations. Every combination
 						verified.
@@ -256,7 +256,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 										<td className="px-4 py-3">
 											{Item.Workbench}
 										</td>
-										<td className="px-4 py-3 text-muted-foreground">
+										<td className="px-4 py-3 text-card-foreground opacity-70">
 											{Item.Feature}
 										</td>
 										<td className="px-4 py-3">
@@ -280,10 +280,10 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 
 				{/* Deployment Strategies */}
 				<div className="mb-16">
-					<h3 className="mb-2 text-2xl tracking-tight">
+					<h3 className="mb-2 text-2xl tracking-tight text-foreground">
 						Deployment Strategies
 					</h3>
-					<p className="mb-8 text-muted-foreground">
+					<p className="mb-8 text-foreground opacity-70">
 						Four deployment modes from development to production.
 					</p>
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -296,7 +296,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 									className="TransparencyCard StaccatoCard StaccatoBorderShimmer flat flex flex-col space-y-4 bg-card p-6"
 								>
 									<div className="flex items-start justify-between">
-										<h4 className="font-mono text-sm font-semibold">
+										<h4 className="font-mono text-sm font-semibold text-card-foreground">
 											{Item.Name}
 										</h4>
 										{Icon && (
@@ -311,7 +311,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 											</div>
 										)}
 									</div>
-									<div className="StaccatoBreath text-muted-foreground">
+									<div className="StaccatoBreath text-card-foreground opacity-70">
 										<RichText Text={Item.Description} />
 									</div>
 									<div className="flat flex items-baseline bg-secondary px-3 py-2">
@@ -365,7 +365,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 							href={SourceURL}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center text-muted-foreground underline underline-offset-4 hover:text-foreground"
+							className="inline-flex items-center text-card-foreground opacity-70 underline underline-offset-4 hover:opacity-100"
 						>
 							Verify in source code
 							<span className="InlineSeparator">

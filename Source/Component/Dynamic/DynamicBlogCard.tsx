@@ -7,14 +7,14 @@ const DynamicBlogCard = ({ Post }: { Post: BlogPost }) => (
 				{Post.Tags.map((Tag) => (
 					<span
 						key={Tag}
-						className="bg-muted px-2 py-0.5 font-mono text-sm font-medium uppercase tracking-widest text-muted-foreground"
+						className="bg-card-foreground/10 px-2 py-0.5 font-mono text-sm font-medium uppercase tracking-widest text-card-foreground/70"
 					>
 						{Tag}
 					</span>
 				))}
 			</div>
 		)}
-		<h3 className="mb-2 font-mono text-sm font-semibold leading-snug">
+		<h3 className="mb-2 font-mono text-sm font-semibold leading-snug text-card-foreground">
 			{Post.Title}
 		</h3>
 		<p className="mb-4 line-clamp-3 text-sm text-card-foreground">

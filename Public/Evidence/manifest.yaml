@@ -1,0 +1,119 @@
+subject: rain-speckled glass with reflected green light
+element: Land
+mode: flash-observation
+palette: [dark-green, black, pale-silver]
+crop: right-edge / subject exceeds top and right frame
+alt: Rain-speckled glass reflecting a green light at night
+usage:
+  - homepage-hero
+  - land-element-page
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: stone strata with visible geological layers
+element: Mountain
+mode: painted-specimen
+palette: [granite-grey, ochre, charcoal]
+crop: center / full cross-section visible
+alt: Painted cross-section showing stone strata layers
+usage:
+  - mountain-element-page
+  - gallery-grid
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: woven fiber mesh under magnification
+element: Cocoon
+mode: scanner-artifact
+palette: [ivory, amber, shadow]
+crop: corner / mesh extends beyond frame
+alt: Scanner-captured fiber mesh texture
+usage:
+  - cocoon-element-page
+  - detail-macro
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: wet cable in rain with water droplets
+element: Wind
+mode: flash-observation
+palette: [slate, silver, deep-blue]
+crop: diagonal / cable crosses corner to corner
+alt: Wet cable photographed in rain with water droplets
+usage:
+  - wind-element-page
+  - weather-feature
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: night sky with atmospheric gradient
+element: Sky
+mode: painted-specimen
+palette: [midnight-blue, indigo, pale-violet]
+crop: full-bleed / sky fills entire frame
+alt: Painted night sky with atmospheric color gradient
+usage:
+  - sky-element-page
+  - hero-background
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: vapor trails and translucent air currents
+element: Air
+mode: material-abstraction
+palette: [white, pale-grey, translucent-blue]
+crop: soft-focus / no hard edges
+alt: Abstract vapor trails in translucent atmosphere
+usage:
+  - air-element-page
+  - section-divider
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: water ripple grain under scan light
+element: Echo
+mode: scanner-artifact
+palette: [aqua, soft-gold, shadow]
+crop: center / concentric ripples fill frame
+alt: Scanner-artifact of water ripple grain pattern
+usage:
+  - echo-element-page
+  - texture-swatch
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
+---
+subject: root network with fungal mycelium
+element: Grove
+mode: painted-specimen
+palette: [forest-green, bone-white, earth-brown]
+crop: bottom-left / roots extend beyond frame
+alt: Painted root network with fungal mycelium detail
+usage:
+  - grove-element-page
+  - ecosystem-panel
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder

@@ -1,10 +1,8 @@
 "use client";
 
-import { ThemeImage } from "@Library/Theme";
-
 import * as lucide from "lucide-react";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslation } from "react-i18next";
 
@@ -16,138 +14,89 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 
 import "../Layout/Header/Stylesheet.css";
 
-/**
- * Icon registry:maps string keys to Lucide components.
- * Used by both sub-header and mobile menu.
- */
 const IconRegistry: Record<string, lucide.LucideIcon> = {
 	Sparkles: lucide.Sparkles,
-
 	Download: lucide.Download,
-
 	BookOpen: lucide.BookOpen,
-
 	GitFork: lucide.GitFork,
-
 	ExternalLink: lucide.ExternalLink,
-
 	Newspaper: lucide.Newspaper,
-
 	Users: lucide.Users,
-
 	LayoutDashboard: lucide.LayoutDashboard,
-
 	HelpCircle: lucide.HelpCircle,
-
 	LogIn: lucide.LogIn,
-
 	Monitor: lucide.Monitor,
 };
 
 interface NavigationLink {
 	Label: string;
-
 	Href: string;
-
 	Icon?: string;
-
 	Tooltip?: string | string[];
 }
 
 export interface HeaderContent {
 	Logo?: { Text: string };
-
 	Navigation?: NavigationLink[];
-
 	Actions?: Array<{
 		Type?: string;
-
 		Text: string;
-
 		Variant?: string;
-
 		Size?: string;
-
 		Href?: string;
-
 		Icon?: string;
-
 		Tooltip?: string | string[];
 	}>;
 }
 
 interface HeaderProps {
 	Content?: HeaderContent;
-
 	AuthSlot?: React.ReactNode;
+	Mode?: "minimal" | "functional";
 }
 
-const Header = ({ Content, AuthSlot }: HeaderProps) => {
+const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 	const { t: T } = useTranslation("header");
 
 	const [NavMenuOpen, SetNavMenuOpen] = useState(false);
-
 	const [MobileMenuOpen, SetMobileMenuOpen] = useState(false);
+	const [Scrolled, SetScrolled] = useState(false);
+
+	useEffect(() => {
+		const onScroll = () => SetScrolled(window.scrollY > 8);
+		window.addEventListener("scroll", onScroll, { passive: true });
+		return () => window.removeEventListener("scroll", onScroll);
+	}, []);
 
 	const HeaderData: HeaderContent = Content || {
 		Logo: { Text: T("logo", "Land") },
-
 		Navigation: [
-			{
-				Label: T("nav.features", "Features"),
-
-				Href: "/#features",
-			},
-
-			{
-				Label: T("nav.download", "Download"),
-
-				Href: "/Download",
-			},
-
-			{
-				Label: T("nav.docs", "Documentation"),
-
-				Href: "/Doc",
-			},
-
+			{ Label: T("nav.features", "Features"), Href: "/#features" },
+			{ Label: T("nav.download", "Download"), Href: "/Download" },
+			{ Label: T("nav.docs", "Documentation"), Href: "/Doc" },
 			{
 				Label: T("nav.github", "GitHub"),
-
 				Href: "https://github.com/CodeEditorLand/Land",
 			},
 		],
-
 		Actions: [
 			{
 				Text: T("actions.signIn", "Sign In"),
-
 				Variant: "ghost",
-
 				Size: "default",
-
 				Href: "/Account/SignIn",
 			},
-
 			{
 				Text: T("actions.editorPortal", "Portal"),
-
 				Variant: "ghost",
-
 				Size: "default",
-
 				Href: "/Portal",
 			},
-
 			{
 				Text: T("actions.getStarted", "Get Land"),
-
 				Variant: "default",
-
 				Size: "default",
-
 				Href: "/Download",
-
 				Icon: "Download",
 			},
 		],
@@ -155,20 +104,15 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 
 	const RenderActionIcon = (
 		IconName?: string,
-
 		Label?: string,
-
 		Tooltip?: string | string[],
 	) => {
 		if (!IconName) return null;
-
 		const Icon = IconRegistry[IconName];
-
 		if (!Icon) return null;
-
 		return (
 			<>
-				{"\u2001"}
+				{" "}
 				<IconTooltip
 					Label={Tooltip || Label || IconName}
 					Icon={Icon}
@@ -184,14 +128,15 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 				<a
 					key={Index}
 					href={Link.Href}
-					className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-3 text-muted-foreground transition-colors hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+					className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-3 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 					onClick={OnClick}
+					aria-label={Link.Label}
 					{...(Link.Href.startsWith("http")
 						? { target: "_blank", rel: "noopener noreferrer" }
 						: {})}
 				>
 					<span className="HeaderLinkLabel font-mono text-sm font-medium uppercase tracking-widest">
-						{Link.Label}
+						/{Link.Label.toUpperCase()}
 					</span>
 				</a>
 			))}
@@ -203,16 +148,14 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 		FullWidth,
 	}: {
 		OnClick?: () => void;
-
 		FullWidth?: boolean;
 	}) => (
 		<>
 			{AuthSlot ? (
 				<>
 					{AuthSlot}
-
 					{HeaderData.Actions?.filter(
-						(Action) => Action.Href !== "/Account/SignIn",
+						(A) => A.Href !== "/Account/SignIn",
 					).map((Action, Index) => {
 						const variant =
 							(Action.Variant as
@@ -223,11 +166,6 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 						const cls = FullWidth
 							? "StaccatoButton w-full justify-start"
 							: "StaccatoButton";
-						// Ghost/link variants have no filled-blob equivalent in
-						// Jelly UI and must stay as plain CSS elements.  Default
-						// and outline render as real jelly-buttons with onClick
-						// navigation so the header CTAs get the same soft-body
-						// physics as the hero buttons.
 						if (variant === "ghost" || variant === "link") {
 							return (
 								<Button
@@ -321,11 +259,16 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 		</>
 	);
 
+	const ModeClass =
+		Mode === "functional" ? "HeaderFunctional" : "HeaderMinimal";
+	const ScrolledClass = Scrolled ? "HeaderScrolled" : "";
+
 	return (
-		<header className="Header sticky top-0 z-50 w-full" role="banner">
-			{/* Primary bar */}
-			<div className="container mx-auto flex h-16 items-center justify-between px-4">
-				{/* Left: logo always + inline nav on lg+, hamburger on md only */}
+		<header
+			className={`Header ${ModeClass} ${ScrolledClass} sticky top-0 z-50 w-full`}
+			role="banner"
+		>
+			<div className="container mx-auto flex h-14 items-center justify-between px-4">
 				<div className="flex items-center gap-3">
 					<a
 						href="/"
@@ -333,24 +276,23 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 						aria-label={`${HeaderData.Logo?.Text || "Land"} - Go to homepage`}
 					>
 						<div
-							className="LogoBox relative flex h-8 w-8 items-center justify-center overflow-hidden"
+							className="LogoBox relative flex h-7 w-7 items-center justify-center overflow-hidden"
 							aria-hidden="true"
 						>
-							<ThemeImage
+							<img
 								src="/Asset/Dark/Logo/Glyph/Land.svg"
 								alt="Code Editor Land"
 								title="Code Editor Land"
-								width={32}
-								height={32}
+								width={28}
+								height={28}
 								className="h-full w-full"
 							/>
 						</div>
-						<span className="font-mono text-sm font-medium uppercase tracking-widest">
+						<span className="HeaderLogoText font-mono text-sm font-medium uppercase tracking-widest">
 							{HeaderData.Logo?.Text || "LAND"}
 						</span>
 					</a>
 
-					{/* Inline nav - desktop only (lg+) */}
 					<nav
 						className="ml-2 hidden items-center lg:flex"
 						aria-label="Main navigation"
@@ -359,7 +301,8 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 							<a
 								key={Index}
 								href={Link.Href}
-								className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-2 text-muted-foreground transition-colors hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+								className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-2 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+								aria-label={Link.Label}
 								{...(Link.Href.startsWith("http")
 									? {
 											target: "_blank",
@@ -368,13 +311,12 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 									: {})}
 							>
 								<span className="HeaderLinkLabel font-mono text-sm font-medium uppercase tracking-widest">
-									{Link.Label}
+									/{Link.Label.toUpperCase()}
 								</span>
 							</a>
 						))}
 					</nav>
 
-					{/* Nav hamburger - tablet only (md, hidden on lg+) */}
 					<Button
 						variant="ghost"
 						size="icon"
@@ -391,14 +333,12 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 					</Button>
 				</div>
 
-				{/* Right: actions (md+) + mobile hamburger */}
 				<div className="flex items-center gap-3">
 					<div className="hidden items-center gap-3 md:flex">
 						<LocaleSwitcher />
 						<ActionButtons />
 					</div>
 
-					{/* Mobile hamburger - merges nav + actions */}
 					<Button
 						variant="ghost"
 						size="icon"
@@ -416,10 +356,9 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 				</div>
 			</div>
 
-			{/* Tablet nav dropdown (md only, hidden on lg+) */}
 			{NavMenuOpen && (
 				<div
-					className="NavDropdown hidden bg-card md:block lg:hidden"
+					className="NavDropdown hidden md:block lg:hidden"
 					role="dialog"
 					aria-label="Navigation menu"
 				>
@@ -432,10 +371,9 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 				</div>
 			)}
 
-			{/* Mobile full menu: nav + locale + actions */}
 			{MobileMenuOpen && (
 				<div
-					className="bg-card md:hidden"
+					className="HeaderMobileMenu md:hidden"
 					role="dialog"
 					aria-label="Mobile navigation menu"
 				>
@@ -444,11 +382,11 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 						aria-label="Mobile navigation"
 					>
 						<NavLinks OnClick={() => SetMobileMenuOpen(false)} />
-						<div className="my-1.5 border-t border-border" />
+						<div className="my-1.5 border-t border-[var(--HeaderBorder)]" />
 						<div className="px-4 py-3">
 							<LocaleSwitcher />
 						</div>
-						<div className="my-1.5 border-t border-border" />
+						<div className="my-1.5 border-t border-[var(--HeaderBorder)]" />
 						<ActionButtons
 							OnClick={() => SetMobileMenuOpen(false)}
 							FullWidth
@@ -461,5 +399,4 @@ const Header = ({ Content, AuthSlot }: HeaderProps) => {
 };
 
 export { Header };
-
 export default Header;

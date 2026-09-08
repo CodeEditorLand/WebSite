@@ -116,7 +116,7 @@ const DynamicSystemRequirements = ({ Content, ClassName }: Property) => {
 				>
 					{/* Minimum Requirements */}
 					<div className="StaccatoCard StaccatoBorderShimmer flat bg-card p-6">
-						<h3 className="mb-6 font-mono text-sm font-semibold">
+						<h3 className="mb-6 font-mono text-sm font-semibold text-card-foreground">
 							{T(
 								"systemRequirements.minimum",
 								"Minimum Requirements",
@@ -130,7 +130,7 @@ const DynamicSystemRequirements = ({ Content, ClassName }: Property) => {
 
 					{/* Recommended Requirements */}
 					<div className="StaccatoCard StaccatoBorderShimmer flat border border-primary bg-card p-6">
-						<h3 className="mb-6 font-mono text-sm font-semibold">
+						<h3 className="mb-6 font-mono text-sm font-semibold text-card-foreground">
 							{T(
 								"systemRequirements.recommended",
 								"Recommended for the Best Experience",

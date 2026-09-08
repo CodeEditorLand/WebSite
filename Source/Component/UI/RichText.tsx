@@ -309,7 +309,7 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 		case "Code":
 			return (
 				<span className="inline-flex items-baseline">
-					<code className="flat bg-mute px-1.5 py-0.5 font-mono">
+					<code className="flat bg-card-foreground/10 px-1.5 py-0.5 font-mono text-card-foreground">
 						{Segment.Value}
 					</code>
 					<CopyInlineButton Code={Segment.Value} />
@@ -414,7 +414,7 @@ const LineNode = ({
 					{EnableMatch[1]}
 				</span>
 				<span className="inline-flex items-baseline">
-					<code className="flat bg-mute px-1.5 py-0.5 font-mono">
+					<code className="flat bg-card-foreground/10 px-1.5 py-0.5 font-mono text-card-foreground">
 						{Command}
 					</code>
 					<CopyInlineButton Code={Command} />
@@ -501,7 +501,7 @@ const LineNode = ({
 								{Item}
 							</span>
 						) : (
-							<code className="flat bg-mute px-1.5 py-0.5 font-mono">
+							<code className="flat bg-card-foreground/10 px-1.5 py-0.5 font-mono text-card-foreground">
 								{Item}
 							</code>
 						)}
@@ -523,7 +523,7 @@ const LineNode = ({
 	if (IsCommandString(Trimmed)) {
 		return (
 			<span className="inline-flex items-baseline">
-				<code className="flat bg-mute px-1.5 py-0.5 font-mono">
+				<code className="flat bg-card-foreground/10 px-1.5 py-0.5 font-mono text-card-foreground">
 					{Trimmed}
 				</code>
 				<CopyInlineButton Code={Trimmed} />

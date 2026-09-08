@@ -1,5 +1,5 @@
 ---
-import { DownloadsPage } from "../Component/Dynamic/DownloadsPage";
+import { DynamicReleaseManifest } from "../Component/Dynamic/DynamicReleaseManifest";
 import { DynamicTransparency } from "../Component/Dynamic/DynamicTransparency";
 import { Header } from "../Component/Layout/Header";
 import Base from "../Layout/Base.astro";
@@ -177,7 +177,7 @@ const TransparencyContent = {
 			Identifier: "production-release",
 			Name: "Release Build",
 			Description:
-				"Optimized release packaging path. Public signing and published verification artifacts are still being prepared.",
+				"Optimized release packaging path. Public signing and verification artifacts are still being prepared.",
 			Icon: "Server",
 			Command: "bash Maintain/Release/Build.sh --profile production",
 			Feature: [
@@ -206,115 +206,45 @@ const TransparencyContent = {
 	SourceURL: "https://github.com/CodeEditorLand/Land",
 } as const;
 
-// For static generation, we'll provide empty platforms - DynamicPlatformGrid will fetch from API
-const DownloadContent = {
-	PlatformGrid: {
-		Title: T("download.page.title", { defaultValue: "Download Land" }),
-		Subtitle: T("download.page.subtitle", {
-			defaultValue:
-				"Source builds are active today. Public installers, signing, and verification artifacts are still being prepared.",
-		}),
-		Platforms: [], // Will be fetched by DynamicPlatformGrid
-		ShowVerification: true,
-		OnDownload: async (Platform: { Name: string; Id?: string }) => {
-			if (Platform.Id) {
-				try {
-					const { default: DownloadAPI } =
-						await import("../Library/API/Download");
-					const Information = await DownloadAPI.GetInfo(Platform.Id);
-					window.open(Information.downloadUrl, "_blank");
-					await DownloadAPI.TrackDownload(Platform.Id);
-				} catch (DownloadError) {
-					console.error("Download failed:", DownloadError);
-				}
-			}
+// Release manifest content - field-record grammar
+const ReleaseManifestContent = {
+	Title: T("download.page.title", { defaultValue: "Release Manifest" }),
+	Subtitle: T("download.page.subtitle", {
+		defaultValue:
+			"Source builds are active today. Public installers, signing, and verification artifacts are still being prepared.",
+	}),
+	ReleaseIndex: "RELEASE_01",
+	Platforms: [
+		{
+			Name: "macOS",
+			Channel: "PUBLIC",
+			Arch: "AARCH64 / X86_64",
+			Signing: "IN PREPARATION" as const,
+			Size: "45.2 MB",
+			Checksum: "Available with public release artifacts",
+			Status: "active" as const,
+			DownloadUrl: "https://github.com/CodeEditorLand/Land/releases",
+			DownloadLabel: "VIEW SOURCE BUILDS",
 		},
-	},
-	SystemRequirements: {
-		Title: T("download.systemRequirements.title", {
-			defaultValue: "System Requirements",
-		}),
-		Description: T("download.systemRequirements.subtitle", {
-			defaultValue:
-				"A quick check before you download saves a reinstall later.",
-		}),
-		Requirements: {
-			Minimum: [
-				{
-					Id: "cpu-min",
-					Label: "Processor",
-					Value: "Intel Core i5 or AMD Ryzen 5 / Apple Silicon",
-				},
-				{ Id: "ram-min", Label: "Memory", Value: "4 GB RAM" },
-				{ Id: "disk-min", Label: "Disk Space", Value: "500 MB" },
-			],
-			Recommended: [
-				{
-					Id: "cpu-rec",
-					Label: "Processor",
-					Value: "Intel Core i7 or AMD Ryzen 7",
-				},
-				{ Id: "ram-rec", Label: "Memory", Value: "8 GB RAM" },
-				{ Id: "disk-rec", Label: "Disk Space", Value: "1 GB SSD" },
-			],
+		{
+			Name: "Windows",
+			Channel: "PUBLIC",
+			Arch: "X86_64",
+			Signing: "IN PREPARATION" as const,
+			Size: "-",
+			Checksum: "-",
+			Status: "preparing" as const,
 		},
-		Os: [
-			"macOS 11+",
-			"Windows 10+",
-			"Ubuntu 20.04+ / Fedora 35+ / Debian 11+",
-		],
-	},
-	VerificationInfo: {
-		Title: T("download.verification.title", {
-			defaultValue: "Verification Will Ship With Public Releases.",
-		}),
-		Description: T("download.verification.description", {
-			defaultValue:
-				"Release downloads will publish checksum and signature material when public installers are available.",
-		}),
-		DownloadVerification: {
-			SHA256: "Available with public release artifacts",
-			PGPSignature: "Available with public release artifacts",
-			SigningKeyId: "Published with each release",
-			VerificationInstructions:
-				"Verification instructions will be published beside the installer, checksum, and signature artifacts.",
+		{
+			Name: "Linux",
+			Channel: "PUBLIC",
+			Arch: "X86_64",
+			Signing: "IN PREPARATION" as const,
+			Size: "-",
+			Checksum: "-",
+			Status: "preparing" as const,
 		},
-		IntegrityVerification: {
-			SHA256: "Available with public release artifacts",
-			PGPSignature: "Available with public release artifacts",
-			VerificationInstructions:
-				"Air contains checksum and integrity code. Public release verification material will be published with the installers.",
-		},
-		DownloadButton: {
-			Text: T("download.verification.downloadButton", {
-				defaultValue: "View Verification Plan",
-			}),
-			Variant: "outline",
-			Size: "default",
-			FullWidth: false,
-		},
-		VerifyButton: {
-			Text: T("download.verification.verifyButton", {
-				defaultValue: "Verify Download",
-			}),
-			Variant: "default",
-			Size: "default",
-			FullWidth: false,
-		},
-	},
-	PreviousReleases: {
-		Title: T("download.previousReleases.title", {
-			defaultValue: "Previous Releases",
-		}),
-		Description: T("download.previousReleases.description", {
-			defaultValue:
-				"Download an older version if you need to pin to a specific release.",
-		}),
-		Releases: [],
-		ShowChangelog: false,
-	},
-	Header: undefined,
-	Footer: {},
+	],
 };
 
 const MetaTitle = T("meta.downloads.title", {
@@ -330,7 +260,7 @@ const MetaDescription = T("meta.downloads.description", {
 <Base Title={MetaTitle} Description={MetaDescription}>
 	<Header client:load />
 	<div
-		class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 pt-6 text-muted-foreground"
+		class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 pt-6 text-foreground"
 	>
 		<picture>
 			<source
@@ -447,10 +377,6 @@ const MetaDescription = T("meta.downloads.description", {
 			Unmodified Extensions
 		</jelly-badge>
 	</div>
-	<DownloadsPage
-		Content={DownloadContent}
-		MetaTitle={MetaTitle}
-		MetaDescription={MetaDescription}
-	/>
+	<DynamicReleaseManifest Content={ReleaseManifestContent} client:load />
 	<DynamicTransparency Content={TransparencyContent} client:load />
 </Base>

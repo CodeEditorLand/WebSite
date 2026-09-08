@@ -2,6 +2,11 @@
 import { Header } from "../Component/Layout/Header";
 import Base from "../Layout/Base.astro";
 import { GetI18n } from "../Library/I18n/Server";
+import { FieldRecordDataCard } from "../Component/Brand/FieldRecordDataCard";
+import { FieldRecordIndex } from "../Component/Brand/FieldRecordIndex";
+import { FieldRecordStatus } from "../Component/Brand/FieldRecordStatus";
+import { FieldRecordAction } from "../Component/Brand/FieldRecordAction";
+import { FieldRecordEvidence } from "../Component/Brand/FieldRecordEvidence";
 
 const T = GetI18n();
 
@@ -10,8 +15,10 @@ const MetaTitle = T("common.error.404", {
 });
 const MetaDescription = T("common.error.pageNotFound", {
 	defaultValue:
-		"The page you're looking for doesn't exist or has been moved.\n\nCheck the URL for typos, or return to the home page and start fresh.\n\nIf you believe this is an error, open a GitHub issue and we'll help you find what you need.",
+		"The page you're looking for doesn't exist or has been moved.",
 });
+
+const RequestedPath = Astro.url.pathname;
 ---
 
 <Base Title={MetaTitle} Description={MetaDescription} noIndex={true}>
@@ -21,50 +28,91 @@ const MetaDescription = T("common.error.pageNotFound", {
 		class="flex min-h-[80dvh] w-full flex-col items-center justify-center py-20"
 		aria-label="Page not found"
 	>
-		<div class="container mx-auto px-4 text-center">
-			<p
-				id="RouteRedirectNotice"
-				class="mb-4 hidden text-muted-foreground"
-			>
-				Redirecting...
-			</p>
-			<h1 class="StaccatoJitter mb-4 text-6xl font-bold">404</h1>
-			<p class="StaccatoBreath mb-8 text-xl text-muted-foreground">
-				{
-					T("common.error.pageNotFound", {
-						defaultValue:
-							"The page you're looking for doesn't exist or has been moved.\n\nCheck the URL for typos, or return to the home page and start fresh.\n\nIf you believe this is an error, open a GitHub issue and we'll help you find what you need.",
-					})
-				}
-			</p>
-			<a
-				href="/"
-				class="StaccatoButton text-primary-fg inline-flex h-10 items-center justify-center bg-primary px-4 py-2 font-medium transition-all hover:opacity-90 focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
-			>
-				{
-					T("common.button.backToHome", {
-						defaultValue: "Return to Homepage",
-					})
-				}&#x2001;&rarr;
-			</a>
+		<div class="container mx-auto px-4">
+			<div class="mx-auto max-w-3xl">
+				<div class="flex flex-col md:flex-row">
+					<div class="min-w-0 flex-1">
+						<FieldRecordDataCard className="h-full">
+							<div class="flex h-full flex-col gap-4">
+								<FieldRecordIndex
+									index="ROUTE_404"
+									client:load
+								/>
+
+								<p
+									class="text-field-xl font-mono font-normal leading-[0.95] tracking-[-0.02em] text-card-foreground"
+								>
+									〈NOT FOUND〉
+								</p>
+
+								<p
+									class="text-field-s font-mono font-normal leading-[1.1] text-card-foreground opacity-70"
+								>
+									/TRACE: {RequestedPath}
+								</p>
+
+								<div class="mt-6">
+									<FieldRecordStatus
+										status="interrupted"
+										tone="quiet"
+										client:load
+									/>
+								</div>
+
+								<div class="mt-2">
+									<p
+										class="text-field-xs font-mono uppercase tracking-wider text-card-foreground opacity-60"
+									>
+										SIGNAL: ABSENT · ROUTE: UNRESOLVED
+									</p>
+								</div>
+
+								<div class="my-12 flex-1" aria-hidden="true">
+								</div>
+
+								<div>
+									<p
+										class="text-field-l font-mono font-normal leading-[1.08] text-card-foreground"
+									>
+										LAND:
+									</p>
+									<p
+										class="text-field-s mt-3 font-mono font-normal leading-[1.1] text-card-foreground opacity-70"
+									>
+										↳RETURN TO INDEX
+									</p>
+								</div>
+
+								<div class="mt-10">
+									<FieldRecordAction
+										label="BACK TO LAND"
+										href="/"
+										variant="button"
+										client:load
+									/>
+								</div>
+							</div>
+						</FieldRecordDataCard>
+					</div>
+
+					<div
+						class="hidden w-px md:block"
+						style="background-color: var(--Background)"
+						aria-hidden="true"
+					>
+					</div>
+
+					<div class="min-w-0 flex-1">
+						<FieldRecordEvidence
+							src="/Evidence/Land/NightGlass-01.png"
+							alt="Rain-speckled glass reflecting a green light at night"
+							position="center"
+							className="h-full min-h-[40dvh] w-full"
+							client:load
+						/>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-
-	<script>
-		const Notice = document.getElementById("RouteRedirectNotice");
-
-		if (Notice) {
-			Notice.classList.remove("hidden");
-		}
-
-		const RedirectFromRouteMap = (
-			await import("@Function/Route/Redirect.js")
-		).default;
-
-		await RedirectFromRouteMap();
-
-		if (Notice) {
-			Notice.classList.add("hidden");
-		}
-	</script>
 </Base>

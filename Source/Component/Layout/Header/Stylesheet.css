@@ -1,44 +1,85 @@
-/* Header - Nocturnal Field Record. Dark canvas, mono, flat. */
+/* Header - Nocturnal Field Record. Flat, no glass, no shadow. Two modes. */
 
-.Header {
-	background: color-mix(in srgb, var(--Background) 85%, transparent);
-	backdrop-filter: blur(12px) saturate(140%);
-	-webkit-backdrop-filter: blur(12px) saturate(140%);
-	border-bottom: 1px solid var(--Border);
+/* ─── MODE: MINIMAL (homepage/hero) ─── */
+.HeaderMinimal {
+	--HeaderBg: transparent;
+	--HeaderBorder: rgba(255, 255, 255, 0.08);
+	--HeaderFg: var(--Foreground);
+	--HeaderMuted: var(--MuteForeground);
+	--HeaderHoverColor: var(--Accent);
+	--HeaderScrolledBg: #000000;
+	--HeaderScrolledBorder: rgba(255, 255, 255, 0.12);
+	--HeaderLogoText: var(--Foreground);
+
+	background: var(--HeaderBg);
+	border-bottom: 1px solid var(--HeaderBorder);
+	border-radius: 0;
 }
 
-.Header .LogoBox {
+.HeaderMinimal .LogoBox {
 	background-color: transparent;
 }
 
-.HeaderLogo span {
-	color: var(--Foreground);
+.HeaderMinimal .HeaderLogoText {
+	color: var(--HeaderLogoText);
 }
 
-/* Nav link label - underline only the text */
+/* ─── MODE: FUNCTIONAL (docs/account/downloads) ─── */
+.HeaderFunctional {
+	--HeaderBg: var(--Card);
+	--HeaderBorder: var(--CardForeground);
+	--HeaderFg: var(--CardForeground);
+	--HeaderMuted: #3f3f46;
+	--HeaderHoverColor: var(--CardForeground);
+	--HeaderScrolledBg: var(--Card);
+	--HeaderScrolledBorder: var(--CardForeground);
+	--HeaderLogoText: var(--CardForeground);
+
+	background: var(--HeaderBg);
+	border-bottom: 1px solid
+		color-mix(in srgb, var(--HeaderBorder) 25%, transparent);
+	border-radius: 0;
+}
+
+.HeaderFunctional .LogoBox {
+	background-color: transparent;
+}
+
+.HeaderFunctional .HeaderLogoText {
+	color: var(--HeaderLogoText);
+}
+
+/* ─── SCROLLED STATE (both modes) ─── */
+.HeaderScrolled {
+	background: var(--HeaderScrolledBg);
+	border-bottom: 1px solid var(--HeaderScrolledBorder);
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+/* ─── NAV LINKS (both modes) ─── */
 .HeaderSubLink .HeaderLinkLabel {
+	color: var(--HeaderFg);
 	text-decoration: underline;
-	text-decoration-color: var(--Border);
+	text-decoration-color: color-mix(in srgb, var(--HeaderFg) 20%, transparent);
 	text-underline-offset: 2px;
-	transition: text-decoration-color 0.15s ease;
+	transition:
+		text-decoration-color 0.15s ease,
+		color 0.15s ease;
 }
 
 .HeaderSubLink:hover .HeaderLinkLabel {
-	text-decoration-color: var(--Accent);
+	color: var(--HeaderHoverColor);
+	text-decoration-color: var(--HeaderHoverColor);
 }
 
-/* Nav dropdown */
-.NavDropdown {
-	background: var(--Background);
-	border-bottom: 1px solid var(--Border);
-}
-
+/* ─── HOVER OVERLAY ─── */
 .HeaderSubLink {
 	position: relative;
 	z-index: 1;
 }
 
-/* Hover overlay - uses accent green at low opacity */
 .HeaderSubLink::before {
 	content: "";
 	position: absolute;
@@ -55,4 +96,33 @@
 
 .HeaderSubLink:active::before {
 	opacity: 0.2;
+}
+
+.HeaderFunctional .HeaderSubLink::before {
+	background: var(--CardForeground);
+}
+
+/* ─── NAV DROPDOWN ─── */
+.NavDropdown {
+	background: var(--HeaderScrolledBg, var(--HeaderBg));
+	border-bottom: 1px solid var(--HeaderScrolledBorder, var(--HeaderBorder));
+}
+
+/* ─── MOBILE MENU ─── */
+.HeaderMobileMenu {
+	background: var(--HeaderScrolledBg, var(--HeaderBg));
+	border-bottom: 1px solid var(--HeaderScrolledBorder, var(--HeaderBorder));
+}
+
+/* ─── REMOVE GLASS/FROST EVERYWHERE ─── */
+.Header {
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.Header::before,
+.Header::after {
+	content: none;
 }

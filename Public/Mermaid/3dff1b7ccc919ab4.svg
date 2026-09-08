@@ -1,259 +1,534 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 3005.5px; background-color: white;"
-	viewBox="-132 -10 3005.5 1946" role="graphics-document document" aria-roledescription="sequence">
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="max-width: 3005.5px; background-color: white;" viewBox="-132 -10 3005.5 1946"
+	role="graphics-document document" aria-roledescription="sequence">
 	<g>
-		<rect x="2673.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2748.5" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2673.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2748.5" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2748.5" dy="0">LandDiagnostics</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2473.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L8"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2548.5" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2473.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L8" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2548.5" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2548.5" dy="0">TimingProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2273.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L5"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2348.5" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2273.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L5" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2348.5" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2348.5" dy="0">AsyncProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="2069.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L4"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="2144.5" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="2069.5" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L4" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="2144.5" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="2144.5" dy="0">DisposableProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1847" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L3"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1922" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1847" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L3" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1922" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1922" dy="0">CancellationProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1647" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L2"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1722" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1647" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L2" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1722" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1722" dy="0">EmitterFireProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1447" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L1"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1522" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1447" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="L1" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1522" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1522" dy="0">ErrorHandlerProxy</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="1104" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Init"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1179" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1104" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Init" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1179" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1179" dy="0">Init.js</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="807" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Inj"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="882" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="807" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Inj" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="882" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="882" dy="0">InjectShimHook</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="561" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="WBS"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="636" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="561" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="WBS" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="636" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="636" dy="0">workbench.startup()</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="361" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Env"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="436" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="361" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Env" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="436" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="436" dy="0">.env.Land</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="0" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Build"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="75" y="1892.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="0" y="1860" fill="#eaeaea" stroke="#666" width="150" height="65" name="Build" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="75" y="1892.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="75" dy="0">Build Pipeline</tspan>
 		</text>
 	</g>
 	<g>
-		<line id="actor11" x1="2748.5" y1="65" x2="2748.5" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Diag" data-et="life-line" data-id="Diag" />
+		<line id="actor11" x1="2748.5" y1="65" x2="2748.5" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Diag" data-et="life-line" data-id="Diag" />
 		<g id="root-11" data-et="participant" data-type="participant" data-id="Diag">
-			<rect x="2673.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2748.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2673.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Diag" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2748.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2748.5" dy="0">LandDiagnostics</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor10" x1="2548.5" y1="65" x2="2548.5" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L8" data-et="life-line" data-id="L8" />
+		<line id="actor10" x1="2548.5" y1="65" x2="2548.5" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L8" data-et="life-line" data-id="L8" />
 		<g id="root-10" data-et="participant" data-type="participant" data-id="L8">
-			<rect x="2473.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L8"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2548.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2473.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L8" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2548.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2548.5" dy="0">TimingProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor9" x1="2348.5" y1="65" x2="2348.5" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L5" data-et="life-line" data-id="L5" />
+		<line id="actor9" x1="2348.5" y1="65" x2="2348.5" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L5" data-et="life-line" data-id="L5" />
 		<g id="root-9" data-et="participant" data-type="participant" data-id="L5">
-			<rect x="2273.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L5"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2348.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2273.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L5" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2348.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2348.5" dy="0">AsyncProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor8" x1="2144.5" y1="65" x2="2144.5" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L4" data-et="life-line" data-id="L4" />
+		<line id="actor8" x1="2144.5" y1="65" x2="2144.5" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L4" data-et="life-line" data-id="L4" />
 		<g id="root-8" data-et="participant" data-type="participant" data-id="L4">
-			<rect x="2069.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L4"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="2144.5" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="2069.5" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L4" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="2144.5" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="2144.5" dy="0">DisposableProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor7" x1="1922" y1="65" x2="1922" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L3" data-et="life-line" data-id="L3" />
+		<line id="actor7" x1="1922" y1="65" x2="1922" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L3" data-et="life-line" data-id="L3" />
 		<g id="root-7" data-et="participant" data-type="participant" data-id="L3">
-			<rect x="1847" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L3"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1922" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1847" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L3" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1922" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1922" dy="0">CancellationProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor6" x1="1722" y1="65" x2="1722" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L2" data-et="life-line" data-id="L2" />
+		<line id="actor6" x1="1722" y1="65" x2="1722" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L2" data-et="life-line" data-id="L2" />
 		<g id="root-6" data-et="participant" data-type="participant" data-id="L2">
-			<rect x="1647" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L2"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1722" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1647" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L2" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1722" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1722" dy="0">EmitterFireProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor5" x1="1522" y1="65" x2="1522" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="L1" data-et="life-line" data-id="L1" />
+		<line id="actor5" x1="1522" y1="65" x2="1522" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="L1" data-et="life-line" data-id="L1" />
 		<g id="root-5" data-et="participant" data-type="participant" data-id="L1">
-			<rect x="1447" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L1"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1522" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1447" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="L1" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1522" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1522" dy="0">ErrorHandlerProxy</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor4" x1="1179" y1="65" x2="1179" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Init" data-et="life-line" data-id="Init" />
+		<line id="actor4" x1="1179" y1="65" x2="1179" y2="1860" class="actor-line 200" stroke-width="0.5px"
+			stroke="#999" name="Init" data-et="life-line" data-id="Init" />
 		<g id="root-4" data-et="participant" data-type="participant" data-id="Init">
-			<rect x="1104" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Init"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1179" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1104" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Init" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1179" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1179" dy="0">Init.js</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor3" x1="882" y1="65" x2="882" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Inj" data-et="life-line" data-id="Inj" />
+		<line id="actor3" x1="882" y1="65" x2="882" y2="1860" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Inj" data-et="life-line" data-id="Inj" />
 		<g id="root-3" data-et="participant" data-type="participant" data-id="Inj">
-			<rect x="807" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Inj"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="882" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="807" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Inj" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="882" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="882" dy="0">InjectShimHook</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor2" x1="636" y1="65" x2="636" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="WBS" data-et="life-line" data-id="WBS" />
+		<line id="actor2" x1="636" y1="65" x2="636" y2="1860" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="WBS" data-et="life-line" data-id="WBS" />
 		<g id="root-2" data-et="participant" data-type="participant" data-id="WBS">
-			<rect x="561" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="WBS"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="636" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="561" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="WBS" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="636" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="636" dy="0">workbench.startup()</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor1" x1="436" y1="65" x2="436" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Env" data-et="life-line" data-id="Env" />
+		<line id="actor1" x1="436" y1="65" x2="436" y2="1860" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Env" data-et="life-line" data-id="Env" />
 		<g id="root-1" data-et="participant" data-type="participant" data-id="Env">
-			<rect x="361" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Env"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="436" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="361" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Env" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="436" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="436" dy="0">.env.Land</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor0" x1="75" y1="65" x2="75" y2="1860" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Build" data-et="life-line" data-id="Build" />
+		<line id="actor0" x1="75" y1="65" x2="75" y2="1860" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Build" data-et="life-line" data-id="Build" />
 		<g id="root-0" data-et="participant" data-type="participant" data-id="Build">
-			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Build"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Build" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="75" dy="0">Build Pipeline</tspan>
 			</text>
 		</g>
 	</g>
-	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .actor{stroke:#9370DB;fill:#ECECFF;stroke-width:1;}#my-svg rect.actor.outer-path[data-look="neo"]{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg rect.note[data-look="neo"]{stroke:#aaaa33;fill:#fff5ad;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg text.actor&gt;tspan{fill:black;stroke:none;}#my-svg .actor-line{stroke:#9370DB;}#my-svg .innerArc{stroke-width:1.5;stroke-dasharray:none;}#my-svg .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#my-svg .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#my-svg [id$="-arrowhead"] path{fill:#333;stroke:#333;}#my-svg .sequenceNumber{fill:white;}#my-svg [id$="-sequencenumber"]{fill:#333;}#my-svg [id$="-crosshead"] path{fill:#333;stroke:#333;}#my-svg .messageText{fill:#333;stroke:none;}#my-svg .labelBox{stroke:#9370DB;fill:#ECECFF;filter:none;}#my-svg .labelText,#my-svg .labelText&gt;tspan{fill:black;stroke:none;}#my-svg .loopText,#my-svg .loopText&gt;tspan{fill:black;stroke:none;}#my-svg .sectionTitle,#my-svg .sectionTitle&gt;tspan{fill:black;stroke:none;}#my-svg .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#9370DB;fill:#9370DB;}#my-svg .note{stroke:#aaaa33;fill:#fff5ad;}#my-svg .noteText,#my-svg .noteText&gt;tspan{fill:black;stroke:none;font-weight:normal;}#my-svg .activation0{fill:#f4f4f4;stroke:#666;}#my-svg .activation1{fill:#f4f4f4;stroke:#666;}#my-svg .activation2{fill:#f4f4f4;stroke:#666;}#my-svg .actorPopupMenu{position:absolute;}#my-svg .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#my-svg .actor-man circle,#my-svg line{fill:#ECECFF;stroke-width:2px;}#my-svg g rect.rect{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));stroke:#9370DB;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<style>
+		#my-svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+			fill: #333;
+		}
+
+		@keyframes edge-animation-frame {
+			from {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		#my-svg .edge-animation-slow {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 50s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .edge-animation-fast {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 20s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .error-icon {
+			fill: #552222;
+		}
+
+		#my-svg .error-text {
+			fill: #552222;
+			stroke: #552222;
+		}
+
+		#my-svg .edge-thickness-normal {
+			stroke-width: 1px;
+		}
+
+		#my-svg .edge-thickness-thick {
+			stroke-width: 3.5px;
+		}
+
+		#my-svg .edge-pattern-solid {
+			stroke-dasharray: 0;
+		}
+
+		#my-svg .edge-thickness-invisible {
+			stroke-width: 0;
+			fill: none;
+		}
+
+		#my-svg .edge-pattern-dashed {
+			stroke-dasharray: 3;
+		}
+
+		#my-svg .edge-pattern-dotted {
+			stroke-dasharray: 2;
+		}
+
+		#my-svg .marker {
+			fill: #333333;
+			stroke: #333333;
+		}
+
+		#my-svg .marker.cross {
+			stroke: #333333;
+		}
+
+		#my-svg svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+		}
+
+		#my-svg p {
+			margin: 0;
+		}
+
+		#my-svg .actor {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			stroke-width: 1;
+		}
+
+		#my-svg rect.actor.outer-path[data-look="neo"] {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg rect.note[data-look="neo"] {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg text.actor&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .actor-line {
+			stroke: #9370DB;
+		}
+
+		#my-svg .innerArc {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+		}
+
+		#my-svg .messageLine0 {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+			stroke: #333;
+		}
+
+		#my-svg .messageLine1 {
+			stroke-width: 1.5;
+			stroke-dasharray: 2, 2;
+			stroke: #333;
+		}
+
+		#my-svg [id$="-arrowhead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .sequenceNumber {
+			fill: white;
+		}
+
+		#my-svg [id$="-sequencenumber"] {
+			fill: #333;
+		}
+
+		#my-svg [id$="-crosshead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .messageText {
+			fill: #333;
+			stroke: none;
+		}
+
+		#my-svg .labelBox {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			filter: none;
+		}
+
+		#my-svg .labelText,
+		#my-svg .labelText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopText,
+		#my-svg .loopText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .sectionTitle,
+		#my-svg .sectionTitle&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopLine {
+			stroke-width: 2px;
+			stroke-dasharray: 2, 2;
+			stroke: #9370DB;
+			fill: #9370DB;
+		}
+
+		#my-svg .note {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+		}
+
+		#my-svg .noteText,
+		#my-svg .noteText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+			font-weight: normal;
+		}
+
+		#my-svg .activation0 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation1 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation2 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .actorPopupMenu {
+			position: absolute;
+		}
+
+		#my-svg .actorPopupMenuPanel {
+			position: absolute;
+			fill: #ECECFF;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+		}
+
+		#my-svg .actor-man circle,
+		#my-svg line {
+			fill: #ECECFF;
+			stroke-width: 2px;
+		}
+
+		#my-svg g rect.rect {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			stroke: #9370DB;
+		}
+
+		#my-svg .node .neo-node {
+			stroke: #9370DB;
+		}
+
+		#my-svg [data-look="neo"].node rect,
+		#my-svg [data-look="neo"].cluster rect,
+		#my-svg [data-look="neo"].node polygon {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node path {
+			stroke: #9370DB;
+			stroke-width: 1px;
+		}
+
+		#my-svg [data-look="neo"].node .outer-path {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node .neo-line path {
+			stroke: #9370DB;
+			filter: none;
+		}
+
+		#my-svg [data-look="neo"].node circle {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node circle .state-start {
+			fill: #000000;
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon {
+			fill: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon-neo path {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg :root {
+			--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+		}
+	</style>
 	<g />
 	<defs>
 		<symbol id="my-svg-computer" width="24" height="24">
@@ -274,67 +549,62 @@
 		</symbol>
 	</defs>
 	<defs>
-		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M -1 0 L 10 5 L 0 10 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4"
-			refY="4.5">
+		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5">
 			<path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7"
 				style="stroke-dasharray: 0, 0;" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28"
-			orient="auto">
+		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto">
 			<path d="M 18,7 L9,13 L14,7 L9,1 Z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40"
-			orient="auto">
+		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto">
 			<circle cx="15" cy="15" r="6" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 8 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 0 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<g data-et="note" data-id="i0">
 		<rect x="50" y="75" fill="#EDF2AE" stroke="#666" width="411" height="39" class="note" />
-		<text x="256" y="80" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="noteText" dy="1em"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="256" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="noteText" dy="1em" style="font-size: 16px; font-weight: 400;">
 			<tspan x="256">BUILD TIME</tspan>
 		</text>
 	</g>
 	<g data-et="note" data-id="i4">
 		<rect x="611" y="316" fill="#EDF2AE" stroke="#666" width="593" height="39" class="note" />
-		<text x="908" y="321" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="noteText" dy="1em"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="908" y="321" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="noteText" dy="1em" style="font-size: 16px; font-weight: 400;">
 			<tspan x="908">RUNTIME - workbench boot</tspan>
 		</text>
 	</g>
@@ -344,11 +614,10 @@
 		<line x1="1168" y1="1356" x2="2559.5" y2="1356" class="loopLine" />
 		<line x1="1168" y1="1047" x2="1168" y2="1356" class="loopLine" />
 		<polygon points="1168,1047 1218,1047 1218,1060 1209.6,1067 1168,1067" class="labelBox" />
-		<text x="1193" y="1060" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="labelText" style="font-size: 16px; font-weight: 400;">
+		<text x="1193" y="1060" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="labelText" style="font-size: 16px; font-weight: 400;">
 			par</text>
-		<text x="1888.75" y="1065" text-anchor="middle" class="loopText"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="1888.75" y="1065" text-anchor="middle" class="loopText" style="font-size: 16px; font-weight: 400;">
 			<tspan x="1888.75">[Activate all 6 hooks via dynamic import]</tspan>
 		</text>
 	</g>
@@ -357,18 +626,14 @@
 		<line x1="2759.5" y1="527" x2="2759.5" y2="1840" class="loopLine" />
 		<line x1="1068.5" y1="1840" x2="2759.5" y2="1840" class="loopLine" />
 		<line x1="1068.5" y1="527" x2="1068.5" y2="1840" class="loopLine" />
-		<line x1="1068.5" y1="651" x2="2759.5" y2="651" class="loopLine"
-			style="stroke-dasharray: 3, 3;" />
-		<line x1="1068.5" y1="814" x2="2759.5" y2="814" class="loopLine"
-			style="stroke-dasharray: 3, 3;" />
-		<line x1="1068.5" y1="933" x2="2759.5" y2="933" class="loopLine"
-			style="stroke-dasharray: 3, 3;" />
+		<line x1="1068.5" y1="651" x2="2759.5" y2="651" class="loopLine" style="stroke-dasharray: 3, 3;" />
+		<line x1="1068.5" y1="814" x2="2759.5" y2="814" class="loopLine" style="stroke-dasharray: 3, 3;" />
+		<line x1="1068.5" y1="933" x2="2759.5" y2="933" class="loopLine" style="stroke-dasharray: 3, 3;" />
 		<polygon points="1068.5,527 1118.5,527 1118.5,540 1110.1,547 1068.5,547" class="labelBox" />
-		<text x="1094" y="540" text-anchor="middle" dominant-baseline="middle"
-			alignment-baseline="middle" class="labelText" style="font-size: 16px; font-weight: 400;">
+		<text x="1094" y="540" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+			class="labelText" style="font-size: 16px; font-weight: 400;">
 			alt</text>
-		<text x="1939" y="545" text-anchor="middle" class="loopText"
-			style="font-size: 16px; font-weight: 400;">
+		<text x="1939" y="545" text-anchor="middle" class="loopText" style="font-size: 16px; font-weight: 400;">
 			<tspan x="1939">[TierShim = None]</tspan>
 		</text>
 		<text x="1914" y="669" text-anchor="middle" class="sectionTitle"
@@ -378,142 +643,124 @@
 		<text x="1914" y="951" text-anchor="middle" class="sectionTitle"
 			style="font-size: 16px; font-weight: 400;">[TierShim = Own | Preempt]</text>
 	</g>
-	<text x="257" y="129" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<text x="257" y="129" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">TierShim=None|Proxy|Replace|Own|Preempt</text>
-	<line x1="435" y1="158" x2="79" y2="158" class="messageLine0" data-et="message" data-id="i1"
-		data-from="Env" data-to="Build" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="76" y="173" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
-		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">esbuild define:
+	<line x1="435" y1="158" x2="79" y2="158" class="messageLine0" data-et="message" data-id="i1" data-from="Env"
+		data-to="Build" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="76" y="173" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText"
+		dy="1em" style="font-size: 16px; font-weight: 400;">esbuild define:
 		__LandTier_Shim__ = "Proxy"</text>
-	<path d="M 76,202 C 136,192 136,232 76,222" class="messageLine0" data-et="message" data-id="i2"
-		data-from="Build" data-to="Build" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="76" y="247" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
-		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">tree-shake all code
+	<path d="M 76,202 C 136,192 136,232 76,222" class="messageLine0" data-et="message" data-id="i2" data-from="Build"
+		data-to="Build" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="76" y="247" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText"
+		dy="1em" style="font-size: 16px; font-weight: 400;">tree-shake all code
 		behind TierShim=None check</text>
-	<path d="M 76,276 C 136,266 136,306 76,296" class="messageLine0" data-et="message" data-id="i3"
-		data-from="Build" data-to="Build" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="637" y="370" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">InstantiationService created</text>
-	<path d="M 637,399 C 697,389 697,429 637,419" class="messageLine0" data-et="message"
-		data-id="i5" data-from="WBS" data-to="WBS" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="758" y="444" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">returns instantiationService</text>
-	<line x1="637" y1="473" x2="878" y2="473" class="messageLine1" data-et="message" data-id="i6"
-		data-from="WBS" data-to="Inj" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="1029" y="488" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<path d="M 76,276 C 136,266 136,306 76,296" class="messageLine0" data-et="message" data-id="i3" data-from="Build"
+		data-to="Build" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="637" y="370" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">InstantiationService created</text>
+	<path d="M 637,399 C 697,389 697,429 637,419" class="messageLine0" data-et="message" data-id="i5" data-from="WBS"
+		data-to="WBS" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="758" y="444" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">returns instantiationService</text>
+	<line x1="637" y1="473" x2="878" y2="473" class="messageLine1" data-et="message" data-id="i6" data-from="WBS"
+		data-to="Inj" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="1029" y="488" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">LandShimInit(instantiationService)</text>
-	<line x1="883" y1="517" x2="1175" y2="517" class="messageLine0" data-et="message" data-id="i7"
-		data-from="Inj" data-to="Init" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1180" y="577" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">No-op - all code dead</text>
-	<path d="M 1180,606 C 1240,596 1240,636 1180,626" class="messageLine0" data-et="message"
-		data-id="i9" data-from="Init" data-to="Init" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1962" y="696" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">wrapServiceCollectionForAudit(sc)</text>
-	<line x1="1180" y1="725" x2="2744.5" y2="725" class="messageLine0" data-et="message"
-		data-id="i11" data-from="Init" data-to="Diag" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1180" y="740" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">setInterval(flushAuditLog, 30s)</text>
-	<path d="M 1180,769 C 1240,759 1240,799 1180,789" class="messageLine0" data-et="message"
-		data-id="i12" data-from="Init" data-to="Init" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1180" y="859" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">replaceTelemetryService(sc)</text>
-	<path d="M 1180,888 C 1240,878 1240,918 1180,908" class="messageLine0" data-et="message"
-		data-id="i14" data-from="Init" data-to="Init" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1180" y="978" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">activateLowLevelHooks()</text>
-	<path d="M 1180,1007 C 1240,997 1240,1037 1180,1027" class="messageLine0" data-et="message"
-		data-id="i16" data-from="Init" data-to="Init" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1349" y="1097" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="883" y1="517" x2="1175" y2="517" class="messageLine0" data-et="message" data-id="i7" data-from="Inj"
+		data-to="Init" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1180" y="577" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">No-op - all code dead</text>
+	<path d="M 1180,606 C 1240,596 1240,636 1180,626" class="messageLine0" data-et="message" data-id="i9"
+		data-from="Init" data-to="Init" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1962" y="696" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">wrapServiceCollectionForAudit(sc)</text>
+	<line x1="1180" y1="725" x2="2744.5" y2="725" class="messageLine0" data-et="message" data-id="i11" data-from="Init"
+		data-to="Diag" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1180" y="740" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">setInterval(flushAuditLog, 30s)</text>
+	<path d="M 1180,769 C 1240,759 1240,799 1180,789" class="messageLine0" data-et="message" data-id="i12"
+		data-from="Init" data-to="Init" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1180" y="859" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">replaceTelemetryService(sc)</text>
+	<path d="M 1180,888 C 1240,878 1240,918 1180,908" class="messageLine0" data-et="message" data-id="i14"
+		data-from="Init" data-to="Init" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1180" y="978" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">activateLowLevelHooks()</text>
+	<path d="M 1180,1007 C 1240,997 1240,1037 1180,1027" class="messageLine0" data-et="message" data-id="i16"
+		data-from="Init" data-to="Init" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1349" y="1097" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/ErrorHandlerProxy.js")</text>
-	<line x1="1180" y1="1126" x2="1518" y2="1126" class="messageLine0" data-et="message"
-		data-id="i18" data-from="Init" data-to="L1" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1449" y="1141" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1180" y1="1126" x2="1518" y2="1126" class="messageLine0" data-et="message" data-id="i18" data-from="Init"
+		data-to="L1" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1449" y="1141" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/EmitterFireProxy.js")</text>
-	<line x1="1180" y1="1170" x2="1718" y2="1170" class="messageLine0" data-et="message"
-		data-id="i19" data-from="Init" data-to="L2" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1549" y="1185" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1180" y1="1170" x2="1718" y2="1170" class="messageLine0" data-et="message" data-id="i19" data-from="Init"
+		data-to="L2" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1549" y="1185" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/CancellationProxy.js")</text>
-	<line x1="1180" y1="1214" x2="1918" y2="1214" class="messageLine0" data-et="message"
-		data-id="i20" data-from="Init" data-to="L3" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1660" y="1229" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1180" y1="1214" x2="1918" y2="1214" class="messageLine0" data-et="message" data-id="i20" data-from="Init"
+		data-to="L3" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1660" y="1229" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/DisposableProxy.js")</text>
-	<line x1="1180" y1="1258" x2="2140.5" y2="1258" class="messageLine0" data-et="message"
-		data-id="i21" data-from="Init" data-to="L4" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1762" y="1273" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1180" y1="1258" x2="2140.5" y2="1258" class="messageLine0" data-et="message" data-id="i21"
+		data-from="Init" data-to="L4" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1762" y="1273" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/AsyncProxy.js")</text>
-	<line x1="1180" y1="1302" x2="2344.5" y2="1302" class="messageLine0" data-et="message"
-		data-id="i22" data-from="Init" data-to="L5" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1862" y="1317" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
+	<line x1="1180" y1="1302" x2="2344.5" y2="1302" class="messageLine0" data-et="message" data-id="i22"
+		data-from="Init" data-to="L5" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1862" y="1317" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em"
 		style="font-size: 16px; font-weight: 400;">import("./Intercept/TimingProxy.js")</text>
-	<line x1="1180" y1="1346" x2="2544.5" y2="1346" class="messageLine0" data-et="message"
-		data-id="i23" data-from="Init" data-to="L8" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1523" y="1371" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch errorHandler.onUnexpectedError()</text>
-	<path d="M 1523,1400 C 1583,1390 1583,1430 1523,1420" class="messageLine0" data-et="message"
-		data-id="i25" data-from="L1" data-to="L1" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1723" y="1445" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch Emitter.prototype.fire()</text>
-	<path d="M 1723,1474 C 1783,1464 1783,1504 1723,1494" class="messageLine0" data-et="message"
-		data-id="i26" data-from="L2" data-to="L2" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1923" y="1519" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch CancellationTokenSource.prototype.cancel()</text>
-	<path d="M 1923,1548 C 1983,1538 1983,1578 1923,1568" class="messageLine0" data-et="message"
-		data-id="i27" data-from="L3" data-to="L3" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2146" y="1593" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch DisposableStore.prototype.add/dispose</text>
-	<path d="M 2145.5,1622 C 2205.5,1612 2205.5,1652 2145.5,1642" class="messageLine0"
-		data-et="message" data-id="i28" data-from="L4" data-to="L4" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2350" y="1667" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch platform.setTimeout0()</text>
-	<path d="M 2349.5,1696 C 2409.5,1686 2409.5,1726 2349.5,1716" class="messageLine0"
-		data-et="message" data-id="i29" data-from="L5" data-to="L5" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="2550" y="1741" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">patch StopWatch constructor/stop/elapsed</text>
-	<path d="M 2549.5,1770 C 2609.5,1760 2609.5,1800 2549.5,1790" class="messageLine0"
-		data-et="message" data-id="i30" data-from="L8" data-to="L8" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<line x1="1180" y1="1346" x2="2544.5" y2="1346" class="messageLine0" data-et="message" data-id="i23"
+		data-from="Init" data-to="L8" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1523" y="1371" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch
+		errorHandler.onUnexpectedError()</text>
+	<path d="M 1523,1400 C 1583,1390 1583,1430 1523,1420" class="messageLine0" data-et="message" data-id="i25"
+		data-from="L1" data-to="L1" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1723" y="1445" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch Emitter.prototype.fire()</text>
+	<path d="M 1723,1474 C 1783,1464 1783,1504 1723,1494" class="messageLine0" data-et="message" data-id="i26"
+		data-from="L2" data-to="L2" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1923" y="1519" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch
+		CancellationTokenSource.prototype.cancel()</text>
+	<path d="M 1923,1548 C 1983,1538 1983,1578 1923,1568" class="messageLine0" data-et="message" data-id="i27"
+		data-from="L3" data-to="L3" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2146" y="1593" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch
+		DisposableStore.prototype.add/dispose</text>
+	<path d="M 2145.5,1622 C 2205.5,1612 2205.5,1652 2145.5,1642" class="messageLine0" data-et="message" data-id="i28"
+		data-from="L4" data-to="L4" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2350" y="1667" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch platform.setTimeout0()</text>
+	<path d="M 2349.5,1696 C 2409.5,1686 2409.5,1726 2349.5,1716" class="messageLine0" data-et="message" data-id="i29"
+		data-from="L5" data-to="L5" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="2550" y="1741" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">patch StopWatch
+		constructor/stop/elapsed</text>
+	<path d="M 2549.5,1770 C 2609.5,1760 2609.5,1800 2549.5,1790" class="messageLine0" data-et="message" data-id="i30"
+		data-from="L8" data-to="L8" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
 </svg>

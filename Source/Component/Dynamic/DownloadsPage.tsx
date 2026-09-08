@@ -212,7 +212,9 @@ const DownloadsPage = ({ Content, ClassName }: Property) => {
 
 	return (
 		<div className={`flex min-h-screen flex-col ${ClassName || ""}`}>
-			{HeaderContent !== undefined && <Header Content={HeaderContent} />}
+			{HeaderContent !== undefined && (
+				<Header Content={HeaderContent} Mode="functional" />
+			)}
 
 			<div className="flex-1">
 				<DynamicPlatformGrid Content={PlatformGrid} />

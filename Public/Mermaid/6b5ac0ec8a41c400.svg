@@ -1,113 +1,394 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 1457.5px; background-color: white;"
-	viewBox="-50 -10 1457.5 597" role="graphics-document document" aria-roledescription="sequence">
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="max-width: 1457.5px; background-color: white;" viewBox="-50 -10 1457.5 597" role="graphics-document document"
+	aria-roledescription="sequence">
 	<g>
-		<rect x="1132" y="511" fill="#eaeaea" stroke="#666" width="172" height="65" name="Cocoon"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1218" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1132" y="511" fill="#eaeaea" stroke="#666" width="172" height="65" name="Cocoon" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1218" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1218" dy="0">Cocoon Extension Host</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="830" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mountain"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="905" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="830" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mountain" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="905" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="905" dy="0">Mountain</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="517" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Wind"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="592" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="517" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Wind" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="592" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="592" dy="0">Wind Editor</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="251" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Sky" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="326" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="251" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Sky" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="326" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="326" dy="0">Sky UI</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="0" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3"
-			ry="3" class="actor actor-bottom" />
-		<text x="75" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="0" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="75" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="75" dy="0">User</tspan>
 		</text>
 	</g>
 	<g>
-		<line id="actor4" x1="1218" y1="65" x2="1218" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Cocoon" data-et="life-line" data-id="Cocoon" />
+		<line id="actor4" x1="1218" y1="65" x2="1218" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Cocoon" data-et="life-line" data-id="Cocoon" />
 		<g id="root-4" data-et="participant" data-type="participant" data-id="Cocoon">
-			<rect x="1132" y="0" fill="#eaeaea" stroke="#666" width="172" height="65" name="Cocoon"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1218" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1132" y="0" fill="#eaeaea" stroke="#666" width="172" height="65" name="Cocoon" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1218" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1218" dy="0">Cocoon Extension Host</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor3" x1="905" y1="65" x2="905" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Mountain" data-et="life-line"
-			data-id="Mountain" />
+		<line id="actor3" x1="905" y1="65" x2="905" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Mountain" data-et="life-line" data-id="Mountain" />
 		<g id="root-3" data-et="participant" data-type="participant" data-id="Mountain">
-			<rect x="830" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mountain"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="905" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="830" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Mountain" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="905" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="905" dy="0">Mountain</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor2" x1="592" y1="65" x2="592" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Wind" data-et="life-line" data-id="Wind" />
+		<line id="actor2" x1="592" y1="65" x2="592" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Wind" data-et="life-line" data-id="Wind" />
 		<g id="root-2" data-et="participant" data-type="participant" data-id="Wind">
-			<rect x="517" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Wind"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="592" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="517" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Wind" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="592" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="592" dy="0">Wind Editor</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor1" x1="326" y1="65" x2="326" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Sky" data-et="life-line" data-id="Sky" />
+		<line id="actor1" x1="326" y1="65" x2="326" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Sky" data-et="life-line" data-id="Sky" />
 		<g id="root-1" data-et="participant" data-type="participant" data-id="Sky">
-			<rect x="251" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Sky"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="326" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="251" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Sky" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="326" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="326" dy="0">Sky UI</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor0" x1="75" y1="65" x2="75" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="User" data-et="life-line" data-id="User" />
+		<line id="actor0" x1="75" y1="65" x2="75" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="User" data-et="life-line" data-id="User" />
 		<g id="root-0" data-et="participant" data-type="participant" data-id="User">
-			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="User" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="75" dy="0">User</tspan>
 			</text>
 		</g>
 	</g>
-	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .actor{stroke:#9370DB;fill:#ECECFF;stroke-width:1;}#my-svg rect.actor.outer-path[data-look="neo"]{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg rect.note[data-look="neo"]{stroke:#aaaa33;fill:#fff5ad;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg text.actor&gt;tspan{fill:black;stroke:none;}#my-svg .actor-line{stroke:#9370DB;}#my-svg .innerArc{stroke-width:1.5;stroke-dasharray:none;}#my-svg .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#my-svg .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#my-svg [id$="-arrowhead"] path{fill:#333;stroke:#333;}#my-svg .sequenceNumber{fill:white;}#my-svg [id$="-sequencenumber"]{fill:#333;}#my-svg [id$="-crosshead"] path{fill:#333;stroke:#333;}#my-svg .messageText{fill:#333;stroke:none;}#my-svg .labelBox{stroke:#9370DB;fill:#ECECFF;filter:none;}#my-svg .labelText,#my-svg .labelText&gt;tspan{fill:black;stroke:none;}#my-svg .loopText,#my-svg .loopText&gt;tspan{fill:black;stroke:none;}#my-svg .sectionTitle,#my-svg .sectionTitle&gt;tspan{fill:black;stroke:none;}#my-svg .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#9370DB;fill:#9370DB;}#my-svg .note{stroke:#aaaa33;fill:#fff5ad;}#my-svg .noteText,#my-svg .noteText&gt;tspan{fill:black;stroke:none;font-weight:normal;}#my-svg .activation0{fill:#f4f4f4;stroke:#666;}#my-svg .activation1{fill:#f4f4f4;stroke:#666;}#my-svg .activation2{fill:#f4f4f4;stroke:#666;}#my-svg .actorPopupMenu{position:absolute;}#my-svg .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#my-svg .actor-man circle,#my-svg line{fill:#ECECFF;stroke-width:2px;}#my-svg g rect.rect{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));stroke:#9370DB;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<style>
+		#my-svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+			fill: #333;
+		}
+
+		@keyframes edge-animation-frame {
+			from {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		#my-svg .edge-animation-slow {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 50s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .edge-animation-fast {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 20s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .error-icon {
+			fill: #552222;
+		}
+
+		#my-svg .error-text {
+			fill: #552222;
+			stroke: #552222;
+		}
+
+		#my-svg .edge-thickness-normal {
+			stroke-width: 1px;
+		}
+
+		#my-svg .edge-thickness-thick {
+			stroke-width: 3.5px;
+		}
+
+		#my-svg .edge-pattern-solid {
+			stroke-dasharray: 0;
+		}
+
+		#my-svg .edge-thickness-invisible {
+			stroke-width: 0;
+			fill: none;
+		}
+
+		#my-svg .edge-pattern-dashed {
+			stroke-dasharray: 3;
+		}
+
+		#my-svg .edge-pattern-dotted {
+			stroke-dasharray: 2;
+		}
+
+		#my-svg .marker {
+			fill: #333333;
+			stroke: #333333;
+		}
+
+		#my-svg .marker.cross {
+			stroke: #333333;
+		}
+
+		#my-svg svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+		}
+
+		#my-svg p {
+			margin: 0;
+		}
+
+		#my-svg .actor {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			stroke-width: 1;
+		}
+
+		#my-svg rect.actor.outer-path[data-look="neo"] {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg rect.note[data-look="neo"] {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg text.actor&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .actor-line {
+			stroke: #9370DB;
+		}
+
+		#my-svg .innerArc {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+		}
+
+		#my-svg .messageLine0 {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+			stroke: #333;
+		}
+
+		#my-svg .messageLine1 {
+			stroke-width: 1.5;
+			stroke-dasharray: 2, 2;
+			stroke: #333;
+		}
+
+		#my-svg [id$="-arrowhead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .sequenceNumber {
+			fill: white;
+		}
+
+		#my-svg [id$="-sequencenumber"] {
+			fill: #333;
+		}
+
+		#my-svg [id$="-crosshead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .messageText {
+			fill: #333;
+			stroke: none;
+		}
+
+		#my-svg .labelBox {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			filter: none;
+		}
+
+		#my-svg .labelText,
+		#my-svg .labelText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopText,
+		#my-svg .loopText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .sectionTitle,
+		#my-svg .sectionTitle&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopLine {
+			stroke-width: 2px;
+			stroke-dasharray: 2, 2;
+			stroke: #9370DB;
+			fill: #9370DB;
+		}
+
+		#my-svg .note {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+		}
+
+		#my-svg .noteText,
+		#my-svg .noteText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+			font-weight: normal;
+		}
+
+		#my-svg .activation0 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation1 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation2 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .actorPopupMenu {
+			position: absolute;
+		}
+
+		#my-svg .actorPopupMenuPanel {
+			position: absolute;
+			fill: #ECECFF;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+		}
+
+		#my-svg .actor-man circle,
+		#my-svg line {
+			fill: #ECECFF;
+			stroke-width: 2px;
+		}
+
+		#my-svg g rect.rect {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			stroke: #9370DB;
+		}
+
+		#my-svg .node .neo-node {
+			stroke: #9370DB;
+		}
+
+		#my-svg [data-look="neo"].node rect,
+		#my-svg [data-look="neo"].cluster rect,
+		#my-svg [data-look="neo"].node polygon {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node path {
+			stroke: #9370DB;
+			stroke-width: 1px;
+		}
+
+		#my-svg [data-look="neo"].node .outer-path {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node .neo-line path {
+			stroke: #9370DB;
+			filter: none;
+		}
+
+		#my-svg [data-look="neo"].node circle {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node circle .state-start {
+			fill: #000000;
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon {
+			fill: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon-neo path {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg :root {
+			--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+		}
+	</style>
 	<g />
 	<defs>
 		<symbol id="my-svg-computer" width="24" height="24">
@@ -128,106 +409,94 @@
 		</symbol>
 	</defs>
 	<defs>
-		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M -1 0 L 10 5 L 0 10 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4"
-			refY="4.5">
+		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5">
 			<path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7"
 				style="stroke-dasharray: 0, 0;" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28"
-			orient="auto">
+		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto">
 			<path d="M 18,7 L9,13 L14,7 L9,1 Z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40"
-			orient="auto">
+		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto">
 			<circle cx="15" cy="15" r="6" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 8 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 0 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
-	<text x="199" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
-		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Hover over symbol in
+	<text x="199" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText"
+		dy="1em" style="font-size: 16px; font-weight: 400;">Hover over symbol in
 		editor</text>
-	<line x1="76" y1="109" x2="322" y2="109" class="messageLine0" data-et="message" data-id="i0"
-		data-from="User" data-to="Sky" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="458" y="124" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">IEditorService.hover(position)</text>
-	<line x1="327" y1="153" x2="588" y2="153" class="messageLine0" data-et="message" data-id="i1"
-		data-from="Sky" data-to="Wind" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="747" y="168" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Tauri invoke('hover', { uri, line, col })</text>
-	<line x1="593" y1="197" x2="901" y2="197" class="messageLine0" data-et="message" data-id="i2"
-		data-from="Wind" data-to="Mountain" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1060" y="212" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC ProvideHover({ uri, line, col })</text>
-	<line x1="906" y1="241" x2="1214" y2="241" class="messageLine0" data-et="message" data-id="i3"
-		data-from="Mountain" data-to="Cocoon" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1219" y="256" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">extHostLanguages provides HoverProvider</text>
-	<path d="M 1219,285 C 1279,275 1279,315 1219,305" class="messageLine0" data-et="message"
-		data-id="i4" data-from="Cocoon" data-to="Cocoon" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1063" y="330" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC response (markdown content)</text>
-	<line x1="1217" y1="359" x2="909" y2="359" class="messageLine1" data-et="message" data-id="i5"
-		data-from="Cocoon" data-to="Mountain" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="750" y="374" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Hover result</text>
-	<line x1="904" y1="403" x2="596" y2="403" class="messageLine1" data-et="message" data-id="i6"
-		data-from="Mountain" data-to="Wind" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="461" y="418" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Render hover widget</text>
-	<line x1="591" y1="447" x2="330" y2="447" class="messageLine1" data-et="message" data-id="i7"
-		data-from="Wind" data-to="Sky" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="202" y="462" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Hover tooltip displayed</text>
-	<line x1="325" y1="491" x2="79" y2="491" class="messageLine1" data-et="message" data-id="i8"
-		data-from="Sky" data-to="User" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
+	<line x1="76" y1="109" x2="322" y2="109" class="messageLine0" data-et="message" data-id="i0" data-from="User"
+		data-to="Sky" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="458" y="124" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">IEditorService.hover(position)</text>
+	<line x1="327" y1="153" x2="588" y2="153" class="messageLine0" data-et="message" data-id="i1" data-from="Sky"
+		data-to="Wind" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="747" y="168" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Tauri invoke('hover', { uri, line, col
+		})</text>
+	<line x1="593" y1="197" x2="901" y2="197" class="messageLine0" data-et="message" data-id="i2" data-from="Wind"
+		data-to="Mountain" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1060" y="212" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC ProvideHover({ uri, line, col
+		})</text>
+	<line x1="906" y1="241" x2="1214" y2="241" class="messageLine0" data-et="message" data-id="i3" data-from="Mountain"
+		data-to="Cocoon" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1219" y="256" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">extHostLanguages provides
+		HoverProvider</text>
+	<path d="M 1219,285 C 1279,275 1279,315 1219,305" class="messageLine0" data-et="message" data-id="i4"
+		data-from="Cocoon" data-to="Cocoon" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="fill: none;" />
+	<text x="1063" y="330" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC response (markdown content)</text>
+	<line x1="1217" y1="359" x2="909" y2="359" class="messageLine1" data-et="message" data-id="i5" data-from="Cocoon"
+		data-to="Mountain" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="750" y="374" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Hover result</text>
+	<line x1="904" y1="403" x2="596" y2="403" class="messageLine1" data-et="message" data-id="i6" data-from="Mountain"
+		data-to="Wind" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="461" y="418" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Render hover widget</text>
+	<line x1="591" y1="447" x2="330" y2="447" class="messageLine1" data-et="message" data-id="i7" data-from="Wind"
+		data-to="Sky" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="202" y="462" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Hover tooltip displayed</text>
+	<line x1="325" y1="491" x2="79" y2="491" class="messageLine1" data-et="message" data-id="i8" data-from="Sky"
+		data-to="User" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
 </svg>

@@ -1314,6 +1314,62 @@ img[src*="/Mermaid/"] {
 	padding: 1rem;
 }
 
+/* Fix mermaid SVG text colors for Nocturnal Field Record */
+.mermaid-diagram svg text,
+.mermaid-diagram svg .node text,
+.mermaid-diagram svg .edgeLabel text,
+.mermaid-diagram svg .label text,
+.mermaid-diagram svg span,
+.mermaid-diagram svg p {
+	fill: var(--CardForeground) !important;
+	color: var(--CardForeground) !important;
+}
+
+.mermaid-diagram svg .node rect,
+.mermaid-diagram svg .node circle,
+.mermaid-diagram svg .node polygon,
+.mermaid-diagram svg .node path {
+	fill: var(--Card) !important;
+	stroke: var(--CardForeground) !important;
+}
+
+.mermaid-diagram svg .edgePath path,
+.mermaid-diagram svg .flowchart-link {
+	stroke: var(--CardForeground) !important;
+}
+
+.mermaid-diagram svg .marker {
+	fill: var(--CardForeground) !important;
+	stroke: var(--CardForeground) !important;
+}
+
+img[src*="/Mermaid/"] svg text,
+img[src*="/Mermaid/"] svg .node text,
+img[src*="/Mermaid/"] svg .edgeLabel text,
+img[src*="/Mermaid/"] svg .label text,
+img[src*="/Mermaid/"] svg span,
+img[src*="/Mermaid/"] svg p {
+	fill: var(--CardForeground) !important;
+	color: var(--CardForeground) !important;
+}
+
+img[src*="/Mermaid/"] svg .node rect,
+img[src*="/Mermaid/"] svg .node circle,
+img[src*="/Mermaid/"] svg .node polygon,
+img[src*="/Mermaid/"] svg .node path {
+	fill: var(--Card) !important;
+	stroke: var(--CardForeground) !important;
+}
+
+img[src*="/Mermaid/"] svg .edgePath path,
+img[src*="/Mermaid/"] svg .flowchart-link {
+	stroke: var(--CardForeground) !important;
+}
+
+img[src*="/Mermaid/"] svg .marker {
+	fill: var(--CardForeground) !important;
+	stroke: var(--CardForeground) !important;
+}
 
 /* ── Jelly UI fallback (https://jelly-ui.com) ─────────────────────────
  <jelly-button>/<jelly-icon-button> are custom elements upgraded by an
@@ -1403,7 +1459,7 @@ jelly-icon-button:not(:defined)[disabled] {
 
 .text-field-l {
 	font-size: var(--TypeScaleL);
-	line-height: 1.0;
+	line-height: 1;
 	letter-spacing: -0.02em;
 }
 
@@ -1411,4 +1467,59 @@ jelly-icon-button:not(:defined)[disabled] {
 	font-size: var(--TypeScaleXL);
 	line-height: 0.95;
 	letter-spacing: -0.02em;
+}
+
+/* ── State vocabulary: focus-visible ─────────────────────────── */
+:focus-visible {
+	outline: 2px solid var(--Accent);
+	outline-offset: 4px;
+}
+
+.FieldRecordAction:focus-visible {
+	background: var(--CardForeground);
+	color: var(--Card);
+	outline-color: var(--Accent);
+}
+
+/* ── FieldRecord component styles ───────────────────────────── */
+.FieldRecordDataCard {
+	border-radius: 0;
+}
+
+.FieldRecordEvidence img {
+	border-radius: 0;
+}
+
+.FieldRecordIndex {
+	font-family: var(--FontSans);
+	font-size: var(--TypeScaleXS, 0.75rem);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.FieldRecordMetadata {
+	font-family: var(--FontSans);
+	font-size: var(--TypeScaleXS, 0.75rem);
+	letter-spacing: 0.04em;
+}
+
+.FieldRecordStatus {
+	font-family: var(--FontSans);
+	font-size: var(--TypeScaleXS, 0.75rem);
+	letter-spacing: 0.04em;
+}
+
+.FieldRecordAction {
+	font-family: var(--FontSans);
+	font-size: var(--TypeScaleS, 0.875rem);
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
+
+/* ── Reduced motion support ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+	.FieldRecord * {
+		animation: none !important;
+		transition: none !important;
+	}
 }
