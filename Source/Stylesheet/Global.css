@@ -24,7 +24,22 @@ jelly-badge {
 	--jelly-badge-radius: 0 !important;
 }
 
-/* Jelly UI: flat corners everywhere per Nocturnal Field Record */
+/* Fallback: render jelly-badge as a visible pill before hydration completes.
+   Without this, the custom element renders as bare inherited text (light
+   gray on the dark canvas) until the shadow-DOM styles upgrade it. */
+jelly-badge:not(:defined) {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid transparent;
+	padding: 0.125rem 0.625rem;
+	font-size: 0.875rem;
+	line-height: 1rem;
+	font-weight: 600;
+	background: var(--Secondary);
+	color: var(--SecondaryForeground);
+}
+
+/* Jelly UI radius custom properties (shared by all components) */
 --jelly-radius: 0;
 --jelly-accordion-radius: 0;
 --jelly-alert-radius: 0;
