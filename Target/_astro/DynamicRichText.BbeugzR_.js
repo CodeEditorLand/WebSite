@@ -1,1 +1,0 @@
-import{un as r}from"./Vendor/React.DPJYEGPx.js";import{t}from"./RichText.BegnWuTv.js";var a=r(),o=r=>(0,a.jsx)(t,{...r});export{o as DynamicRichText,o as default};
