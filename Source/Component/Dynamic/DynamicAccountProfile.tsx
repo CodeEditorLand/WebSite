@@ -673,7 +673,7 @@ const AccountProfileInner = ({
 							defaultValue: "Profile Fields",
 						})}
 					</h3>
-					<span className="text-sm text-muted-foreground">
+					<span className="text-sm text-card-foreground">
 						All data stored in Auth0
 					</span>
 				</div>

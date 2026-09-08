@@ -375,7 +375,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 												).map((Tag, TagIndex) => (
 													<span
 														key={TagIndex}
-														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground"
+														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-foreground"
 													>
 														{Tag}
 													</span>
@@ -384,7 +384,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 										)}
 
 										{/* Lead - first line of the quote only */}
-										<p className="text-sm leading-relaxed text-muted-foreground">
+										<p className="text-sm leading-relaxed text-card-foreground">
 											{Testimonial.Quote.split("\n")[0]}
 										</p>
 									</div>
@@ -486,7 +486,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 												(Tag, TagIndex) => (
 													<span
 														key={TagIndex}
-														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-muted-foreground"
+														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-foreground"
 													>
 														{Tag}
 													</span>
@@ -494,7 +494,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											)}
 										</div>
 									)}
-									<p className="text-sm leading-relaxed text-muted-foreground">
+									<p className="text-sm leading-relaxed text-card-foreground">
 										{Testimonial.Quote.split("\n")[0]}
 									</p>
 								</div>

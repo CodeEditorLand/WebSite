@@ -217,7 +217,7 @@ const DynamicSignIn = ({
 									>
 										{FooterLinks.SignUp.Label}
 									</button>
-									<p className="mt-1 text-muted-foreground">
+									<p className="mt-1 text-card-foreground">
 										Don't have an account?
 									</p>
 								</div>
@@ -236,7 +236,7 @@ const DynamicSignIn = ({
 									>
 										{FooterLinks.ForgotPassword.Label}
 									</button>
-									<p className="mt-1 text-muted-foreground">
+									<p className="mt-1 text-card-foreground">
 										Forgot your password?
 									</p>
 								</div>

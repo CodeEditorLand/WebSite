@@ -74,13 +74,13 @@ export default () => {
 										{Right.Code}
 									</span>
 									{Right.Article && (
-										<span className="font-mono text-[9px] text-muted-foreground">
+										<span className="font-mono text-[9px] text-card-foreground">
 											{Right.Article}
 										</span>
 									)}
 								</div>
 							</div>
-							<p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+							<p className="mb-4 flex-1 text-sm leading-relaxed text-card-foreground">
 								{Right.Subtitle}
 							</p>
 							<span className="mt-auto inline-flex items-center text-sm font-medium text-primary">
@@ -113,14 +113,14 @@ export default () => {
 						>
 							<div className="mb-2 flex items-center justify-between gap-2">
 								<h4 className="font-medium">{Channel.Title}</h4>
-								<span className="shrink-0 font-mono text-sm font-bold tracking-widest text-muted-foreground">
+								<span className="shrink-0 font-mono text-sm font-bold tracking-widest text-card-foreground">
 									{Channel.Code}
 								</span>
 							</div>
-							<p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+							<p className="mb-4 flex-1 text-sm leading-relaxed text-card-foreground">
 								{Channel.Subtitle}
 							</p>
-							<span className="mt-auto font-mono text-sm text-muted-foreground">
+							<span className="mt-auto font-mono text-sm text-card-foreground">
 								{Channel.To}
 							</span>
 						</a>
@@ -171,7 +171,7 @@ export default () => {
 									ERASE
 								</span>
 							</div>
-							<p className="text-sm text-muted-foreground">
+							<p className="text-sm text-card-foreground">
 								Opens a structured erasure request form. The
 								generated email includes income code [ERASE] and
 								covers Auth0, PostHog, Cloudflare, and all

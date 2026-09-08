@@ -95,7 +95,7 @@ const Posts = BlogEntries.map((Entry) => ({
 				Posts.length === 0 ? (
 					<div class="StaccatoCard bg-card p-12 text-center">
 						<h2 class="mb-3 text-xl font-semibold">{EmptyTitle}</h2>
-						<p class="whitespace-pre-line text-muted-foreground">
+						<p class="whitespace-pre-line text-card-foreground">
 							{EmptySubtitle}
 						</p>
 					</div>
@@ -110,7 +110,7 @@ const Posts = BlogEntries.map((Entry) => ({
 									{Post.Tags.length > 0 && (
 										<div class="mb-3 flex flex-wrap gap-2">
 											{Post.Tags.map((Tag) => (
-												<span class="px-2 py-0.5 font-medium text-muted-foreground">
+												<span class="px-2 py-0.5 font-medium text-card-foreground">
 													{Tag}
 												</span>
 											))}
@@ -119,10 +119,10 @@ const Posts = BlogEntries.map((Entry) => ({
 									<h3 class="mb-2 text-xl font-semibold">
 										{Post.Title}
 									</h3>
-									<p class="mb-4 whitespace-pre-line text-muted-foreground">
+									<p class="mb-4 whitespace-pre-line text-card-foreground">
 										{Post.Summary}
 									</p>
-									<div class="flex items-center justify-between text-muted-foreground">
+									<div class="flex items-center justify-between text-card-foreground">
 										<span>{Post.Author}</span>
 										<span>{Post.ReadTime} min read</span>
 									</div>

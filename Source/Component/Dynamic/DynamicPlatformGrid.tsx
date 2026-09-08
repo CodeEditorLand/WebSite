@@ -384,7 +384,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 									<div className="space-y-2 font-mono text-sm text-muted-foreground">
 										<div className="flex justify-between">
 											<span>{VersionLabel}</span>
-											<span className="font-medium text-foreground">
+											<span className="font-medium text-card-foreground">
 												{FormatVersion(
 													Platform.Version,
 												)}
@@ -392,7 +392,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 										</div>
 										<div className="flex justify-between">
 											<span>{SizeLabel}</span>
-											<span className="font-medium text-foreground">
+											<span className="font-medium text-card-foreground">
 												{FormatFileSize(Platform.Size)}
 											</span>
 										</div>
@@ -400,7 +400,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 											Platform.Requirements.length >
 												0 && (
 												<div className="mt-2 border-t border-border pt-2">
-													<p className="mb-1 font-medium text-foreground">
+													<p className="mb-1 font-medium text-card-foreground">
 														{RequirementsLabel}
 													</p>
 													<ul className="list-inside list-disc space-y-1">

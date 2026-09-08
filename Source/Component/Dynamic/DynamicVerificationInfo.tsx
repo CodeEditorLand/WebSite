@@ -127,7 +127,7 @@ const DynamicVerificationInfo = ({
 						</button>
 					</div>
 					{Information.SigningKeyId && (
-						<p className="text-muted-foreground">
+						<p className="text-card-foreground">
 							{T("labels.signedWithKeyId", {
 								defaultValue: "Signed with key ID: {{keyId}}",
 								keyId: Information.SigningKeyId,

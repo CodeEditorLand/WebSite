@@ -352,7 +352,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 									}
 								/>
 								{Field.hint && (
-									<p className="mt-0.5 text-sm text-muted-foreground">
+									<p className="mt-0.5 text-sm text-card-foreground">
 										{Field.hint}
 									</p>
 								)}
@@ -393,7 +393,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 								}
 							/>
 							{Field.hint && (
-								<p className="mt-0.5 text-sm text-muted-foreground">
+								<p className="mt-0.5 text-sm text-card-foreground">
 									{Field.hint}
 								</p>
 							)}

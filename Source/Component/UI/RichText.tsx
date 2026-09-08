@@ -134,12 +134,12 @@ const CategoryStyle: Record<TermCategory, string> = {
 };
 
 const CategoryFill: Record<TermCategory, string> = {
-	Architecture: "var(--SpineIPCMute)",
-	Telemetry: "var(--ExtensionTauriMute)",
-	Protocol: "var(--SpineWASMMute)",
-	Feature: "var(--SpineTCPMute)",
-	License: "var(--SpinegRPCMute)",
-	Tool: "var(--ExtensionReactMute)",
+	Architecture: "color-mix(in srgb, #3b82f6 12%, #ffffff)",
+	Telemetry: "color-mix(in srgb, #fbbf24 12%, #ffffff)",
+	Protocol: "color-mix(in srgb, #a855f7 12%, #ffffff)",
+	Feature: "color-mix(in srgb, #f97316 12%, #ffffff)",
+	License: "color-mix(in srgb, #22c55e 12%, #ffffff)",
+	Tool: "color-mix(in srgb, #60a5fa 12%, #ffffff)",
 };
 const CategoryLabel: Record<TermCategory, string> = {
 	Architecture: "Architecture element",
@@ -327,7 +327,6 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 			const Fill = CategoryFill[Segment.Category];
 			return (
 				<jelly-badge
-					variant="platinum"
 					shape="square"
 					className={Style}
 					title={`${CategoryLabel[Segment.Category]}: ${Segment.Value}`}

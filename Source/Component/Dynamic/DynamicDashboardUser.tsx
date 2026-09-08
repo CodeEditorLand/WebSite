@@ -178,7 +178,7 @@ const DashboardUserInner = () => {
 							"Could not load your account. Please refresh.",
 					})}
 				</p>
-				<p className="text-muted-foreground">{AuthError.message}</p>
+				<p className="text-card-foreground">{AuthError.message}</p>
 				<Button
 					variant="outline"
 					size="sm"
@@ -193,7 +193,7 @@ const DashboardUserInner = () => {
 	if (!IsAuthenticated || !User) {
 		return (
 			<div className="space-y-3">
-				<p className="text-muted-foreground">
+				<p className="text-card-foreground">
 					{T("dashboard.account.notSignedIn", {
 						defaultValue: "Sign in to see your account details.",
 					})}
@@ -246,7 +246,7 @@ const DashboardUserInner = () => {
 					aria-label={
 						PIIVisible ? "Hide personal data" : "Show personal data"
 					}
-					className="text-muted-foreground transition-colors hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+					className="text-card-foreground transition-colors hover:text-card-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 				>
 					{PIIVisible ? (
 						<EyeOff className="h-4 w-4" aria-hidden="true" />
@@ -281,7 +281,7 @@ const DashboardUserInner = () => {
 					/>
 				) : null}
 				<div
-					className={`${User.picture ? "hidden" : "flex"} flat bg-mute h-12 w-12 items-center justify-center text-lg font-bold text-muted-foreground`}
+					className={`${User.picture ? "hidden" : "flex"} flat bg-mute h-12 w-12 items-center justify-center text-lg font-bold text-card-foreground`}
 					aria-hidden="true"
 				>
 					<Pii visible={PIIVisible}>
@@ -292,7 +292,7 @@ const DashboardUserInner = () => {
 
 			{/* Display Name */}
 			<div className="flex justify-between">
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					{T("dashboard.account.nameLabel", { defaultValue: "Name" })}
 				</span>
 				<span className="font-medium">
@@ -302,13 +302,13 @@ const DashboardUserInner = () => {
 
 			{/* Email + Verified Badge */}
 			<div className="flex justify-between">
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					{T("dashboard.account.emailLabel", {
 						defaultValue: "Email",
 					})}
 				</span>
 				<span className="flex items-center gap-1.5">
-					<span className="text-muted-foreground">
+					<span className="text-card-foreground">
 						<Pii visible={PIIVisible}>{User.email || "--"}</Pii>
 					</span>
 					{User.email_verified === true && (
@@ -332,7 +332,7 @@ const DashboardUserInner = () => {
 
 			{/* Plan */}
 			<div className="flex justify-between">
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					{T("dashboard.account.planLabel", { defaultValue: "Plan" })}
 				</span>
 				<span className="font-medium">
@@ -348,12 +348,12 @@ const DashboardUserInner = () => {
 
 			{/* Auth Provider */}
 			<div className="flex justify-between">
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					{T("dashboard.account.providerLabel", {
 						defaultValue: "Provider",
 					})}
 				</span>
-				<span className="flex items-center gap-1.5 text-muted-foreground">
+				<span className="flex items-center gap-1.5 text-card-foreground">
 					{ProviderIcon && (
 						<ThemeImage
 							src={ProviderIcon}
@@ -370,7 +370,7 @@ const DashboardUserInner = () => {
 			{/* Organization (Enterprise only) */}
 			{IsEnterprise && (OrganizationName || OrganizationIdentifier) && (
 				<div className="flex justify-between">
-					<span className="text-muted-foreground">
+					<span className="text-card-foreground">
 						{T("dashboard.account.organizationLabel", {
 							defaultValue: "Organization",
 						})}
@@ -385,12 +385,12 @@ const DashboardUserInner = () => {
 
 			{/* Member Since */}
 			<div className="flex justify-between">
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					{T("dashboard.account.memberSinceLabel", {
 						defaultValue: "Member Since",
 					})}
 				</span>
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground">
 					<Pii visible={PIIVisible}>{MemberSince}</Pii>
 				</span>
 			</div>

@@ -1,114 +1,394 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 1592px; background-color: white;"
-	viewBox="-50 -10 1592 597" role="graphics-document document" aria-roledescription="sequence">
+<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="max-width: 1592px; background-color: white;" viewBox="-50 -10 1592 597" role="graphics-document document"
+	aria-roledescription="sequence">
 	<g>
-		<rect x="1342" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Trait"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1417" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="1342" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Trait" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1417" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1417" dy="0">Common trait impl</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="940.5" y="511" fill="#eaeaea" stroke="#666" width="181" height="65" name="Mountain"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="1031" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="940.5" y="511" fill="#eaeaea" stroke="#666" width="181" height="65" name="Mountain" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="1031" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="1031" dy="0">Mountain ActionHandler</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="679" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Spine"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="754" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="679" y="511" fill="#eaeaea" stroke="#666" width="150" height="65" name="Spine" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="754" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="754" dy="0">Spine protocol</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="363.5" y="511" fill="#eaeaea" stroke="#666" width="153" height="65" name="Shim"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="440" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="363.5" y="511" fill="#eaeaea" stroke="#666" width="153" height="65" name="Shim" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="440" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="440" dy="0">Cocoon vscode shim</tspan>
 		</text>
 	</g>
 	<g>
-		<rect x="0" y="511" fill="#eaeaea" stroke="#666" width="188" height="65" name="Extension"
-			rx="3" ry="3" class="actor actor-bottom" />
-		<text x="94" y="543.5" dominant-baseline="central" alignment-baseline="central"
-			class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400;">
+		<rect x="0" y="511" fill="#eaeaea" stroke="#666" width="188" height="65" name="Extension" rx="3" ry="3"
+			class="actor actor-bottom" />
+		<text x="94" y="543.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
+			style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 			<tspan x="94" dy="0">Extension code in Cocoon</tspan>
 		</text>
 	</g>
 	<g>
-		<line id="actor4" x1="1417" y1="65" x2="1417" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Trait" data-et="life-line" data-id="Trait" />
+		<line id="actor4" x1="1417" y1="65" x2="1417" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Trait" data-et="life-line" data-id="Trait" />
 		<g id="root-4" data-et="participant" data-type="participant" data-id="Trait">
-			<rect x="1342" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Trait"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="1417" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="1342" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Trait" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1417" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1417" dy="0">Common trait impl</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor3" x1="1031" y1="65" x2="1031" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Mountain" data-et="life-line"
-			data-id="Mountain" />
+		<line id="actor3" x1="1031" y1="65" x2="1031" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Mountain" data-et="life-line" data-id="Mountain" />
 		<g id="root-3" data-et="participant" data-type="participant" data-id="Mountain">
-			<rect x="940.5" y="0" fill="#eaeaea" stroke="#666" width="181" height="65"
-				name="Mountain" rx="3" ry="3" class="actor actor-top" />
-			<text x="1031" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="940.5" y="0" fill="#eaeaea" stroke="#666" width="181" height="65" name="Mountain" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="1031" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="1031" dy="0">Mountain ActionHandler</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor2" x1="754" y1="65" x2="754" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Spine" data-et="life-line" data-id="Spine" />
+		<line id="actor2" x1="754" y1="65" x2="754" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Spine" data-et="life-line" data-id="Spine" />
 		<g id="root-2" data-et="participant" data-type="participant" data-id="Spine">
-			<rect x="679" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Spine"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="754" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="679" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" name="Spine" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="754" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="754" dy="0">Spine protocol</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor1" x1="440" y1="65" x2="440" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Shim" data-et="life-line" data-id="Shim" />
+		<line id="actor1" x1="440" y1="65" x2="440" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Shim" data-et="life-line" data-id="Shim" />
 		<g id="root-1" data-et="participant" data-type="participant" data-id="Shim">
-			<rect x="363.5" y="0" fill="#eaeaea" stroke="#666" width="153" height="65" name="Shim"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="440" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="363.5" y="0" fill="#eaeaea" stroke="#666" width="153" height="65" name="Shim" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="440" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="440" dy="0">Cocoon vscode shim</tspan>
 			</text>
 		</g>
 	</g>
 	<g>
-		<line id="actor0" x1="94" y1="65" x2="94" y2="511" class="actor-line 200"
-			stroke-width="0.5px" stroke="#999" name="Extension" data-et="life-line"
-			data-id="Extension" />
+		<line id="actor0" x1="94" y1="65" x2="94" y2="511" class="actor-line 200" stroke-width="0.5px" stroke="#999"
+			name="Extension" data-et="life-line" data-id="Extension" />
 		<g id="root-0" data-et="participant" data-type="participant" data-id="Extension">
-			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="188" height="65" name="Extension"
-				rx="3" ry="3" class="actor actor-top" />
-			<text x="94" y="32.5" dominant-baseline="central" alignment-baseline="central"
-				class="actor actor-box"
+			<rect x="0" y="0" fill="#eaeaea" stroke="#666" width="188" height="65" name="Extension" rx="3" ry="3"
+				class="actor actor-top" />
+			<text x="94" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box"
 				style="text-anchor: middle; font-size: 16px; font-weight: 400;">
 				<tspan x="94" dy="0">Extension code in Cocoon</tspan>
 			</text>
 		</g>
 	</g>
-	<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .actor{stroke:#9370DB;fill:#ECECFF;stroke-width:1;}#my-svg rect.actor.outer-path[data-look="neo"]{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg rect.note[data-look="neo"]{stroke:#aaaa33;fill:#fff5ad;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg text.actor&gt;tspan{fill:black;stroke:none;}#my-svg .actor-line{stroke:#9370DB;}#my-svg .innerArc{stroke-width:1.5;stroke-dasharray:none;}#my-svg .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#my-svg .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#my-svg [id$="-arrowhead"] path{fill:#333;stroke:#333;}#my-svg .sequenceNumber{fill:white;}#my-svg [id$="-sequencenumber"]{fill:#333;}#my-svg [id$="-crosshead"] path{fill:#333;stroke:#333;}#my-svg .messageText{fill:#333;stroke:none;}#my-svg .labelBox{stroke:#9370DB;fill:#ECECFF;filter:none;}#my-svg .labelText,#my-svg .labelText&gt;tspan{fill:black;stroke:none;}#my-svg .loopText,#my-svg .loopText&gt;tspan{fill:black;stroke:none;}#my-svg .sectionTitle,#my-svg .sectionTitle&gt;tspan{fill:black;stroke:none;}#my-svg .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#9370DB;fill:#9370DB;}#my-svg .note{stroke:#aaaa33;fill:#fff5ad;}#my-svg .noteText,#my-svg .noteText&gt;tspan{fill:black;stroke:none;font-weight:normal;}#my-svg .activation0{fill:#f4f4f4;stroke:#666;}#my-svg .activation1{fill:#f4f4f4;stroke:#666;}#my-svg .activation2{fill:#f4f4f4;stroke:#666;}#my-svg .actorPopupMenu{position:absolute;}#my-svg .actorPopupMenuPanel{position:absolute;fill:#ECECFF;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#my-svg .actor-man circle,#my-svg line{fill:#ECECFF;stroke-width:2px;}#my-svg g rect.rect{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));stroke:#9370DB;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+	<style>
+		#my-svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+			fill: #333;
+		}
+
+		@keyframes edge-animation-frame {
+			from {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		#my-svg .edge-animation-slow {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 50s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .edge-animation-fast {
+			stroke-dasharray: 9, 5 !important;
+			stroke-dashoffset: 900;
+			animation: dash 20s linear infinite;
+			stroke-linecap: round;
+		}
+
+		#my-svg .error-icon {
+			fill: #552222;
+		}
+
+		#my-svg .error-text {
+			fill: #552222;
+			stroke: #552222;
+		}
+
+		#my-svg .edge-thickness-normal {
+			stroke-width: 1px;
+		}
+
+		#my-svg .edge-thickness-thick {
+			stroke-width: 3.5px;
+		}
+
+		#my-svg .edge-pattern-solid {
+			stroke-dasharray: 0;
+		}
+
+		#my-svg .edge-thickness-invisible {
+			stroke-width: 0;
+			fill: none;
+		}
+
+		#my-svg .edge-pattern-dashed {
+			stroke-dasharray: 3;
+		}
+
+		#my-svg .edge-pattern-dotted {
+			stroke-dasharray: 2;
+		}
+
+		#my-svg .marker {
+			fill: #333333;
+			stroke: #333333;
+		}
+
+		#my-svg .marker.cross {
+			stroke: #333333;
+		}
+
+		#my-svg svg {
+			font-family: "trebuchet ms", verdana, arial, sans-serif;
+			font-size: 16px;
+		}
+
+		#my-svg p {
+			margin: 0;
+		}
+
+		#my-svg .actor {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			stroke-width: 1;
+		}
+
+		#my-svg rect.actor.outer-path[data-look="neo"] {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg rect.note[data-look="neo"] {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg text.actor&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .actor-line {
+			stroke: #9370DB;
+		}
+
+		#my-svg .innerArc {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+		}
+
+		#my-svg .messageLine0 {
+			stroke-width: 1.5;
+			stroke-dasharray: none;
+			stroke: #333;
+		}
+
+		#my-svg .messageLine1 {
+			stroke-width: 1.5;
+			stroke-dasharray: 2, 2;
+			stroke: #333;
+		}
+
+		#my-svg [id$="-arrowhead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .sequenceNumber {
+			fill: white;
+		}
+
+		#my-svg [id$="-sequencenumber"] {
+			fill: #333;
+		}
+
+		#my-svg [id$="-crosshead"] path {
+			fill: #333;
+			stroke: #333;
+		}
+
+		#my-svg .messageText {
+			fill: #333;
+			stroke: none;
+		}
+
+		#my-svg .labelBox {
+			stroke: #9370DB;
+			fill: #ECECFF;
+			filter: none;
+		}
+
+		#my-svg .labelText,
+		#my-svg .labelText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopText,
+		#my-svg .loopText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .sectionTitle,
+		#my-svg .sectionTitle&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+		}
+
+		#my-svg .loopLine {
+			stroke-width: 2px;
+			stroke-dasharray: 2, 2;
+			stroke: #9370DB;
+			fill: #9370DB;
+		}
+
+		#my-svg .note {
+			stroke: #aaaa33;
+			fill: #fff5ad;
+		}
+
+		#my-svg .noteText,
+		#my-svg .noteText&gt;
+
+		tspan {
+			fill: black;
+			stroke: none;
+			font-weight: normal;
+		}
+
+		#my-svg .activation0 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation1 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .activation2 {
+			fill: #f4f4f4;
+			stroke: #666;
+		}
+
+		#my-svg .actorPopupMenu {
+			position: absolute;
+		}
+
+		#my-svg .actorPopupMenuPanel {
+			position: absolute;
+			fill: #ECECFF;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+		}
+
+		#my-svg .actor-man circle,
+		#my-svg line {
+			fill: #ECECFF;
+			stroke-width: 2px;
+		}
+
+		#my-svg g rect.rect {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			stroke: #9370DB;
+		}
+
+		#my-svg .node .neo-node {
+			stroke: #9370DB;
+		}
+
+		#my-svg [data-look="neo"].node rect,
+		#my-svg [data-look="neo"].cluster rect,
+		#my-svg [data-look="neo"].node polygon {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node path {
+			stroke: #9370DB;
+			stroke-width: 1px;
+		}
+
+		#my-svg [data-look="neo"].node .outer-path {
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node .neo-line path {
+			stroke: #9370DB;
+			filter: none;
+		}
+
+		#my-svg [data-look="neo"].node circle {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].node circle .state-start {
+			fill: #000000;
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon {
+			fill: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg [data-look="neo"].icon-shape .icon-neo path {
+			stroke: #9370DB;
+			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+		}
+
+		#my-svg :root {
+			--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+		}
+	</style>
 	<g />
 	<defs>
 		<symbol id="my-svg-computer" width="24" height="24">
@@ -129,106 +409,91 @@
 		</symbol>
 	</defs>
 	<defs>
-		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M -1 0 L 10 5 L 0 10 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4"
-			refY="4.5">
+		<marker id="my-svg-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5">
 			<path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7"
 				style="stroke-dasharray: 0, 0;" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28"
-			orient="auto">
+		<marker id="my-svg-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto">
 			<path d="M 18,7 L9,13 L14,7 L9,1 Z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40"
-			orient="auto">
+		<marker id="my-svg-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto">
 			<circle cx="15" cy="15" r="6" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 8 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 10 0 L 0 8 z" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
 	<defs>
-		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse"
-			markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+		<marker id="my-svg-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12"
+			markerHeight="12" orient="auto-start-reverse">
 			<path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none" />
 		</marker>
 	</defs>
-	<text x="266" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
-		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Call vscode API
+	<text x="266" y="80" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText"
+		dy="1em" style="font-size: 16px; font-weight: 400;">Call vscode API
 		(e.g., openTextDocument)</text>
-	<line x1="95" y1="109" x2="436" y2="109" class="messageLine0" data-et="message" data-id="i0"
-		data-from="Extension" data-to="Shim" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="441" y="124" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Create ActionEffect</text>
-	<path d="M 441,153 C 501,143 501,183 441,173" class="messageLine0" data-et="message"
-		data-id="i1" data-from="Shim" data-to="Shim" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="596" y="198" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC PerformAction(ActionRequest)</text>
-	<line x1="441" y1="227" x2="750" y2="227" class="messageLine0" data-et="message" data-id="i2"
-		data-from="Shim" data-to="Spine" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="891" y="242" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Route to ActionHandler</text>
-	<line x1="755" y1="271" x2="1027" y2="271" class="messageLine0" data-et="message" data-id="i3"
-		data-from="Spine" data-to="Mountain" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1223" y="286" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Execute action via Common trait implementation</text>
-	<line x1="1032" y1="315" x2="1413" y2="315" class="messageLine0" data-et="message" data-id="i4"
-		data-from="Mountain" data-to="Trait" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
-	<text x="1226" y="330" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Action result</text>
-	<line x1="1416" y1="359" x2="1035" y2="359" class="messageLine1" data-et="message" data-id="i5"
-		data-from="Trait" data-to="Mountain" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="894" y="374" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">ActionResponse { result, error }</text>
-	<line x1="1030" y1="403" x2="758" y2="403" class="messageLine1" data-et="message" data-id="i6"
-		data-from="Mountain" data-to="Spine" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="599" y="418" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">gRPC response</text>
-	<line x1="753" y1="447" x2="444" y2="447" class="messageLine1" data-et="message" data-id="i7"
-		data-from="Spine" data-to="Shim" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
-	<text x="269" y="462" text-anchor="middle" dominant-baseline="middle"
-		alignment-baseline="middle" class="messageText" dy="1em"
-		style="font-size: 16px; font-weight: 400;">Return result to extension</text>
-	<line x1="439" y1="491" x2="98" y2="491" class="messageLine1" data-et="message" data-id="i8"
-		data-from="Shim" data-to="Extension" stroke-width="2" stroke="none"
-		marker-end="url(#my-svg-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;" />
+	<line x1="95" y1="109" x2="436" y2="109" class="messageLine0" data-et="message" data-id="i0" data-from="Extension"
+		data-to="Shim" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="441" y="124" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Create ActionEffect</text>
+	<path d="M 441,153 C 501,143 501,183 441,173" class="messageLine0" data-et="message" data-id="i1" data-from="Shim"
+		data-to="Shim" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="596" y="198" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC PerformAction(ActionRequest)</text>
+	<line x1="441" y1="227" x2="750" y2="227" class="messageLine0" data-et="message" data-id="i2" data-from="Shim"
+		data-to="Spine" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="891" y="242" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Route to ActionHandler</text>
+	<line x1="755" y1="271" x2="1027" y2="271" class="messageLine0" data-et="message" data-id="i3" data-from="Spine"
+		data-to="Mountain" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1223" y="286" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Execute action via Common trait
+		implementation</text>
+	<line x1="1032" y1="315" x2="1413" y2="315" class="messageLine0" data-et="message" data-id="i4" data-from="Mountain"
+		data-to="Trait" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)" style="fill: none;" />
+	<text x="1226" y="330" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Action result</text>
+	<line x1="1416" y1="359" x2="1035" y2="359" class="messageLine1" data-et="message" data-id="i5" data-from="Trait"
+		data-to="Mountain" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="894" y="374" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">ActionResponse { result, error }</text>
+	<line x1="1030" y1="403" x2="758" y2="403" class="messageLine1" data-et="message" data-id="i6" data-from="Mountain"
+		data-to="Spine" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="599" y="418" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">gRPC response</text>
+	<line x1="753" y1="447" x2="444" y2="447" class="messageLine1" data-et="message" data-id="i7" data-from="Spine"
+		data-to="Shim" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
+	<text x="269" y="462" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle"
+		class="messageText" dy="1em" style="font-size: 16px; font-weight: 400;">Return result to extension</text>
+	<line x1="439" y1="491" x2="98" y2="491" class="messageLine1" data-et="message" data-id="i8" data-from="Shim"
+		data-to="Extension" stroke-width="2" stroke="none" marker-end="url(#my-svg-arrowhead)"
+		style="stroke-dasharray: 3, 3; fill: none;" />
 </svg>
