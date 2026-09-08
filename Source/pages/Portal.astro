@@ -1,10 +1,24 @@
 ---
-import { DynamicPortal } from "../Component/Dynamic/DynamicPortal";
 import { Header } from "../Component/Layout/Header";
 import Base from "../Layout/Base.astro";
 import { GetI18n } from "../Library/I18n/Server";
+import { FieldRecordDataCard } from "../Component/Brand/FieldRecordDataCard";
+import { FieldRecordIndex } from "../Component/Brand/FieldRecordIndex";
+import { FieldRecordStatus } from "../Component/Brand/FieldRecordStatus";
+import { FieldRecordAction } from "../Component/Brand/FieldRecordAction";
+import { FieldRecordEvidence } from "../Component/Brand/FieldRecordEvidence";
+import { FieldRecordMetadata } from "../Component/Brand/FieldRecordMetadata";
+import { FieldRecordSeal } from "../Component/Brand/FieldRecordSeal";
 
 const T = GetI18n();
+
+const MetaTitle = T("meta.portal.title", {
+	defaultValue: "Editor Portal | Code Editor Land",
+});
+const MetaDescription = T("meta.portal.description", {
+	defaultValue:
+		"CodeEditorLand account sign-in and planned portal modes for cloud, provider, local-first, and enterprise workflows.",
+});
 
 const PortalContent = {
 	Title: T("account.portal.title", {
@@ -143,8 +157,7 @@ const PortalContent = {
 			{
 				Heading: "CI/CD",
 				Description: T("account.portal.provider.feature.ci", {
-					defaultValue:
-						"CI/CD integration belongs to later portal work",
+					defaultValue: "CI/CD integration belongs to later portal work",
 				}),
 				Icon: ["CirclePlay", "Rocket", "GitBranch"],
 			},
@@ -193,8 +206,7 @@ const PortalContent = {
 			{
 				Heading: "Air Daemon",
 				Description: T("account.portal.localfirst.feature.daemon", {
-					defaultValue:
-						"Browser-to-daemon loopback control is planned",
+					defaultValue: "Browser-to-daemon loopback control is planned",
 				}),
 				Icon: ["Wifi", "Server", "Lock"],
 			},
@@ -378,13 +390,19 @@ const PortalContent = {
 	},
 };
 
-const MetaTitle = T("meta.portal.title", {
-	defaultValue: "Editor Portal | Code Editor Land",
-});
-const MetaDescription = T("meta.portal.description", {
-	defaultValue:
-		"CodeEditorLand account sign-in and planned portal modes for cloud, provider, local-first, and enterprise workflows.",
-});
+const TierSealMap: Record<string, "Mountain" | "Cocoon" | "Wind" | "Sky"> = {
+	Cloud: "Mountain",
+	Provider: "Cocoon",
+	LocalFirst: "Wind",
+	Enterprise: "Sky",
+};
+
+const TierIndexMap: Record<string, string> = {
+	Cloud: "CLOUD_01",
+	Provider: "PROVIDER_02",
+	LocalFirst: "LOCALFIRST_03",
+	Enterprise: "ENTERPRISE_04",
+};
 ---
 
 <Base Title={MetaTitle} Description={MetaDescription}>
@@ -394,106 +412,304 @@ const MetaDescription = T("meta.portal.description", {
 	 Auth0AccountGate (which auto-calls loginWithRedirect() on mount). -->
 	<Header client:load />
 
-	<main id="main-content">
-		<!-- Breadcrumb -->
-		<nav
-			aria-label="Breadcrumb"
-			class="container mx-auto px-4 pt-6 text-muted-foreground"
+	<main id="main-content" class="bg-background">
+		<!-- ── HERO SECTION: Field Record Pattern ── -->
+		<section
+			id="portal-hero"
+			aria-label="Portal Hero"
+			class="relative w-full overflow-hidden"
 		>
-			<ol class="flex flex-wrap items-center space-x-2">
-				<li>
-					<a href="/" class="transition-colors hover:text-foreground">
-						{T("common.breadcrumb.home", { defaultValue: "Home" })}
-					</a>
-				</li>
-				<li class="mx-2">/</li>
-				<li>
-					<span class="font-medium text-foreground">
-						{
-							T("meta.portal.breadcrumb", {
-								defaultValue: "Portal",
-							})
-						}
-					</span>
-				</li>
-			</ol>
-		</nav>
+			<!-- Nocturnal Field Record: faint grid on black canvas -->
+			<div
+				aria-hidden="true"
+				class="pointer-events-none absolute inset-0"
+				style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%);"
+			></div>
 
-		<div
-			class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 pt-6 text-muted-foreground"
+			<!-- ── TWO-PANEL ARTIFACT ── -->
+			<div
+				class="relative mx-auto flex min-h-[60dvh] flex-col md:flex-row"
+				style="padding: clamp(2rem, 5vw, 5rem); gap: clamp(0.5rem, 1.5vw, 1.875rem);"
+			>
+				<!-- ══ LEFT: Warm-white data card ══ -->
+				<div class="flex flex-1 flex-col justify-center">
+					<FieldRecordDataCard className="h-full">
+						<div class="flex h-full flex-col justify-between">
+							<!-- Top: Index + Seal -->
+							<div class="flex items-start justify-between">
+								<FieldRecordIndex index="PORTAL_01" client:load />
+								<FieldRecordSeal element="Land" client:load />
+							</div>
+
+							<!-- Middle: Oversized stamp -->
+							<div class="mt-10">
+								<h1
+									class="text-field-xl font-mono font-normal leading-[0.95] tracking-[-0.02em] text-card-foreground"
+								>
+									〈AUTHENTICATION TIERS〉
+								</h1>
+								<p
+									class="text-field-l mt-2 font-mono font-normal leading-[1.0] tracking-[-0.02em] text-card-foreground"
+								>
+									〈FOUR MODES〉
+								</p>
+							</div>
+
+							<!-- Route block -->
+							<div class="mt-10">
+								<p
+									class="text-field-l font-mono font-normal leading-[1.05] text-card-foreground"
+								>
+									/PROTOCOL:HTTPS
+								</p>
+								<p
+									class="text-field-s mt-1 font-mono font-normal leading-[1.1] text-card-foreground opacity-70"
+								>
+									CLOUD · PROVIDER · LOCAL-FIRST · ENTERPRISE
+								</p>
+							</div>
+
+							<!-- Program + Status -->
+							<p
+								class="text-field-xs mt-6 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60"
+							>
+								NATIVE · OPEN · CROSS-PLATFORM
+							</p>
+
+							<div class="mt-3">
+								<FieldRecordStatus
+									status="preparing"
+									tone="specimen"
+									client:load
+								/>
+							</div>
+
+							<!-- MAJOR BLANK ZONE -->
+							<div class="my-12 flex-1" aria-hidden="true"></div>
+
+							<!-- Project / artist block -->
+							<div>
+								<p
+									class="text-field-l font-mono font-normal leading-[1.08] text-card-foreground"
+								>
+									LAND:
+								</p>
+								<p
+									class="text-field-s mt-3 font-mono font-normal leading-[1.1] text-card-foreground opacity-70"
+								>
+									↳EDITOR WITHOUT CHROMIUM
+								</p>
+							</div>
+
+							<!-- Metadata footer -->
+							<div class="mt-10">
+								<FieldRecordMetadata
+									rows={[
+										{
+											label: "TARGET",
+											value: "MACOS / WINDOWS / LINUX",
+										},
+										{ label: "LICENSE", value: "CC0" },
+										{
+											label: "SIGNAL",
+											value: "LOCAL-FIRST",
+										},
+									]}
+									client:load
+								/>
+							</div>
+						</div>
+					</FieldRecordDataCard>
+				</div>
+
+				<!-- ══ Black gutter ══ -->
+				<div
+					class="hidden w-px md:block"
+					style="background-color: var(--Background)"
+					aria-hidden="true"
+				></div>
+
+				<!-- ══ RIGHT: Evidence image ══ -->
+				<div class="flex flex-1 items-center justify-center">
+					<FieldRecordEvidence
+						src="/Evidence/Land/NightGlass-01.png"
+						alt="Rain-speckled glass reflecting a green light at night"
+						position="right"
+						className="h-full min-h-[40dvh] w-full"
+						client:load
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- ── TIER CARDS: Field Record Grammar ── -->
+		<section
+			id="portal-tiers"
+			aria-label="Authentication Tiers"
+			class="w-full py-16 sm:py-20"
 		>
-			<picture>
-				<source
-					srcset="/Asset/Logo/Glyph/Land.svg"
-					media="(prefers-color-scheme: dark)"
-					data-theme-dark
-				/>
-				<img
-					alt="Land"
-					src="/Asset/Logo/Glyph/Land.svg"
-					width="28"
-					height="28"
-				/>
-			</picture>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Telemetry Feature Gated&#x2001;<span
-					class="flat h-1.5 w-1.5"
-					style="background-color:var(--SpinegRPC)"
-					aria-hidden="true"></span>
-			</jelly-badge>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				CC0 Licensed&#x2001;<picture class="inline-flex align-middle">
-					<source
-						srcset="/Image/CC0.svg"
-						media="(prefers-color-scheme: dark)"
-						data-theme-dark
-					/>
-					<img
-						src="/Image/CC0.svg"
-						alt=""
-						width="12"
-						height="12"
-						class="opacity-70"
-						aria-hidden="true"
-					/>
-				</picture>
-			</jelly-badge>
-			<jelly-badge
-				variant="azure"
-				shape="square"
-				style={`--jelly-fill:var(--SpineIPCMute);--jelly-label:var(--SpineIPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				Auth0 + OAuth 2.0
-			</jelly-badge>
-			<jelly-badge
-				variant="mint"
-				shape="square"
-				style={`--jelly-fill:var(--SpinegRPCMute);--jelly-label:var(--SpinegRPCFore);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
-			>
-				OIDC / SAML / Okta Planned&#x2001;<span
-					class="flat h-1.5 w-1.5"
-					style="background-color:var(--SpinegRPC)"
-					aria-hidden="true"></span>
-			</jelly-badge>
-			<jelly-badge
-				variant="platinum"
-				shape="square"
-				outline
-				style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
-				onclick="window.open('https://PlayForm.Cloud','_blank','noopener noreferrer')"
-			>
-				PlayForm
-			</jelly-badge>
-		</div>
+			<div class="container mx-auto px-4">
+				<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+					{(Object.keys(PortalContent) as Array<keyof typeof PortalContent>)
+						.filter(
+							(key): key is "Cloud" | "Provider" | "LocalFirst" | "Enterprise" =>
+								key !== "Title" &&
+								key !== "Subtitle" &&
+								key !== "Labels",
+						)
+						.map((TierKey) => {
+							const Tier = PortalContent[TierKey];
+							const SealElement = TierSealMap[Tier.Identifier];
+							const TierIndex = TierIndexMap[Tier.Identifier];
+							const StatusLabel =
+								Tier.Status === "ComingSoon"
+									? "PLANNED"
+									: Tier.Status === "WIP"
+										? "WIP"
+										: "ACTIVE";
 
-		<DynamicPortal Content={PortalContent} client:load />
+							return (
+								<FieldRecordDataCard key={Tier.Identifier} className="h-full">
+									<div class="flex h-full flex-col justify-between">
+										<!-- Top: Index + Seal -->
+										<div class="flex items-start justify-between">
+											<FieldRecordIndex
+												index={TierIndex}
+												client:load
+											/>
+											<FieldRecordSeal
+												element={SealElement}
+												size={48}
+												client:load
+											/>
+										</div>
+
+										<!-- Tier stamp -->
+										<div class="mt-6">
+											<h2 class="text-field-xl font-mono font-normal leading-[0.95] tracking-[-0.02em] text-card-foreground">
+												〈{Tier.Title.toUpperCase()}〉
+											</h2>
+											<p class="text-field-s mt-2 font-mono font-normal leading-[1.1] text-card-foreground opacity-70">
+												/PROTOCOL: {Tier.Protocol}
+											</p>
+										</div>
+
+										<!-- Metadata block -->
+										<div class="mt-6">
+											<FieldRecordMetadata
+												pairs={[
+													{
+														label: "STATUS",
+														value: StatusLabel,
+													},
+													{
+														label: "BADGE",
+														value: Tier.Badge,
+													},
+												]}
+												client:load
+											/>
+										</div>
+
+										<!-- Status -->
+										<div class="mt-4">
+											<FieldRecordStatus
+												status={
+													Tier.Status === "ComingSoon"
+														? "preparing"
+														: "active"
+												}
+												tone="ink"
+												client:load
+											/>
+										</div>
+
+										<!-- Features list -->
+										<div class="mt-6">
+											<p class="text-field-xs font-mono uppercase tracking-wider text-card-foreground opacity-60">
+												FEATURES:
+											</p>
+											<ul class="mt-2 space-y-0">
+												{Tier.Feature.map((Feature, Index) => (
+													<li
+														key={Index}
+														class="flex flex-col gap-0 border-b border-border py-2"
+													>
+														<span class="text-field-xs font-mono uppercase tracking-wider text-card-foreground">
+															{Feature.Heading}
+														</span>
+														<span class="text-field-xs font-mono text-card-foreground opacity-60">
+															{Feature.Description}
+														</span>
+													</li>
+												))}
+											</ul>
+										</div>
+
+										<!-- Capabilities list -->
+										{Tier.Capability.length > 0 && (
+											<div class="mt-6">
+												<p class="text-field-xs font-mono uppercase tracking-wider text-card-foreground opacity-60">
+													CAPABILITIES:
+												</p>
+												<div class="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+													{Tier.Capability.map(
+														(CapabilityText, CapIndex) => (
+															<span
+																key={CapIndex}
+																class="text-field-xs font-mono text-card-foreground opacity-60"
+															>
+																{CapabilityText}
+															</span>
+														),
+													)}
+												</div>
+											</div>
+										)}
+
+										<!-- CTA -->
+										<div class="mt-6">
+											<FieldRecordAction
+												label={`ENTER ${Tier.Identifier.toUpperCase()}`}
+												href={`/Account/SignIn?connection=${Tier.Identifier.toLowerCase()}`}
+												variant="button"
+												client:load
+											/>
+										</div>
+									</div>
+								</FieldRecordDataCard>
+							);
+						})}
+				</div>
+			</div>
+		</section>
+
+		<!-- ── FOOTER: Credits Record Format ── -->
+		<section
+			id="portal-footer"
+			aria-label="Portal Credits"
+			class="w-full border-t border-border py-12"
+		>
+			<div class="container mx-auto px-4">
+				<div class="mx-auto max-w-3xl">
+					<div class="flex flex-col items-center gap-4 text-center">
+						<p class="text-field-xs font-mono uppercase tracking-wider text-muted-foreground">
+							CODEEDITORLAND PORTAL · CC0 LICENSED
+						</p>
+						<p class="text-field-xs font-mono uppercase tracking-wider text-muted-foreground">
+							TELEMETRY FEATURE GATED · AUTH0 + OAUTH 2.0 · OIDC / SAML PLANNED
+						</p>
+						<div class="mt-4 flex items-center gap-4">
+							<a
+								href="/"
+								class="text-field-xs font-mono uppercase tracking-wider text-accent underline-offset-4 hover:underline"
+							>
+								↳RETURN TO INDEX
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Base>
