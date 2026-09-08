@@ -927,9 +927,14 @@ self.addEventListener("fetch", (Event: FetchEvent) => {
 	if (
 		Path.startsWith("/_astro/") ||
 		Path.startsWith("/Asset/") ||
+		Path.startsWith("/Dark/") ||
+		Path.startsWith("/Evidence/") ||
 		Path.startsWith("/Favicon/") ||
+		Path.startsWith("/Font/") ||
 		Path.startsWith("/Image/") ||
-		Path.startsWith("/Mermaid/")
+		Path.startsWith("/Mermaid/") ||
+		Path.startsWith("/OpenGraph/") ||
+		Path.startsWith("/Vendor/")
 	) {
 		__DEV__ && Log(`Asset (cache-first): ${Path}`);
 
