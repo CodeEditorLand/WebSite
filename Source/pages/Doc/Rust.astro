@@ -154,7 +154,7 @@ const RustDocSite = [
 							{Site.Label}
 							<span class="InlineSeparator">↗</span>
 						</p>
-						<p class="mt-1 text-muted-foreground">
+						<p class="mt-1 text-card-foreground">
 							{Site.Description}
 						</p>
 					</a>
@@ -182,7 +182,7 @@ const RustDocSite = [
 							class={`RustDocTab border px-3 py-1 font-medium transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)] ${
 								Index === 0
 									? "text-primary-fg border-[var(--Primary)] bg-primary"
-									: "border-[var(--Border)] bg-card text-muted-foreground hover:bg-secondary"
+									: "border-[var(--Border)] bg-card text-card-foreground hover:bg-secondary"
 							}`}
 						>
 							{Site.Label}
@@ -219,7 +219,7 @@ const RustDocSite = [
 		"RustDocTab border px-3 py-1 font-medium transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]";
 	const ActiveClass = "border-[var(--Primary)] bg-primary text-primary-fg";
 	const InactiveClass =
-		"border-[var(--Border)] bg-card text-muted-foreground hover:bg-secondary";
+		"border-[var(--Border)] bg-card text-card-foreground hover:bg-secondary";
 
 	function SetActive(ActiveTab: HTMLButtonElement): void {
 		Tabs.forEach((Tab) => {

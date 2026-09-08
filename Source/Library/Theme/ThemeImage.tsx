@@ -18,7 +18,8 @@ export interface ThemeImageProps {
 
 /**
  * ThemeImage - Nocturnal Field Record (single theme).
- * Serves the standard /Image/ variant. No theme switching.
+ * Serves the dark variant. If src already points to a /Dark/ path, uses it
+ * directly. Otherwise, derives the dark path from the light src.
  */
 export function ThemeImage({
 	src,
@@ -29,25 +30,32 @@ export function ThemeImage({
 	className,
 	...props
 }: ThemeImageProps) {
+	const Dark =
+		darkSrc ??
+		(src.includes("/Dark/")
+			? src
+			: src
+					.replace(/^\/Image\//, "/Dark/Image/")
+					.replace(/^\/Asset\//, "/Asset/Dark/"));
 	const sourceRef = useRef<HTMLSourceElement>(null);
 
 	useEffect(() => {
 		if (!sourceRef.current) return;
 
-		// Nocturnal theme: serve standard images
-		sourceRef.current.media = "(prefers-color-scheme: dark)";
+		// Nocturnal theme: always serve dark images
+		sourceRef.current.media = "all";
 	}, []);
 
 	return (
 		<picture>
 			<source
 				ref={sourceRef}
-				srcSet={src}
+				srcSet={Dark}
 				media="(prefers-color-scheme: dark)"
 				data-theme-dark=""
 			/>
 			<img
-				src={src}
+				src={Dark}
 				alt={alt}
 				width={width}
 				height={height}

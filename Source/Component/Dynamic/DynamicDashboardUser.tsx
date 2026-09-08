@@ -246,7 +246,7 @@ const DashboardUserInner = () => {
 					aria-label={
 						PIIVisible ? "Hide personal data" : "Show personal data"
 					}
-					className="text-muted-foreground transition-colors hover:text-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+					className="text-muted-foreground transition-colors hover:text-card-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 				>
 					{PIIVisible ? (
 						<EyeOff className="h-4 w-4" aria-hidden="true" />

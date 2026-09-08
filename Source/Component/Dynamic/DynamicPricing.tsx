@@ -182,12 +182,14 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 									? "opacity-75"
 									: ""
 							}`}
-							style={{
-								"--jelly-fill": "var(--Card)",
-								"--jelly-radius": "0",
-								"--jelly-card-padding-block": "0",
-								"--jelly-card-padding-inline": "0",
-							} as React.CSSProperties}
+							style={
+								{
+									"--jelly-fill": "var(--Card)",
+									"--jelly-radius": "0",
+									"--jelly-card-padding-block": "0",
+									"--jelly-card-padding-inline": "0",
+								} as React.CSSProperties
+							}
 							aria-disabled={
 								Tier.Status && Tier.Status !== "Ready"
 									? true
@@ -195,97 +197,194 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 							}
 						>
 							<div className="flex flex-col">
-							{/* ── Card header ───────────────────────────── */}
-							<div className="border-b border-[var(--Border)] p-8">
-								{Tier.Popular && (
-									<div className="mb-3">
-										<jelly-badge
-											variant="mint"
-											shape="square"
-											style={{
-												"--jelly-fill": "var(--SpinegRPCMute)",
-												"--jelly-label": "var(--SpinegRPCFore)",
-												"--jelly-badge-radius": "0px",
-												"--jelly-badge-font-size": "10px",
-											} as React.CSSProperties}
-										>
-											<span
-												className="StaccatoRhythmDot mr-1.5 h-1.5 w-1.5 flat"
-												style={{
-													backgroundColor: "var(--SpinegRPC)",
-												}}
-												aria-hidden="true"
-											/>
-											{PopularLabel}
-										</jelly-badge>
+								{/* ── Card header ───────────────────────────── */}
+								<div className="border-b border-[var(--Border)] p-8">
+									{Tier.Popular && (
+										<div className="mb-3">
+											<jelly-badge
+												variant="mint"
+												shape="square"
+												style={
+													{
+														"--jelly-fill":
+															"var(--SpinegRPCMute)",
+														"--jelly-label":
+															"var(--SpinegRPCFore)",
+														"--jelly-badge-radius":
+															"0px",
+														"--jelly-badge-font-size":
+															"10px",
+													} as React.CSSProperties
+												}
+											>
+												<span
+													className="StaccatoRhythmDot flat mr-1.5 h-1.5 w-1.5"
+													style={{
+														backgroundColor:
+															"var(--SpinegRPC)",
+													}}
+													aria-hidden="true"
+												/>
+												{PopularLabel}
+											</jelly-badge>
+										</div>
+									)}
+									{Tier.Status && Tier.Status !== "Ready" && (
+										<div className="mb-2">
+											<jelly-badge
+												variant="platinum"
+												shape="square"
+												style={
+													{
+														"--jelly-fill":
+															"var(--Mute)",
+														"--jelly-label":
+															"var(--MuteForeground)",
+														"--jelly-badge-radius":
+															"0px",
+														"--jelly-badge-font-size":
+															"0.625rem",
+													} as React.CSSProperties
+												}
+											>
+												{Tier.Status === "WIP"
+													? "WIP"
+													: "Coming Soon"}
+											</jelly-badge>
+										</div>
+									)}
+									<div className="mb-4">
+										<DynamicButton
+											Content={{
+												...Tier.CTA,
+												FullWidth: true,
+											}}
+										/>
 									</div>
-								)}
-								{Tier.Status && Tier.Status !== "Ready" && (
-									<div className="mb-2">
-										<jelly-badge
-											variant="platinum"
-											shape="square"
-											style={{
-												"--jelly-fill": "var(--Mute)",
-												"--jelly-label": "var(--MuteForeground)",
-												"--jelly-badge-radius": "0px",
-												"--jelly-badge-font-size": "0.625rem",
-											} as React.CSSProperties}
-										>
-											{Tier.Status === "WIP"
-												? "WIP"
-												: "Coming Soon"}
-										</jelly-badge>
-									</div>
-								)}
-								<div className="mb-4">
-									<DynamicButton
-										Content={{
-											...Tier.CTA,
-											FullWidth: true,
-										}}
-									/>
+									<h3 className="mb-2 text-2xl font-bold">
+										{Tier.Name}
+									</h3>
+									{Tier.Description && (
+										<div className="StaccatoBreath text-muted-foreground">
+											<RichText Text={Tier.Description} />
+										</div>
+									)}
 								</div>
-								<h3 className="mb-2 text-2xl font-bold">
-									{Tier.Name}
-								</h3>
-								{Tier.Description && (
-									<div className="StaccatoBreath text-muted-foreground">
-										<RichText Text={Tier.Description} />
-									</div>
-								)}
-							</div>
 
-							{/* ── Card body ─────────────────────────────── */}
-							<div className="flex flex-1 flex-col p-8">
-								{/* Elements section */}
-								{Tier.Element && Tier.Element.length > 0 && (
-									<>
-										<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-											Elements
-										</p>
-										<ul className="space-y-3">
-											{Tier.Element.map(
-												(Element, Index) => {
-													const Parts =
-														Element.split("\n");
+								{/* ── Card body ─────────────────────────────── */}
+								<div className="flex flex-1 flex-col p-8">
+									{/* Elements section */}
+									{Tier.Element &&
+										Tier.Element.length > 0 && (
+											<>
+												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+													Elements
+												</p>
+												<ul className="space-y-3">
+													{Tier.Element.map(
+														(Element, Index) => {
+															const Parts =
+																Element.split(
+																	"\n",
+																);
 
-													const NameLine =
-														Parts[0] ?? "";
+															const NameLine =
+																Parts[0] ?? "";
 
-													const Sub1 = Parts[1];
+															const Sub1 =
+																Parts[1];
 
-													const Sub2 = Parts[2];
+															const Sub2 =
+																Parts[2];
 
-													const AccentColor =
-														GetElementColor(
-															NameLine,
-														);
+															const AccentColor =
+																GetElementColor(
+																	NameLine,
+																);
 
-													return (
+															return (
+																<li
+																	key={Index}
+																	className={`flex flex-col gap-0.5 ${
+																		Tier.Status &&
+																		Tier.Status !==
+																			"Ready"
+																			? "opacity-70"
+																			: ""
+																	}`}
+																>
+																	<a
+																		href={
+																			ElementDocPath[
+																				NameLine
+																			] ??
+																			`/Doc/${NameLine.toLowerCase()}`
+																		}
+																		className="font-mono text-sm font-semibold transition-colors hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+																		style={{
+																			color: AccentColor,
+																		}}
+																	>
+																		<RichText
+																			Text={
+																				NameLine
+																			}
+																			Terms={
+																				true
+																			}
+																		/>
+																	</a>
+																	{Sub1 && (
+																		<span className="font-mono text-sm text-card-foreground">
+																			<RichText
+																				Text={
+																					Sub1
+																				}
+																				Terms={
+																					true
+																				}
+																			/>
+																		</span>
+																	)}
+																	{Sub2 && (
+																		<span className="font-mono text-sm text-muted-foreground">
+																			<RichText
+																				Text={
+																					Sub2
+																				}
+																				Terms={
+																					true
+																				}
+																			/>
+																		</span>
+																	)}
+																</li>
+															);
+														},
+													)}
+												</ul>
+												{Tier.Feature.length > 0 && (
+													<hr className="my-5 border-[var(--Border)]" />
+												)}
+											</>
+										)}
+
+									{/* Features section */}
+									{Tier.Feature.length > 0 && (
+										<>
+											{Tier.Element &&
+												Tier.Element.length > 0 && (
+													<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+														Roadmap
+													</p>
+												)}
+
+											<ul className="space-y-3">
+												{Tier.Feature.map(
+													(Feature, FeatureIndex) => (
 														<li
-															key={Index}
-															className={`flex flex-col gap-0.5 ${
+															key={FeatureIndex}
+															className={`flex items-start justify-between gap-2 ${
 																Tier.Status &&
 																Tier.Status !==
 																	"Ready"
@@ -293,125 +392,56 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 																	: ""
 															}`}
 														>
-																														<a
-																																href={
-																																	ElementDocPath[
-																																		NameLine
-																																	] ??
-																																		`/Doc/${NameLine.toLowerCase()}`
-																																}
-																															className="font-mono text-sm font-semibold transition-colors hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
-																															style={{
-																																color: AccentColor,
-																															}}
-																														>
-																															<RichText
-																																Text={
-																																	NameLine
-																																}
-																																Terms={true}
-																															/>
-																														</a>
-															{Sub1 && (
-																<span className="font-mono text-sm text-foreground">
-																	<RichText
-																		Text={
-																			Sub1
-																		}
-																		Terms={
-																			true
-																		}
-																	/>
-																</span>
-															)}
-															{Sub2 && (
-																<span className="font-mono text-sm text-muted-foreground">
-																	<RichText
-																		Text={
-																			Sub2
-																		}
-																		Terms={
-																			true
-																		}
-																	/>
-																</span>
+															<span className="min-w-0 flex-1">
+																<RichText
+																	Text={
+																		Feature
+																	}
+																	Terms={true}
+																/>
+															</span>
+															{Tier.Status &&
+															Tier.Status !==
+																"Ready" ? (
+																<jelly-badge
+																	variant="platinum"
+																	shape="square"
+																	className="shrink-0"
+																	style={
+																		{
+																			"--jelly-fill":
+																				"var(--Mute)",
+																			"--jelly-label":
+																				"var(--MuteForeground)",
+																			"--jelly-badge-radius":
+																				"0px",
+																			"--jelly-badge-font-size":
+																				"0.625rem",
+																		} as React.CSSProperties
+																	}
+																>
+																	{Tier.Status ===
+																	"WIP"
+																		? "WIP"
+																		: "Coming Soon"}
+																</jelly-badge>
+															) : (
+																<IconTooltip
+																	Label="Included"
+																	Icon={
+																		lucide.Check
+																	}
+																	SizeClass="h-4 w-4 shrink-0"
+																	ClassName="StaccatoCheckmark mt-0.5 text-primary"
+																/>
 															)}
 														</li>
-													);
-												},
-											)}
-										</ul>
-										{Tier.Feature.length > 0 && (
-											<hr className="my-5 border-[var(--Border)]" />
-										)}
-									</>
-								)}
-
-								{/* Features section */}
-								{Tier.Feature.length > 0 && (
-									<>
-										{Tier.Element &&
-											Tier.Element.length > 0 && (
-												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-													Roadmap
-												</p>
-											)}
-
-										<ul className="space-y-3">
-											{Tier.Feature.map(
-												(Feature, FeatureIndex) => (
-													<li
-														key={FeatureIndex}
-														className={`flex items-start justify-between gap-2 ${
-															Tier.Status &&
-															Tier.Status !==
-																"Ready"
-																? "opacity-70"
-																: ""
-														}`}
-													>
-														<span className="min-w-0 flex-1">
-															<RichText
-																Text={Feature}
-																Terms={true}
-															/>
-														</span>
-														{Tier.Status &&
-														Tier.Status !==
-															"Ready" ? (
-															<jelly-badge
-																									variant="platinum"
-																									shape="square"
-																									className="shrink-0"
-																									style={{
-																										"--jelly-fill": "var(--Mute)",
-																										"--jelly-label": "var(--MuteForeground)",
-																										"--jelly-badge-radius": "0px",
-																										"--jelly-badge-font-size": "0.625rem",
-																									} as React.CSSProperties}
-																								>
-																									{Tier.Status ===
-																									"WIP"
-																										? "WIP"
-																										: "Coming Soon"}
-																								</jelly-badge>
-														) : (
-															<IconTooltip
-																Label="Included"
-																Icon={
-																	lucide.Check
-																}
-																SizeClass="h-4 w-4 shrink-0"
-																ClassName="StaccatoCheckmark mt-0.5 text-primary"
-															/>
-														)}
-													</li>
-												),
-											)}
-										</ul>
-									</>
-								)}
-							</div>
+													),
+												)}
+											</ul>
+										</>
+									)}
+								</div>
 							</div>
 						</jelly-card>
 					))}
