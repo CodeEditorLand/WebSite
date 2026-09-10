@@ -1,7 +1,5 @@
 "use client";
 
-import { ThemeImage } from "@Library/Theme";
-
 import * as lucide from "lucide-react";
 
 import { useEffect, useRef, useState } from "react";
@@ -344,8 +342,8 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 					{Logo && (
 						<>
 							{"\u2001"}
-							<ThemeImage
-								src={Logo}
+							<img
+								src={Logo.replace("/Image/", "/Dark/Image/")}
 								alt=""
 								width={12}
 								height={12}

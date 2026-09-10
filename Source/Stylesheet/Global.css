@@ -24,6 +24,11 @@ jelly-badge {
 	--jelly-badge-radius: 0 !important;
 }
 
+/* Warm-white jelly-card: ink text on the paper card surface (single dark theme) */
+jelly-card {
+	--jelly-card-color: var(--CardForeground);
+}
+
 /* Fallback: render jelly-badge as a visible pill before hydration completes.
    Without this, the custom element renders as bare inherited text (light
    gray on the dark canvas) until the shadow-DOM styles upgrade it. */
