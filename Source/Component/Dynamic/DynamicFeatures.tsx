@@ -400,7 +400,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 																			}
 																		>
 																			<ThemeImage
-																				src={IconName.replace(/^\/Image\//, "/Dark/Image/").replace(/^\/Asset\//, "/Asset/Dark/")}
+																				src={IconName}
 																				alt={
 																					StackLabel
 																				}
