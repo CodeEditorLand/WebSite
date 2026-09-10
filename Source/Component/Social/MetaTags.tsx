@@ -142,7 +142,7 @@ export default ({
 			/>
 			<meta property="og:locale:alternate" content="bg" />
 			<meta property="og:locale:alternate" content="de" />
-			<meta name="theme-color" content="#ffffff" />
+			<meta name="theme-color" content="#000000" />
 			<meta name="format-detection" content="telephone=no" />
 
 			<script

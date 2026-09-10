@@ -361,7 +361,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											</div>
 											{Testimonial.Href && (
 												<lucide.ExternalLink
-													className="text-muted-foreground/40 h-3 w-3 shrink-0"
+													className="text-card-foreground/50 h-3 w-3 shrink-0"
 													aria-hidden="true"
 												/>
 											)}
@@ -475,7 +475,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 										</div>
 										{Testimonial.Href && (
 											<lucide.ExternalLink
-												className="text-muted-foreground/40 h-3 w-3 shrink-0"
+												className="text-card-foreground/50 h-3 w-3 shrink-0"
 												aria-hidden="true"
 											/>
 										)}

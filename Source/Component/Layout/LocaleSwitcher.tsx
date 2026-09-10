@@ -75,14 +75,17 @@ const LocaleSwitcher = () => {
 							"--jelly-button-padding-inline": "12px",
 							"--jelly-button-min-width": "0px",
 							"--jelly-button-radius": "0px",
+							"--jelly-fill": "transparent",
+							"--jelly-ring": "var(--Accent)",
+							"--jelly-label": "var(--HeaderFg, var(--Foreground))",
 						} as React.CSSProperties
 					}
 				>
-					<span className="flex items-center gap-1.5 font-medium text-card-foreground">
+					<span className="flex items-center gap-1.5 font-medium">
 						<span>{LocaleLabel[CurrentLocale]}</span>
 						<ChevronDown
 							size={14}
-							className="text-muted transition-transform duration-200 [[data-state=open]_&]:rotate-180"
+							className="opacity-60 transition-transform duration-200 [[data-state=open]_&]:rotate-180"
 						/>
 					</span>
 				</jelly-button>
@@ -94,8 +97,8 @@ const LocaleSwitcher = () => {
 						onClick={() => HandleChange(Locale)}
 						className={
 							Locale === CurrentLocale
-								? "text-fg font-semibold"
-								: "text-muted"
+								? "text-accent font-semibold"
+								: "text-card-foreground opacity-70"
 						}
 					>
 						{LocaleLabel[Locale]}

@@ -179,7 +179,8 @@ p:last-child {
 /* Text Selection Highlighting */
 *::selection,
 ::selection {
-	@apply bg-yellow-400 text-black;
+	background: var(--Accent);
+	color: var(--Card);
 
 	text-shadow: none;
 }

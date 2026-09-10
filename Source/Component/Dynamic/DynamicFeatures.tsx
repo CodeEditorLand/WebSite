@@ -323,7 +323,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 											/>
 										</div>
 									</div>
-									<p className="StaccatoBreath text-sm text-muted-foreground">
+									<p className="StaccatoBreath text-sm text-card-foreground opacity-70">
 										<RichText Text={Feature.Description} />
 										<br />
 										{Feature.Icons &&

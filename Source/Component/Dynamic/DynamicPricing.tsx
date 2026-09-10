@@ -265,7 +265,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 										{Tier.Name}
 									</h3>
 									{Tier.Description && (
-										<div className="StaccatoBreath text-muted-foreground">
+										<div className="StaccatoBreath text-card-foreground opacity-70">
 											<RichText Text={Tier.Description} />
 										</div>
 									)}
@@ -277,8 +277,8 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 									{Tier.Element &&
 										Tier.Element.length > 0 && (
 											<>
-												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-													Elements
+												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
+						Elements
 												</p>
 												<ul className="space-y-3">
 													{Tier.Element.map(
@@ -347,7 +347,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 																		</span>
 																	)}
 																	{Sub2 && (
-																		<span className="font-mono text-sm text-muted-foreground">
+																		<span className="font-mono text-sm text-card-foreground opacity-50">
 																			<RichText
 																				Text={
 																					Sub2
@@ -374,8 +374,8 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 										<>
 											{Tier.Element &&
 												Tier.Element.length > 0 && (
-													<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-														Roadmap
+													<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
+							Roadmap
 													</p>
 												)}
 

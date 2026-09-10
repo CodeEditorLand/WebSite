@@ -539,7 +539,7 @@ const EnterpriseSSOForm = ({
 					style={{
 						backgroundColor: Content.Color,
 						borderColor: Content.BorderColor,
-						color: "#ffffff",
+						color: "#070707",
 					}}
 				>
 					{T("portal.enterprise.continueSSO", {

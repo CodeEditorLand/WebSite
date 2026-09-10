@@ -10,8 +10,6 @@ import { DynamicBadge } from "./DynamicBadge";
 
 import { DynamicButton } from "./DynamicButton";
 
-import { FieldRecord } from "../Brand/FieldRecord.js";
-
 import { FieldRecordDataCard } from "../Brand/FieldRecordDataCard.js";
 
 import { FieldRecordEvidence } from "../Brand/FieldRecordEvidence.js";
@@ -208,15 +206,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 			<div
 				aria-hidden="true"
 				className="pointer-events-none absolute inset-0"
-				style={{
-					backgroundImage:
-						"linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-					backgroundSize: "48px 48px",
-					maskImage:
-						"radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%)",
-					WebkitMaskImage:
-						"radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%)",
-				}}
+				style={{ backgroundColor: "var(--Background)" }}
 			/>
 
 			{/* ── TWO-PANEL ARTIFACT ── */}
@@ -303,8 +293,12 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 								/>
 							</div>
 
-							{/* CTA */}
+							{/* Program line + CTA */}
 							<div className="mt-10">
+								<p className="text-field-xs mb-4 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
+									OPEN · EDIT · SHIP
+								</p>
+
 								<FieldRecordAction
 									label="ENTER"
 									href={PrimaryCTA?.Href || "/Download"}

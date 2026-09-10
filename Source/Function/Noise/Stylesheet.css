@@ -146,11 +146,6 @@
 	border-color: color-mix(in srgb, var(--Foreground) 28%, transparent);
 }
 
-.dark .TransparencyCard:hover {
-	border-color: color-mix(in srgb, var(--Ring) 50%, transparent);
-	box-shadow: 0 0 24px -8px color-mix(in srgb, var(--Ring) 60%, transparent);
-}
-
 /* Logo - near-zero seed offset, not structural movement */
 
 .StaccatoLogo {
@@ -319,7 +314,7 @@
  Only border-radius (paint-only) is safe here. */
 
 .StaccatoMorphRadius {
-	border-radius: calc(max(var(--StaccatoSeed, 0), 0px) * 1.5px);
+	border-radius: 0;
 }
 
 .StaccatoMorphPadding {
@@ -586,7 +581,7 @@
 }
 
 .StaccatoFocus {
-	outline: 2px solid var(--Primary, #3b82f6);
+	outline: 2px solid var(--Primary, var(--Accent));
 	outline-offset: 2px;
 }
 

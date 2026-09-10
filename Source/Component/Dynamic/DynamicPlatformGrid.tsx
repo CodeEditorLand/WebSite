@@ -381,7 +381,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 							},
 							Body: {
 								content: (
-									<div className="space-y-2 font-mono text-sm text-muted-foreground">
+									<div className="space-y-2 font-mono text-sm text-card-foreground opacity-70">
 										<div className="flex justify-between">
 											<span>{VersionLabel}</span>
 											<span className="font-medium text-card-foreground">
@@ -432,7 +432,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 								? {
 										Footer: {
 											content: (
-												<div className="font-mono text-sm text-muted-foreground">
+												<div className="font-mono text-sm text-card-foreground opacity-70">
 													{Platform.Checksum && (
 														<p>
 															SHA-256:{" "}

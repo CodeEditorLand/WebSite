@@ -135,17 +135,10 @@ export default {
 					ring: "var(--Ring)",
 				},
 
-				// Existing tokens
-				backgroundLight: "var(--BackgroundLight)",
-
-				backgroundDark: "var(--BackgroundDark)",
-
 				// Bridge colors from Example/src/index.css
 				"color-green-500": "var(--ColorGreen500)",
 
 				"color-yellow-500": "var(--ColorYellow500)",
-
-				"color-white": "var(--ColorWhite)",
 
 				// Extended technology badge palette - Protocol Spines
 				"spine-grpc": "#22c55e",

@@ -1095,17 +1095,17 @@
  ───────────────────────────────────────────────────────────── */
 
 .markdown-alert {
-	border-left: 4px solid rgba(255, 255, 255, 0.2);
+	border-left: 4px solid color-mix(in srgb, var(--CardForeground) 20%, transparent);
 
 	border-radius: 0;
 
-	color: #e7e7ea;
+	color: var(--CardForeground);
 
 	margin: 1.25rem 0;
 
 	padding: 0.5rem 1rem;
 
-	background-color: rgba(255, 255, 255, 0.04);
+	background-color: color-mix(in srgb, var(--CardForeground) 4%, transparent);
 }
 
 .markdown-alert > :first-child {
@@ -1140,13 +1140,11 @@
 
 /* NOTE - blue */
 .markdown-alert-note {
-	background-color: rgba(59, 130, 246, 0.08);
-
-	border-left-color: #1f6feb;
+	background-color: rgba(59, 130, 246, 0.06);
 }
 
 .markdown-alert-note .markdown-alert-title {
-	color: #388bfd;
+	color: #0969da;
 }
 
 .markdown-alert-note .markdown-alert-title::before {
@@ -1155,13 +1153,11 @@
 
 /* TIP - green */
 .markdown-alert-tip {
-	background-color: rgba(34, 197, 94, 0.08);
-
-	border-left-color: #238636;
+	background-color: rgba(34, 197, 94, 0.06);
 }
 
 .markdown-alert-tip .markdown-alert-title {
-	color: #3fb950;
+	color: #1a7f37;
 }
 
 .markdown-alert-tip .markdown-alert-title::before {
@@ -1170,13 +1166,11 @@
 
 /* IMPORTANT - purple */
 .markdown-alert-important {
-	background-color: rgba(168, 85, 247, 0.08);
-
-	border-left-color: #8957e5;
+	background-color: rgba(168, 85, 247, 0.06);
 }
 
 .markdown-alert-important .markdown-alert-title {
-	color: #d2a8ff;
+	color: #8250df;
 }
 
 .markdown-alert-important .markdown-alert-title::before {
@@ -1185,13 +1179,11 @@
 
 /* WARNING - amber */
 .markdown-alert-warning {
-	background-color: rgba(251, 191, 36, 0.08);
-
-	border-left-color: #9e6a03;
+	background-color: rgba(251, 191, 36, 0.06);
 }
 
 .markdown-alert-warning .markdown-alert-title {
-	color: #d29922;
+	color: #9a6700;
 }
 
 .markdown-alert-warning .markdown-alert-title::before {
@@ -1200,13 +1192,11 @@
 
 /* CAUTION - red */
 .markdown-alert-caution {
-	background-color: rgba(248, 113, 113, 0.08);
-
-	border-left-color: #da3633;
+	background-color: rgba(248, 113, 113, 0.06);
 }
 
 .markdown-alert-caution .markdown-alert-title {
-	color: #f85149;
+	color: #cf222e;
 }
 
 .markdown-alert-caution .markdown-alert-title::before {

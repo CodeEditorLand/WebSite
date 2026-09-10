@@ -51,10 +51,10 @@ function Calendar({
 			row: "flex w-full mt-2",
 
 			cell: cn(
-				"relative p-0 text-center focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md",
+				"relative p-0 text-center focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-none",
 
 				props.mode === "range"
-					? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
+					? "[&:has(>.day-range-end)]:rounded-none [&:has(>.day-range-start)]:rounded-none first:[&:has([aria-selected])]:rounded-none last:[&:has([aria-selected])]:rounded-none"
 					: "[&:has([aria-selected])]:rounded-none",
 			),
 

@@ -120,26 +120,26 @@ const TermDictionary = new Map<string, TermCategory>([
 ]);
 
 const CategoryStyle: Record<TermCategory, string> = {
-	Architecture: "border-blue-200 text-blue-700",
+	Architecture: "border-border text-card-foreground",
 
-	Telemetry: "border-yellow-200 text-yellow-700",
+	Telemetry: "border-border text-card-foreground",
 
-	Protocol: "border-purple-200 text-purple-700",
+	Protocol: "border-border text-card-foreground",
 
-	Feature: "border-orange-200 text-orange-700",
+	Feature: "border-border text-card-foreground",
 
-	License: "border-green-200 text-green-700",
+	License: "border-border text-card-foreground",
 
-	Tool: "border-sky-200 text-sky-700",
+	Tool: "border-border text-card-foreground",
 };
 
 const CategoryFill: Record<TermCategory, string> = {
-	Architecture: "color-mix(in srgb, #3b82f6 12%, #ffffff)",
-	Telemetry: "color-mix(in srgb, #fbbf24 12%, #ffffff)",
-	Protocol: "color-mix(in srgb, #a855f7 12%, #ffffff)",
-	Feature: "color-mix(in srgb, #f97316 12%, #ffffff)",
-	License: "color-mix(in srgb, #22c55e 12%, #ffffff)",
-	Tool: "color-mix(in srgb, #60a5fa 12%, #ffffff)",
+	Architecture: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	Telemetry: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	Protocol: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	Feature: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	License: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	Tool: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
 };
 const CategoryLabel: Record<TermCategory, string> = {
 	Architecture: "Architecture element",
@@ -317,7 +317,7 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 			);
 		case "Em":
 			return (
-				<em className="font-medium not-italic text-foreground">
+				<em className="font-medium not-italic text-card-foreground">
 					{Segment.Value}
 				</em>
 			);
@@ -461,7 +461,7 @@ const LineNode = ({
 								{Item}
 							</span>
 						) : (
-							<em className="font-medium not-italic text-foreground">
+							<em className="font-medium not-italic text-card-foreground">
 								{Item}
 							</em>
 						)}
