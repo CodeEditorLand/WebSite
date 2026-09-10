@@ -29,6 +29,15 @@ jelly-card {
 	--jelly-card-color: var(--CardForeground);
 }
 
+/* Warm-white Tailwind surfaces: ink text on the paper card (single dark theme).
+   Any text inside bg-card/bg-secondary/bg-popover without an explicit text-*
+   class would otherwise inherit the light --Foreground from the body. */
+.bg-card,
+.bg-secondary,
+.bg-popover {
+	color: var(--CardForeground);
+}
+
 /* Fallback: render jelly-badge as a visible pill before hydration completes.
    Without this, the custom element renders as bare inherited text (light
    gray on the dark canvas) until the shadow-DOM styles upgrade it. */
