@@ -120,26 +120,26 @@ const TermDictionary = new Map<string, TermCategory>([
 ]);
 
 const CategoryStyle: Record<TermCategory, string> = {
-	Architecture: "border-border text-card-foreground",
+	Architecture: "border-[var(--SpineIPC)]/40 text-[var(--SpineIPCFore)]",
 
-	Telemetry: "border-border text-card-foreground",
+	Telemetry: "border-[#fbbf24]/40 text-[#fcd34d]",
 
-	Protocol: "border-border text-card-foreground",
+	Protocol: "border-[var(--SpineWASM)]/40 text-[var(--SpineWASMFore)]",
 
-	Feature: "border-border text-card-foreground",
+	Feature: "border-[var(--SpineTCP)]/40 text-[var(--SpineTCPFore)]",
 
-	License: "border-border text-card-foreground",
+	License: "border-[var(--SpinegRPC)]/40 text-[var(--SpinegRPCFore)]",
 
-	Tool: "border-border text-card-foreground",
+	Tool: "border-[#60a5fa]/40 text-[#93c5fd]",
 };
 
 const CategoryFill: Record<TermCategory, string> = {
-	Architecture: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
-	Telemetry: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
-	Protocol: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
-	Feature: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
-	License: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
-	Tool: "color-mix(in srgb, var(--Accent) 12%, var(--Card))",
+	Architecture: "var(--SpineIPCMute)",
+	Telemetry: "color-mix(in srgb, #fbbf24 18%, #000000)",
+	Protocol: "var(--SpineWASMMute)",
+	Feature: "var(--SpineTCPMute)",
+	License: "var(--SpinegRPCMute)",
+	Tool: "color-mix(in srgb, #60a5fa 18%, #000000)",
 };
 const CategoryLabel: Record<TermCategory, string> = {
 	Architecture: "Architecture element",
