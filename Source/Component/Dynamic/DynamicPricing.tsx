@@ -261,7 +261,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 											}}
 										/>
 									</div>
-									<h3 className="mb-2 text-2xl font-bold">
+									<h3 className="mb-2 text-2xl font-bold text-card-foreground">
 										{Tier.Name}
 									</h3>
 									{Tier.Description && (
@@ -432,7 +432,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 																		lucide.Check
 																	}
 																	SizeClass="h-4 w-4 shrink-0"
-																	ClassName="StaccatoCheckmark mt-0.5 text-primary"
+																	ClassName="StaccatoCheckmark mt-0.5 text-accent"
 																/>
 															)}
 														</li>

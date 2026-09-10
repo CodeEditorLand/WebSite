@@ -684,7 +684,7 @@ const EnterpriseSSOForm = ({
 			</Button>
 
 			<div className="PortalTierDivider StaccatoSeparator" />
-			<p className="text-center text-muted-foreground">
+			<p className="text-center text-card-foreground">
 				{T("portal.enterprise.note", {
 					defaultValue:
 						"OpenID Connect Discovery \u2001+\u2001 SAML 2.0 Assertion \u2001+\u2001 SCIM 2.0 User Provisioning",
@@ -983,7 +983,7 @@ const PortalTierRow = ({
 									</IconTooltip>
 								</Button>
 								<div className="PortalTierDivider StaccatoSeparator" />
-								<p className="text-center text-muted-foreground">
+								<p className="text-center text-card-foreground">
 									{T("portal.provider.oauthNote", {
 										defaultValue:
 											"OAuth 2.0 \u2001 Profile + Email scope \u2001 Linked to your preferences",
@@ -1101,7 +1101,7 @@ const PortalTierRow = ({
 									/>
 								</Button>
 								<div className="PortalTierDivider StaccatoSeparator" />
-								<p className="text-center text-muted-foreground">
+								<p className="text-center text-card-foreground">
 									{T("portal.localfirst.note", {
 										defaultValue:
 											"Zero cloud dependency \u2001 JWT certificates \u2001 mTLS",

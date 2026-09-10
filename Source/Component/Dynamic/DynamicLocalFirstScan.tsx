@@ -203,7 +203,7 @@ const LocalFirstScanInner = () => {
 				/>
 				<div className="flex-1">
 					<div className="flex items-center gap-3">
-						<h3 className="font-medium">
+						<h3 className="font-medium text-card-foreground">
 							{T("dashboard.localFirst.title", {
 								defaultValue: "Air Daemon",
 							})}

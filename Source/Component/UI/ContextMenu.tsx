@@ -135,7 +135,7 @@ function ContextMenuItem({
 			data-inset={inset}
 			data-variant={variant}
 			className={cn(
-				"data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:*:[svg]:!text-destructive outline-hidden flat relative flex cursor-default select-none items-center gap-2 px-2 py-1.5 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[disabled]:opacity-50 data-[variant=destructive]:focus:text-destructive [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
+				"data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:*:[svg]:!text-destructive outline-hidden flat relative flex cursor-default select-none items-center gap-2 px-2 py-1.5 focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[disabled]:opacity-50 data-[variant=destructive]:focus:text-destructive [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-popover-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
 				className,
 			)}
 			{...props}
@@ -205,7 +205,7 @@ function ContextMenuLabel({
 			data-slot="context-menu-label"
 			data-inset={inset}
 			className={cn(
-				"px-2 py-1.5 font-medium text-foreground data-[inset]:pl-8",
+				"px-2 py-1.5 font-medium text-popover-foreground data-[inset]:pl-8",
 				className,
 			)}
 			{...props}
@@ -234,7 +234,7 @@ function ContextMenuShortcut({
 		<span
 			data-slot="context-menu-shortcut"
 			className={cn(
-				"ml-auto tracking-widest text-muted-foreground",
+				"ml-auto tracking-widest text-popover-foreground",
 				className,
 			)}
 			{...props}

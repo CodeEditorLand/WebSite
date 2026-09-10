@@ -207,7 +207,7 @@ const DynamicSignIn = ({
 								<div>
 									<button
 										type="button"
-										className="font-medium text-primary hover:underline"
+										className="font-medium text-card-foreground hover:underline"
 										onClick={() =>
 											FooterLinks.SignUp &&
 											OnNavigate?.(
@@ -226,7 +226,7 @@ const DynamicSignIn = ({
 								<div>
 									<button
 										type="button"
-										className="font-medium text-primary hover:underline"
+										className="font-medium text-card-foreground hover:underline"
 										onClick={() =>
 											FooterLinks.ForgotPassword &&
 											OnNavigate?.(

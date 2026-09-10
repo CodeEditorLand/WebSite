@@ -83,7 +83,7 @@ export default () => {
 							<p className="mb-4 flex-1 text-sm leading-relaxed text-card-foreground">
 								{Right.Subtitle}
 							</p>
-							<span className="mt-auto inline-flex items-center text-sm font-medium text-primary">
+							<span className="mt-auto inline-flex items-center text-sm font-medium text-card-foreground">
 								Open form{" "}
 								<span aria-hidden="true" className="ml-1">
 									{"→"}

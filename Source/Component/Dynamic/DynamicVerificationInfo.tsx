@@ -62,7 +62,7 @@ const DynamicVerificationInfo = ({
 						{"\u2001"}
 
 						<Fingerprint
-							className="h-4 w-4 shrink-0 text-primary"
+							className="h-4 w-4 shrink-0 text-card-foreground"
 							aria-hidden="true"
 						/>
 					</div>
@@ -101,7 +101,7 @@ const DynamicVerificationInfo = ({
 						{"\u2001"}
 
 						<Shield
-							className="h-4 w-4 shrink-0 text-primary"
+							className="h-4 w-4 shrink-0 text-card-foreground"
 							aria-hidden="true"
 						/>
 					</div>

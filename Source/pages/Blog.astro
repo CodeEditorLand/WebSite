@@ -94,7 +94,7 @@ const Posts = BlogEntries.map((Entry) => ({
 			{
 				Posts.length === 0 ? (
 					<div class="StaccatoCard bg-card p-12 text-center">
-						<h2 class="mb-3 text-xl font-semibold">{EmptyTitle}</h2>
+						<h2 class="mb-3 text-xl font-semibold text-card-foreground">{EmptyTitle}</h2>
 						<p class="whitespace-pre-line text-card-foreground">
 							{EmptySubtitle}
 						</p>
@@ -116,7 +116,7 @@ const Posts = BlogEntries.map((Entry) => ({
 											))}
 										</div>
 									)}
-									<h3 class="mb-2 text-xl font-semibold">
+									<h3 class="mb-2 text-xl font-semibold text-card-foreground">
 										{Post.Title}
 									</h3>
 									<p class="mb-4 whitespace-pre-line text-card-foreground">

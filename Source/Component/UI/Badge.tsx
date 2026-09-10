@@ -16,7 +16,7 @@ const BadgeVariants = cva(
 					"border-transparent bg-secondary text-secondary-fg hover:opacity-80",
 				destructive:
 					"border-transparent bg-destruct text-destruct-fg hover:opacity-80",
-				outline: "text-fg",
+				outline: "text-card-fg",
 			},
 		},
 		defaultVariants: {

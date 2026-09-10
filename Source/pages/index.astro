@@ -86,20 +86,13 @@ const SiteUrl = Astro.site?.href ?? "";
 	<div
 		class="container mx-auto flex flex-wrap items-center justify-center gap-3 px-4 py-10 text-muted-foreground"
 	>
-		<picture>
-			<source
-				srcset="/Asset/Logo/Glyph/Land.svg"
-				media="(prefers-color-scheme: dark)"
-				data-theme-dark
-			/>
-			<img
-				alt="Code Editor Land logo"
-				title="Code Editor Land"
-				src="/Asset/Logo/Glyph/Land.svg"
-				width="20"
-				height="20"
-			/>
-		</picture>
+		<img
+			alt="Code Editor Land logo"
+			title="Code Editor Land"
+			src="/Asset/Dark/Logo/Glyph/Land.svg"
+			width="20"
+			height="20"
+		/>
 		<jelly-badge
 			variant="mint"
 			shape="square"
@@ -172,7 +165,7 @@ const SiteUrl = Astro.site?.href ?? "";
 			variant="platinum"
 			shape="square"
 			outline
-			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
+			style={`--jelly-label:var(--Foreground);--jelly-badge-radius:0;--jelly-badge-font-size:11px`}
 		>
 			VS Code API In Progress
 		</jelly-badge>
@@ -180,7 +173,7 @@ const SiteUrl = Astro.site?.href ?? "";
 			variant="platinum"
 			shape="square"
 			outline
-			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
+			style={`--jelly-label:var(--Foreground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
 			onclick="window.open('https://PlayForm.Cloud','_blank','noopener noreferrer')"
 		>
 			PlayForm
@@ -189,7 +182,7 @@ const SiteUrl = Astro.site?.href ?? "";
 			variant="platinum"
 			shape="square"
 			outline
-			style={`--jelly-label:var(--MuteForeground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
+			style={`--jelly-label:var(--Foreground);--jelly-badge-radius:0;--jelly-badge-font-size:11px;cursor:pointer`}
 			onclick="location.href='/'"
 		>
 			CodeEditorLand

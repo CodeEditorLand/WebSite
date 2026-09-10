@@ -130,7 +130,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 						)}
 
 						{Subtitle && (
-							<div className="mx-auto max-w-3xl text-lg text-card-foreground opacity-70">
+							<div className="mx-auto max-w-3xl text-lg text-muted-foreground opacity-70">
 								<RichText Text={Subtitle} />
 							</div>
 						)}
@@ -181,7 +181,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 													aria-hidden="true"
 												>
 													<Icon
-														className="StaccatoIcon h-5 w-5 text-primary"
+														className="StaccatoIcon h-5 w-5 text-secondary-fg"
 														aria-hidden="true"
 													/>
 												</div>
@@ -305,7 +305,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 												aria-hidden="true"
 											>
 												<Icon
-													className="StaccatoIcon h-5 w-5 text-primary"
+													className="StaccatoIcon h-5 w-5 text-secondary-fg"
 													aria-hidden="true"
 												/>
 											</div>
@@ -365,7 +365,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 							href={SourceURL}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center text-card-foreground underline underline-offset-4 opacity-70 hover:opacity-100"
+							className="inline-flex items-center text-foreground underline underline-offset-4 opacity-70 hover:opacity-100"
 						>
 							Verify in source code
 							<span className="InlineSeparator">

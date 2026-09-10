@@ -100,13 +100,13 @@ const FieldRow = ({
 						</span>
 					)}
 				</div>
-				<div className="mt-1 text-sm text-muted-foreground">
+				<div className="mt-1 text-sm text-card-foreground opacity-70">
 					{value}
 				</div>
 			</div>
 		</div>
 		{editHint && (
-			<p className="mt-1.5 text-sm text-muted-foreground">
+			<p className="mt-1.5 text-sm text-card-foreground opacity-70">
 				{editHint}
 
 				{editHref && (
@@ -116,7 +116,7 @@ const FieldRow = ({
 							href={editHref}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-primary hover:underline"
+							className="text-card-foreground hover:underline"
 						>
 							Update here →
 						</a>
@@ -753,7 +753,7 @@ const AccountProfileInner = ({
 										/>
 									</span>
 									<Pii visible={PIIVisible}>
-										<span className="font-mono text-sm text-muted-foreground">
+										<span className="font-mono text-sm text-card-foreground opacity-70">
 											{User.picture
 												.split("/")
 												.pop()
@@ -763,7 +763,7 @@ const AccountProfileInner = ({
 									</Pii>
 								</span>
 							) : (
-								<span className="text-muted-foreground">
+								<span className="text-card-foreground opacity-70">
 									Not set
 								</span>
 							)
@@ -884,7 +884,7 @@ const AccountProfileInner = ({
 								<div>
 									<div className="flex items-center gap-2 text-sm font-medium">
 										<Lock
-											className="h-3.5 w-3.5 text-muted-foreground"
+											className="h-3.5 w-3.5 text-card-foreground opacity-70"
 											aria-hidden="true"
 										/>
 										Password
@@ -893,7 +893,7 @@ const AccountProfileInner = ({
 											Editable
 										</span>
 									</div>
-									<p className="mt-1 text-sm text-muted-foreground">
+									<p className="mt-1 text-sm text-card-foreground opacity-70">
 										A reset link is sent to your email. You
 										will not be signed out until you set a
 										new password.
@@ -933,7 +933,7 @@ const AccountProfileInner = ({
 						<div className="px-6 py-4">
 							<div className="flex items-center gap-2 text-sm font-medium">
 								<Lock
-									className="h-3.5 w-3.5 text-muted-foreground"
+									className="h-3.5 w-3.5 text-card-foreground opacity-70"
 									aria-hidden="true"
 								/>
 								Password
@@ -945,7 +945,7 @@ const AccountProfileInner = ({
 									Not applicable
 								</span>
 							</div>
-							<p className="mt-1 text-sm text-muted-foreground">
+							<p className="mt-1 text-sm text-card-foreground opacity-70">
 								You signed in via {ProviderLabel}. Password
 								management is handled entirely by{" "}
 								{ProviderLabel} - Code Editor Land never
@@ -957,7 +957,7 @@ const AccountProfileInner = ({
 											href={ProviderProfileUrl}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-primary hover:underline"
+											className="text-card-foreground hover:underline"
 										>
 											Manage at {ProviderLabel} →
 										</a>
@@ -971,7 +971,7 @@ const AccountProfileInner = ({
 					<div className="px-6 py-4">
 						<div className="flex items-center gap-2 text-sm font-medium">
 							<ShieldCheck
-								className="h-3.5 w-3.5 text-muted-foreground"
+								className="h-3.5 w-3.5 text-card-foreground opacity-70"
 								aria-hidden="true"
 							/>
 							Active Session
@@ -980,7 +980,7 @@ const AccountProfileInner = ({
 								Read-only
 							</span>
 						</div>
-						<p className="mt-1 text-sm text-muted-foreground">
+						<p className="mt-1 text-sm text-card-foreground opacity-70">
 							Session managed by Auth0. Signing out revokes the
 							session token on Auth0's servers and clears local
 							storage. Access token validity: 1 hour.
