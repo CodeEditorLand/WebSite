@@ -482,15 +482,15 @@ const DetectProviderLabel = (Sub?: string): string => {
 const DetectProviderIcon = (Sub?: string): string | null => {
 	if (!Sub) return null;
 
-	if (Sub.startsWith("github|")) return "/Image/GitHub.svg";
+	if (Sub.startsWith("github|")) return "/Dark/Image/GitHub.svg";
 
-	if (Sub.startsWith("google-oauth2|")) return "/Image/Google.svg";
+	if (Sub.startsWith("google-oauth2|")) return "/Dark/Image/Google.svg";
 
-	if (Sub.startsWith("gitlab|")) return "/Image/GitLab.svg";
+	if (Sub.startsWith("gitlab|")) return "/Dark/Image/GitLab.svg";
 
-	if (Sub.startsWith("okta|")) return "/Image/Okta.svg";
+	if (Sub.startsWith("okta|")) return "/Dark/Image/Okta.svg";
 
-	if (Sub.startsWith("waad|")) return "/Image/Microsoft.svg";
+	if (Sub.startsWith("waad|")) return "/Dark/Image/Microsoft.svg";
 
 	return null;
 };

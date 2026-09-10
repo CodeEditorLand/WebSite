@@ -196,7 +196,7 @@ const LocalFirstScanInner = () => {
 		<div className="StaccatoCard StaccatoBorderShimmer bg-card p-6">
 			<div className="flex items-center gap-4">
 				<ThemeImage
-					src="/Asset/Logo/Glyph/Land.svg"
+					src="/Asset/Dark/Logo/Glyph/Land.svg"
 					alt="Land"
 					width={48}
 					height={48}

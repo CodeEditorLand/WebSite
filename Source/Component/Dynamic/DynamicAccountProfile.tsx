@@ -91,7 +91,7 @@ const FieldRow = ({
 					<span className="text-sm font-medium">{label}</span>
 					<SourceBadge label={source} icon={sourceIcon} />
 					{editable ? (
-						<span className="inline-flex items-center border border-blue-200 bg-blue-50 px-1.5 py-0 font-mono text-sm text-blue-600">
+						<span className="inline-flex items-center border-[var(--Accent)]/30 bg-[var(--Accent)]/10 px-1.5 py-0 font-mono text-sm text-[var(--Accent)]">
 							Editable
 						</span>
 					) : (
@@ -889,7 +889,7 @@ const AccountProfileInner = ({
 										/>
 										Password
 										<SourceBadge label="Auth0" />
-										<span className="inline-flex items-center border border-blue-200 bg-blue-50 px-1.5 py-0 font-mono text-sm text-blue-600">
+										<span className="inline-flex items-center border-[var(--Accent)]/30 bg-[var(--Accent)]/10 px-1.5 py-0 font-mono text-sm text-[var(--Accent)]">
 											Editable
 										</span>
 									</div>

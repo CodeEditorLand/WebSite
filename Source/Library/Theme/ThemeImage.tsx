@@ -1,9 +1,5 @@
-import { useEffect, useRef } from "react";
-
 export interface ThemeImageProps {
 	src: string;
-
-	darkSrc?: string;
 
 	alt?: string;
 
@@ -28,54 +24,21 @@ export interface ThemeImageProps {
  */
 export function ThemeImage({
 	src,
-	darkSrc,
 	alt = "",
 	width,
 	height,
 	className,
 	...props
 }: ThemeImageProps) {
-	const IsDark = src.includes("/Dark/") || src.includes("/Asset/Dark/");
-
-	const Light =
-		darkSrc ??
-		(IsDark
-			? src
-					.replace(/^\/Dark\/Image\//, "/Image/")
-					.replace(/^\/Asset\/Dark\//, "/Asset/")
-			: src);
-
-	const Dark = IsDark
-		? src
-		: src.includes("/Asset/")
-			? src.replace(/^\/Asset\//, "/Asset/Dark/")
-			: src.replace(/^\/Image\//, "/Dark/Image/");
-
-	const sourceRef = useRef<HTMLSourceElement>(null);
-
-	useEffect(() => {
-		if (!sourceRef.current) return;
-
-		sourceRef.current.media = "(prefers-color-scheme: dark)";
-	}, []);
-
 	return (
-		<picture>
-			<source
-				ref={sourceRef}
-				srcSet={Dark}
-				media="(prefers-color-scheme: dark)"
-				data-theme-dark=""
-			/>
-			<img
-				src={Light}
-				alt={alt}
-				width={width}
-				height={height}
-				className={className}
-				{...props}
-			/>
-		</picture>
+		<img
+			src={src}
+			alt={alt}
+			width={width}
+			height={height}
+			className={className}
+			{...props}
+		/>
 	);
 }
 

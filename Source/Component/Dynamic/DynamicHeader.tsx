@@ -41,7 +41,7 @@ const DynamicHeader = ({ Content, ClassName }: Property) => {
 						aria-hidden="true"
 					>
 						<ThemeImage
-							src="/Asset/Logo/Glyph/Land.svg"
+							src="/Asset/Dark/Logo/Glyph/Land.svg"
 							alt="Code Editor Land"
 							title="Code Editor Land"
 							width={32}

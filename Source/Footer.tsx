@@ -15,7 +15,7 @@ const Footer: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 						aria-label="GitHub"
 					>
 						<ThemeImage
-							src="/Image/GitHub.svg"
+							src="/Dark/Image/GitHub.svg"
 							alt="GitHub"
 							width={24}
 							height={24}
@@ -74,7 +74,7 @@ const Footer: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 						className="flex"
 					>
 						<ThemeImage
-							src="/Image/GitHub/Made/Tauri.svg"
+							src="/Dark/Image/GitHub/Made/Tauri.svg"
 							alt="Made With Tauri"
 							width={160}
 							height={32}
@@ -84,7 +84,7 @@ const Footer: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 				<li className="flex items-center gap-2">
 					<a href="/" className="flex items-center">
 						<ThemeImage
-							src="/Asset/Logo/Glyph/Land.svg"
+							src="/Asset/Dark/Logo/Glyph/Land.svg"
 							alt="Land"
 							width={24}
 							height={24}
