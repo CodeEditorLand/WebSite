@@ -112,7 +112,9 @@ export default () => {
 							className="StaccatoCard StaccatoBorderShimmer flex flex-col bg-card p-5 transition-all hover:bg-secondary focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 						>
 							<div className="mb-2 flex items-center justify-between gap-2">
-								<h4 className="font-medium text-card-foreground">{Channel.Title}</h4>
+								<h4 className="font-medium text-card-foreground">
+									{Channel.Title}
+								</h4>
 								<span className="shrink-0 font-mono text-sm font-bold tracking-widest text-card-foreground">
 									{Channel.Code}
 								</span>

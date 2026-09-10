@@ -47,7 +47,7 @@ function ResizableHandle({
 			{...props}
 		>
 			{withHandle && (
-				<div className="rounded-none z-10 flex h-4 w-3 items-center justify-center border bg-border">
+				<div className="z-10 flex h-4 w-3 items-center justify-center rounded-none border bg-border">
 					<lucide.GripVerticalIcon className="size-2.5" />
 				</div>
 			)}

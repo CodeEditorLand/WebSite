@@ -872,7 +872,9 @@ const AccountProfileInner = ({
 			{/* ── Security ──────────────────────────────────────────── */}
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold text-card-foreground">Security</h3>
+					<h3 className="font-semibold text-card-foreground">
+						Security
+					</h3>
 				</div>
 				<div className="divide-y divide-[var(--Border)]">
 					{/* Password - email/password users only */}

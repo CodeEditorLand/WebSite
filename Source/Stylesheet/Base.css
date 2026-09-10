@@ -1095,7 +1095,8 @@
  ───────────────────────────────────────────────────────────── */
 
 .markdown-alert {
-	border-left: 4px solid color-mix(in srgb, var(--CardForeground) 20%, transparent);
+	border-left: 4px solid
+		color-mix(in srgb, var(--CardForeground) 20%, transparent);
 
 	border-radius: 0;
 

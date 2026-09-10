@@ -77,7 +77,8 @@ const LocaleSwitcher = () => {
 							"--jelly-button-radius": "0px",
 							"--jelly-fill": "transparent",
 							"--jelly-ring": "var(--Accent)",
-							"--jelly-label": "var(--HeaderFg, var(--Foreground))",
+							"--jelly-label":
+								"var(--HeaderFg, var(--Foreground))",
 						} as React.CSSProperties
 					}
 				>
@@ -97,7 +98,7 @@ const LocaleSwitcher = () => {
 						onClick={() => HandleChange(Locale)}
 						className={
 							Locale === CurrentLocale
-								? "text-accent font-semibold"
+								? "font-semibold text-accent"
 								: "text-card-foreground opacity-70"
 						}
 					>

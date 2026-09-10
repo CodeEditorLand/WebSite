@@ -278,7 +278,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 										Tier.Element.length > 0 && (
 											<>
 												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
-						Elements
+													Elements
 												</p>
 												<ul className="space-y-3">
 													{Tier.Element.map(
@@ -375,7 +375,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 											{Tier.Element &&
 												Tier.Element.length > 0 && (
 													<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
-							Roadmap
+														Roadmap
 													</p>
 												)}
 
