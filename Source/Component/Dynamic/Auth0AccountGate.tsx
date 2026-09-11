@@ -196,13 +196,13 @@ export default ({
 								"--jelly-fill": "var(--Mute)",
 								"--jelly-label": "var(--MuteForeground)",
 								"--jelly-badge-radius": "0px",
-								"--jelly-badge-font-size": "0.625rem",
+								"--jelly-badge-font-size": "0.8125rem",
 							} as React.CSSProperties
 						}
 					>
 						Coming Soon
 					</jelly-badge>
-					<h1 className="text-2xl font-semibold">
+					<h1 className="text-2xl font-medium">
 						{T("registrationComingSoon.title", {
 							defaultValue: "Registration is not open yet",
 						})}
@@ -307,7 +307,7 @@ export default ({
 						/>
 					)}
 
-					<h2 className="text-lg font-semibold">{DisplayName}</h2>
+					<h2 className="text-lg font-medium">{DisplayName}</h2>
 
 					<p className="text-muted-foreground">{User.email}</p>
 

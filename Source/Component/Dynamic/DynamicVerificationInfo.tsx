@@ -54,7 +54,7 @@ const DynamicVerificationInfo = ({
 			{Information.SHA256 && (
 				<div className="space-y-2">
 					<div className="flex items-center">
-						<span className="font-semibold">
+						<span className="font-medium">
 							{T("labels.sha256Checksum", {
 								defaultValue: "SHA-256 Checksum",
 							})}
@@ -93,7 +93,7 @@ const DynamicVerificationInfo = ({
 			{Information.PGPSignature && (
 				<div className="space-y-2">
 					<div className="flex items-center">
-						<span className="font-semibold">
+						<span className="font-medium">
 							{T("labels.pgpSignature", {
 								defaultValue: "Release Signature",
 							})}
@@ -139,7 +139,7 @@ const DynamicVerificationInfo = ({
 
 			{Information.VerificationInstructions && (
 				<div className="border-t border-[var(--Border)] pt-4">
-					<h5 className="mb-2 font-semibold">
+					<h5 className="mb-2 font-medium">
 						{T("labels.verificationInstructions", {
 							defaultValue: "Verification Instructions",
 						})}
@@ -197,7 +197,7 @@ const DynamicVerificationInfo = ({
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 						{/* Download Verification */}
 						<div className="StaccatoCard StaccatoBorderShimmer flat bg-card p-6">
-							<h3 className="mb-4 flex items-center font-mono text-sm font-semibold text-card-foreground">
+							<h3 className="mb-4 flex items-center font-mono text-sm font-medium text-card-foreground">
 								{T("labels.downloadVerification", {
 									defaultValue: "Download Verification",
 								})}
@@ -215,7 +215,7 @@ const DynamicVerificationInfo = ({
 
 						{/* Integrity Verification */}
 						<div className="StaccatoCard StaccatoBorderShimmer flat border border-primary bg-card p-6">
-							<h3 className="mb-4 flex items-center font-mono text-sm font-semibold text-card-foreground">
+							<h3 className="mb-4 flex items-center font-mono text-sm font-medium text-card-foreground">
 								{T("labels.integrityCheck", {
 									defaultValue: "Integrity Check",
 								})}

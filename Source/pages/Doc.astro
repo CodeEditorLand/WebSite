@@ -66,7 +66,7 @@ const Element = [
 					class="sticky top-6 max-h-[calc(100vh-3.5rem)] overflow-y-auto overscroll-contain pb-8 pr-1 [-webkit-overflow-scrolling:touch] [scrollbar-color:var(--Border)_transparent] [scrollbar-width:thin]"
 				>
 					<p
-						class="mb-2 px-2 font-mono text-sm font-semibold uppercase tracking-widest text-muted-foreground"
+						class="mb-2 px-2 font-mono text-sm font-medium uppercase tracking-widest text-muted-foreground"
 					>
 						{
 							T("sidebar.title", {
@@ -121,7 +121,7 @@ const Element = [
 				<!-- Page Header -->
 				<header class="mb-12">
 					<h1
-						class="text-2xl font-semibold tracking-tight sm:text-3xl"
+						class="text-2xl font-medium tracking-tight sm:text-3xl"
 					>
 						{
 							T("common.docs.pageTitle", {
@@ -148,7 +148,7 @@ const Element = [
 						onclick="window.open('https://github.com/CodeEditorLand/Land#readme','_blank','noopener noreferrer')"
 					>
 						<div class="p-6">
-							<h2 class="mb-2 text-xl font-semibold text-card-foreground">
+							<h2 class="mb-2 text-xl font-medium text-card-foreground">
 								{
 									T("common.docs.gettingStarted.title", {
 										defaultValue: "Get Started in Minutes",
@@ -176,7 +176,7 @@ const Element = [
 						onclick="window.open('https://github.com/CodeEditorLand/Land/issues','_blank','noopener noreferrer')"
 					>
 						<div class="p-6">
-							<h2 class="mb-2 text-xl font-semibold text-card-foreground">
+							<h2 class="mb-2 text-xl font-medium text-card-foreground">
 								{
 									T("common.docs.issueTracker.title", {
 										defaultValue:
@@ -202,7 +202,7 @@ const Element = [
 						onclick="location.href='/Doc/Rust'"
 					>
 						<div class="p-6">
-							<h2 class="mb-2 text-xl font-semibold text-card-foreground">
+							<h2 class="mb-2 text-xl font-medium text-card-foreground">
 								{
 									T("common.docs.rustApi.title", {
 										defaultValue: "Rust API Reference",
@@ -235,7 +235,7 @@ const Element = [
 								class="mt-12"
 								id={Section.toLowerCase().replace(/\s+/g, "-")}
 							>
-								<h2 class="mb-6 text-2xl font-semibold">
+								<h2 class="mb-6 text-2xl font-medium">
 									{Section}
 								</h2>
 								<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -266,7 +266,7 @@ const Element = [
 
 				<!-- Architecture Summary -->
 				<section class="mt-12">
-					<h2 class="mb-6 text-2xl font-semibold text-foreground">
+					<h2 class="mb-6 text-2xl font-medium text-foreground">
 						{
 							T("common.docs.architecture.heading", {
 								defaultValue:
@@ -318,7 +318,7 @@ const Element = [
 
 				<!-- Backend Services (Cloudflare Workers) -->
 				<section class="mt-12">
-					<h2 class="mb-6 text-2xl font-semibold text-foreground">
+					<h2 class="mb-6 text-2xl font-medium text-foreground">
 						{
 							T("common.docs.workers.heading", {
 								defaultValue: "Backend Services",
@@ -340,7 +340,7 @@ const Element = [
 									href="https://codeeditorland-auth.playform.workers.dev"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="font-semibold text-card-foreground hover:underline"
+									class="font-medium text-card-foreground hover:underline"
 									>Auth<span class="InlineSeparator">↗</span
 									></a
 								>
@@ -359,7 +359,7 @@ const Element = [
 									href="https://codeeditorland-download.playform.workers.dev"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="font-semibold text-card-foreground hover:underline"
+									class="font-medium text-card-foreground hover:underline"
 									>Download<span class="InlineSeparator"
 										>↗</span
 									></a
@@ -379,7 +379,7 @@ const Element = [
 									href="https://codeeditorland-status.playform.workers.dev"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="font-semibold text-card-foreground hover:underline"
+									class="font-medium text-card-foreground hover:underline"
 									>Status<span class="InlineSeparator">↗</span
 									></a
 								>
@@ -398,7 +398,7 @@ const Element = [
 									href="https://codeeditorland-analytics.playform.workers.dev"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="font-semibold text-card-foreground hover:underline"
+									class="font-medium text-card-foreground hover:underline"
 									>Analytics<span class="InlineSeparator"
 										>↗</span
 									></a
@@ -419,7 +419,7 @@ const Element = [
 
 				<!-- Live Deployments -->
 				<section class="mt-12">
-					<h2 class="mb-6 text-2xl font-semibold text-foreground">
+					<h2 class="mb-6 text-2xl font-medium text-foreground">
 						{
 							T("common.docs.deployments.heading", {
 								defaultValue: "Live Deployments",
@@ -442,7 +442,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.website", {
 											defaultValue: "editor.land",
@@ -468,7 +468,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.status", {
 											defaultValue: "Status",
@@ -494,7 +494,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T(
 											"common.docs.deployments.rustMountain",
@@ -524,7 +524,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.rustRest", {
 											defaultValue: "Rust API: Rest",
@@ -550,7 +550,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T(
 											"common.docs.deployments.rustMaintain",
@@ -580,7 +580,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T(
 											"common.docs.deployments.rustCommon",
@@ -610,7 +610,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.rustEcho", {
 											defaultValue: "Rust API: Echo",
@@ -636,7 +636,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.rustAir", {
 											defaultValue: "Rust API: Air",
@@ -662,7 +662,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T(
 											"common.docs.deployments.rustSideCar",
@@ -692,7 +692,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.rustLand", {
 											defaultValue:
@@ -719,7 +719,7 @@ const Element = [
 								rel="noopener noreferrer"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T("common.docs.deployments.knowledge", {
 											defaultValue: "Knowledge Base",
@@ -743,7 +743,7 @@ const Element = [
 								href="/Doc/Rust"
 								class="block bg-card px-4 py-3 text-card-foreground transition-colors hover:bg-secondary"
 							>
-								<span class="font-semibold"
+								<span class="font-medium"
 									>{
 										T(
 											"common.docs.deployments.rustInteractive",

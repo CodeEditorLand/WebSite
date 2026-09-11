@@ -1,6 +1,6 @@
 import * as lucide from "lucide-react";
 
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 
 import { RichText } from "../UI/RichText.js";
 
@@ -56,51 +56,11 @@ const ElementGlyph = ({ Name }: { Name?: string }) => {
 	return (
 		<span
 			aria-hidden="true"
-			className="ml-2 inline-block text-base leading-none"
+			className="ml-2 inline-block text-lg leading-none"
 		>
 			{Glyph}
 		</span>
 	);
-};
-
-/**
- * Semantic color map per architecture element ID.
- * Rust backends: ExtensionRust. Effect-TS layer: ExtensionEffectTypeScript.
- * TypeScript workbench: LanguageTypeScript/LanguageJavaScript.
- * Astro UI: ExtensionAstro. WASM sandbox: SpineWASM.
- * gRPC contracts: SpinegRPC. Network: SpineIPC.
- * Toolchain: ToolOxc/ToolEsBuild/ToolBiome. Node runtime: RuntimeNode.
- */
-const TestimonialColorMap: Record<string, string> = {
-	Mountain: "var(--ExtensionRust)",
-
-	Cocoon: "var(--ExtensionEffectTypeScript)",
-
-	Wind: "var(--LanguageTypeScript)",
-
-	Sky: "var(--ExtensionAstro)",
-
-	Air: "var(--ExtensionTauri)",
-
-	Echo: "var(--SpineTCP)",
-
-	Common: "var(--LanguageRust)",
-
-	Vine: "var(--SpinegRPC)",
-
-	Grove: "var(--SpineWASM)",
-
-	Mist: "var(--SpineIPC)",
-
-	Rest: "var(--ToolOxc)",
-
-	Output: "var(--ToolEsBuild)",
-
-	SideCar: "var(--RuntimeNode)",
-
-	Worker: "var(--LanguageJavaScript)",
-
-	Maintain: "var(--ToolBiome)",
 };
 
 // ── Quasi-random row ratios ────────────────────────────────────────────────
@@ -311,10 +271,6 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 									? ColA
 									: ColB;
 
-							const AccentColor =
-								TestimonialColorMap[Testimonial.Id] ??
-								"var(--Primary)";
-
 							return (
 								<jelly-card
 									key={Testimonial.Id}
@@ -336,12 +292,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 										{/* Name + glyph + GitHub link */}
 										<div className="flex items-center justify-between gap-2">
 											<div className="flex items-center gap-1.5">
-												<span
-													className="font-mono text-sm font-bold"
-													style={{
-														color: AccentColor,
-													}}
-												>
+												<span className="font-mono text-lg font-medium text-card-foreground">
 													{Testimonial.Href ? (
 														<a
 															href={
@@ -381,18 +332,19 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											)}
 										</div>
 
-										{/* Role → chips split by " - " */}
+										{/* Role → keyword chips split by em-space (U+2001) or legacy " - " */}
 										{Testimonial.Role && (
-											<div className="flex flex-wrap gap-1">
+											<div className="flex flex-wrap text-card-foreground">
 												{Testimonial.Role.split(
-													" - ",
+													/\u2001| - /,
 												).map((Tag, TagIndex) => (
-													<span
-														key={TagIndex}
-														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-foreground"
-													>
-														{Tag}
-													</span>
+													<Fragment key={TagIndex}>
+														{TagIndex > 0 &&
+															"\u2001"}
+														<code className="flat bg-current/10 px-1.5 py-0.5 font-mono text-sm">
+															{Tag}
+														</code>
+													</Fragment>
 												))}
 											</div>
 										)}
@@ -442,10 +394,6 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 					className={`StaccatoMorphGap grid ${ColumnClass[Columns as number] ?? ColumnClass[3]} mx-auto gap-12`}
 				>
 					{Testimonials.map((Testimonial) => {
-						const AccentColor =
-							TestimonialColorMap[Testimonial.Id] ??
-							"var(--Primary)";
-
 						return (
 							<jelly-card
 								key={Testimonial.Id}
@@ -464,10 +412,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 								<div className="flex flex-col gap-3">
 									<div className="flex items-center justify-between gap-2">
 										<div className="flex items-center gap-1.5">
-											<span
-												className="font-mono text-sm font-bold"
-												style={{ color: AccentColor }}
-											>
+											<span className="font-mono text-lg font-medium text-card-foreground">
 												{Testimonial.Href ? (
 													<a
 														href={Testimonial.Href}
@@ -502,18 +447,19 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											</a>
 										)}
 									</div>
+									{/* Role → keyword chips split by em-space (U+2001) or legacy " - " */}
 									{Testimonial.Role && (
-										<div className="flex flex-wrap gap-1">
-											{Testimonial.Role.split(" - ").map(
-												(Tag, TagIndex) => (
-													<span
-														key={TagIndex}
-														className="bg-mute px-2 py-0.5 font-mono text-sm tracking-wide text-foreground"
-													>
+										<div className="flex flex-wrap text-card-foreground">
+											{Testimonial.Role.split(
+												/\u2001| - /,
+											).map((Tag, TagIndex) => (
+												<Fragment key={TagIndex}>
+													{TagIndex > 0 && " "}
+													<code className="flat bg-current/10 px-1.5 py-0.5 font-mono text-sm">
 														{Tag}
-													</span>
-												),
-											)}
+													</code>
+												</Fragment>
+											))}
 										</div>
 									)}
 									<p className="text-sm leading-relaxed text-card-foreground">

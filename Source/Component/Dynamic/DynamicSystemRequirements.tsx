@@ -116,7 +116,7 @@ const DynamicSystemRequirements = ({ Content, ClassName }: Property) => {
 				>
 					{/* Minimum Requirements */}
 					<div className="StaccatoCard StaccatoBorderShimmer flat bg-card p-6">
-						<h3 className="mb-6 font-mono text-sm font-semibold text-card-foreground">
+						<h3 className="mb-6 font-mono text-sm font-medium text-card-foreground">
 							{T(
 								"systemRequirements.minimum",
 								"Minimum Requirements",
@@ -130,7 +130,7 @@ const DynamicSystemRequirements = ({ Content, ClassName }: Property) => {
 
 					{/* Recommended Requirements */}
 					<div className="StaccatoCard StaccatoBorderShimmer flat border border-primary bg-card p-6">
-						<h3 className="mb-6 font-mono text-sm font-semibold text-card-foreground">
+						<h3 className="mb-6 font-mono text-sm font-medium text-card-foreground">
 							{T(
 								"systemRequirements.recommended",
 								"Recommended for the Best Experience",
@@ -146,7 +146,7 @@ const DynamicSystemRequirements = ({ Content, ClassName }: Property) => {
 				{/* OS Support */}
 				{Content.Os && Content.Os.length > 0 && (
 					<div className="mt-12 text-center">
-						<h4 className="mb-4 font-mono text-sm font-semibold">
+						<h4 className="mb-4 font-mono text-sm font-medium">
 							{T(
 								"systemRequirements.supportedOS",
 								"Supported Operating Systems",

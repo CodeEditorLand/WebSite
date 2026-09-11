@@ -119,7 +119,7 @@ const VerifyPage = ({
 											/>
 										</svg>
 									</div>
-									<h1 className="mb-2 text-2xl font-bold">
+									<h1 className="mb-2 text-2xl font-medium">
 										{"Email Verified Successfully!"}
 									</h1>
 									<p className="mb-6 text-muted-foreground">
@@ -162,7 +162,7 @@ const VerifyPage = ({
 											/>
 										</svg>
 									</div>
-									<h1 className="mb-2 text-2xl font-bold">
+									<h1 className="mb-2 text-2xl font-medium">
 										{"Verification Failed"}
 									</h1>
 									<p className="mb-2 text-muted-foreground">

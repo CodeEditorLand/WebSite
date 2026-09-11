@@ -49,7 +49,7 @@ const DynamicHeader = ({ Content, ClassName }: Property) => {
 							className="h-full w-full"
 						/>
 					</div>
-					<span className="font-semibold">{Logo.Text}</span>
+					<span className="font-medium">{Logo.Text}</span>
 				</div>
 
 				{/* Desktop Navigation */}

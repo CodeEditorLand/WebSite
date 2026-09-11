@@ -223,7 +223,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 						<div className="flex h-full flex-col justify-between">
 							{/* Top: Index + Seal */}
 							<div className="flex items-start justify-between">
-								<FieldRecordIndex value="# LAND_01" />
+								<FieldRecordIndex index="LAND_01" />
 
 								<FieldRecordSeal element="Land" />
 							</div>
@@ -251,7 +251,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 							</div>
 
 							{/* Program + Status */}
-							<p className="text-field-xs mt-6 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
+							<p className="text-field-s mt-6 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
 								NATIVE · OPEN · CROSS-PLATFORM
 							</p>
 
@@ -295,7 +295,7 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 
 							{/* Program line + CTA */}
 							<div className="mt-10">
-								<p className="text-field-xs mb-4 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
+								<p className="text-field-s mb-4 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
 									OPEN · EDIT · SHIP
 								</p>
 

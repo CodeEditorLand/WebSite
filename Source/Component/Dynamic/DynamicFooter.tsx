@@ -90,7 +90,7 @@ const DynamicFooter = ({ Content, ClassName }: Property) => {
 				<div className="mb-8 grid grid-cols-2 gap-8 md:grid-cols-4">
 					{/* Brand Column */}
 					<div className="col-span-2 md:col-span-4 lg:col-span-1">
-						<h3 className="mb-2 font-mono text-sm font-semibold">
+						<h3 className="mb-2 font-mono text-sm font-medium">
 							{Brand.Name}
 						</h3>
 						{Brand.Description && (
@@ -135,7 +135,7 @@ const DynamicFooter = ({ Content, ClassName }: Property) => {
 					{/* Dynamic Columns */}
 					{Columns.map((Column, ColumnIndex) => (
 						<div key={ColumnIndex}>
-							<h4 className="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+							<h4 className="mb-4 font-mono text-sm font-medium uppercase tracking-wider text-muted-foreground">
 								{Column.Title}
 							</h4>
 							<ul className="space-y-2">

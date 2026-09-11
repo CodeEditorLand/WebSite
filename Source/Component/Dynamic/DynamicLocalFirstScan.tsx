@@ -118,7 +118,7 @@ const ScanAnimation = () => (
 				style={{ animationDelay: "300ms" }}
 			/>
 		</div>
-		<span className="text-muted-foreground">
+		<span className="text-card-foreground opacity-70">
 			Scanning for Air Daemon...
 		</span>
 	</div>
@@ -262,7 +262,7 @@ const LocalFirstScanInner = () => {
 									style={{ width: `${ScanProgress}%` }}
 								/>
 							</div>
-							<p className="mt-1 text-muted-foreground">
+							<p className="mt-1 text-card-foreground opacity-70">
 								{T("dashboard.localFirst.scanDescription", {
 									defaultValue:
 										"Checking ws://localhost:7979 and ws://localhost:7878",
@@ -279,7 +279,7 @@ const LocalFirstScanInner = () => {
 									defaultValue: "Connected to Air Daemon",
 								})}
 							</p>
-							<div className="flex flex-wrap gap-3 text-muted-foreground">
+							<div className="flex flex-wrap gap-3 text-card-foreground opacity-70">
 								<span className="flex items-center gap-1">
 									<span className="font-medium">
 										{T("dashboard.localFirst.portLabel", {
@@ -340,8 +340,8 @@ const LocalFirstScanInner = () => {
 					{/* Not Found State */}
 					{Status === "NotFound" && (
 						<div className="mt-3 space-y-3">
-							<p className="text-muted-foreground">
-								{T("dashboard.localFirst.notFoundMessage", {
+							<p className="text-card-foreground opacity-70">
+														{T("dashboard.localFirst.notFoundMessage", {
 									defaultValue:
 										"Air Daemon not detected. Launch Code Editor Land to enable local-first features.",
 								})}

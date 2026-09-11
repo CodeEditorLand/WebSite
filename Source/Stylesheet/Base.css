@@ -983,7 +983,7 @@
 
 		line-height: 1rem;
 
-		font-weight: 600;
+		font-weight: 500;
 
 		transition-property: opacity;
 
@@ -1124,7 +1124,7 @@
 
 	font-size: 0.875rem;
 
-	font-weight: 600;
+	font-weight: 500;
 
 	gap: 0.375rem;
 
@@ -1268,6 +1268,13 @@
 /* ── Shiki code blocks: flat corners, dark surface ─────── */
 .astro-code {
 	border-radius: 0 !important;
+}
+
+/* Neutralize prose-code backgrounds leaking into Shiki's <code> (the blog
+   prose-code:[background-color:color-mix(...)] tint would otherwise paint a
+   light band around the code text). Shiki tokens carry inline colors. */
+.astro-code code {
+	background-color: transparent !important;
 }
 
 /* ── Mermaid diagrams ─────────────────────────────────── */
@@ -1441,12 +1448,6 @@ jelly-icon-button:not(:defined)[disabled] {
 }
 
 /* Nocturnal Field Record type utilities */
-.text-field-xs {
-	font-size: var(--TypeScaleXS);
-	line-height: 1.1;
-	letter-spacing: 0.04em;
-}
-
 .text-field-s {
 	font-size: var(--TypeScaleS);
 	line-height: 1.2;
@@ -1488,20 +1489,20 @@ jelly-icon-button:not(:defined)[disabled] {
 
 .FieldRecordIndex {
 	font-family: var(--FontSans);
-	font-size: var(--TypeScaleXS, 0.75rem);
+	font-size: var(--TypeScaleS, 0.875rem);
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 }
 
 .FieldRecordMetadata {
 	font-family: var(--FontSans);
-	font-size: var(--TypeScaleXS, 0.75rem);
+	font-size: var(--TypeScaleS, 0.875rem);
 	letter-spacing: 0.04em;
 }
 
 .FieldRecordStatus {
 	font-family: var(--FontSans);
-	font-size: var(--TypeScaleXS, 0.75rem);
+	font-size: var(--TypeScaleS, 0.875rem);
 	letter-spacing: 0.04em;
 }
 

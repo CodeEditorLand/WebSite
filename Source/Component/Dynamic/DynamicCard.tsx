@@ -58,15 +58,15 @@ const DynamicCard = ({ Sections, ClassName, OnClick, Style }: Property) => {
 			{BodySection && (
 				<CardContent>
 					{BodySection.title && (
-						<h3 className="mb-2 font-mono text-sm font-semibold">
+						<h3 className="mb-2 font-mono text-sm font-medium">
 							{BodySection.title}
 						</h3>
 					)}
 
 					{BodySection.description && (
-						<div className="StaccatoBreath mb-4 text-muted-foreground">
-							<RichText Text={BodySection.description} />
-						</div>
+						<div className="StaccatoBreath mb-4 text-card-foreground opacity-70">
+												<RichText Text={BodySection.description} />
+											</div>
 					)}
 
 					{BodySection.content}

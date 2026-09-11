@@ -56,7 +56,7 @@ const FieldRecordAction: React.FC<FieldRecordActionProps> = ({
 		<a
 			href={href}
 			className={cn(
-				"text-field-xs font-mono uppercase tracking-wider",
+				"text-field-s font-mono uppercase tracking-wider",
 				"underline-offset-4 hover:underline",
 				className,
 			)}

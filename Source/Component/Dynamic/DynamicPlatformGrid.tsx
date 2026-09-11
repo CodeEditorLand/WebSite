@@ -8,6 +8,8 @@ import { useEffect, useRef, useState } from "react";
 
 import { useTranslation } from "react-i18next";
 
+import * as lucide from "lucide-react";
+
 import { RichText } from "../UI/RichText.js";
 
 import { DynamicButton } from "./DynamicButton";
@@ -32,6 +34,20 @@ const PlatformColorMap: Record<string, string> = {
 	Windows: "var(--OSWindows)",
 
 	Linux: "var(--OSLinux)",
+};
+
+/**
+ * Platform icon registry - maps the PlatformInformation.Icon names
+ * (Apple / Monitor / Terminal) to lucide components so the icons
+ * render in the initial HTML. Inline SVG inherits currentColor,
+ * so it renders dark ink on the warm-white card (never /Dark/).
+ */
+const PlatformIconRegistry: Record<string, lucide.LucideIcon> = {
+	Apple: lucide.Apple,
+
+	Monitor: lucide.Monitor,
+
+	Terminal: lucide.Terminal,
 };
 
 /**
@@ -64,10 +80,6 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 		}),
 
 		Size: SizeLabel = T("labels.size", { defaultValue: "Size:" }),
-
-		Requirements: RequirementsLabel = T("labels.requirements", {
-			defaultValue: "Requirements:",
-		}),
 
 		Loading: LoadingLabel = T("labels.loading", {
 			defaultValue: "Loading available downloads...",
@@ -348,113 +360,129 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 					className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3"
 				>
 					{Platforms.map((Platform) => {
-						const HasVerification =
-							ShowVerification &&
-							(Platform.Checksum || Platform.Signature);
+						const PlatformIcon =
+							PlatformIconRegistry[Platform.Icon];
 
 						const PlatformCardSection: CardSection = {
 							Header: {
-								title: Platform.Name,
-								description: Platform.Description,
 								content: (
-									<div className="mt-3">
-										<DynamicButton
-											Content={{
-												Text: T("labels.downloadFor", {
-													defaultValue:
-														"Download for {{platform}}",
-													platform:
-														Platform.Name ||
-														"this platform",
-												}),
-												Variant: "default",
-												Size: "lg",
-												FullWidth: true,
-												Icon: "Download",
-												ClassName:
-											"PlatformDownloadButton whitespace-nowrap",
-											}}
-											OnAction={() =>
-												HandleDownload(Platform)
-											}
-										/>
+									<div className="flex items-center gap-3">
+										{PlatformIcon && (
+											<PlatformIcon
+												className="h-5 w-5 shrink-0 text-card-foreground"
+												aria-hidden="true"
+											/>
+										)}
+
+										<div>
+											<h3 className="font-mono text-sm font-medium leading-snug tracking-tight text-card-foreground">
+												{Platform.Name}
+											</h3>
+
+											<p className="font-mono text-sm uppercase tracking-[0.2em] text-card-foreground opacity-70">
+												〈{Platform.Description}〉
+											</p>
+										</div>
 									</div>
 								),
 							},
 							Body: {
 								content: (
-									<div className="space-y-2 font-mono text-sm text-card-foreground opacity-70">
-										<div className="flex justify-between">
-											<span>{VersionLabel}</span>
+									<div className="space-y-2 font-mono text-sm">
+										<div className="flex justify-between text-card-foreground opacity-70">
+											<span className="uppercase">
+												{VersionLabel}
+											</span>
+
 											<span className="font-medium text-card-foreground">
 												{FormatVersion(
 													Platform.Version,
 												)}
 											</span>
 										</div>
-										<div className="flex justify-between">
-											<span>{SizeLabel}</span>
+
+										<div className="flex justify-between text-card-foreground opacity-70">
+											<span className="uppercase">
+												{SizeLabel}
+											</span>
+
 											<span className="font-medium text-card-foreground">
-												{FormatFileSize(Platform.Size)}
+												{FormatFileSize(
+													Platform.Size,
+												)}
 											</span>
 										</div>
-										{Platform.Requirements &&
-											Platform.Requirements.length >
-												0 && (
-												<div className="mt-2 border-t border-border pt-2">
-													<p className="mb-1 font-medium text-card-foreground">
-														{RequirementsLabel}
-													</p>
-													<ul className="list-inside list-disc space-y-1">
-														{Platform.Requirements.map(
-															(
-																Requirement,
 
-																RequirementIndex,
-															) => (
-																<li
-																	key={
-																		RequirementIndex
-																	}
-																	className=""
-																>
-																	{
-																		Requirement
-																	}
-																</li>
-															),
+										{ShowVerification &&
+											Platform.Checksum && (
+												<div className="flex justify-between text-card-foreground opacity-70">
+													<span className="uppercase">
+														CHECKSUM:
+													</span>
+
+													<span className="font-medium text-card-foreground">
+														{Platform.Checksum.substring(
+															0,
+															16,
 														)}
-													</ul>
+														...
+													</span>
 												</div>
 											)}
+
+										<div className="flex justify-between text-card-foreground opacity-70">
+											<span className="uppercase">
+												SIGNING:
+											</span>
+
+											<span className="font-medium text-card-foreground">
+												{Platform.Signature
+													? "VERIFIED"
+													: "IN PREPARATION"}
+											</span>
+										</div>
+
+										<div className="pt-1">
+											<DynamicButton
+												Content={{
+													Text: T(
+														"labels.downloadFor",
+														{
+															defaultValue:
+																"Download for {{platform}}",
+															platform:
+																Platform.Name ||
+																"this platform",
+														},
+													),
+													Variant: "default",
+													Size: "lg",
+													FullWidth: true,
+													Icon: "Download",
+													ClassName:
+														"PlatformDownloadButton whitespace-nowrap",
+												}}
+												OnAction={() =>
+													HandleDownload(Platform)
+												}
+											/>
+										</div>
 									</div>
 								),
 							},
-							...(HasVerification
-								? {
-										Footer: {
-											content: (
-												<div className="font-mono text-sm text-card-foreground opacity-70">
-													{Platform.Checksum && (
-														<p>
-															SHA-256:{" "}
-															{Platform.Checksum.substring(
-																0,
-																16,
-															)}
-															...
-														</p>
-													)}
-													{Platform.Signature && (
-														<p>
-															Signature: available
-														</p>
-													)}
-												</div>
-											),
-										},
-									}
-								: {}),
+							Footer: {
+								content: (
+									<div className="flex justify-between font-mono text-sm text-card-foreground opacity-70">
+										<span className="uppercase">
+											STATUS:
+										</span>
+
+										<span className="font-medium text-card-foreground">
+											RELEASE PREPARATION
+										</span>
+									</div>
+								),
+							},
 						};
 
 						const PlatformAccentColor =

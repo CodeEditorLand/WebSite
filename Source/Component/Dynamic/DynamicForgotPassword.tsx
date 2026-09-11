@@ -139,7 +139,7 @@ const DynamicForgotPassword = ({
 												/>
 											</svg>
 										</div>
-										<h3 className="text-lg font-semibold">
+										<h3 className="text-lg font-medium">
 											Check your email
 										</h3>
 										<p className="text-muted-foreground">

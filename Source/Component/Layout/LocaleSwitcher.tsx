@@ -98,7 +98,7 @@ const LocaleSwitcher = () => {
 						onClick={() => HandleChange(Locale)}
 						className={
 							Locale === CurrentLocale
-								? "font-semibold text-accent"
+								? "font-medium text-accent"
 								: "text-card-foreground opacity-70"
 						}
 					>

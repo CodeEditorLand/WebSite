@@ -118,17 +118,34 @@ const TermDictionary = new Map<string, TermCategory>([
 ]);
 
 const CategoryStyle: Record<TermCategory, string> = {
-	Architecture: "border-[var(--SpineIPC)]/40 text-[var(--SpineIPCFore)]",
+	Architecture: "border-[var(--SpineIPC)] text-[#2563eb]",
 
-	Telemetry: "border-[#fbbf24]/40 text-[#fcd34d]",
+	Telemetry: "border-[#fbbf24] text-[#b45309]",
 
-	Protocol: "border-[var(--SpineWASM)]/40 text-[var(--SpineWASMFore)]",
+	Protocol: "border-[var(--SpineWASM)] text-[#9333ea]",
 
-	Feature: "border-[var(--SpineTCP)]/40 text-[var(--SpineTCPFore)]",
+	Feature: "border-[var(--SpineTCP)] text-[#c2410c]",
 
-	License: "border-[var(--SpinegRPC)]/40 text-[var(--SpinegRPCFore)]",
+	License: "border-[var(--SpinegRPC)] text-[#15803d]",
 
-	Tool: "border-[#60a5fa]/40 text-[#93c5fd]",
+	Tool: "border-[#60a5fa] text-[#2563eb]",
+};
+
+// Jelly-badge variant: labels sit on the dark 18%-hue color-mix fills, so
+// they need bright -300 shades instead of the dark 600/700 shades used on
+// the plain warm-white chips above.
+const CategoryBadgeStyle: Record<TermCategory, string> = {
+	Architecture: "border-[var(--SpineIPC)] text-[#93c5fd]",
+
+	Telemetry: "border-[#fbbf24] text-[#fcd34d]",
+
+	Protocol: "border-[var(--SpineWASM)] text-[#c4b5fd]",
+
+	Feature: "border-[var(--SpineTCP)] text-[#fdba74]",
+
+	License: "border-[var(--SpinegRPC)] text-[#86efac]",
+
+	Tool: "border-[#60a5fa] text-[#93c5fd]",
 };
 
 const CategoryFill: Record<TermCategory, string> = {
@@ -321,7 +338,7 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 			);
 		case "Term": {
 			const Logo = TermLogo[Segment.Value];
-			const Style = CategoryStyle[Segment.Category];
+			const Style = CategoryBadgeStyle[Segment.Category];
 			const Fill = CategoryFill[Segment.Category];
 			return (
 				<jelly-badge

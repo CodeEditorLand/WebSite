@@ -281,7 +281,7 @@ const DashboardUserInner = () => {
 					/>
 				) : null}
 				<div
-					className={`${User.picture ? "hidden" : "flex"} flat bg-mute h-12 w-12 items-center justify-center text-lg font-bold text-foreground`}
+					className={`${User.picture ? "hidden" : "flex"} flat bg-mute h-12 w-12 items-center justify-center text-lg font-medium text-foreground`}
 					aria-hidden="true"
 				>
 					<Pii visible={PIIVisible}>

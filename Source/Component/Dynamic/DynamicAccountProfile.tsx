@@ -155,7 +155,7 @@ const Auth0Badge = () => (
 		</svg>
 		<span>
 			Secured by{" "}
-			<span className="font-semibold" style={{ color: "#EB5424" }}>
+			<span className="font-medium" style={{ color: "#EB5424" }}>
 				Auth0
 			</span>{" "}
 			by Okta
@@ -528,13 +528,13 @@ const AccountProfileInner = ({
 							className="flat h-20 w-20 object-cover"
 						/>
 					) : (
-						<div className="bg-mute flex h-20 w-20 items-center justify-center text-2xl font-bold text-muted-foreground">
+						<div className="bg-mute flex h-20 w-20 items-center justify-center text-2xl font-medium text-muted-foreground">
 							{DisplayName.slice(0, 2).toUpperCase()}
 						</div>
 					)}
 				</div>
 				<div className="flex-1">
-					<h2 className="text-2xl font-bold">
+					<h2 className="text-2xl font-medium">
 						<Pii visible={PIIVisible}>{DisplayName}</Pii>
 					</h2>
 					<div className="mt-1 flex flex-wrap items-center gap-2">
@@ -668,7 +668,7 @@ const AccountProfileInner = ({
 			{/* ── Profile fields ────────────────────────────────────── */}
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="flex items-center justify-between border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold text-card-foreground">
+					<h3 className="font-medium text-card-foreground">
 						{T("profileSection", {
 							defaultValue: "Profile Fields",
 						})}
@@ -872,7 +872,7 @@ const AccountProfileInner = ({
 			{/* ── Security ──────────────────────────────────────────── */}
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold text-card-foreground">
+					<h3 className="font-medium text-card-foreground">
 						Security
 					</h3>
 				</div>
@@ -993,7 +993,7 @@ const AccountProfileInner = ({
 
 			<div className="StaccatoCard StaccatoBorderShimmer bg-card">
 				<div className="border-b border-[var(--Border)] px-6 py-4">
-					<h3 className="font-semibold text-card-foreground">
+					<h3 className="font-medium text-card-foreground">
 						{T("actionsSection", {
 							defaultValue: "Account Actions",
 						})}

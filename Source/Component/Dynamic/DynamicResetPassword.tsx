@@ -173,7 +173,7 @@ const DynamicResetPassword = ({
 										}
 									/>
 									<div className="flex items-center justify-center">
-										<h3 className="text-lg font-semibold">
+										<h3 className="text-lg font-medium">
 											Invalid or Expired Token
 										</h3>
 										{"\u2001"}
@@ -220,7 +220,7 @@ const DynamicResetPassword = ({
 										}
 									/>
 									<div className="flex items-center justify-center">
-										<h3 className="text-lg font-semibold">
+										<h3 className="text-lg font-medium">
 											Password Reset Successful
 										</h3>
 										{"\u2001"}

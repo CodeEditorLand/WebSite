@@ -36,7 +36,7 @@ const FieldRecordStatus: React.FC<FieldRecordStatusProps> = ({
 	return (
 		<span
 			className={cn(
-				"text-field-xs font-mono uppercase tracking-wider",
+				"text-field-s font-mono uppercase tracking-wider",
 				className,
 			)}
 			style={{ color }}

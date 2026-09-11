@@ -188,7 +188,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 						{Config.ResponseDays}d SLA
 					</span>
 				</div>
-				<h1 className="font-mono text-lg font-semibold tracking-tight">
+				<h1 className="font-mono text-lg font-medium tracking-tight">
 					{Config.Title}
 				</h1>
 				<p className="text-muted-foreground">{Config.Subtitle}</p>
@@ -480,7 +480,7 @@ const ContactFormInner = ({ Config }: { Config: RequestConfig }) => {
 
 			{/* Pair reference explanation */}
 			<div className="bg-mute border border-[var(--Border)] px-5 py-4 text-sm text-muted-foreground">
-				<span className="font-mono font-semibold text-foreground">
+				<span className="font-mono font-medium text-foreground">
 					{Config.Code}-{PairId}
 				</span>{" "}
 				is your unique pair reference for this submission -{" "}

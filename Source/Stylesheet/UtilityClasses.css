@@ -163,7 +163,7 @@
 .section-label {
 	font-family: var(--FontMono);
 	font-size: 0.875rem;
-	font-weight: 600;
+	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	color: var(--MuteForeground);
@@ -183,7 +183,7 @@
 	font-family: var(--FontMono);
 	font-size: 0.875rem;
 	line-height: 1.375;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: -0.025em;
 }
 
@@ -192,7 +192,7 @@
 	background-color: var(--Mute);
 	padding: 0.125rem 0.5rem;
 	font-family: var(--FontMono);
-	font-size: 10px;
+	font-size: 13px;
 	letter-spacing: 0.025em;
 	color: var(--MuteForeground);
 }

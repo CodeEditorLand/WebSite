@@ -213,8 +213,8 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 														"--jelly-badge-radius":
 															"0px",
 														"--jelly-badge-font-size":
-															"10px",
-													} as React.CSSProperties
+															"13px",
+														} as React.CSSProperties
 												}
 											>
 												<span
@@ -243,7 +243,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 														"--jelly-badge-radius":
 															"0px",
 														"--jelly-badge-font-size":
-															"0.625rem",
+															"0.8125rem",
 													} as React.CSSProperties
 												}
 											>
@@ -261,7 +261,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 											}}
 										/>
 									</div>
-									<h3 className="mb-2 text-2xl font-bold text-card-foreground">
+									<h3 className="mb-2 text-2xl font-medium text-card-foreground">
 										{Tier.Name}
 									</h3>
 									{Tier.Description && (
@@ -277,7 +277,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 									{Tier.Element &&
 										Tier.Element.length > 0 && (
 											<>
-												<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
+												<p className="mb-3 font-mono text-sm font-medium uppercase tracking-wider text-card-foreground opacity-70">
 													Elements
 												</p>
 												<ul className="space-y-3">
@@ -320,7 +320,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 																			] ??
 																			`/Doc/${NameLine.toLowerCase()}`
 																		}
-																		className="font-mono text-sm font-semibold transition-colors hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+																		className="font-mono text-sm font-medium transition-colors hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
 																		style={{
 																			color: AccentColor,
 																		}}
@@ -374,7 +374,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 										<>
 											{Tier.Element &&
 												Tier.Element.length > 0 && (
-													<p className="mb-3 font-mono text-sm font-semibold uppercase tracking-wider text-card-foreground opacity-70">
+													<p className="mb-3 font-mono text-sm font-medium uppercase tracking-wider text-card-foreground opacity-70">
 														Roadmap
 													</p>
 												)}
@@ -416,7 +416,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 																			"--jelly-badge-radius":
 																				"0px",
 																			"--jelly-badge-font-size":
-																				"0.625rem",
+																				"0.8125rem",
 																		} as React.CSSProperties
 																	}
 																>

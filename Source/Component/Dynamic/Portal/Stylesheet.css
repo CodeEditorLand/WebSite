@@ -23,7 +23,7 @@
 
 .PortalTitle {
 	font-size: clamp(1.75rem, 4vw, 3rem);
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: -0.02em;
 	color: var(--Foreground);
 	margin-bottom: 1rem;
@@ -137,7 +137,7 @@
 
 .PortalTierDescriptionTitle {
 	font-size: 1.25rem;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: -0.01em;
 	overflow-wrap: break-word;
 	word-break: break-word;
@@ -160,7 +160,7 @@
 
 .PortalTierFeatureHeading {
 	font-size: 0.875rem;
-	font-weight: 700;
+	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	color: var(--MuteForeground);
@@ -226,7 +226,7 @@
 .PortalTierProtocolCode {
 	font-family: var(--FontMono);
 	font-size: 0.875rem;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 0.02em;
 	overflow-wrap: break-word;
 	word-break: break-word;

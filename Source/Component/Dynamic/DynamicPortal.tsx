@@ -801,7 +801,7 @@ const PortalTierRow = ({
 												"var(--MuteForeground)",
 											"--jelly-badge-radius": "0px",
 											"--jelly-badge-font-size":
-												"0.625rem",
+												"0.8125rem",
 										} as React.CSSProperties
 									}
 								>
@@ -1133,7 +1133,7 @@ const PortalTierRow = ({
 								"--jelly-label":
 									Content.Color || "var(--Foreground)",
 								"--jelly-badge-radius": "0px",
-								"--jelly-badge-font-size": "0.625rem",
+								"--jelly-badge-font-size": "0.8125rem",
 								"--jelly-color-border-default":
 									Content.BorderColor || "var(--Border)",
 							} as React.CSSProperties
@@ -1191,7 +1191,7 @@ const PortalTierRow = ({
 														"--jelly-badge-radius":
 															"0px",
 														"--jelly-badge-font-size":
-															"0.625rem",
+															"0.8125rem",
 													} as React.CSSProperties
 												}
 											>
@@ -1355,7 +1355,7 @@ const PortalTierRow = ({
 															"--jelly-badge-radius":
 																"0px",
 															"--jelly-badge-font-size":
-																"0.625rem",
+																"0.8125rem",
 														} as React.CSSProperties
 													}
 												>

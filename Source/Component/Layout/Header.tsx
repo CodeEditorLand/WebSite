@@ -61,8 +61,11 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 	const [NavMenuOpen, SetNavMenuOpen] = useState(false);
 	const [MobileMenuOpen, SetMobileMenuOpen] = useState(false);
 	const [Scrolled, SetScrolled] = useState(false);
+	const [CurrentPath, SetCurrentPath] = useState("");
 
 	useEffect(() => {
+		SetCurrentPath(window.location.pathname);
+	}, []);
 		const onScroll = () => SetScrolled(window.scrollY > 8);
 		window.addEventListener("scroll", onScroll, { passive: true });
 		return () => window.removeEventListener("scroll", onScroll);

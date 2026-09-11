@@ -28,12 +28,12 @@ const FieldRecordMetadata: React.FC<FieldRecordMetadataProps> = ({
 			{items.map((pair, i) => (
 				<div key={i} className="flex gap-2">
 					<dt
-						className="text-field-xs font-mono uppercase tracking-wider"
+						className="text-field-s font-mono uppercase tracking-wider"
 						style={{ color: "var(--MuteForeground)" }}
 					>
 						{pair.label}:
 					</dt>
-					<dd className="text-field-xs font-mono uppercase tracking-wider">
+					<dd className="text-field-s font-mono uppercase tracking-wider">
 						{pair.value}
 					</dd>
 				</div>

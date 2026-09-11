@@ -61,7 +61,7 @@ export class ErrorBoundary extends Component<
 				<div className="flex min-h-[200px] items-center justify-center p-8">
 					<div className="w-full max-w-md border border-[var(--Destruct)] bg-card p-8 text-center">
 						<div className="bg-destruct mx-auto mb-4 h-1 w-8" />
-						<h2 className="text-card-foreground mb-2 text-xl font-semibold">
+						<h2 className="text-card-foreground mb-2 text-xl font-medium">
 							Something went wrong
 						</h2>
 						<p className="mb-6 text-card-foreground opacity-70">

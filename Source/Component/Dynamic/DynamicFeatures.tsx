@@ -304,7 +304,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 							>
 								<div className="flex flex-col gap-6">
 									<div className="flex items-start justify-between">
-										<h3 className="font-mono text-sm font-semibold leading-snug text-card-foreground">
+										<h3 className="font-mono text-sm font-medium leading-snug text-card-foreground">
 											{Feature.Title}
 										</h3>
 										<div

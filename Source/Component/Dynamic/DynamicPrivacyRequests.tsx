@@ -47,7 +47,7 @@ export default () => {
 		<div className="space-y-12">
 			{/* GDPR Rights */}
 			<div>
-				<h3 className="mb-2 font-mono text-sm font-semibold">
+				<h3 className="mb-2 font-mono text-sm font-medium">
 					Your Rights Under GDPR
 				</h3>
 				<p className="mb-6 text-muted-foreground">
@@ -69,7 +69,7 @@ export default () => {
 								</h4>
 								<div className="flex shrink-0 flex-col items-end gap-1">
 									<span
-										className={`px-2 py-0.5 font-mono text-sm font-bold tracking-widest ${BadgeColor(Right.Article)}`}
+										className={`px-2 py-0.5 font-mono text-sm font-medium tracking-widest ${BadgeColor(Right.Article)}`}
 									>
 										{Right.Code}
 									</span>
@@ -96,7 +96,7 @@ export default () => {
 
 			{/* Support Channels */}
 			<div>
-				<h3 className="mb-2 font-mono text-sm font-semibold">
+				<h3 className="mb-2 font-mono text-sm font-medium">
 					Support & Assistance
 				</h3>
 				<p className="mb-6 text-muted-foreground">
@@ -115,7 +115,7 @@ export default () => {
 								<h4 className="font-medium text-card-foreground">
 									{Channel.Title}
 								</h4>
-								<span className="shrink-0 font-mono text-sm font-bold tracking-widest text-card-foreground">
+								<span className="shrink-0 font-mono text-sm font-medium tracking-widest text-card-foreground">
 									{Channel.Code}
 								</span>
 							</div>
@@ -132,7 +132,7 @@ export default () => {
 
 			{/* Delete Account */}
 			<div>
-				<h3 className="mb-2 font-mono text-sm font-semibold">
+				<h3 className="mb-2 font-mono text-sm font-medium">
 					Delete Account
 				</h3>
 				<p className="mb-6 text-muted-foreground">
@@ -166,12 +166,12 @@ export default () => {
 						</div>
 						<div className="flex-1">
 							<div className="mb-1 flex items-center gap-2">
-								<h4 className="font-semibold text-red-700">
+								<h4 className="font-medium text-red-700">
 									Permanent Account Deletion
 								</h4>
-								<span className="font-mono text-sm font-bold tracking-widest text-red-400">
-									ERASE
-								</span>
+								<span className="font-mono text-sm font-medium tracking-widest text-red-700">
+															ERASE
+														</span>
 							</div>
 							<p className="text-sm text-card-foreground">
 								Opens a structured erasure request form. The

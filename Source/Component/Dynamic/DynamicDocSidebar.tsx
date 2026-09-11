@@ -107,7 +107,7 @@ const DynamicDocSidebar = ({
 										ToggleSection(Section.Id)
 									}
 								>
-									<CollapsibleTrigger className="flat flex w-full items-center justify-between px-2 py-1.5 text-sm font-semibold uppercase tracking-widest text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
+									<CollapsibleTrigger className="flat flex w-full items-center justify-between px-2 py-1.5 text-sm font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]">
 										<span className="font-mono">
 											{Section.Label}
 										</span>

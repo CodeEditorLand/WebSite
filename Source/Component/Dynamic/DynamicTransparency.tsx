@@ -156,7 +156,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 									className="TransparencyCard StaccatoCard StaccatoBorderShimmer flat flex flex-col space-y-4 bg-card p-6"
 								>
 									<div className="flex items-start justify-between">
-										<h4 className="font-mono text-sm font-semibold text-card-foreground">
+										<h4 className="font-mono text-sm font-medium text-card-foreground">
 											{Item.Title}
 										</h4>
 										<div className="ml-4 flex items-center gap-3">
@@ -296,7 +296,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 									className="TransparencyCard StaccatoCard StaccatoBorderShimmer flat flex flex-col space-y-4 bg-card p-6"
 								>
 									<div className="flex items-start justify-between">
-										<h4 className="font-mono text-sm font-semibold text-card-foreground">
+										<h4 className="font-mono text-sm font-medium text-card-foreground">
 											{Item.Name}
 										</h4>
 										{Icon && (

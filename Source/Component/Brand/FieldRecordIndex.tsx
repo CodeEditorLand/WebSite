@@ -14,10 +14,10 @@ const FieldRecordIndex: React.FC<FieldRecordIndexProps> = ({
 	return (
 		<span
 			className={cn(
-				"text-field-xs font-mono uppercase tracking-widest",
+				"text-field-s font-mono uppercase tracking-widest",
 				className,
 			)}
-			style={{ color: "var(--Foreground)" }}
+			style={{ color: "var(--CardForeground)" }}
 		>
 			# {index}
 		</span>

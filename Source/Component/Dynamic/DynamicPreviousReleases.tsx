@@ -45,7 +45,7 @@ const DynamicPreviousReleases = ({ Content, ClassName }: Property) => {
 			Header: "Version",
 
 			Render: (Value: unknown, _Row: ReleaseVersion) => (
-				<span className="font-semibold text-card-foreground">
+				<span className="font-medium text-card-foreground">
 					{String(Value)}
 				</span>
 			),
