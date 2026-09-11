@@ -1,0 +1,14 @@
+subject: vapor trails and translucent air currents
+element: Air
+mode: material-abstraction
+palette: [white, pale-grey, translucent-blue]
+crop: soft-focus / no hard edges
+alt: Vapor in low light macro
+usage:
+  - air-element-page
+  - section-divider
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder

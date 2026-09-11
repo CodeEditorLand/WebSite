@@ -1,0 +1,14 @@
+subject: night sky with atmospheric gradient
+element: Sky
+mode: painted-specimen
+palette: [midnight-blue, indigo, pale-violet]
+crop: full-bleed / sky fills entire frame
+alt: Night sky with distant light
+usage:
+  - sky-element-page
+  - hero-background
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder

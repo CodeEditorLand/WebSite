@@ -1,0 +1,14 @@
+subject: water ripple grain under scan light
+element: Echo
+mode: scanner-artifact
+palette: [aqua, soft-gold, shadow]
+crop: center / concentric ripples fill frame
+alt: Ripple in grainy water
+usage:
+  - echo-element-page
+  - texture-swatch
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder
