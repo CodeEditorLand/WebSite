@@ -324,7 +324,7 @@ const SegmentNode = ({ Segment }: { Segment: Segment }) => {
 		case "Code":
 			return (
 				<span className="inline-flex items-baseline">
-					<code className="flat bg-current/10 px-1.5 py-0.5 font-mono">
+					<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono">
 						{Segment.Value}
 					</code>
 					<CopyInlineButton Code={Segment.Value} />
@@ -425,11 +425,11 @@ const LineNode = ({
 		const Remainder = EnableMatch[4]?.trim();
 		return (
 			<>
-				<span className="text-muted-foreground/80">
+				<span className="text-[color-mix(in_srgb,var(--MuteForeground)_80%,transparent)]">
 					{EnableMatch[1]}
 				</span>
 				<span className="inline-flex items-baseline">
-					<code className="flat bg-current/10 px-1.5 py-0.5 font-mono">
+					<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono">
 						{Command}
 					</code>
 					<CopyInlineButton Code={Command} />
@@ -458,7 +458,7 @@ const LineNode = ({
 			.filter(Boolean);
 		return (
 			<>
-				<span className="text-muted-foreground/80">
+				<span className="text-[color-mix(in_srgb,var(--MuteForeground)_80%,transparent)]">
 					{SubFeaturesMatch[1]}
 				</span>
 				{Items.map((Item, Index) => (
@@ -498,7 +498,7 @@ const LineNode = ({
 		const Remainder = DefaultFeaturesMatch[4]?.trim();
 		return (
 			<>
-				<span className="text-muted-foreground/80">
+				<span className="text-[color-mix(in_srgb,var(--MuteForeground)_80%,transparent)]">
 					{DefaultFeaturesMatch[1]}
 				</span>
 				{Items.map((Item, Index) => (
@@ -516,7 +516,7 @@ const LineNode = ({
 								{Item}
 							</span>
 						) : (
-							<code className="flat bg-current/10 px-1.5 py-0.5 font-mono">
+							<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono">
 								{Item}
 							</code>
 						)}
@@ -538,7 +538,7 @@ const LineNode = ({
 	if (IsCommandString(Trimmed)) {
 		return (
 			<span className="inline-flex items-baseline">
-				<code className="flat bg-current/10 px-1.5 py-0.5 font-mono">
+				<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono">
 					{Trimmed}
 				</code>
 				<CopyInlineButton Code={Trimmed} />

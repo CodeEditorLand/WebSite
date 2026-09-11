@@ -66,7 +66,7 @@ const DynamicVerificationInfo = ({
 							aria-hidden="true"
 						/>
 					</div>
-					<div className="bg-muted/50 flex items-center gap-2 p-3">
+					<div className="bg-[color-mix(in_srgb,var(--Mute)_50%,transparent)] flex items-center gap-2 p-3">
 						<code className="flex-1 truncate font-mono text-card-foreground">
 							{Information.SHA256}
 						</code>
@@ -105,7 +105,7 @@ const DynamicVerificationInfo = ({
 							aria-hidden="true"
 						/>
 					</div>
-					<div className="bg-muted/50 flex items-center gap-2 p-3">
+					<div className="bg-[color-mix(in_srgb,var(--Mute)_50%,transparent)] flex items-center gap-2 p-3">
 						<code className="flex-1 truncate font-mono text-card-foreground">
 							{Information.PGPSignature}
 						</code>

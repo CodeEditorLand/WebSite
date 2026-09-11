@@ -88,7 +88,7 @@ const DynamicForgotPassword = ({
 									<div aria-live="polite" aria-atomic="true">
 										{(ErrorMessage || InternalError) && (
 											<div
-												className="bg-destructive/10 flat p-3 text-destructive"
+												className="bg-[color-mix(in_srgb,var(--Destruct)_10%,transparent)] flat p-3 text-destructive"
 												role="alert"
 											>
 												{ErrorMessage || InternalError}

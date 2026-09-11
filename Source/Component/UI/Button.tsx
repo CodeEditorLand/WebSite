@@ -10,14 +10,14 @@ import { cn } from "./Utility";
 // Original look (colors, sizing) is unchanged - only the physics/
 // motion layer is Jelly's.
 const ButtonVariants = cva(
-	"inline-flex items-center justify-center gap-0 whitespace-nowrap select-none touch-manipulation rounded-[var(--RadiusButton)] font-mono text-sm font-medium uppercase tracking-wider transition-[background-color,color,transform] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-[var(--Ring)]/40 focus-visible:ring-[2px] aria-invalid:ring-[var(--Destruct)]/20",
+	"inline-flex items-center justify-center gap-0 whitespace-nowrap select-none touch-manipulation rounded-[var(--RadiusButton)] font-mono text-sm font-medium uppercase tracking-wider transition-[background-color,color,transform] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-[color-mix(in_srgb,var(--Ring)_40%,transparent)] focus-visible:ring-[2px] aria-invalid:ring-[color-mix(in_srgb,var(--Destruct)_20%,transparent)]",
 
 	{
 		variants: {
 			variant: {
-				default: "bg-foreground text-bg hover:bg-foreground/85",
+				default: "bg-foreground text-bg hover:bg-[color-mix(in_srgb,var(--Foreground)_85%,transparent)]",
 				destructive:
-					"bg-destruct text-destruct-fg hover:bg-destruct/85 focus-visible:ring-[var(--Destruct)]/20",
+					"bg-destruct text-destruct-fg hover:bg-[color-mix(in_srgb,var(--Destruct)_85%,transparent)] focus-visible:ring-[color-mix(in_srgb,var(--Destruct)_20%,transparent)]",
 				outline:
 					"bg-background text-fg border border-border hover:bg-mute",
 				secondary: "bg-secondary text-secondary-fg hover:bg-surface3",

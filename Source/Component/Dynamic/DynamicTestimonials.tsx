@@ -322,7 +322,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 													target="_blank"
 													rel="noopener noreferrer"
 													aria-label={`Open ${Testimonial.Author} source`}
-													className="text-card-foreground/50 inline-flex items-center transition-colors hover:text-card-foreground"
+													className="text-[color-mix(in_srgb,var(--CardForeground)_50%,transparent)] inline-flex items-center transition-colors hover:text-card-foreground"
 												>
 													<lucide.ExternalLink
 														className="h-3 w-3 shrink-0"
@@ -341,7 +341,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 													<Fragment key={TagIndex}>
 														{TagIndex > 0 &&
 															"\u2001"}
-														<code className="flat bg-current/10 px-1.5 py-0.5 font-mono text-sm">
+														<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono text-sm">
 															{Tag}
 														</code>
 													</Fragment>
@@ -438,7 +438,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 												target="_blank"
 												rel="noopener noreferrer"
 												aria-label={`Open ${Testimonial.Author} source`}
-												className="text-card-foreground/50 inline-flex items-center transition-colors hover:text-card-foreground"
+												className="text-[color-mix(in_srgb,var(--CardForeground)_50%,transparent)] inline-flex items-center transition-colors hover:text-card-foreground"
 											>
 												<lucide.ExternalLink
 													className="h-3 w-3 shrink-0"
@@ -455,7 +455,7 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											).map((Tag, TagIndex) => (
 												<Fragment key={TagIndex}>
 													{TagIndex > 0 && " "}
-													<code className="flat bg-current/10 px-1.5 py-0.5 font-mono text-sm">
+													<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono text-sm">
 														{Tag}
 													</code>
 												</Fragment>

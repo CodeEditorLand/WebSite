@@ -71,6 +71,15 @@
 	);
 }
 
+/* ─── ACTIVE-ROUTE STATE (both modes) ─── */
+.HeaderNavActive .HeaderLinkLabel {
+	text-decoration-color: var(--Accent);
+}
+
+.HeaderFunctional .HeaderNavActive .HeaderLinkLabel {
+	text-decoration-color: var(--CardForeground);
+}
+
 /* ─── NAV LINKS (both modes) ─── */
 .HeaderSubLink .HeaderLinkLabel {
 	color: var(--HeaderFg);

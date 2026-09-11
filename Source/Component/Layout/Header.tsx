@@ -65,11 +65,17 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 
 	useEffect(() => {
 		SetCurrentPath(window.location.pathname);
-	}, []);
 		const onScroll = () => SetScrolled(window.scrollY > 8);
 		window.addEventListener("scroll", onScroll, { passive: true });
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
+
+	const IsActive = (Href: string) => {
+		if (Href.startsWith("http")) return false;
+		const base = Href.split("#")[0];
+		if (base === "/") return CurrentPath === "/";
+		return CurrentPath === base || CurrentPath.startsWith(base + "/");
+	};
 
 	const HeaderData: HeaderContent = Content || {
 		Logo: { Text: T("logo", "Land") },
@@ -131,9 +137,10 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 				<a
 					key={Index}
 					href={Link.Href}
-					className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-3 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+					className={`StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-3 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]${IsActive(Link.Href) ? " HeaderNavActive" : ""}`}
 					onClick={OnClick}
 					aria-label={Link.Label}
+					aria-current={IsActive(Link.Href) ? "page" : undefined}
 					{...(Link.Href.startsWith("http")
 						? { target: "_blank", rel: "noopener noreferrer" }
 						: {})}
@@ -308,8 +315,9 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 							<a
 								key={Index}
 								href={Link.Href}
-								className="StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-2 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]"
+								className={`StaccatoNavLink HeaderSubLink relative flex items-center px-4 py-2 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-[var(--Primary)]${IsActive(Link.Href) ? " HeaderNavActive" : ""}`}
 								aria-label={Link.Label}
+								aria-current={IsActive(Link.Href) ? "page" : undefined}
 								{...(Link.Href.startsWith("http")
 									? {
 											target: "_blank",

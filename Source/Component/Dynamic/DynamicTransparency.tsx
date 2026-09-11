@@ -331,7 +331,7 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 											}}
 											aria-label="Copy command"
 											title="Copy command"
-											className="flat bg-mute ml-2 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center opacity-50 transition-opacity hover:opacity-100"
+											className="flat RichTextCopyButton ml-2 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center opacity-50 transition-opacity hover:opacity-100"
 										>
 											<lucide.Copy
 												className="h-[0.65em] w-[0.65em]"
