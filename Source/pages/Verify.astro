@@ -72,7 +72,7 @@ const MetaDescription = T("verify.pending.description", {
 ---
 
 <Base Title={MetaTitle} Description={MetaDescription} noIndex={true}>
-	<Header client:load />
+	<Header client:load Mode="functional" />
 	<main id="main-content">
 		<VerifyPage
 			Content={VerifyContent}

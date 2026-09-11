@@ -164,18 +164,14 @@
 }
 
 .FooterTauriLink {
-	color: var(--MuteForeground);
-	text-decoration: none;
-	letter-spacing: 0.04em;
-	border-bottom: 1px solid transparent;
-	transition:
-		color 120ms ease,
-		border-color 120ms ease;
+	display: inline-flex;
+	align-items: center;
+	opacity: 0.9;
+	transition: opacity 120ms ease;
 }
 
 .FooterTauriLink:hover {
-	color: var(--Foreground);
-	border-bottom-color: var(--Accent);
+	opacity: 1;
 }
 
 @media (min-width: 768px) {

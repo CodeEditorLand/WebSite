@@ -38,5 +38,6 @@ const HeaderWithAuth = ({ Content }: { Content?: HeaderContent }) => (
 	<Header
 		{...(Content ? { Content } : {})}
 		AuthSlot={<DynamicAuthStatus />}
+		Mode="functional"
 	/>
 );

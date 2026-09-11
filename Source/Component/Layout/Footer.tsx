@@ -143,7 +143,14 @@ const Footer = ({ Content }: FooterProps) => {
 							rel="noopener noreferrer"
 							className="FooterTauriLink"
 						>
-							TAURI
+							<img
+								src="/Dark/Image/GitHub/Made/Tauri.svg"
+								alt="Made with Tauri"
+								width="160"
+								height="32"
+								className="h-8"
+								loading="lazy"
+							/>
 						</a>
 					</span>
 				</div>

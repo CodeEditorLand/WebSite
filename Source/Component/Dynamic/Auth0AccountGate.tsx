@@ -185,6 +185,7 @@ export default ({
 			<div className="flex min-h-screen flex-col">
 				<Header
 					{...(HeaderContent ? { content: HeaderContent } : {})}
+					Mode="functional"
 				/>
 				<div className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-5 px-4 text-center">
 					<jelly-badge
@@ -229,6 +230,7 @@ export default ({
 			<div className="flex min-h-screen flex-col">
 				<Header
 					{...(HeaderContent ? { content: HeaderContent } : {})}
+					Mode="functional"
 				/>
 				<div className="flex flex-1 items-center justify-center">
 					<p className="text-muted-foreground">
@@ -244,6 +246,7 @@ export default ({
 			<div className="flex min-h-screen flex-col">
 				<Header
 					{...(HeaderContent ? { content: HeaderContent } : {})}
+					Mode="functional"
 				/>
 				<div className="flex flex-1 flex-col items-center justify-center gap-4 px-4">
 					<p className="text-destructive">
@@ -272,6 +275,7 @@ export default ({
 			<div className="flex min-h-screen flex-col">
 				<Header
 					{...(HeaderContent ? { content: HeaderContent } : {})}
+					Mode="functional"
 				/>
 				<div className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-6 px-4">
 					<Button variant="default" className="w-full" asChild>
@@ -323,7 +327,7 @@ export default ({
 	// Not authenticated, not loading - redirect is in progress
 	return (
 		<div className="flex min-h-screen flex-col">
-			<Header {...(HeaderContent ? { Content: HeaderContent } : {})} />
+			<Header {...(HeaderContent ? { Content: HeaderContent } : {})} Mode="functional" />
 			<div className="flex flex-1 items-center justify-center">
 				<p className="text-muted-foreground">
 					{T("redirecting", {

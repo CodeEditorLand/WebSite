@@ -410,7 +410,7 @@ const TierIndexMap: Record<string, string> = {
 	 Auth0-aware DynamicAuthHeader does not place a "Sign In" link on
 	 the auth-selection page, and more importantly does not instantiate
 	 Auth0AccountGate (which auto-calls loginWithRedirect() on mount). -->
-	<Header client:load />
+	<Header client:load Mode="functional" />
 
 	<main id="main-content" class="bg-background">
 		<!-- ── HERO SECTION: Field Record Pattern ── -->

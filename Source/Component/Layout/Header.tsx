@@ -280,7 +280,11 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 							aria-hidden="true"
 						>
 							<img
-								src="/Asset/Dark/Logo/Glyph/Land.svg"
+								src={
+									Mode === "functional"
+										? "/Asset/Logo/Glyph/Land.svg"
+										: "/Asset/Dark/Logo/Glyph/Land.svg"
+								}
 								alt="Code Editor Land"
 								title="Code Editor Land"
 								width={28}
