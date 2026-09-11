@@ -151,7 +151,11 @@ export default (await import("astro/config")).defineConfig({
 									unused: true,
 								},
 
-								mangle: !On,
+								mangle: false,
+
+								keep_classnames: true,
+
+								keep_fnames: true,
 							},
 						},
 					}),
