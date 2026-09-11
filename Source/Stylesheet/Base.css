@@ -1277,6 +1277,14 @@
 	background-color: transparent !important;
 }
 
+/* Neutralize prose-code text colors leaking into Shiki's <code> (e.g.
+   prose-code:text-card-foreground dark ink on doc pages would otherwise
+   render dark-on-dark over the pre's #24292e). inherit lets the pre's
+   inline color flow to plain spans; token spans keep their inline colors. */
+.astro-code code {
+	color: inherit !important;
+}
+
 /* ── Mermaid diagrams ─────────────────────────────────── */
 .mermaid-diagram {
 	max-width: 100%;
