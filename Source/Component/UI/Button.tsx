@@ -160,6 +160,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 					style={
 						{
 							"--jelly-icon-button-radius": "var(--RadiusButton)",
+							"--jelly-ring": "var(--Ring)",
 							...JellySizeOverride.icon,
 							...JellyColorOverride[variant],
 						} as React.CSSProperties
@@ -182,6 +183,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				style={
 					{
 						"--jelly-button-radius": "var(--RadiusButton)",
+						"--jelly-ring": "var(--Ring)",
 						...JellySizeOverride[size ?? "default"],
 						...JellyColorOverride[variant],
 					} as React.CSSProperties

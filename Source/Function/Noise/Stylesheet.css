@@ -176,7 +176,7 @@
 }
 
 .StaccatoButton:focus-visible {
-	outline: 2px solid var(--Primary);
+	outline: 2px solid var(--Ring);
 	outline-offset: 3px;
 }
 

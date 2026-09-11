@@ -143,7 +143,8 @@ const Element = [
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
 					<jelly-card
 						squish
-						class="transition-colors"
+						class="focus-ring transition-colors"
+						tabindex="0"
 						style="--jelly-fill:var(--Card);--jelly-radius:0;--jelly-card-font-size:inherit;--jelly-card-padding-block:0;--jelly-card-padding-inline:0"
 						onclick="window.open('https://github.com/CodeEditorLand/Land#readme','_blank','noopener noreferrer')"
 					>
@@ -171,7 +172,8 @@ const Element = [
 
 					<jelly-card
 						squish
-						class="transition-colors"
+						class="focus-ring transition-colors"
+						tabindex="0"
 						style="--jelly-fill:var(--Card);--jelly-radius:0;--jelly-card-font-size:inherit;--jelly-card-padding-block:0;--jelly-card-padding-inline:0"
 						onclick="window.open('https://github.com/CodeEditorLand/Land/issues','_blank','noopener noreferrer')"
 					>
@@ -197,7 +199,8 @@ const Element = [
 
 					<jelly-card
 						squish
-						class="transition-colors"
+						class="focus-ring transition-colors"
+						tabindex="0"
 						style="--jelly-fill:var(--Card);--jelly-radius:0;--jelly-card-font-size:inherit;--jelly-card-padding-block:0;--jelly-card-padding-inline:0"
 						onclick="location.href='/Doc/Rust'"
 					>
@@ -242,7 +245,8 @@ const Element = [
 									{Entries.map((Entry) => (
 										<jelly-card
 											squish
-											class="transition-colors"
+											class="focus-ring transition-colors"
+											tabindex="0"
 											style="--jelly-fill:var(--Card);--jelly-radius:0;--jelly-card-font-size:inherit;--jelly-card-padding-block:0;--jelly-card-padding-inline:0"
 											onclick={`location.href='/Doc/${Entry.id}'`}
 										>
@@ -289,7 +293,8 @@ const Element = [
 									<jelly-badge
 										variant="platinum"
 										shape="square"
-										class="cursor-pointer transition-colors hover:bg-secondary"
+										class="focus-ring cursor-pointer transition-colors hover:bg-secondary"
+										tabindex="0"
 										style={`--jelly-fill:var(--Card);--jelly-label:var(--CardForeground);--jelly-badge-radius:0`}
 										onclick={`location.href='/Doc/${E.Name.toLowerCase()}'`}
 									>
