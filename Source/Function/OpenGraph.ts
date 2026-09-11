@@ -110,7 +110,7 @@ const GenerateOpenGraphSvg = (
 	// Compose route: /ROUTE
 	const RouteText = (Meta?.Route ?? [SectionName])
 		.map((Route) => (Route.startsWith("/") ? Route : `/${Route}`))
-		.join(" · ");
+		.join("\u2001");
 
 	// Index / catalogue number: # SECTION_01
 	const IndexText = Meta?.Index ?? `# ${SectionUpper}_01`;
@@ -221,7 +221,7 @@ ${CaptionElement}
 
 \t<!-- Footer -->
 \t<text x="${TextX}" y="${CardY + CardH - 18}" font-family="${FontStack}" font-size="11" font-weight="400" fill="${MutedColor}" fill-opacity="0.45">editor.land</text>
-\t<text x="${CardX + CardW - 28}" y="${CardY + CardH - 18}" font-family="${FontStack}" font-size="10" font-weight="400" fill="${MutedColor}" fill-opacity="0.4" text-anchor="end">field record · ${EscapeXML(SectionName.toLowerCase())}</text>
+\t<text x="${CardX + CardW - 28}" y="${CardY + CardH - 18}" font-family="${FontStack}" font-size="10" font-weight="400" fill="${MutedColor}" fill-opacity="0.4" text-anchor="end">field record{"\u2001"}${EscapeXML(SectionName.toLowerCase())}</text>
 </svg>`;
 };
 

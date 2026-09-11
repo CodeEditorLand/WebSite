@@ -269,7 +269,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 						>
 							<div className="flex flex-col">
 								{/* ── Card header - release manifest ─────────── */}
-															<div className="border-b border-[var(--Border)] p-8">
+															<div className="border-b border-[color-mix(in_srgb,var(--CardForeground)_8%,transparent)] p-8">
 																<div className="mb-4 flex flex-col gap-1 font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground">
 																	<span>
 																		# RELEASE_

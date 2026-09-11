@@ -7,7 +7,7 @@ export const Land: FieldRecord = {
 	Index: "# LAND_01",
 	Stamp: ["RUST + TAURI", "NO ELECTRON"],
 	Route: ["/COMPAT:VS CODE", "EXTENSIONS / UNMODIFIED"],
-	Program: ["NATIVE · OPEN · CROSS-PLATFORM"],
+	Program: ["NATIVE\u2001OPEN\u2001CROSS-PLATFORM"],
 	Status: {
 		Label: "STATUS",
 		Value: "SOURCE ACTIVE",

@@ -55,7 +55,7 @@ const GenerateFieldRecordSvg = (Record: FieldRecord): string => {
 	const StampText = Record.Stamp.map((s) => `〈${s}〉`).join(" ");
 
 	// Compose route: /ROUTE · /ROUTE
-	const RouteText = Record.Route.join(" · ");
+	const RouteText = Record.Route.join("\u2001");
 
 	// Info lines from Status + Metadata
 	const InfoLines: string[] = [];
@@ -136,7 +136,7 @@ ${ProgramElement}	<!-- Evidence panel -->
 
 	<!-- Footer -->
 	<text x="${TextX}" y="${CardY + CardH - 18}" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="${MutedColor}" fill-opacity="0.45">editor.land</text>
-	<text x="${CardX + CardW - 28}" y="${CardY + CardH - 18}" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', monospace" font-size="10" font-weight="400" fill="${MutedColor}" fill-opacity="0.4" text-anchor="end">field record · ${Record.Category.toLowerCase()}</text>
+	<text x="${CardX + CardW - 28}" y="${CardY + CardH - 18}" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', monospace" font-size="10" font-weight="400" fill="${MutedColor}" fill-opacity="0.4" text-anchor="end">field record{"\u2001"}${Record.Category.toLowerCase()}</text>
 </svg>`;
 };
 
