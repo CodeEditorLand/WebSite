@@ -2,8 +2,10 @@
  * Static page metadata for OpenGraph image generation.
  *
  * Maps slug paths to their title, description, and section for the
- * OG image SVG template. Blog and Doc entries are resolved dynamically
- * from content collections in the endpoint; this covers static pages.
+ * OG image SVG template. Status / License / Target are the field-record
+ * info lines rendered on the artifact card (STATUS: / LICENSE: / TARGET:).
+ * Blog and Doc entries are resolved dynamically from content collections
+ * in the endpoint; this covers static pages.
  */
 
 interface PageMeta {
@@ -12,6 +14,12 @@ interface PageMeta {
 	Description: string;
 
 	Section?: string;
+
+	Status?: string;
+
+	License?: string;
+
+	Target?: string;
 }
 
 const PageMetadata: Record<string, PageMeta> = {
@@ -31,6 +39,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Download Land for Windows, macOS, and Linux. Free and open-source.",
 
 		Section: "Download",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "MACOS / WINDOWS / LINUX",
 	},
 
 	Blog: {
@@ -40,6 +54,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Updates, tutorials, and insights from the Code Editor Land team.",
 
 		Section: "Blog",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "PUBLIC",
 	},
 
 	Doc: {
@@ -49,6 +69,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Guides, API references, and tutorials for Code Editor Land.",
 
 		Section: "Doc",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "GUIDES / API / REFERENCE",
 	},
 
 	Portal: {
@@ -58,6 +84,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Sign in to your Code Editor Land account. Manage settings, sync, and cloud features.",
 
 		Section: "Portal",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "CLOUD / SYNC",
 	},
 
 	Contributing: {
@@ -67,6 +99,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Learn how to contribute to Code Editor Land. Guidelines, setup, and community resources.",
 
 		Section: "Contributing",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "GITHUB",
 	},
 
 	License: {
@@ -76,6 +114,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Code Editor Land licensing information. CC0 1.0 Universal public domain dedication.",
 
 		Section: "License",
+
+		Status: "PUBLIC DOMAIN",
+
+		License: "CC0",
+
+		Target: "CC0 1.0",
 	},
 
 	Dashboard: {
@@ -85,6 +129,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Your Code Editor Land dashboard. Manage your account and settings.",
 
 		Section: "Dashboard",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "ACCOUNT",
 	},
 
 	"Contact/Sale": {
@@ -94,6 +144,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Get in touch with our sales team for enterprise licensing and support.",
 
 		Section: "Contact",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "SALES",
 	},
 
 	"Account/SignIn": {
@@ -102,6 +158,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Sign in to your Code Editor Land account.",
 
 		Section: "Account",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "ACCOUNT",
 	},
 
 	"Account/SignUp": {
@@ -110,6 +172,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Create a new Code Editor Land account.",
 
 		Section: "Account",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "ACCOUNT",
 	},
 
 	"Account/ForgotPassword": {
@@ -118,6 +186,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Reset your Code Editor Land account password.",
 
 		Section: "Account",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "ACCOUNT",
 	},
 
 	"Account/ResetPassword": {
@@ -126,6 +200,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Set a new password for your Code Editor Land account.",
 
 		Section: "Account",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "ACCOUNT",
 	},
 
 	"Legal/Term": {
@@ -134,6 +214,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Code Editor Land terms of service and usage agreement.",
 
 		Section: "Legal",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "LEGAL",
 	},
 
 	"Legal/Privacy": {
@@ -143,6 +229,12 @@ const PageMetadata: Record<string, PageMeta> = {
 			"Code Editor Land privacy policy. How we handle your data.",
 
 		Section: "Legal",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "LEGAL",
 	},
 
 	Verify: {
@@ -151,6 +243,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Verify your Code Editor Land email address.",
 
 		Section: "Account",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "EMAIL",
 	},
 
 	Visit: {
@@ -159,6 +257,12 @@ const PageMetadata: Record<string, PageMeta> = {
 		Description: "Explore Code Editor Land features and capabilities.",
 
 		Section: "Visit",
+
+		Status: "READY",
+
+		License: "CC0",
+
+		Target: "FEATURES",
 	},
 };
 

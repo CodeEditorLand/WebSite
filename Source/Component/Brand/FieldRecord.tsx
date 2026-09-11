@@ -63,14 +63,19 @@ const FieldRecord: React.FC<FieldRecordProps> = ({
 			{/* Left panel: warm-white data card */}
 			<div className="min-w-0 flex-1">
 				<FieldRecordDataCard {...dataCard} className="h-full">
-					<div className="flex h-full flex-col gap-4">
-						{index && <FieldRecordIndex {...index} />}
-						{metadata && <FieldRecordMetadata {...metadata} />}
-						{status && <FieldRecordStatus {...status} />}
-						{seal && <FieldRecordSeal {...seal} />}
-						{action && <FieldRecordAction {...action} />}
-					</div>
-				</FieldRecordDataCard>
+								<div className="flex h-full flex-col gap-4">
+									{/* Top: Index (left) + Seal (upper-right) */}
+									{(index || seal) && (
+										<div className="flex items-start justify-between">
+											{index && <FieldRecordIndex {...index} />}
+											{seal && <FieldRecordSeal {...seal} />}
+										</div>
+									)}
+									{metadata && <FieldRecordMetadata {...metadata} />}
+									{status && <FieldRecordStatus {...status} />}
+									{action && <FieldRecordAction {...action} />}
+								</div>
+							</FieldRecordDataCard>
 			</div>
 
 			{/* Black gutter */}

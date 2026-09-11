@@ -1,0 +1,14 @@
+subject: stone strata with visible geological layers
+element: Mountain
+mode: painted-specimen
+palette: [granite-grey, ochre, charcoal]
+crop: center / full cross-section visible
+alt: Stone strata in low light
+usage:
+  - mountain-element-page
+  - gallery-grid
+prohibited:
+  - text-overlay
+  - logo-overlay
+  - dark-mode-color-filter
+status: placeholder

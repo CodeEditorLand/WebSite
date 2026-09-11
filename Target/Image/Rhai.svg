@@ -1,4 +1,1 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-	<title>Rhai</title>
-	<path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h2v2H8V8zm0 4h8v2H8v-2zm0 4h6v2H8v-2z" fill="#ED8B00" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Rhai</title><path fill="#ed8b00" d="M3 3h18v18H3zm2 2v14h14V5zm3 3h2v2H8zm0 4h8v2H8zm0 4h6v2H8z"/></svg>

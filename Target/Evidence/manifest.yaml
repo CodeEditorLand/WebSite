@@ -18,7 +18,7 @@ element: Mountain
 mode: painted-specimen
 palette: [granite-grey, ochre, charcoal]
 crop: center / full cross-section visible
-alt: Painted cross-section showing stone strata layers
+alt: Stone strata in low light
 usage:
   - mountain-element-page
   - gallery-grid
@@ -33,7 +33,7 @@ element: Cocoon
 mode: scanner-artifact
 palette: [ivory, amber, shadow]
 crop: corner / mesh extends beyond frame
-alt: Scanner-captured fiber mesh texture
+alt: Woven fiber in macro detail
 usage:
   - cocoon-element-page
   - detail-macro
@@ -48,7 +48,7 @@ element: Wind
 mode: flash-observation
 palette: [slate, silver, deep-blue]
 crop: diagonal / cable crosses corner to corner
-alt: Wet cable photographed in rain with water droplets
+alt: Wet cable in long exposure
 usage:
   - wind-element-page
   - weather-feature
@@ -63,7 +63,7 @@ element: Sky
 mode: painted-specimen
 palette: [midnight-blue, indigo, pale-violet]
 crop: full-bleed / sky fills entire frame
-alt: Painted night sky with atmospheric color gradient
+alt: Night sky with distant light
 usage:
   - sky-element-page
   - hero-background
@@ -78,7 +78,7 @@ element: Air
 mode: material-abstraction
 palette: [white, pale-grey, translucent-blue]
 crop: soft-focus / no hard edges
-alt: Abstract vapor trails in translucent atmosphere
+alt: Vapor in low light macro
 usage:
   - air-element-page
   - section-divider
@@ -93,7 +93,7 @@ element: Echo
 mode: scanner-artifact
 palette: [aqua, soft-gold, shadow]
 crop: center / concentric ripples fill frame
-alt: Scanner-artifact of water ripple grain pattern
+alt: Ripple in grainy water
 usage:
   - echo-element-page
   - texture-swatch
@@ -108,7 +108,7 @@ element: Grove
 mode: painted-specimen
 palette: [forest-green, bone-white, earth-brown]
 crop: bottom-left / roots extend beyond frame
-alt: Painted root network with fungal mycelium detail
+alt: Root network in macro detail
 usage:
   - grove-element-page
   - ecosystem-panel

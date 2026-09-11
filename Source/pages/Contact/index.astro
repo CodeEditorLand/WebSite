@@ -1,0 +1,207 @@
+---
+import { Header } from "../../Component/Layout/Header";
+import Base from "../../Layout/Base.astro";
+import { GetI18n } from "../../Library/I18n/Server";
+
+const T = GetI18n();
+
+const MetaTitle = T("meta.contact.hub.title", {
+	defaultValue: "Contact | Code Editor Land",
+});
+
+const MetaDescription = T("meta.contact.hub.description", {
+	defaultValue:
+		"Contact the Code Editor Land team: data requests, technical support, legal, and enterprise inquiries.",
+});
+
+const ContactRoutes = [
+	{
+		Route: "Amend",
+		Code: "AMEND",
+		Title: "Correct Your Data",
+		Subtitle:
+			"Request rectification of inaccurate or incomplete personal data under GDPR Article 16.",
+	},
+	{
+		Route: "Claim",
+		Code: "CLAIM",
+		Title: "Copyright & DMCA",
+		Subtitle:
+			"Submit a copyright infringement claim or DMCA takedown notice under 17 U.S.C. 512(c)(3).",
+	},
+	{
+		Route: "Deals",
+		Code: "DEALS",
+		Title: "Enterprise Sales",
+		Subtitle:
+			"Enquiries about enterprise deployments, custom integrations, support contracts, and volume licensing.",
+	},
+	{
+		Route: "Erase",
+		Code: "ERASE",
+		Title: "Delete Your Account",
+		Subtitle:
+			"Permanently delete your account and all associated personal data under GDPR Article 17 (Right to Erasure). This action is irreversible.",
+	},
+	{
+		Route: "Guard",
+		Code: "GUARD",
+		Title: "Security Report",
+		Subtitle:
+			"Report a vulnerability, suspected data breach, unauthorised access, or any security concern. You may report anonymously.",
+	},
+	{
+		Route: "Hails",
+		Code: "HAILS",
+		Title: "General Inquiry",
+		Subtitle:
+			"General questions, feedback, partnership proposals, or anything that doesn't fit another category.",
+	},
+	{
+		Route: "Leave",
+		Code: "LEAVE",
+		Title: "Withdraw Consent",
+		Subtitle:
+			"Withdraw consent for processing activities that rely on your consent as the lawful basis, under GDPR Article 7.",
+	},
+	{
+		Route: "Legal",
+		Code: "LEGAL",
+		Title: "Legal & Compliance",
+		Subtitle:
+			"Legal notices, regulatory enquiries, compliance questions, law enforcement requests, and matters requiring legal review.",
+	},
+	{
+		Route: "Lodge",
+		Code: "LODGE",
+		Title: "Lodge a Complaint",
+		Subtitle:
+			"Lodge a formal complaint about how we have handled your personal data under GDPR Article 77.",
+	},
+	{
+		Route: "Pause",
+		Code: "PAUSE",
+		Title: "Restrict Processing",
+		Subtitle:
+			"Request that we limit how we process your personal data while a dispute is being assessed, under GDPR Article 18.",
+	},
+	{
+		Route: "Query",
+		Code: "QUERY",
+		Title: "Object to Processing",
+		Subtitle:
+			"Formally object to our processing of your personal data for specific purposes under GDPR Article 21.",
+	},
+	{
+		Route: "Reach",
+		Code: "REACH",
+		Title: "Data Access & Export",
+		Subtitle:
+			"Request a structured copy of all personal data we hold about you under GDPR Article 15 and the Right to Data Portability (Article 20).",
+	},
+	{
+		Route: "Scout",
+		Code: "SCOUT",
+		Title: "Technical Support",
+		Subtitle:
+			"Report a build failure, editor crash, extension issue, performance problem, or anything not working as expected.",
+	},
+	{
+		Route: "Sale",
+		Code: "SALE",
+		Title: "Enterprise Inquiries",
+		Subtitle:
+			"Contact the Code Editor Land team for enterprise licensing, support, and deployment options.",
+	},
+];
+---
+
+<Base
+	Title={MetaTitle}
+	Description={MetaDescription}
+	Url={Astro.url.href}
+	lang="en"
+>
+	<Header client:load Mode="functional" />
+
+	<div class="container mx-auto max-w-5xl px-4 py-16">
+		<!-- Breadcrumbs -->
+		<nav aria-label="Breadcrumb" class="mb-8">
+			<ol
+				class="flex flex-wrap items-center space-x-2 text-muted-foreground"
+			>
+				<li>
+					<a href="/" class="transition-colors hover:text-foreground"
+						>{
+							T("common.breadcrumb.home", {
+								defaultValue: "Home",
+							})
+						}</a
+					>
+				</li>
+				<li class="mx-2">/</li>
+				<li>
+					<span class="font-medium text-foreground"
+						>{
+							T("common.contact.pageTitle", {
+								defaultValue: "Contact",
+							})
+						}</span
+					>
+				</li>
+			</ol>
+		</nav>
+
+		<!-- Page Header -->
+		<header class="mb-12">
+			<h1 class="text-2xl font-medium tracking-tight sm:text-3xl">
+				{
+					T("common.contact.pageTitle", {
+						defaultValue: "Contact",
+					})
+				}
+			</h1>
+			<p class="text-muted-foreground">
+				{
+					T("common.contact.pageSubtitle", {
+						defaultValue:
+							"Data requests, technical support, legal, and enterprise inquiries - each contact carries a 5-letter income code.",
+					})
+				}
+			</p>
+		</header>
+
+		<!-- Contact route index -->
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{ContactRoutes.map((Entry) => (
+				<a
+					href={`/Contact/${Entry.Route}`}
+					class="block bg-card px-5 py-4 text-card-foreground transition-colors hover:bg-secondary"
+				>
+					<p
+						class="font-mono text-sm font-medium uppercase tracking-widest text-[color-mix(in_srgb,var(--CardForeground)_70%,transparent)]"
+					>
+						/{Entry.Code}
+					</p>
+					<h2 class="mt-2 font-medium text-card-foreground">
+						{Entry.Title}
+					</h2>
+					<p class="mt-1 text-card-foreground opacity-70">
+						{Entry.Subtitle}
+					</p>
+				</a>
+			))}
+		</div>
+
+		<!-- Back to top -->
+		<div class="mt-12 border-t pt-8">
+			<a href="#top" class="StaccatoButton text-primary hover:underline"
+				>{
+					T("common.button.backToTop", {
+						defaultValue: "Back to top",
+					})
+				}<span class="InlineSeparator">↑</span></a
+			>
+		</div>
+	</div>
+</Base>

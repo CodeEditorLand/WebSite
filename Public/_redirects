@@ -9,7 +9,7 @@
 /Contact                  /Contact/Sale/            200
 /Contact/                 /Contact/Sale/            200
 
-# ── VARIANT REWRITES (200) - 616 rules ──
+# ── VARIANT REWRITES (200) - 618 rules ──
 # Case permutations, plurals, aliases → canonical content.
 /account                              /Account/                             200
 /ACCOUNT                              /Account/                             200
@@ -177,12 +177,14 @@
 /confirm-email                        /Verify/                              200
 /confirm-email/                       /Verify/                              200
 /confirm/                             /Verify/                              200
+/contact                              /Contact/                             200
 /contact_sale                         /Contact/Sale/                        200
 /contact_sale/                        /Contact/Sale/                        200
 /contact-sale                         /Contact/Sale/                        200
 /contact-sale/                        /Contact/Sale/                        200
 /contact-sales                        /Contact/Sale/                        200
 /contact-sales/                       /Contact/Sale/                        200
+/contact/                             /Contact/                             200
 /contact/amend                        /Contact/Amend/                       200
 /contact/amend/                       /Contact/Amend/                       200
 /contact/claim                        /Contact/Claim/                       200
@@ -645,6 +647,7 @@
 /Blog/LocalFirstPhilosophy /Blog/LocalFirstPhilosophy/ 200
 /Blog/TauriDesktopIntegration /Blog/TauriDesktopIntegration/ 200
 /Blog/VSCodeCompatibility /Blog/VSCodeCompatibility/ 200
+/Contact                  /Contact/                 200
 /Contact/Amend            /Contact/Amend/           200
 /Contact/Claim            /Contact/Claim/           200
 /Contact/Deals            /Contact/Deals/           200

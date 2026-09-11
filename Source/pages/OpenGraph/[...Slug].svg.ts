@@ -22,12 +22,31 @@ export const GET: APIRoute = async ({ params }) => {
 	const StaticMeta = PageMetadata[Slug];
 
 	if (StaticMeta) {
+		const {
+			Title: StaticTitle,
+			Description: StaticDescription,
+			Section: StaticSection,
+			Status: StaticStatus,
+			License: StaticLicense,
+			Target: StaticTarget,
+		} = StaticMeta;
+
 		const Svg = GenerateOpenGraphSvg(
-			StaticMeta.Title,
+			StaticTitle,
 
-			StaticMeta.Description,
+			StaticDescription,
 
-			StaticMeta.Section,
+			StaticSection,
+
+			{
+				Slug,
+
+				Status: StaticStatus,
+
+				License: StaticLicense,
+
+				Target: StaticTarget,
+			},
 		);
 
 		return new Response(Svg, {
@@ -57,6 +76,12 @@ export const GET: APIRoute = async ({ params }) => {
 					BlogEntry.data.summary ?? BlogEntry.data.title,
 
 					"Blog",
+
+					{
+						Slug: BlogSlug,
+
+						Target: "PUBLIC",
+					},
 				);
 
 				return new Response(Svg, {
@@ -90,6 +115,12 @@ export const GET: APIRoute = async ({ params }) => {
 					DocEntry.data.description ?? DocEntry.data.title,
 
 					"Doc",
+
+					{
+						Slug: DocSlug,
+
+						Target: "GUIDES / API / REFERENCE",
+					},
 				);
 
 				return new Response(Svg, {
@@ -112,6 +143,10 @@ export const GET: APIRoute = async ({ params }) => {
 		FallbackTitle,
 
 		"The next-generation code editor built with Rust and Tauri.",
+
+		undefined,
+
+		{ Slug },
 	);
 
 	return new Response(Svg, {
