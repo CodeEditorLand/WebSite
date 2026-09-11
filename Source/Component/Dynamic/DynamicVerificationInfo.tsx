@@ -67,7 +67,7 @@ const DynamicVerificationInfo = ({
 						/>
 					</div>
 					<div className="bg-muted/50 flex items-center gap-2 p-3">
-						<code className="flex-1 truncate font-mono">
+						<code className="flex-1 truncate font-mono text-card-foreground">
 							{Information.SHA256}
 						</code>
 						<button
@@ -106,7 +106,7 @@ const DynamicVerificationInfo = ({
 						/>
 					</div>
 					<div className="bg-muted/50 flex items-center gap-2 p-3">
-						<code className="flex-1 truncate font-mono">
+						<code className="flex-1 truncate font-mono text-card-foreground">
 							{Information.PGPSignature}
 						</code>
 						<button

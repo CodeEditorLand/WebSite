@@ -7,53 +7,59 @@ import { RichText } from "../UI/RichText.js";
 import type Property from "./Interface/Property/Testimonial.js";
 
 /**
- * Architecture-element glyph: maps a codename to a lucide icon so the cards
- * use the project icon system instead of sprinkled emoji. Falls back to a
- * neutral square for unknown names. See .claude/skills/land-design.
+ * Architecture-element glyph: the official emoji per element, sourced from the
+ * element README header table (Land/Element/<Name>/README.md line 1 - the
+ * Readme-Element standard's "emoji cell", the project's visual identity) and
+ * corroborated by the per-element doc pages (WebSite/Source/Content/doc/*.md)
+ * and the HomePage Testimonial Emoji data. Falls back to the spec's neutral ◎
+ * (U+25CE) functional symbol for unknown names (design_system.md §Functional
+ * symbols - design_system.md assigns SVG seals, not emoji, to the 8 core
+ * records; the official emoji placement lives in the element READMEs).
  */
 const ElementGlyph = ({ Name }: { Name?: string }) => {
 	const Key = (Name ?? "").toLowerCase();
 
-	const Map: Record<string, lucide.LucideIcon> = {
-		mountain: lucide.Mountain,
+	const Map: Record<string, string> = {
+		mountain: "⛰️",
 
-		cocoon: lucide.Box,
+		cocoon: "🦋",
 
-		wind: lucide.Wind,
+		wind: "🍃",
 
-		sky: lucide.Cloud,
+		sky: "🌌",
 
-		air: lucide.Wind,
+		air: "🪁",
 
-		echo: lucide.Radio,
+		echo: "📣",
 
-		grove: lucide.Trees,
+		grove: "🌳",
 
-		vine: lucide.Sprout,
+		vine: "🌿",
 
-		rest: lucide.Umbrella,
+		rest: "⛱️",
 
-		worker: lucide.HardHat,
+		worker: "🍩",
 
-		common: lucide.Boxes,
+		common: "🧑🏻‍🏭",
 
-		maintain: lucide.Wrench,
+		maintain: "💪🏻",
 
-		mist: lucide.CloudFog,
+		mist: "🌫️",
 
-		output: lucide.FileOutput,
+		output: "⚫",
 
-		sidecar: lucide.Container,
+		sidecar: "🚃",
 	};
 
-	const Icon = Map[Key] ?? lucide.Square;
+	const Glyph = Map[Key] ?? "◎";
 
 	return (
-		<Icon
+		<span
 			aria-hidden="true"
-			strokeWidth={1.5}
-			className="ml-2 inline h-4 w-4 align-[-3px] text-muted"
-		/>
+			className="ml-2 inline-block text-base leading-none"
+		>
+			{Glyph}
+		</span>
 	);
 };
 

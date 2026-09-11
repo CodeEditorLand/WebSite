@@ -172,7 +172,7 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 									key={Index}
 									variant={variant}
 									size={size}
-									className={cls}
+									className={`${cls} HeaderActionButton`}
 									asChild
 								>
 									<a href={Action.Href} onClick={OnClick}>
@@ -222,7 +222,7 @@ const Header = ({ Content, AuthSlot, Mode = "minimal" }: HeaderProps) => {
 								key={Index}
 								variant={variant}
 								size={size}
-								className={cls}
+								className={`${cls} HeaderActionButton`}
 								asChild
 							>
 								<a href={Action.Href} onClick={OnClick}>

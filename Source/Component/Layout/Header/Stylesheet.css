@@ -58,6 +58,19 @@
 	-webkit-backdrop-filter: none;
 }
 
+/* ─── ACTION BUTTONS (both modes) ─── */
+.Header .HeaderActionButton {
+	color: var(--HeaderFg);
+}
+
+.HeaderFunctional .HeaderActionButton:hover {
+	background-color: color-mix(
+		in srgb,
+		var(--CardForeground) 8%,
+		transparent
+	);
+}
+
 /* ─── NAV LINKS (both modes) ─── */
 .HeaderSubLink .HeaderLinkLabel {
 	color: var(--HeaderFg);

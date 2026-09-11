@@ -315,9 +315,9 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 										<RichText Text={Item.Description} />
 									</div>
 									<div className="flat flex items-baseline bg-secondary px-3 py-2">
-										<code className="font-mono">
-											{Item.Command}
-										</code>
+										<code className="font-mono text-secondary-fg">
+																{Item.Command}
+															</code>
 										<button
 											type="button"
 											onClick={async () => {

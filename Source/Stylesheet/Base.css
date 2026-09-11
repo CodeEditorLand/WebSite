@@ -1265,6 +1265,11 @@
 	}
 }
 
+/* ── Shiki code blocks: flat corners, dark surface ─────── */
+.astro-code {
+	border-radius: 0 !important;
+}
+
 /* ── Mermaid diagrams ─────────────────────────────────── */
 .mermaid-diagram {
 	max-width: 100%;

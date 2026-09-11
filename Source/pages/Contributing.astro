@@ -165,8 +165,36 @@ const MetaDescription = T("meta.contributing.description", {
 									})
 								}
 							</p>
-							<pre
-								class="bg-mute mt-2 overflow-x-auto p-3 font-mono">git clone --recurse-submodules https://github.com/YOUR_USERNAME/Land.git</pre>
+							<div class="mt-2 flex items-start gap-2">
+								<pre
+									class="bg-mute min-w-0 flex-1 overflow-x-auto p-3 font-mono text-foreground">git clone --recurse-submodules https://github.com/YOUR_USERNAME/Land.git</pre>
+								<jelly-icon-button
+									data-copy
+									size="small"
+									shape="square"
+									label="Copy to clipboard"
+									aria-label="Copy to clipboard"
+									title="Copy to clipboard"
+									style="--jelly-fill: var(--Mute); --jelly-label: var(--Foreground); --jelly-icon-button-radius: 0px; --jelly-ring: var(--Accent);"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										style="color: var(--jelly-label)"
+										aria-hidden="true"
+										><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path
+											d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+										/></svg
+									>
+								</jelly-icon-button>
+							</div>
 						</div>
 					</li>
 					<li class="flex items-start gap-4">
@@ -192,8 +220,36 @@ const MetaDescription = T("meta.contributing.description", {
 									})
 								}
 							</p>
-							<pre
-								class="bg-mute mt-2 overflow-x-auto p-3 font-mono">cd Land && pnpm install && ./Maintain/Debug/Build.sh --profile debug-electron-bundled</pre>
+							<div class="mt-2 flex items-start gap-2">
+								<pre
+									class="bg-mute min-w-0 flex-1 overflow-x-auto p-3 font-mono text-foreground">cd Land && pnpm install && ./Maintain/Debug/Build.sh --profile debug-electron-bundled</pre>
+								<jelly-icon-button
+									data-copy
+									size="small"
+									shape="square"
+									label="Copy to clipboard"
+									aria-label="Copy to clipboard"
+									title="Copy to clipboard"
+									style="--jelly-fill: var(--Mute); --jelly-label: var(--Foreground); --jelly-icon-button-radius: 0px; --jelly-ring: var(--Accent);"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										style="color: var(--jelly-label)"
+										aria-hidden="true"
+										><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path
+											d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+										/></svg
+									>
+								</jelly-icon-button>
+							</div>
 						</div>
 					</li>
 					<li class="flex items-start gap-4">
@@ -630,3 +686,8 @@ const MetaDescription = T("meta.contributing.description", {
 		</div>
 	</div>
 </Base>
+
+<script>
+	import { WireCopyButtons } from "../Function/Utility/CopyCommand";
+	WireCopyButtons();
+</script>

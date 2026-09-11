@@ -1,1 +1,0 @@
-import{n as s}from"./rolldown-runtime.LhxUO5vB.js";import{At as r,jt as t}from"./Vendor/React.BeSv0bSq.js";import{t as o}from"./Utility.DTc0ZsxC.js";t();var a=r(),e=({index:s,className:r})=>(0,a.jsxs)("span",{className:o("text-field-xs font-mono uppercase tracking-widest",r),style:{color:"var(--Foreground)"},children:["# ",s]});export{e as t};

@@ -18,10 +18,7 @@ export default (await import("astro/config")).defineConfig({
 		syntaxHighlight: "shiki",
 
 		shikiConfig: {
-			themes: {
-				light: "github-light",
-				dark: "github-dark",
-			},
+			theme: "github-dark",
 		},
 
 		remarkPlugins: [remarkCallout, remarkMermaid],
@@ -76,10 +73,7 @@ export default (await import("astro/config")).defineConfig({
 			syntaxHighlight: "shiki",
 
 			shikiConfig: {
-				themes: {
-					light: "github-light",
-					dark: "github-dark",
-				},
+				theme: "github-dark",
 			},
 
 			remarkPlugins: [remarkCallout, remarkMermaid],
