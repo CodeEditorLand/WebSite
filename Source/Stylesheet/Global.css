@@ -48,6 +48,22 @@ jelly-button.PlatformDownloadButton {
 	color: var(--CardForeground);
 }
 
+/* RichText inline-code copy button - surface-aware (single dark theme).
+   Default (dark canvas): light button + dark icon (inverted).
+   Warm-white surfaces (.bg-card/.bg-secondary/.bg-popover/jelly-card):
+   black button + light icon, per user request. */
+.RichTextCopyButton {
+	background: var(--Card);
+	color: var(--CardForeground);
+}
+.bg-card .RichTextCopyButton,
+.bg-secondary .RichTextCopyButton,
+.bg-popover .RichTextCopyButton,
+jelly-card .RichTextCopyButton {
+	background: var(--Background);
+	color: var(--Foreground);
+}
+
 /* Fallback: render jelly-badge as a visible pill before hydration completes.
    Without this, the custom element renders as bare inherited text (light
    gray on the dark canvas) until the shadow-DOM styles upgrade it. */

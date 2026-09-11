@@ -283,7 +283,7 @@ const CopyInlineButton = ({ Code }: { Code: string }) => {
 			onClick={HandleCopy}
 			aria-label={Copied ? "Copied" : "Copy to clipboard"}
 			title={Copied ? "Copied" : "Copy to clipboard"}
-			className="flat bg-mute ml-1 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center opacity-50 transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--Ring)]"
+			className="RichTextCopyButton flat ml-1 inline-flex h-[1.1em] w-[1.1em] shrink-0 items-center justify-center opacity-50 transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--Ring)]"
 		>
 			{Copied ? (
 				<lucide.Check
