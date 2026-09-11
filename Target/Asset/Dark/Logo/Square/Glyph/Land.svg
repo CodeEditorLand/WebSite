@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1880" height="1880" fill="none" viewBox="0 0 1880 1880"><rect width="1005.28" height="620.771" fill="#eaeaea" fill-opacity=".21" rx="91.389" transform="matrix(-.93358 .35837 0 1 940 141)"/><rect width="1005.28" height="620.771" fill="#eaeaea" fill-opacity=".21" rx="91.389" transform="matrix(-.93358 .35837 0 1 1880 758.963)"/></svg>
+<svg width="1880" height="1880" viewBox="0 0 1880 1880" fill="none"
+	xmlns="http://www.w3.org/2000/svg">
+	<rect width="1005.28" height="620.771" rx="91.3889"
+		transform="matrix(-0.93358 0.358368 0 1 940 141)" fill="#EAEAEA"
+		fill-opacity="0.21" />
+	<rect width="1005.28" height="620.771" rx="91.3889"
+		transform="matrix(-0.93358 0.358368 0 1 1880 758.963)"
+		fill="#EAEAEA" fill-opacity="0.21" />
+</svg>

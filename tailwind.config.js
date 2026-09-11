@@ -118,11 +118,6 @@ export default {
 				},
 			},
 
-			borderRadius: {
-				none: "0",
-				full: "9999px",
-			},
-
 			borderColor: {
 				DEFAULT: "var(--Border)",
 			},
@@ -199,41 +194,41 @@ export default {
 				"color-yellow-500": "var(--ColorYellow500)",
 
 				// Extended technology badge palette - Protocol Spines
-				"spine-grpc": "#22c55e",
+				"spine-grpc": "var(--SpinegRPC)",
 
-				"spine-ipc": "#3b82f6",
+				"spine-ipc": "var(--SpineIPC)",
 
-				"spine-tcp": "#f97316",
+				"spine-tcp": "var(--SpineTCP)",
 
-				"spine-wasm": "#a855f7",
+				"spine-wasm": "var(--SpineWASM)",
 
 				// Extensions & Libraries
-				"ext-rust": "#ea580c",
+				"ext-rust": "var(--ExtensionRust)",
 
-				"ext-tauri": "#eab308",
+				"ext-tauri": "var(--ExtensionTauri)",
 
-				"ext-effect-ts": "#06b6d4",
+				"ext-effect-ts": "var(--ExtensionEffectTypeScript)",
 
-				"ext-react": "#60a5fa",
+				"ext-react": "var(--ExtensionReact)",
 
-				"ext-vue": "#4ade80",
+				"ext-vue": "var(--ExtensionVue)",
 
-				"ext-svelte": "#fb923c",
+				"ext-svelte": "var(--ExtensionSvelte)",
 
-				"ext-next": "#171717",
+				"ext-next": "var(--ExtensionNext)",
 
-				"ext-nuxt": "#16a34a",
+				"ext-nuxt": "var(--ExtensionNuxt)",
 
-				"ext-solid": "#2563eb",
+				"ext-solid": "var(--ExtensionSolid)",
 
-				"ext-astro": "#9333ea",
+				"ext-astro": "var(--ExtensionAstro)",
 
 				// Platform indicators
-				"platform-web": "#4f46e5",
+				"platform-web": "var(--PlatformWeb)",
 
-				"platform-desktop": "#475569",
+				"platform-desktop": "var(--PlatformDesktop)",
 
-				"platform-mobile": "#ec4899",
+				"platform-mobile": "var(--PlatformMobile)",
 			},
 		},
 	},

@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" fill="none" viewBox="0 0 2048 2048"><g fill="#151515" fill-opacity=".21" clip-path="url(#a)"><rect width="2111.08" height="1303.62" rx="191.917" transform="matrix(-.93358 .35837 0 1 1023.68 -655.946)"/><rect width="2111.08" height="1303.62" rx="191.917" transform="matrix(-.93358 .35837 0 1 2997.68 641.776)"/></g><defs><clipPath id="a"><rect width="2048" height="2048" fill="#fff" rx="21" transform="matrix(-1 0 0 1 2048 0)"/></clipPath></defs></svg>
+<svg width="2048" height="2048" viewBox="0 0 2048 2048" fill="none"
+	xmlns="http://www.w3.org/2000/svg">
+	<g clip-path="url(#clip0_165_71)">
+		<rect width="2111.08" height="1303.62" rx="191.917"
+			transform="matrix(-0.93358 0.358368 0 1 1023.68 -655.946)"
+			fill="#151515" fill-opacity="0.21" />
+		<rect width="2111.08" height="1303.62" rx="191.917"
+			transform="matrix(-0.93358 0.358368 0 1 2997.68 641.776)"
+			fill="#151515" fill-opacity="0.21" />
+	</g>
+	<defs>
+		<clipPath id="clip0_165_71">
+			<rect width="2048" height="2048" rx="21" transform="matrix(-1 0 0 1 2048 0)"
+				fill="white" />
+		</clipPath>
+	</defs>
+</svg>

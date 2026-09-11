@@ -261,7 +261,7 @@
 		#my-svg [data-look="neo"].cluster rect,
 		#my-svg [data-look="neo"].node polygon {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node path {
@@ -270,7 +270,7 @@
 		}
 
 		#my-svg [data-look="neo"].node .outer-path {
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node .neo-line path {
@@ -280,7 +280,7 @@
 
 		#my-svg [data-look="neo"].node circle {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node circle .state-start {
@@ -289,12 +289,12 @@
 
 		#my-svg [data-look="neo"].icon-shape .icon {
 			fill: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].icon-shape .icon-neo path {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg :root {
@@ -1467,13 +1467,9 @@
 		</g>
 	</g>
 	<defs>
-		<filter id="my-svg-drop-shadow" height="130%" width="130%">
-			<feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000" />
-		</filter>
+		
 	</defs>
 	<defs>
-		<filter id="my-svg-drop-shadow-small" height="150%" width="150%">
-			<feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000" />
-		</filter>
+		
 	</defs>
 </svg>

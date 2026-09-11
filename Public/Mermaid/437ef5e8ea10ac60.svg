@@ -193,13 +193,13 @@
 		}
 
 		#my-svg rect.actor.outer-path[data-look="neo"] {
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg rect.note[data-look="neo"] {
 			stroke: #aaaa33;
 			fill: #fff5ad;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg text.actor&gt;
@@ -327,7 +327,7 @@
 			position: absolute;
 			fill: #ECECFF;
 			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-			filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+			);
 		}
 
 		#my-svg .actor-man circle,
@@ -337,7 +337,7 @@
 		}
 
 		#my-svg g rect.rect {
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 			stroke: #9370DB;
 		}
 
@@ -349,7 +349,7 @@
 		#my-svg [data-look="neo"].cluster rect,
 		#my-svg [data-look="neo"].node polygon {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node path {
@@ -358,7 +358,7 @@
 		}
 
 		#my-svg [data-look="neo"].node .outer-path {
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node .neo-line path {
@@ -368,7 +368,7 @@
 
 		#my-svg [data-look="neo"].node circle {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].node circle .state-start {
@@ -377,12 +377,12 @@
 
 		#my-svg [data-look="neo"].icon-shape .icon {
 			fill: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg [data-look="neo"].icon-shape .icon-neo path {
 			stroke: #9370DB;
-			filter: drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));
+			);
 		}
 
 		#my-svg :root {

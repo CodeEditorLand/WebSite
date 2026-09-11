@@ -214,7 +214,7 @@ const DynamicEmailVerification = ({
 					className="bg-[color-mix(in_srgb,var(--Primary)_10%,transparent)] flat mx-auto mb-4 flex h-12 w-12 items-center justify-center"
 					aria-hidden="true"
 				>
-					<div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent"></div>
+					<div className="h-6 w-6 animate-spin rounded-none border-2 border-primary border-t-transparent"></div>
 				</div>
 				<CardTitle>
 					{Content.Verifying?.Title ||

@@ -133,7 +133,7 @@ const DynamicResetPassword = ({
 							<CardContent className="pt-6">
 								<div className="space-y-4" aria-live="polite">
 									<div
-										className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"
+										className="mx-auto h-8 w-8 animate-spin rounded-none border-4 border-primary border-t-transparent"
 										aria-hidden="true"
 									></div>
 									<p
