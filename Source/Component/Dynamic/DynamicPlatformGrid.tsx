@@ -365,30 +365,46 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 
 						const PlatformCardSection: CardSection = {
 							Header: {
-								content: (
-									<div className="flex items-center gap-3">
-										{PlatformIcon && (
-											<PlatformIcon
-												className="h-5 w-5 shrink-0 text-card-foreground"
-												aria-hidden="true"
-											/>
-										)}
+															content: (
+																<div className="flex flex-col gap-1">
+																	<span className="font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground">
+																		# RELEASE_01
+																	</span>
 
-										<div>
-											<h3 className="font-mono text-sm font-medium leading-snug tracking-tight text-card-foreground">
-												{Platform.Name}
-											</h3>
+																	<div className="flex items-center gap-3">
+																		{PlatformIcon && (
+																			<PlatformIcon
+																				className="h-5 w-5 shrink-0 text-card-foreground"
+																				aria-hidden="true"
+																			/>
+																		)}
 
-											<p className="font-mono text-sm uppercase tracking-[0.2em] text-card-foreground opacity-70">
-												〈{Platform.Description}〉
-											</p>
-										</div>
-									</div>
-								),
-							},
+																		<div>
+																			<h3 className="font-mono text-sm font-medium leading-snug tracking-tight text-card-foreground">
+																				{Platform.Name}
+																			</h3>
+
+																			<p className="font-mono text-sm uppercase tracking-[0.2em] text-card-foreground opacity-70">
+																				〈{Platform.Description}〉
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															),
+														},
 							Body: {
 								content: (
 									<div className="space-y-2 font-mono text-sm">
+										<div className="flex justify-between text-card-foreground opacity-70">
+											<span className="uppercase">
+												/CHANNEL:
+											</span>
+
+											<span className="font-medium text-card-foreground">
+												PUBLIC
+											</span>
+										</div>
+
 										<div className="flex justify-between text-card-foreground opacity-70">
 											<span className="uppercase">
 												{VersionLabel}

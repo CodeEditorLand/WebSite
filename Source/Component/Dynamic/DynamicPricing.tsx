@@ -1,10 +1,4 @@
-import * as lucide from "lucide-react";
-
 import { useEffect, useRef, useState } from "react";
-
-import { useTranslation } from "react-i18next";
-
-import { IconTooltip } from "../UI/IconTooltip.js";
 
 import { RichText } from "../UI/RichText.js";
 
@@ -76,6 +70,79 @@ const ElementDocPath: Record<string, string> = {
 };
 
 /**
+ * Release-manifest copy pass (DesignPass Track 3/4): the roadmap tiers render
+ * as # RELEASE_<NN> manifest records. Phase labels come from the roadmap
+ * subtitle's milestone vocabulary ("active source / integration work in
+ * progress / release preparation"); STATUS follows the state vocabulary
+ * (ACTIVE for the built source, LOADING for WIP); /CHANNEL derives from the
+ * public CC0 source; TARGET:/SIGNAL: fragments condense each tier
+ * description; Row[] converts each feature sentence into a manifest row
+ * (LABEL: VALUE) without changing the facts.
+ */
+const ReleaseManifest: Record<
+	string,
+	{
+		Phase: string;
+
+		Status: string;
+
+		Target: string;
+
+		Signal: string;
+
+		Row: string[];
+	}
+> = {
+	free: {
+		Phase: "ACTIVE SOURCE",
+
+		Status: "ACTIVE",
+
+		Target: "NATIVE DESKTOP PATH",
+
+		Signal: "NO CHROMIUM / NO ELECTRON / CC0",
+
+		Row: [
+			"EXTENSIONS: UNMODIFIED / COCOON",
+
+			"WEBVIEW: OS NATIVE / TAURI",
+
+			"FIBERS: CANCELLABLE SERVICE WORK",
+
+			"TELEMETRY: COMPILE-GATED / RUST",
+
+			"LICENSE: CC0 / NO RESTRICTIONS",
+
+			"TARGETS: MACOS / WINDOWS / LINUX",
+		],
+	},
+
+	progress: {
+		Phase: "INTEGRATION",
+
+		Status: "LOADING",
+
+		Target: "V1.0",
+
+		Signal: "SIGNED INSTALLERS / VERIFIED DOWNLOADS",
+
+		Row: [
+			"MARKETPLACE: UNDER REVIEW",
+
+			"GROVE: WASMTIME HOST",
+
+			"VINE: TYPED IPC / EXPANDING",
+
+			"INSTALLERS: CROSS-PLATFORM / TAURI",
+
+			"SOURCE MAPS: OXC",
+
+			"DISTRIBUTION: VERIFICATION PUBLISHING",
+		],
+	},
+};
+
+/**
  * Dynamic Pricing - two-column layout (Free + Future).
  * Each tier card shows:
  * Elements section - colored multi-line rows (name / descriptor / detail)
@@ -83,8 +150,6 @@ const ElementDocPath: Record<string, string> = {
  * Features section - icon checklist
  */
 const DynamicPricing = ({ Content, ClassName }: Property) => {
-	const { t: T } = useTranslation("home");
-
 	const GridReference = useRef<HTMLDivElement>(null);
 
 	const {
@@ -97,13 +162,7 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 		ShowMonthlyYearlyToggle = false,
 
 		DefaultYearly = false,
-
-		Labels = {},
 	} = Content;
-
-	const PopularLabel =
-		Labels.Popular ??
-		T("pricing.labels.popular", { defaultValue: "Most Popular" });
 
 	const [IsYearly, SetIsYearly] = useState(DefaultYearly);
 
@@ -161,8 +220,15 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 						)}
 
 						{Subtitle && (
-							<div className="mt-3 text-muted">
-								<RichText Text={Subtitle} />
+							<div className="mt-3 flex flex-col gap-1 font-mono text-sm font-medium uppercase tracking-[0.2em] text-muted">
+								<span>
+									FUNDING: NLNET / NGI0 COMMONS FUND
+								</span>
+
+								<span className="opacity-70">
+									PHASE: ACTIVE SOURCE / INTEGRATION /
+									RELEASE PREPARATION
+								</span>
 							</div>
 						)}
 					</div>
@@ -172,7 +238,12 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 					ref={GridReference}
 					className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2"
 				>
-					{DisplayTier.map((Tier) => (
+					{DisplayTier.map((Tier, TierIndex) => {
+					const Manifest =
+						ReleaseManifest[Tier.Identifier] ??
+						ReleaseManifest.free;
+
+					return (
 						<jelly-card
 							key={Tier.Identifier}
 							className={`PricingCard flat ${
@@ -197,79 +268,54 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 							}
 						>
 							<div className="flex flex-col">
-								{/* ── Card header ───────────────────────────── */}
-								<div className="border-b border-[var(--Border)] p-8">
-									{Tier.Popular && (
-										<div className="mb-3">
-											<jelly-badge
-												variant="mint"
-												shape="square"
-												style={
-													{
-														"--jelly-fill":
-															"var(--SpinegRPCMute)",
-														"--jelly-label":
-															"var(--SpinegRPCFore)",
-														"--jelly-badge-radius":
-															"0px",
-														"--jelly-badge-font-size":
-															"13px",
-														} as React.CSSProperties
-												}
-											>
-												<span
-													className="StaccatoRhythmDot flat mr-1.5 h-1.5 w-1.5"
-													style={{
-														backgroundColor:
-															"var(--SpinegRPC)",
-													}}
-													aria-hidden="true"
-												/>
-												{PopularLabel}
-											</jelly-badge>
-										</div>
-									)}
-									{Tier.Status && Tier.Status !== "Ready" && (
-										<div className="mb-2">
-											<jelly-badge
-												variant="platinum"
-												shape="square"
-												style={
-													{
-														"--jelly-fill":
-															"var(--Mute)",
-														"--jelly-label":
-															"var(--MuteForeground)",
-														"--jelly-badge-radius":
-															"0px",
-														"--jelly-badge-font-size":
-															"0.8125rem",
-													} as React.CSSProperties
-												}
-											>
-												{Tier.Status === "WIP"
-													? "WIP"
-													: "Coming Soon"}
-											</jelly-badge>
-										</div>
-									)}
-									<div className="mb-4">
-										<DynamicButton
-											Content={{
-												...Tier.CTA,
-												FullWidth: true,
-											}}
-										/>
-									</div>
-									<h3 className="mb-2 text-2xl font-medium text-card-foreground">
-										{Tier.Name}
-									</h3>
-									{Tier.Description && (
-										<div className="StaccatoBreath text-card-foreground opacity-70">
-											<RichText Text={Tier.Description} />
-										</div>
-									)}
-								</div>
+								{/* ── Card header - release manifest ─────────── */}
+															<div className="border-b border-[var(--Border)] p-8">
+																<div className="mb-4 flex flex-col gap-1 font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground">
+																	<span>
+																		# RELEASE_
+																		{String(TierIndex + 1).padStart(2, "0")}
+																	</span>
+
+																	<span className="opacity-70">
+																		〈{Manifest.Phase}〉
+																	</span>
+
+																	<span className="opacity-70">
+																		/CHANNEL: PUBLIC
+																	</span>
+
+																	<span
+																		className={
+																			Manifest.Status === "ACTIVE"
+																				? "text-accent"
+																				: ""
+																		}
+																	>
+																		STATUS: {Manifest.Status}
+																	</span>
+
+																	<span className="opacity-70">
+																		TARGET: {Manifest.Target}
+																	</span>
+
+																	<span className="opacity-70">
+																		SIGNAL: {Manifest.Signal}
+																	</span>
+																</div>
+
+																<div className="mb-4">
+																	<DynamicButton
+																		Content={{
+																			...Tier.CTA,
+																			FullWidth: true,
+																		}}
+																	/>
+																</div>
+
+																<h3 className="mb-2 text-lg font-medium text-card-foreground">
+																	{Tier.Name}
+																</h3>
+															</div>
 
 								{/* ── Card body ─────────────────────────────── */}
 								<div className="flex flex-1 flex-col p-8">
@@ -369,82 +415,37 @@ const DynamicPricing = ({ Content, ClassName }: Property) => {
 											</>
 										)}
 
-									{/* Features section */}
-									{Tier.Feature.length > 0 && (
-										<>
-											{Tier.Element &&
-												Tier.Element.length > 0 && (
-													<p className="mb-3 font-mono text-sm font-medium uppercase tracking-wider text-card-foreground opacity-70">
-														Roadmap
-													</p>
-												)}
+									{/* Manifest rows (features → LABEL: VALUE) */}
+																	{Manifest.Row.length > 0 && (
+																		<>
+																			{Tier.Element &&
+																				Tier.Element.length > 0 && (
+																					<p className="mb-3 font-mono text-sm font-medium uppercase tracking-wider text-card-foreground opacity-70">
+																						Manifest
+																					</p>
+																				)}
 
-											<ul className="space-y-3">
-												{Tier.Feature.map(
-													(Feature, FeatureIndex) => (
-														<li
-															key={FeatureIndex}
-															className={`flex items-start justify-between gap-2 ${
-																Tier.Status &&
-																Tier.Status !==
-																	"Ready"
-																	? "opacity-70"
-																	: ""
-															}`}
-														>
-															<span className="min-w-0 flex-1">
-																<RichText
-																	Text={
-																		Feature
-																	}
-																	Terms={true}
-																/>
-															</span>
-															{Tier.Status &&
-															Tier.Status !==
-																"Ready" ? (
-																<jelly-badge
-																	variant="platinum"
-																	shape="square"
-																	className="shrink-0"
-																	style={
-																		{
-																			"--jelly-fill":
-																				"var(--Mute)",
-																			"--jelly-label":
-																				"var(--MuteForeground)",
-																			"--jelly-badge-radius":
-																				"0px",
-																			"--jelly-badge-font-size":
-																				"0.8125rem",
-																		} as React.CSSProperties
-																	}
-																>
-																	{Tier.Status ===
-																	"WIP"
-																		? "WIP"
-																		: "Coming Soon"}
-																</jelly-badge>
-															) : (
-																<IconTooltip
-																	Label="Included"
-																	Icon={
-																		lucide.Check
-																	}
-																	SizeClass="h-4 w-4 shrink-0"
-																	ClassName="StaccatoCheckmark mt-0.5 text-accent"
-																/>
-															)}
-														</li>
-													),
-												)}
-											</ul>
-										</>
-									)}
-								</div>
+																			<ul className="space-y-2">
+																				{Manifest.Row.map(
+																					(Row, RowIndex) => (
+																						<li
+																							key={RowIndex}
+																							className="flex items-start justify-between gap-2 font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground"
+																						>
+																							<span className="min-w-0 flex-1">
+																								{Row}
+																							</span>
+																						</li>
+																					),
+																				)}
+																			</ul>
+																		</>
+																	)}
+																</div>
 							</div>
 						</jelly-card>
-					))}
+					);
+				})}
 				</div>
 			</div>
 		</section>

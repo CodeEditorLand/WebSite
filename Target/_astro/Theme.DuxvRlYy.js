@@ -1,1 +1,0 @@
-import{yt as t}from"./Vendor/React.Ct0G4ZkE.js";var a=t();function s({src:t,alt:s="",width:r,height:e,className:i,...c}){return(0,a.jsx)("img",{src:t,alt:s,width:r,height:e,className:i,...c})}export{s as t};

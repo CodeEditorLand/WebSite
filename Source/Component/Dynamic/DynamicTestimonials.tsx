@@ -4,6 +4,26 @@ import { Fragment, useEffect, useRef } from "react";
 
 import { RichText } from "../UI/RichText.js";
 
+import { FieldRecordSeal } from "../Brand/FieldRecordSeal.js";
+
+import type { FieldRecord } from "../../Content/Record/FieldRecord.js";
+
+import { Air } from "../../Content/Record/Air.js";
+
+import { Cocoon } from "../../Content/Record/Cocoon.js";
+
+import { Echo } from "../../Content/Record/Echo.js";
+
+import { Grove } from "../../Content/Record/Grove.js";
+
+import { Mountain } from "../../Content/Record/Mountain.js";
+
+import { Sky } from "../../Content/Record/Sky.js";
+
+import { Wind } from "../../Content/Record/Wind.js";
+
+import type Item from "./Interface/Item/Testimonial.js";
+
 import type Property from "./Interface/Property/Testimonial.js";
 
 /**
@@ -40,9 +60,9 @@ const ElementGlyph = ({ Name }: { Name?: string }) => {
 
 		worker: "🍩",
 
-		common: "🧑🏻‍🏭",
+		common: "🧑🏼‍🏭",
 
-		maintain: "💪🏻",
+		maintain: "💪🏼",
 
 		mist: "🌫️",
 
@@ -140,6 +160,173 @@ const GetRowRatio = (RowIndex: number): [number, number] => {
 	];
 
 	return BUCKETS[BucketIndex];
+};
+
+// ── Field-record layer ─────────────────────────────────────────────────────
+
+/**
+ * Per-element field records (Source/Content/Record/*.ts) keyed by element name.
+ * The 8 core records exist (Land, Mountain, Cocoon, Wind, Sky, Air, Echo,
+ * Grove); only those present here are among the architecture cards. The
+ * extended architecture elements (Common, Maintain, Mist, Output, Rest,
+ * SideCar, Vine, Worker) have no record - their cards keep the record index
+ * convention (# <ELEMENT>_01) and the spec's ◎ (U+25CE) fallback seal, and
+ * omit the stamp / route / status / metadata / evidence rows (nothing to
+ * derive - never invented).
+ */
+const ElementRecords: Record<string, FieldRecord> = {
+	Air,
+
+	Cocoon,
+
+	Echo,
+
+	Grove,
+
+	Mountain,
+
+	Sky,
+
+	Wind,
+};
+
+/**
+ * Compact record-card body: the field-record grammar (# INDEX, 〈claim〉,
+ * /ROUTE, STATUS:/metadata rows, seal upper-right, evidence crop placeholder)
+ * layered on top of the existing name + emoji + role-chip + quote work.
+ * Warm-white flat mono uppercase tracked font-medium dark-ink, no XS.
+ */
+const RenderTestimonialBody = ({
+	Testimonial,
+}: {
+	Testimonial: Item;
+}) => {
+	const ElementRecord = ElementRecords[Testimonial.Author];
+
+	return (
+		<div className="flex flex-col gap-3">
+			{/* Record index + upper-right seal (SVG where Public/Seal has one, else ◎) */}
+			<div className="flex items-start justify-between gap-2">
+				<span className="font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground">
+					{ElementRecord?.Index ??
+						`# ${Testimonial.Author.toUpperCase()}_01`}
+				</span>
+				{ElementRecord ? (
+					<FieldRecordSeal
+						element={ElementRecord.Seal}
+						size={40}
+						className="shrink-0"
+					/>
+				) : (
+					<span
+						aria-hidden="true"
+						className="font-mono text-sm leading-none text-card-foreground opacity-60"
+					>
+						◎
+					</span>
+				)}
+			</div>
+
+			{/* Name + glyph + GitHub link */}
+			<div className="flex items-center justify-between gap-2">
+				<div className="flex items-center gap-1.5">
+					<span className="font-mono text-lg font-medium text-card-foreground">
+						{Testimonial.Href ? (
+							<a
+								href={Testimonial.Href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="hover:underline"
+							>
+								{Testimonial.Author}
+							</a>
+						) : (
+							Testimonial.Author
+						)}
+					</span>
+					{Testimonial.Author && (
+						<ElementGlyph Name={Testimonial.Author} />
+					)}
+				</div>
+				{Testimonial.Href && (
+					<a
+						href={Testimonial.Href}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`Open ${Testimonial.Author} source`}
+						className="text-[color-mix(in_srgb,var(--CardForeground)_50%,transparent)] inline-flex items-center transition-colors hover:text-card-foreground"
+					>
+						<lucide.ExternalLink
+							className="h-3 w-3 shrink-0"
+							aria-hidden="true"
+						/>
+					</a>
+				)}
+			</div>
+
+			{/* Role → keyword chips split by em-space (U+2001) or legacy " - " */}
+			{Testimonial.Role && (
+				<div className="flex flex-wrap text-card-foreground">
+					{Testimonial.Role.split(/\u2001| - /).map(
+						(Tag, TagIndex) => (
+							<Fragment key={TagIndex}>
+								{TagIndex > 0 && "\u2001"}
+								<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono text-sm">
+									{Tag}
+								</code>
+							</Fragment>
+						),
+					)}
+				</div>
+			)}
+
+			{/* Field-record rows from the element record */}
+			{ElementRecord && (
+				<div className="flex flex-col gap-1">
+					{ElementRecord.Stamp?.length > 0 && (
+						<p className="font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground">
+							〈{ElementRecord.Stamp.join("\u2001")}〉
+						</p>
+					)}
+					{ElementRecord.Route?.length > 0 && (
+						<p className="font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground opacity-70">
+							{ElementRecord.Route.join("\u2001")}
+						</p>
+					)}
+					<p
+						className={`font-mono text-sm font-medium uppercase tracking-[0.2em] ${
+							ElementRecord.Status.Tone === "specimen"
+								? "text-accent"
+								: "text-card-foreground"
+						}`}
+					>
+						STATUS: {ElementRecord.Status.Value}
+					</p>
+					{ElementRecord.Metadata.length > 0 && (
+						<p className="font-mono text-sm font-medium uppercase tracking-[0.2em] text-card-foreground opacity-70">
+							{ElementRecord.Metadata[0].Label}:{" "}
+							{ElementRecord.Metadata[0].Value}
+						</p>
+					)}
+				</div>
+			)}
+
+			{/* Lead - first line of the quote only */}
+			<p className="text-sm leading-relaxed text-card-foreground">
+				{Testimonial.Quote.split("\n")[0]}
+			</p>
+
+			{/* Evidence crop placeholder - only where the element record defines one */}
+			{ElementRecord && (
+				<div
+					role="img"
+					aria-label={ElementRecord.Evidence.Alt}
+					title={ElementRecord.Evidence.Alt}
+					className="h-14 w-full border border-[color-mix(in_srgb,var(--CardForeground)_15%,transparent)] bg-[color-mix(in_srgb,var(--CardForeground)_8%,transparent)]"
+				/>
+			)}
+		</div>
+	);
 };
 
 // ── Component ──────────────────────────────────────────────────────────────
@@ -279,7 +466,8 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 										{
 											"--jelly-fill": "var(--Card)",
 											"--jelly-radius": "0",
-											"--jelly-card-font-size": "inherit",
+											"--jelly-card-font-size":
+												"inherit",
 											"--jelly-card-padding-block": "0",
 											"--jelly-card-padding-inline": "0",
 											"--jelly-color-border-default":
@@ -288,72 +476,9 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 										} as React.CSSProperties
 									}
 								>
-									<div className="flex flex-col gap-3">
-										{/* Name + glyph + GitHub link */}
-										<div className="flex items-center justify-between gap-2">
-											<div className="flex items-center gap-1.5">
-												<span className="font-mono text-lg font-medium text-card-foreground">
-													{Testimonial.Href ? (
-														<a
-															href={
-																Testimonial.Href
-															}
-															target="_blank"
-															rel="noopener noreferrer"
-															className="hover:underline"
-														>
-															{Testimonial.Author}
-														</a>
-													) : (
-														Testimonial.Author
-													)}
-												</span>
-												{Testimonial.Author && (
-													<ElementGlyph
-														Name={
-															Testimonial.Author
-														}
-													/>
-												)}
-											</div>
-											{Testimonial.Href && (
-												<a
-													href={Testimonial.Href}
-													target="_blank"
-													rel="noopener noreferrer"
-													aria-label={`Open ${Testimonial.Author} source`}
-													className="text-[color-mix(in_srgb,var(--CardForeground)_50%,transparent)] inline-flex items-center transition-colors hover:text-card-foreground"
-												>
-													<lucide.ExternalLink
-														className="h-3 w-3 shrink-0"
-														aria-hidden="true"
-													/>
-												</a>
-											)}
-										</div>
-
-										{/* Role → keyword chips split by em-space (U+2001) or legacy " - " */}
-										{Testimonial.Role && (
-											<div className="flex flex-wrap text-card-foreground">
-												{Testimonial.Role.split(
-													/\u2001| - /,
-												).map((Tag, TagIndex) => (
-													<Fragment key={TagIndex}>
-														{TagIndex > 0 &&
-															"\u2001"}
-														<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono text-sm">
-															{Tag}
-														</code>
-													</Fragment>
-												))}
-											</div>
-										)}
-
-										{/* Lead - first line of the quote only */}
-										<p className="text-sm leading-relaxed text-card-foreground">
-											{Testimonial.Quote.split("\n")[0]}
-										</p>
-									</div>
+									<RenderTestimonialBody
+										Testimonial={Testimonial}
+									/>
 								</jelly-card>
 							);
 						})}
@@ -409,63 +534,9 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 									} as React.CSSProperties
 								}
 							>
-								<div className="flex flex-col gap-3">
-									<div className="flex items-center justify-between gap-2">
-										<div className="flex items-center gap-1.5">
-											<span className="font-mono text-lg font-medium text-card-foreground">
-												{Testimonial.Href ? (
-													<a
-														href={Testimonial.Href}
-														target="_blank"
-														rel="noopener noreferrer"
-														className="hover:underline"
-													>
-														{Testimonial.Author}
-													</a>
-												) : (
-													Testimonial.Author
-												)}
-											</span>
-											{Testimonial.Author && (
-												<ElementGlyph
-													Name={Testimonial.Author}
-												/>
-											)}
-										</div>
-										{Testimonial.Href && (
-											<a
-												href={Testimonial.Href}
-												target="_blank"
-												rel="noopener noreferrer"
-												aria-label={`Open ${Testimonial.Author} source`}
-												className="text-[color-mix(in_srgb,var(--CardForeground)_50%,transparent)] inline-flex items-center transition-colors hover:text-card-foreground"
-											>
-												<lucide.ExternalLink
-													className="h-3 w-3 shrink-0"
-													aria-hidden="true"
-												/>
-											</a>
-										)}
-									</div>
-									{/* Role → keyword chips split by em-space (U+2001) or legacy " - " */}
-									{Testimonial.Role && (
-										<div className="flex flex-wrap text-card-foreground">
-											{Testimonial.Role.split(
-												/\u2001| - /,
-											).map((Tag, TagIndex) => (
-												<Fragment key={TagIndex}>
-													{TagIndex > 0 && " "}
-													<code className="flat bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 font-mono text-sm">
-														{Tag}
-													</code>
-												</Fragment>
-											))}
-										</div>
-									)}
-									<p className="text-sm leading-relaxed text-card-foreground">
-										{Testimonial.Quote.split("\n")[0]}
-									</p>
-								</div>
+								<RenderTestimonialBody
+									Testimonial={Testimonial}
+								/>
 							</jelly-card>
 						);
 					})}
