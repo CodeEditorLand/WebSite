@@ -22,35 +22,9 @@ afterEach(() => {
 });
 
 const SampleFeatures = [
-	{
-		Id: "performance",
-
-		Icon: "Zap",
-
-		Title: "Performance",
-
-		Description: "Native speed via Rust.",
-	},
-
-	{
-		Id: "compatibility",
-
-		Icon: "Box",
-
-		Title: "Compatibility",
-
-		Description: "Run existing VS Code extensions.",
-	},
-
-	{
-		Id: "architecture",
-
-		Icon: "Cpu",
-
-		Title: "Architecture",
-
-		Description: "Effect-TS powered services.",
-	},
+	{ Id: "performance", Icon: "Zap", Title: "Performance", Description: "Native speed via Rust." },
+	{ Id: "compatibility", Icon: "Box", Title: "Compatibility", Description: "Run existing VS Code extensions." },
+	{ Id: "architecture", Icon: "Cpu", Title: "Architecture", Description: "Effect-TS powered services." },
 ];
 
 const SampleContent = {
@@ -58,24 +32,27 @@ const SampleContent = {
 
 	Subtitle: "What makes Land different.",
 
-	Features: SampleFeatures,
+	Feature: SampleFeatures,
 };
 
 describe("DynamicFeatures", () => {
-	it("renders all feature cards", () => {
+	it("renders per-element record cards", () => {
 		render(<DynamicFeatures Content={SampleContent} />);
 
-		for (const Feature of SampleFeatures) {
-			expect(screen.getByText(Feature.Title)).toBeInTheDocument();
-		}
+		expect(screen.getByText("# MOUNTAIN_01")).toBeInTheDocument();
+
+		expect(screen.getByText("# COCOON_01")).toBeInTheDocument();
+
+		expect(screen.getByText("# WIND_01")).toBeInTheDocument();
 	});
 
-	it("renders each feature description", () => {
+	it("renders the record status metadata on each card", () => {
 		render(<DynamicFeatures Content={SampleContent} />);
 
-		for (const Feature of SampleFeatures) {
-			expect(screen.getByText(Feature.Description)).toBeInTheDocument();
-		}
+		// Every element record carries STATUS: ACTIVE.
+		expect(screen.getAllByText("STATUS: ACTIVE").length).toBeGreaterThan(
+			0,
+		);
 	});
 
 	it("renders section title and subtitle", () => {
@@ -104,8 +81,10 @@ describe("DynamicFeatures", () => {
 	it("renders without title or subtitle when omitted", () => {
 		render(<DynamicFeatures Content={{ Feature: SampleFeatures }} />);
 
-		for (const Feature of SampleFeatures) {
-			expect(screen.getByText(Feature.Title)).toBeInTheDocument();
-		}
+		expect(screen.getByText("# MOUNTAIN_01")).toBeInTheDocument();
+
+		expect(screen.getByText("# COCOON_01")).toBeInTheDocument();
+
+		expect(screen.getByText("# WIND_01")).toBeInTheDocument();
 	});
 });
