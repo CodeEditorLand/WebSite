@@ -371,6 +371,7 @@ const DynamicPlatformGrid = ({ Content, ClassName }: Property) => {
 												Size: "lg",
 												FullWidth: true,
 												Icon: "Download",
+												ClassName: "PlatformDownloadButton",
 											}}
 											OnAction={() =>
 												HandleDownload(Platform)

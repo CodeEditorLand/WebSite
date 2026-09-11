@@ -360,10 +360,18 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 												)}
 											</div>
 											{Testimonial.Href && (
-												<lucide.ExternalLink
-													className="text-card-foreground/50 h-3 w-3 shrink-0"
-													aria-hidden="true"
-												/>
+												<a
+													href={Testimonial.Href}
+													target="_blank"
+													rel="noopener noreferrer"
+													aria-label={`Open ${Testimonial.Author} source`}
+													className="text-card-foreground/50 inline-flex items-center transition-colors hover:text-card-foreground"
+												>
+													<lucide.ExternalLink
+														className="h-3 w-3 shrink-0"
+														aria-hidden="true"
+													/>
+												</a>
 											)}
 										</div>
 
@@ -474,10 +482,18 @@ const DynamicTestimonials = ({ Content, ClassName }: Property) => {
 											)}
 										</div>
 										{Testimonial.Href && (
-											<lucide.ExternalLink
-												className="text-card-foreground/50 h-3 w-3 shrink-0"
-												aria-hidden="true"
-											/>
+											<a
+												href={Testimonial.Href}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label={`Open ${Testimonial.Author} source`}
+												className="text-card-foreground/50 inline-flex items-center transition-colors hover:text-card-foreground"
+											>
+												<lucide.ExternalLink
+													className="h-3 w-3 shrink-0"
+													aria-hidden="true"
+												/>
+											</a>
 										)}
 									</div>
 									{Testimonial.Role && (
