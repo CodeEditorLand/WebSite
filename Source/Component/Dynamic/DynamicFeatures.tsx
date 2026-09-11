@@ -318,7 +318,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 												Label={IconLabel}
 												Icon={Icon ?? lucide.Sparkles}
 												Color={FeatureColor}
-												SizeClass="h-4 w-4"
+												SizeClass="h-5 w-5"
 												ClassName="StaccatoIcon"
 											/>
 										</div>

@@ -16,20 +16,38 @@ const FieldRecordAction: React.FC<FieldRecordActionProps> = ({
 	className,
 }) => {
 	if (variant === "button") {
+		const IsExternal = href?.startsWith("http");
+
 		return (
 			<a
 				href={href}
+				{...(IsExternal
+					? { target: "_blank", rel: "noopener noreferrer" }
+					: {})}
 				className={cn(
-					"inline-flex h-10 items-center justify-center px-[2.1rem] py-2",
-					"font-mono text-sm font-medium uppercase tracking-wider",
-					"text-bg hover:bg-foreground/85 bg-foreground",
-					"touch-manipulation select-none rounded-[var(--RadiusButton)]",
-					"transition-[background-color,color] active:scale-[0.97]",
+					"inline-block FieldRecordActionButton",
 					className,
 				)}
-				style={{ borderRadius: 0 }}
 			>
-				{label}
+				<jelly-button
+					squish
+					style={
+						{
+							"--jelly-button-radius": "var(--RadiusButton)",
+							"--jelly-button-height": "44px",
+							"--jelly-button-padding-inline": "2.6rem",
+							"--jelly-button-min-width": "0px",
+							"--jelly-color-background-accent":
+								"var(--Foreground)",
+							"--jelly-color-foreground-on-accent":
+								"var(--Background)",
+						} as React.CSSProperties
+					}
+				>
+					<span className="font-mono text-sm font-medium uppercase tracking-wider">
+						{label}
+					</span>
+				</jelly-button>
 			</a>
 		);
 	}

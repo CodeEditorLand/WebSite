@@ -45,7 +45,7 @@ const DynamicPreviousReleases = ({ Content, ClassName }: Property) => {
 			Header: "Version",
 
 			Render: (Value: unknown, _Row: ReleaseVersion) => (
-				<span className="font-semibold text-primary">
+				<span className="font-semibold text-card-foreground">
 					{String(Value)}
 				</span>
 			),
@@ -73,7 +73,7 @@ const DynamicPreviousReleases = ({ Content, ClassName }: Property) => {
 			Header: "Size",
 
 			Render: (Value: unknown) => (
-				<span className="text-muted-foreground">{String(Value)}</span>
+				<span className="text-card-foreground opacity-70">{String(Value)}</span>
 			),
 		},
 
@@ -83,7 +83,7 @@ const DynamicPreviousReleases = ({ Content, ClassName }: Property) => {
 			Header: "Downloads",
 
 			Render: (Value: unknown) => (
-				<span className="text-muted-foreground">
+				<span className="text-card-foreground opacity-70">
 					{(Value as number).toLocaleString()}
 				</span>
 			),

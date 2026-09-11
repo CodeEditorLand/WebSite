@@ -47,6 +47,64 @@ export default {
 							"-webkit-overflow-scrolling": "touch",
 						},
 
+						// Tables: design-system hairline rows. --Border is the
+						// dark-canvas token; warm-white prose cards override with
+						// prose-thead:/prose-tr: ink hairlines in the page wrapper.
+						thead: {
+							"border-bottom-width": "1px",
+
+							"border-bottom-color": "var(--Border)",
+						},
+
+						// Headers: mono, uppercase, tracked, muted.
+						"thead th": {
+							color: "var(--MuteForeground)",
+
+							"font-family": "var(--FontMono)",
+
+							"font-size": "0.75rem",
+
+							"font-weight": "500",
+
+							"letter-spacing": "0.2em",
+
+							"text-transform": "uppercase",
+
+							"text-align": "left",
+
+							"vertical-align": "bottom",
+
+							"padding-inline-end": "0.75em",
+
+							"padding-top": "0.75em",
+
+							"padding-bottom": "0.75em",
+
+							"padding-inline-start": "0.75em",
+						},
+
+						"tbody tr": {
+							"border-bottom-width": "1px",
+
+							"border-bottom-color": "var(--Border)",
+						},
+
+						// Body cells: light text for the dark canvas (blog).
+						// Warm-white prose cards override with prose-td:.
+						td: {
+							color: "var(--Foreground)",
+
+							"vertical-align": "baseline",
+
+							"padding-inline-end": "0.75em",
+
+							"padding-top": "0.75em",
+
+							"padding-bottom": "0.75em",
+
+							"padding-inline-start": "0.75em",
+						},
+
 						// Pre / code blocks: prevent overflow blowout
 						pre: {
 							"overflow-x": "auto",

@@ -219,19 +219,19 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 						<table className="w-full border-collapse">
 							<thead>
 								<tr className="border-b border-[var(--Border)]">
-									<th className="px-4 py-3 text-left font-semibold">
+									<th className="px-4 py-3 text-left font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
 										Profile
 									</th>
-									<th className="px-4 py-3 text-left font-semibold">
+									<th className="px-4 py-3 text-left font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
 										Tier
 									</th>
-									<th className="px-4 py-3 text-left font-semibold">
+									<th className="px-4 py-3 text-left font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
 										Workbench
 									</th>
-									<th className="px-4 py-3 text-left font-semibold">
+									<th className="px-4 py-3 text-left font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
 										Features
 									</th>
-									<th className="px-4 py-3 text-left font-semibold">
+									<th className="px-4 py-3 text-left font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
 										Status
 									</th>
 								</tr>
@@ -242,10 +242,10 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 										key={Item.Identifier}
 										className="border-b border-[var(--Border)] last:border-b-0"
 									>
-										<td className="px-4 py-3 font-mono">
+										<td className="px-4 py-3 font-mono text-foreground">
 											{Item.Name}
 										</td>
-										<td className="px-4 py-3">
+										<td className="px-4 py-3 text-foreground">
 											<Badge
 												variant="outline"
 												className="StaccatoBadge"
@@ -253,13 +253,13 @@ const DynamicTransparency = ({ Content, ClassName }: Property) => {
 												{Item.Tier}
 											</Badge>
 										</td>
-										<td className="px-4 py-3">
+										<td className="px-4 py-3 text-foreground">
 											{Item.Workbench}
 										</td>
-										<td className="px-4 py-3 text-card-foreground opacity-70">
+										<td className="px-4 py-3 text-foreground opacity-70">
 											{Item.Feature}
 										</td>
-										<td className="px-4 py-3">
+										<td className="px-4 py-3 text-foreground">
 											<Badge className="StaccatoBadge">
 												{Item.Status}
 

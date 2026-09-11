@@ -101,7 +101,7 @@ const DynamicButton = ({ Content, OnAction, IsLoading = false }: Property) => {
 					{"\u2001"}
 
 					<IconComponent
-						className="StaccatoIcon h-4 w-4"
+						className="StaccatoIcon h-5 w-5"
 						aria-hidden="true"
 					/>
 				</>
