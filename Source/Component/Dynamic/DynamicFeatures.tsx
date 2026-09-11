@@ -110,7 +110,7 @@ const DynamicFeatures = ({ Content, ClassName }: Property) => {
 						{Title && (
 							<h2
 								id="FeaturesHeading"
-								className="text-4xl font-normal tracking-tight sm:text-5xl"
+								className="font-mono text-4xl font-normal tracking-tight sm:text-5xl"
 							>
 								{Title}
 							</h2>

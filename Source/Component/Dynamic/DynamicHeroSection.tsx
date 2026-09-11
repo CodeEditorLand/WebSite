@@ -34,10 +34,12 @@ import type Property from "./Interface/Property/Hero.js";
  *   RIGHT: full-bleed evidence image
  *
  * Hierarchy (per design_system.md + further_design_system.md):
- *   # LAND_01 → 〈RUST + TAURI〉 → 〈NO ELECTRON〉 → /COMPAT:VS CODE →
- *   NATIVE · OPEN · CROSS-PLATFORM → STATUS: SOURCE ACTIVE →
- *   [MAJOR BLANK ZONE] → LAND: → ↳EDITOR WITHOUT CHROMIUM →
- *   TARGET / LICENSE / SIGNAL → [ENTER]
+ *   # LAND_01 → 〈21.09.26〉〈20:18〉 (oversized bracketed timestamp,
+ *   strongest top hierarchy) → 〈RUST + TAURI〉 → 〈NO ELECTRON〉 →
+ *   /COMPAT:VS CODE → WALK · LISTEN · SIGNAL → NATIVE · OPEN ·
+ *   CROSS-PLATFORM → STATUS: SOURCE ACTIVE → [MAJOR BLANK ZONE] →
+ *   LAND: → ↳EDITOR WITHOUT CHROMIUM → TARGET / LICENSE / SIGNAL →
+ *   SPECIES / TEMP / WIND → [ENTER]
  *
  * Animation logic (simplex noise, Staccato, Attention) preserved unchanged.
  */
@@ -228,6 +230,17 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 								<FieldRecordSeal element="Land" />
 							</div>
 
+							{/* Oversized bracketed timestamp — strongest top hierarchy (design_system.md §Text syntax / Template copy:154, 174-175) */}
+							<div className="mt-10">
+								<p className="text-field-xl font-mono font-normal leading-[0.95] tracking-[-0.02em] text-card-foreground">
+									〈21.09.26〉
+								</p>
+
+								<p className="text-field-l mt-2 font-mono font-normal leading-[1.0] tracking-[-0.02em] text-card-foreground">
+									〈20:18〉
+								</p>
+							</div>
+
 							{/* Middle: Oversized stamp */}
 							<div className="mt-10">
 								<p className="text-field-xl font-mono font-normal leading-[0.95] tracking-[-0.02em] text-card-foreground">
@@ -250,9 +263,14 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 								</p>
 							</div>
 
+							{/* Program verbs (design_system.md:157-158, 486) — em quad U+2001 separators (DesignSystem-Grammar §3) */}
+							<p className="text-field-s mt-6 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
+								{"WALK\u2001LISTEN\u2001SIGNAL"}
+							</p>
+
 							{/* Program + Status */}
 							<p className="text-field-s mt-6 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
-								NATIVE · OPEN · CROSS-PLATFORM
+								{"NATIVE\u2001OPEN\u2001CROSS-PLATFORM"}
 							</p>
 
 							<div className="mt-3">
@@ -293,10 +311,21 @@ const DynamicHeroSection = ({ Content, ClassName }: Property) => {
 								/>
 							</div>
 
+							{/* Observational metadata footer (design_system.md:162-163, 186-189, 492-495) — specimen data verbatim from the spec example, no invented fields */}
+							<div className="mt-3">
+								<FieldRecordMetadata
+									rows={[
+										{ label: "SPECIES", value: "NOCTUA PRONUBA" },
+										{ label: "TEMP", value: "16.2 C" },
+										{ label: "WIND", value: "01.8 KM/H" },
+									]}
+								/>
+							</div>
+
 							{/* Program line + CTA */}
 							<div className="mt-10">
 								<p className="text-field-s mb-4 font-mono uppercase tracking-[0.25em] text-card-foreground opacity-60">
-									OPEN · EDIT · SHIP
+									{"OPEN\u2001EDIT\u2001SHIP"}
 								</p>
 
 								<FieldRecordAction
