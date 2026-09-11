@@ -74,7 +74,7 @@ export default () => {
 										{Right.Code}
 									</span>
 									{Right.Article && (
-										<span className="font-mono text-[9px] text-card-foreground">
+										<span className="font-mono text-sm text-card-foreground opacity-70">
 											{Right.Article}
 										</span>
 									)}

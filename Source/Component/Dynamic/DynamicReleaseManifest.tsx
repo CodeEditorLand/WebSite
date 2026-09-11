@@ -171,9 +171,9 @@ const DynamicReleaseManifest = ({ Content, ClassName }: Property) => {
 												variant="button"
 											/>
 										) : (
-											<p className="text-field-s font-mono uppercase tracking-wider text-muted-foreground">
-												STATUS: RELEASE PREPARATION
-											</p>
+											<p className="text-field-s font-mono uppercase tracking-wider text-card-foreground opacity-70">
+																						STATUS: RELEASE PREPARATION
+																					</p>
 										)}
 									</div>
 								</div>

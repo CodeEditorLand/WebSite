@@ -198,7 +198,7 @@ const DynamicEmailVerification = ({
 					)}
 
 					{Content.Pending.EmailSentMessage && (
-						<p className="text-center text-muted-foreground">
+						<p className="text-center text-card-foreground opacity-70">
 							{Content.Pending.EmailSentMessage}
 						</p>
 					)}
