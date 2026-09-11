@@ -2,19 +2,10 @@
 	width="1000" height="1000">
 	<style>
     #light-icon {
-      display: inline;
-    }
-    #dark-icon {
       display: none;
     }
-
-    @media (prefers-color-scheme: dark) {
-      #light-icon {
-        display: none;
-      }
-      #dark-icon {
-        display: inline;
-      }
+    #dark-icon {
+      display: inline;
     }
   </style>
 	<g id="light-icon">
@@ -34,7 +25,7 @@
 			</g>
 			<defs>
 				<clipPath id="SvgjsClipPath1511">
-					<rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect>
+					<rect width="1000" height="1000" x="0" y="0"></rect>
 				</clipPath>
 			</defs>
 		</svg>
@@ -56,7 +47,7 @@
 			</g>
 			<defs>
 				<clipPath id="SvgjsClipPath1512">
-					<rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect>
+					<rect width="1000" height="1000" x="0" y="0"></rect>
 				</clipPath>
 			</defs>
 		</svg>
